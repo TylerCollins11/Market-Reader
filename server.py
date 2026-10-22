@@ -311,6 +311,20 @@ class MarketReaderHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_json_response({"error": str(e), "news": []}, status=500)
             return
 
+        # 7B. Historical Candlestick Chart Endpoint
+        if path == "/api/chart":
+            symbol = query.get("symbol", ["SPY"])[0].upper()
+            timeframe = query.get("timeframe", ["1D"])[0].upper()
+            try:
+                chart_data = finnhub_service.get_historical_candles(symbol, timeframe)
+                if chart_data:
+                    self.send_json_response(chart_data)
+                else:
+                    self.send_json_response({"symbol": symbol, "timeframe": timeframe, "candles": [], "meta": {}})
+            except Exception as e:
+                self.send_json_response({"error": str(e), "candles": []}, status=500)
+            return
+
         # 8. Ask AI Financial Analyst Endpoint (GET support)
         if path == "/api/ai/ask":
             prompt = query.get("prompt", [""])[0]

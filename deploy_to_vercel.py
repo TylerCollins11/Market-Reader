@@ -26,7 +26,14 @@ FILES_TO_DEPLOY = [
     "entitlements.js",
     "entitlements.json",
     "pricing.html",
-    "vercel.json"
+    "vercel.json",
+    "api/quote.js",
+    "api/news.js",
+    "api/chart.js",
+    "api/company-analysis.js",
+    "api/ticker-band.js",
+    "api/status.js",
+    "api/config.js"
 ]
 
 base_dir = os.path.dirname(os.path.abspath(__file__))

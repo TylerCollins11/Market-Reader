@@ -2745,6 +2745,72 @@ function getDynamicStockSeries(asset, timeframe) {
     tfGainPct = round(baseChange * 16.0 + (isBaseUp ? 165.0 : -35.0), 2);
   }
 
+  // Check if genuine candles from exchange are cached
+  const candleKey = `${(asset.symbol || '').toUpperCase()}_${tf}`;
+  const candles = state.chartCandlesCache && state.chartCandlesCache[candleKey];
+  if (candles && candles.length > 5) {
+    const minVal = Math.min(...candles.map(c => Number(c.low)));
+    const maxVal = Math.max(...candles.map(c => Number(c.high)));
+    const pad = Math.max(0.01, (maxVal - minVal) * 0.08);
+    const chartMin = Math.max(0.01, minVal - pad);
+    const chartMax = maxVal + pad;
+    const chartRange = Math.max(0.01, chartMax - chartMin);
+
+    const sPrice = Number(candles[0].open || candles[0].close);
+    const cPrice = Number(candles[candles.length - 1].close);
+    const gDollar = round(cPrice - sPrice, 2);
+    const gPct = round((gDollar / sPrice) * 100, 2);
+
+    const curve = candles.map((c, i) => {
+      const v = Math.max(0, Math.min(1, (Number(c.close) - chartMin) / chartRange));
+      const dateObj = new Date(c.time * 1000);
+      let tStr = dateObj.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+      if (tf !== '1D') {
+        tStr = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      }
+      return {
+        v,
+        dollar: `$${Number(c.close).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        t: tStr
+      };
+    });
+
+    const bars = candles.map(c => ({
+      o: Math.max(0, Math.min(1, (Number(c.open) - chartMin) / chartRange)),
+      h: Math.max(0, Math.min(1, (Number(c.high) - chartMin) / chartRange)),
+      l: Math.max(0, Math.min(1, (Number(c.low) - chartMin) / chartRange)),
+      c: Math.max(0, Math.min(1, (Number(c.close) - chartMin) / chartRange)),
+      isUp: Number(c.close) >= Number(c.open),
+      vol: Number(c.volume || 0)
+    }));
+
+    const y4 = chartMax;
+    const y1 = chartMin;
+    const y2 = chartMin + chartRange * 0.333;
+    const y3 = chartMin + chartRange * 0.666;
+    const yLabels = [formatStockPriceShort(y4), formatStockPriceShort(y3), formatStockPriceShort(y2), formatStockPriceShort(y1)];
+
+    return {
+      tfLabel: tf,
+      startPrice: sPrice,
+      currentPrice: cPrice,
+      amount: `$${cPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+      gainDollar: `${gDollar >= 0 ? '+' : ''}$${gDollar.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+      gainDollarNum: gDollar,
+      pct: `${gPct >= 0 ? '+' : ''}${gPct}%`,
+      tfGainPct: gPct,
+      isUp: gPct >= 0,
+      yLabels,
+      xLabels: ['Open', 'Mid', 'Close'],
+      baselineY: (sPrice - chartMin) / chartRange,
+      curve,
+      bars,
+      chartMin,
+      chartMax,
+      chartRange
+    };
+  }
+
   // Exact start price derived from percentage change formula: currentPrice = startPrice * (1 + pct / 100)
   const divisor = Math.max(0.01, 1 + tfGainPct / 100);
   const startPrice = round(currentPrice / divisor, 2);
@@ -3285,6 +3351,31 @@ function resizeModalStockCanvas() {
   return true;
 }
 
+async function fetchModalChartCandles(symbol, timeframe) {
+  if (!symbol) return;
+  if (!state.fetchingCandles) state.fetchingCandles = {};
+  const cacheKey = `${symbol.toUpperCase()}_${(timeframe || '1D').toUpperCase()}`;
+  if (state.fetchingCandles[cacheKey]) return;
+  state.fetchingCandles[cacheKey] = true;
+
+  try {
+    const res = await fetch(`/api/chart?symbol=${encodeURIComponent(symbol)}&timeframe=${encodeURIComponent(timeframe)}`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data && Array.isArray(data.candles) && data.candles.length > 5) {
+        state.chartCandlesCache = state.chartCandlesCache || {};
+        state.chartCandlesCache[cacheKey] = data.candles;
+        if (state.selectedAssetForModal && state.selectedAssetForModal.symbol.toUpperCase() === symbol.toUpperCase() && state.modalStockTimeframe === timeframe) {
+          renderModalStockChart();
+        }
+      }
+    }
+  } catch (e) {
+  } finally {
+    delete state.fetchingCandles[cacheKey];
+  }
+}
+
 function renderModalStockChart(highlightIdx = null) {
   if (!modalStockCanvas || !modalStockCtx) {
     modalStockCanvas = document.getElementById('modalStockCanvas');
@@ -3294,6 +3385,12 @@ function renderModalStockChart(highlightIdx = null) {
 
   const asset = state.selectedAssetForModal;
   if (!asset) return;
+
+  const candleKey = `${(asset.symbol || '').toUpperCase()}_${state.modalStockTimeframe}`;
+  if (!state.chartCandlesCache) state.chartCandlesCache = {};
+  if (!state.chartCandlesCache[candleKey] && (!state.fetchingCandles || !state.fetchingCandles[candleKey])) {
+    fetchModalChartCandles(asset.symbol, state.modalStockTimeframe);
+  }
 
   resizeModalStockCanvas();
 
