@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    window.__ERRORS__ = [];
+    window.addEventListener('error', function(e) {
+      var msg = (e.message || 'unknown') + ' at ' + (e.filename || '') + ':' + (e.lineno || '');
+      window.__ERRORS__.push(msg);
+      console.error('[MarketReader Error]', msg);
+    });
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Market Reader - Pro Portfolio & Asset Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261022h" />
+</head>
+<body>
+  <!-- Desktop Web Application Shell -->
+  <div class="desktop-app-shell">
+    
+    <!-- 0. Real-Time Live Ticker Band (TradingView / Bloomberg Style) -->
+    <div class="live-ticker-band" id="liveTickerBand" title="Live Market Tape · Hover to pause · Click any ticker to view live chart & details">
+      <div class="ticker-live-pill">
+        <span class="ticker-pulse-dot"></span>
+        <span class="ticker-pill-label">LIVE MARKETS</span>
+      </div>
+      <div class="ticker-marquee-viewport" id="tickerMarqueeViewport">
+        <div class="ticker-track" id="tickerTrackPrimary">
+          <div class="ticker-item" data-sym="SPY"><span class="ti-sym">S&P 500</span><span class="ti-price">$5,712.50</span><span class="ti-pct positive">▲ +0.45%</span></div>
+          <div class="ticker-item" data-sym="QQQ"><span class="ti-sym">NASDAQ</span><span class="ti-price">$18,124.80</span><span class="ti-pct positive">▲ +0.68%</span></div>
+          <div class="ticker-item" data-sym="DIA"><span class="ti-sym">DOW JONES</span><span class="ti-price">$42,130.20</span><span class="ti-pct positive">▲ +0.25%</span></div>
+          <div class="ticker-item" data-sym="BTC"><span class="ti-sym">BTC/USD</span><span class="ti-price">$64,281.00</span><span class="ti-pct positive">▲ +2.40%</span></div>
+          <div class="ticker-item" data-sym="ETH"><span class="ti-sym">ETH/USD</span><span class="ti-price">$3,514.80</span><span class="ti-pct positive">▲ +3.80%</span></div>
+          <div class="ticker-item" data-sym="NVDA"><span class="ti-sym">NVDA</span><span class="ti-price">$126.40</span><span class="ti-pct positive">▲ +3.75%</span></div>
+          <div class="ticker-item" data-sym="AAPL"><span class="ti-sym">AAPL</span><span class="ti-price">$228.85</span><span class="ti-pct positive">▲ +1.40%</span></div>
+          <div class="ticker-item" data-sym="TSLA"><span class="ti-sym">TSLA</span><span class="ti-price">$254.20</span><span class="ti-pct positive">▲ +4.80%</span></div>
+          <div class="ticker-item" data-sym="MSFT"><span class="ti-sym">MSFT</span><span class="ti-price">$432.50</span><span class="ti-pct positive">▲ +1.15%</span></div>
+          <div class="ticker-item" data-sym="AMZN"><span class="ti-sym">AMZN</span><span class="ti-price">$188.75</span><span class="ti-pct positive">▲ +1.62%</span></div>
+          <div class="ticker-item" data-sym="GOOGL"><span class="ti-sym">GOOGL</span><span class="ti-price">$164.20</span><span class="ti-pct positive">▲ +0.95%</span></div>
+          <div class="ticker-item" data-sym="META"><span class="ti-sym">META</span><span class="ti-price">$572.40</span><span class="ti-pct positive">▲ +2.10%</span></div>
+          <div class="ticker-item" data-sym="PLTR"><span class="ti-sym">PLTR</span><span class="ti-price">$38.60</span><span class="ti-pct positive">▲ +5.40%</span></div>
+          <div class="ticker-item" data-sym="GLD"><span class="ti-sym">GOLD</span><span class="ti-price">$2,648.50</span><span class="ti-pct positive">▲ +0.72%</span></div>
+          <div class="ticker-item" data-sym="USO"><span class="ti-sym">CRUDE OIL</span><span class="ti-price">$71.40</span><span class="ti-pct negative">▼ -0.85%</span></div>
+          <div class="ticker-item" data-sym="SOL"><span class="ti-sym">SOL/USD</span><span class="ti-price">$148.60</span><span class="ti-pct positive">▲ +6.10%</span></div>
+          <div class="ticker-item" data-sym="AMD"><span class="ti-sym">AMD</span><span class="ti-price">$162.80</span><span class="ti-pct positive">▲ +2.85%</span></div>
+        </div>
+        <div class="ticker-track" id="tickerTrackDuplicate" aria-hidden="true">
+          <!-- Cloned dynamically in JS for seamless infinite loop -->
+        </div>
+      </div>
+      <div class="ticker-band-hint">
+        <span class="ticker-hint-text">HOVER TO PAUSE</span>
+      </div>
+    </div>
+
+    <!-- 1. Unified Desktop Top Navigation Bar -->
+    <header class="desktop-navbar">
+      <div class="nav-left-group">
+        <!-- 3-Lines Hamburger Menu Button -->
+        <button class="hamburger-btn" id="btnHamburgerMenu" aria-label="Open 3-Lines Menu" title="Open 3-Lines Menu: Ask AI, Plans, Live Data, Theme, Portfolios">
+          <div class="burger-lines-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="burger-btn-text">Menu</span>
+        </button>
+
+        <div class="desktop-brand">
+          <div class="brand-glow-dot"></div>
+          <span class="brand-text">Market Reader</span>
+        </div>
+
+        <div class="portfolio-title-group" id="btnPortfolioDropdown" title="Switch or Create Portfolios">
+          <h1 class="portfolio-name" id="portfolioTitleHeading">Primary Portfolio</h1>
+          <span style="font-size:11px; color:var(--text-muted); margin-left:-2px;">▼</span>
+        </div>
+      </div>
+
+      <!-- Universal Ticker & Market Search Bar -->
+      <form class="desktop-search-bar" id="marketSearchBarForm" onsubmit="return false;" title="Search any company using its ticker symbol (e.g. NVDA, AAPL, TSLA, MSFT)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="navbarTickerSearchInput" class="navbar-ticker-input" placeholder="Search company by ticker symbol (e.g. NVDA, AAPL, TSLA, PLTR)..." autocomplete="off" spellcheck="false" />
+        <button type="submit" id="btnNavbarSearchSubmit" class="btn-navbar-search">Analyze</button>
+      </form>
+
+      <!-- Right Header Actions (Clean Desktop Navbar) -->
+      <div class="desktop-actions">
+        <button class="icon-btn-round eye-privacy-btn" id="btnEyePrivacy" title="Hide/Show Balance">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" id="eyeIcon">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+        <button class="icon-btn-round plus-add-btn" id="btnAddAssetPlus" title="Add New Stock to Portfolio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <!-- Header Auth State -->
+        <div class="auth-header-container" id="headerAuthContainer">
+          <div class="auth-btn-group" id="headerAuthLoggedOut">
+            <button id="btnDeskSignIn" class="desk-btn auth-nav-btn">Sign In</button>
+            <button id="btnDeskSignUp" class="desk-btn auth-nav-btn btn-neon-action">Create Account</button>
+          </div>
+          <button id="btnDeskUser" class="desk-btn auth-user-btn hidden" title="Manage Account & Settings">
+            <span id="deskAuthLabel">👤 Account</span>
+          </button>
+        </div>
+        <button id="btnRefreshData" class="desk-btn" title="Fetch Live Quotes Now">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 2. Main Desktop App Container -->
+    <main class="desktop-main-content">
+      
+      <!-- Top Card: Portfolio Hero & Interactive Wave Chart Stage -->
+      <section class="desktop-chart-card">
+        <div class="desktop-chart-header">
+          <div class="hero-balance-section">
+            <div class="balance-caption" id="heroBalanceCaption">Primary Portfolio Balance</div>
+            <div class="balance-amount-row">
+              <h2 class="hero-balance-text" id="heroBalanceText">$0.00</h2>
+              <div class="pct-badge-pill" id="nwBadge">
+                <span>▲</span>
+                <span id="nwBadgeVal">0.00%</span>
+              </div>
+            </div>
+            <div class="gain-stats-row" id="gainStatsRow">
+              <span id="gainDollarVal">+$0.00</span>
+              <span id="gainTfLabel">(1D)</span>
+            </div>
+          </div>
+
+          <div class="chart-controls-group">
+            <div class="chart-top-controls-row">
+              <!-- Chart Style Dropdown (18 Professional Chart Types) -->
+              <div class="chart-style-dropdown-wrap" id="chartStyleDropdownWrap">
+                <button class="chart-style-trigger-btn" id="btnChartStyleTrigger" type="button" aria-haspopup="true" aria-expanded="false" title="Change Chart Style">
+                  <span class="cs-icon" id="csActiveIcon">📈</span>
+                  <span class="cs-label" id="csActiveLabel">Line</span>
+                  <svg class="cs-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+
+                <div class="chart-style-menu" id="chartStyleMenu" role="menu">
+                  <div class="cs-menu-header">
+                    <span class="cs-menu-title">Chart Style</span>
+                    <span class="cs-menu-badge">18 Types</span>
+                  </div>
+
+                  <div class="cs-menu-scrollable">
+                    <!-- Group 1: Candlesticks & Bars -->
+                    <div class="cs-group-label">CANDLES & BARS</div>
+                    <button class="cs-menu-item" data-style="candles" role="menuitem">
+                      <span class="cs-item-icon">🕯️</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Candles</span>
+                        <span class="cs-item-desc">Japanese OHLC candlesticks</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="bars" role="menuitem">
+                      <span class="cs-item-icon">📊</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Bars</span>
+                        <span class="cs-item-desc">Classic OHLC tick bars</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="hollow_candles" role="menuitem">
+                      <span class="cs-item-icon">🕯️</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Hollow Candles</span>
+                        <span class="cs-item-desc">TradingView hollow & solid bars</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="volume_candles" role="menuitem">
+                      <span class="cs-item-icon">📶</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Volume Candles</span>
+                        <span class="cs-item-desc">Volume-weighted body widths</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="hlc_bars" role="menuitem">
+                      <span class="cs-item-icon">📉</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">HLC Bars</span>
+                        <span class="cs-item-desc">High, Low, Close without open</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="heikin_ashi" role="menuitem">
+                      <span class="cs-item-icon">🎋</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Heikin Ashi</span>
+                        <span class="cs-item-desc">Smoothed trend action candles</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+
+                    <!-- Group 2: Lines & Areas -->
+                    <div class="cs-group-label">LINES & AREAS</div>
+                    <button class="cs-menu-item active" data-style="line" role="menuitem">
+                      <span class="cs-item-icon">📈</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Line</span>
+                        <span class="cs-item-desc">Smooth continuous curve</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="line_markers" role="menuitem">
+                      <span class="cs-item-icon">🔘</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Line with Markers</span>
+                        <span class="cs-item-desc">Line with coordinate dots</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="step_line" role="menuitem">
+                      <span class="cs-item-icon">🪜</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Step Line</span>
+                        <span class="cs-item-desc">Staircase step progression</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="area" role="menuitem">
+                      <span class="cs-item-icon">⛰️</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Area</span>
+                        <span class="cs-item-desc">Gradient under-curve fill</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="hlc_area" role="menuitem">
+                      <span class="cs-item-icon">⛅</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">HLC Area</span>
+                        <span class="cs-item-desc">High-Low volatility cloud</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="baseline" role="menuitem">
+                      <span class="cs-item-icon">🎯</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Baseline</span>
+                        <span class="cs-item-desc">Reference line with +/- zones</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="columns" role="menuitem">
+                      <span class="cs-item-icon">🏛️</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Columns</span>
+                        <span class="cs-item-desc">Vertical histogram columns</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="high_low" role="menuitem">
+                      <span class="cs-item-icon">↕️</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">High-Low</span>
+                        <span class="cs-item-desc">Floating range pillars</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+
+                    <!-- Group 3: Trend & Price Action -->
+                    <div class="cs-group-label">TREND & PRICE ACTION</div>
+                    <button class="cs-menu-item" data-style="renko" role="menuitem">
+                      <span class="cs-item-icon">🧱</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Renko</span>
+                        <span class="cs-item-desc">Fixed price-step bricks</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="line_break" role="menuitem">
+                      <span class="cs-item-icon">🔲</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Line Break</span>
+                        <span class="cs-item-desc">Three-line price break blocks</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="kagi" role="menuitem">
+                      <span class="cs-item-icon">⛩️</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Kagi</span>
+                        <span class="cs-item-desc">Yin/Yang trend inflection</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                    <button class="cs-menu-item" data-style="point_and_figure" role="menuitem">
+                      <span class="cs-item-icon">❌</span>
+                      <div class="cs-item-info">
+                        <span class="cs-item-name">Point and Figure</span>
+                        <span class="cs-item-desc">Columns of X's and O's</span>
+                      </div>
+                      <span class="cs-check">✓</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mode Switcher (Line Chart | Pie Chart | Statistics) -->
+              <div class="chart-mode-segment">
+                <button class="cms-btn active" data-mode="line" id="btnModeLine">
+                  <span>📈 Chart</span>
+                </button>
+                <button class="cms-btn" data-mode="pie" id="btnModePie">
+                  <span>🥧 Pie</span>
+                </button>
+                <button class="cms-btn" data-mode="stats" id="btnModeStats">
+                  <span>📊 Stats</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Timeframe Selector Pills (1D, 5D, 1M, 6M, YTD, 1Y, 5Y, ALL) -->
+            <div class="timeframe-bar-pills" id="timeframePills" role="tablist" aria-label="Chart Timeframes">
+              <button class="tf-pill-btn active" data-tf="1D" role="tab" title="1 Day">1D</button>
+              <button class="tf-pill-btn" data-tf="5D" role="tab" title="5 Days">5D</button>
+              <button class="tf-pill-btn" data-tf="1M" role="tab" title="1 Month">1M</button>
+              <button class="tf-pill-btn" data-tf="6M" role="tab" title="6 Months">6M</button>
+              <button class="tf-pill-btn" data-tf="YTD" role="tab" title="Year to Date">YTD</button>
+              <button class="tf-pill-btn" data-tf="1Y" role="tab" title="1 Year">1Y</button>
+              <button class="tf-pill-btn" data-tf="5Y" role="tab" title="5 Years">5Y</button>
+              <button class="tf-pill-btn" data-tf="ALL" role="tab" title="All Time">ALL</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Interactive Chart Display Stage -->
+        <div class="chart-interactive-stage" id="chartStageLine">
+          <!-- Left Y-Axis Labels: dynamically computed from portfolio holdings -->
+          <div class="chart-y-axis-labels" id="chartYLabels">
+            <span>--</span>
+            <span>--</span>
+            <span>--</span>
+            <span>--</span>
+          </div>
+
+          <div class="chart-canvas-wrap">
+            <canvas id="heroWaveCanvas"></canvas>
+            <div class="chart-watermark-tag">
+              <svg width="14" height="14" viewBox="0 0 100 100" fill="currentColor"><path d="M50 10A40 40 0 1 0 90 50 40 40 0 0 0 50 10zm0 70A30 30 0 1 1 80 50 30 30 0 0 1 50 80z"/></svg>
+              <span>MarketReader</span>
+            </div>
+            <!-- Tooltip -->
+            <div class="pro-chart-tooltip hidden" id="proChartTooltip">$0.00</div>
+          </div>
+
+          <!-- Google Stock Bottom X-Axis Timeline Labels -->
+          <div class="chart-x-axis-labels" id="chartXLabels">
+            <span>9:30 AM</span>
+            <span>11:00 AM</span>
+            <span>1:00 PM</span>
+            <span>2:30 PM</span>
+            <span>4:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Pie Chart Allocation Donut View (Alternative View) -->
+        <div class="pie-view-container hidden" id="chartStagePie">
+          <div class="donut-canvas-box">
+            <canvas id="pieCanvas" width="180" height="180"></canvas>
+          </div>
+          <div class="pie-legend-grid" id="pieLegendGrid">
+            <!-- Dynamically populated from asset allocations -->
+          </div>
+        </div>
+
+        <!-- Portfolio Statistics Grid (Alternative View) -->
+        <div class="stats-view-container hidden" id="chartStageStats">
+          <div class="stat-metric-card">
+            <span class="stat-metric-label">24h Profit</span>
+            <strong class="stat-metric-value text-neon-green" id="stat24hProfit">+$0.00</strong>
+          </div>
+          <div class="stat-metric-card">
+            <span class="stat-metric-label">All-Time Return</span>
+            <strong class="stat-metric-value text-neon-green" id="statAllTimeReturn">0.00%</strong>
+          </div>
+          <div class="stat-metric-card">
+            <span class="stat-metric-label">Top Performer</span>
+            <strong class="stat-metric-value" id="statBestPerformer">ETH (+6.51%)</strong>
+          </div>
+          <div class="stat-metric-card">
+            <span class="stat-metric-label">Tracked Assets</span>
+            <strong class="stat-metric-value" id="statAssetCount">28,000+ Available</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Desktop 2-Column Split: Assets Table (65%) & Daily News (35%) -->
+      <div class="desktop-main-split">
+        
+        <!-- Left Column: Category Filter Chips & Assets Table -->
+        <section class="desktop-assets-panel">
+          <!-- Category Filter Chips -->
+          <div class="category-chips-scroll" id="categoryChips">
+            <button class="cat-chip active" data-cat="myportfolio" id="chipMyPortfolio">💼 My Portfolio</button>
+            <button class="cat-chip" data-cat="watchlist" id="chipWatchlist">⭐ Watchlist (<span id="chipWatchlistCount">0</span>)</button>
+            <button class="cat-chip" data-cat="sp500">🏛️ S&P 500 (503)</button>
+            <button class="cat-chip" data-cat="nyse">🏢 NYSE (2,100+)</button>
+            <button class="cat-chip" data-cat="nasdaq">💻 NASDAQ (3,400+)</button>
+            <button class="cat-chip" data-cat="etf">📊 ETFs (6,500+)</button>
+            <button class="cat-chip" data-cat="crypto">⚡ Crypto</button>
+            <button class="cat-chip" data-cat="global">🌍 Global ADRs</button>
+            <button class="cat-chip" data-cat="all">🔥 All 28,000+</button>
+          </div>
+
+          <!-- Assets Table Section -->
+          <div class="your-assets-section">
+            <div class="assets-section-header">
+              <div>
+                <h3 class="your-assets-title" id="assetsSectionTitle">💼 My Portfolio</h3>
+                <span class="catalog-count-pill" id="catalogCountPill">3 Positions Tracked</span>
+              </div>
+              <div class="assets-right-toggles">
+                <div class="dollar-pct-switch" id="dollarPctSwitch">
+                  <button class="dps-btn active" data-unit="dollar" id="btnUnitDollar">$</button>
+                  <button class="dps-btn" data-unit="pct" id="btnUnitPct">%</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column Subheaders -->
+            <div class="assets-table-columns">
+              <span>Asset / Company</span>
+              <span>Market Price</span>
+              <span class="col-holdings-sort" id="btnSortHoldings">
+                <span id="colSortLabel">Holdings</span>
+                <span>▼</span>
+              </span>
+            </div>
+
+            <!-- Dynamic Asset Rows List -->
+            <div class="assets-list-wrap" id="assetsListWrap"></div>
+
+            <!-- Load More Catalog Button -->
+            <button class="btn-load-more-catalog hidden" id="btnLoadMoreCatalog">
+              <span>⬇ Load Next 50 Stocks</span>
+            </button>
+
+            <!-- Quick Add Asset Action Button -->
+            <button class="btn-quick-add-row" id="btnQuickAddAssetRow" title="Add Any Stock or Crypto">
+              <span>⊕</span>
+              <span>Add Any S&P 500, NYSE, or Global Stock to Portfolio</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Right Column: Daily Market News Feed (Google Finance Live Feed) -->
+        <aside class="desktop-news-panel">
+          <section class="market-news-section" id="marketNewsSection">
+            <div class="news-section-header">
+              <div class="news-title-row">
+                <span class="news-live-pulse-dot"></span>
+                <h3 class="news-section-title">Top Stories & Market News</h3>
+              </div>
+              <button class="news-refresh-btn" id="btnRefreshNews" title="Refresh Live News">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+                <span>Live Updates</span>
+              </button>
+            </div>
+
+            <!-- News Category Filter Chips -->
+            <div class="news-chips-scroll" id="newsCategoryChips">
+              <button class="news-cat-chip active" data-newscat="general">🔥 Top Stories</button>
+              <button class="news-cat-chip" data-newscat="portfolio">💼 Portfolio & Watchlist</button>
+              <button class="news-cat-chip" data-newscat="crypto">⚡ Crypto</button>
+              <button class="news-cat-chip" data-newscat="forex">🌐 Macro & FX</button>
+              <button class="news-cat-chip" data-newscat="merger">🤝 M&A</button>
+            </div>
+
+            <!-- Live News Card Feed -->
+            <div class="news-feed-list" id="newsFeedList"></div>
+          </section>
+        </aside>
+
+      </div>
+    </main>
+
+    <!-- Hidden mobile dock items to maintain DOM bindings without rendering on desktop -->
+    <nav class="bottom-nav-dock desktop-hidden" style="display:none;">
+      <button class="dock-item active" data-nav="home" id="navHomeBtn"></button>
+      <button class="dock-item" data-nav="markets" id="navMarketsBtn"></button>
+      <button class="dock-item" data-nav="pie" id="navCenterPieBtn"></button>
+      <button class="dock-item" data-nav="search" id="navSearchBtn"></button>
+      <button class="dock-item" data-nav="ai" id="navAiBtn"></button>
+      <button class="dock-item" data-nav="account" id="navAccountBtn"></button>
+    </nav>
+  </div>
+
+    <!-- Modals & Sheets -->
+    <div class="modal-overlay hidden" id="modalOverlay"></div>
+
+    <!-- 3-Lines Left-Hand Side Drawer / Dropdown Menu -->
+    <div class="side-drawer-left hidden" id="portfolioMenuModal">
+      <div class="drawer-header">
+        <div class="drawer-brand-row">
+          <div class="brand-glow-dot"></div>
+          <div>
+            <h3 style="font-size:16px; font-weight:800; margin:0; line-height:1.2;">Market Reader</h3>
+            <span style="font-size:11px; color:var(--text-dim);">Menu & Portfolio Switcher</span>
+          </div>
+        </div>
+        <button class="sheet-close-btn" id="btnClosePortfolioMenu" title="Close Menu">&times;</button>
+      </div>
+
+      <div class="drawer-content-scroll">
+        <!-- 1. Features & Tools Requested in the 3 Lines Menu -->
+        <div class="drawer-section-label">Quick Tools & Features</div>
+        <div class="drawer-menu-list">
+          <!-- Ask AI -->
+          <button class="drawer-nav-item" id="btnDrawerAi" title="Ask AI Financial Analyst">
+            <div class="dni-icon-box" style="background:rgba(124, 58, 237, 0.15); color:#a78bfa;">✨</div>
+            <div class="dni-text-stack">
+              <div class="dni-title-row">
+                <span class="dni-title">Ask AI Analyst</span>
+                <span class="dni-badge-pill" style="background:rgba(124, 58, 237, 0.2); color:#c4b5fd;">LIVE AI</span>
+              </div>
+              <span class="dni-desc">Portfolio diagnostics, risk & stock outlook</span>
+            </div>
+          </button>
+
+          <!-- Plans / Pricing -->
+          <a href="/pricing" class="drawer-nav-item" id="btnDrawerPlans" title="View Membership Plans">
+            <div class="dni-icon-box" style="background:rgba(0, 208, 132, 0.15); color:var(--emerald-green-dark);">💎</div>
+            <div class="dni-text-stack">
+              <div class="dni-title-row">
+                <span class="dni-title">Membership Plans</span>
+                <span class="dni-badge-pill" style="background:rgba(0, 208, 132, 0.2); color:var(--emerald-green-dark);">PRO UNLOCKED</span>
+              </div>
+              <span class="dni-desc">Pro Trader plan & custom portfolios</span>
+            </div>
+          </a>
+
+          <!-- Price Alerts Manager -->
+          <button class="drawer-nav-item" id="btnDrawerAlerts" title="Manage Price Alerts">
+            <div class="dni-icon-box" style="background:rgba(239, 68, 68, 0.15); color:#ef4444;">🔔</div>
+            <div class="dni-text-stack">
+              <div class="dni-title-row">
+                <span class="dni-title">Price Alerts</span>
+                <span class="dni-badge-pill" id="drawerAlertsBadge" style="background:rgba(16, 185, 129, 0.15); color:#10b981;">UNLIMITED</span>
+              </div>
+              <span class="dni-desc">Custom price triggers & notifications</span>
+            </div>
+          </button>
+
+          <!-- Export Data -->
+          <button class="drawer-nav-item" id="btnDrawerExport" title="Export Watchlist & Portfolio CSV">
+            <div class="dni-icon-box" style="background:rgba(16, 185, 129, 0.15); color:#10b981;">📥</div>
+            <div class="dni-text-stack">
+              <div class="dni-title-row">
+                <span class="dni-title">Export Data</span>
+                <span class="dni-badge-pill" style="background:rgba(16, 185, 129, 0.2); color:#10b981;">CSV EXPORT</span>
+              </div>
+              <span class="dni-desc">Export current watchlist & portfolio into CSV</span>
+            </div>
+          </button>
+
+          <!-- Finnhub Live Status & Refresh -->
+          <div class="drawer-nav-item clickable" id="btnDrawerFinnhubSync" title="Check Finnhub Live Status and Refresh Quotes">
+            <div class="dni-icon-box" style="background:rgba(59, 130, 246, 0.15); color:#38bdf8;">
+              <span class="status-dot-pulse connected" id="drawerFinnhubDot" style="margin:0;"></span>
+            </div>
+            <div class="dni-text-stack">
+              <div class="dni-title-row">
+                <span class="dni-title">Finnhub Live Data</span>
+                <span class="dni-badge-pill" id="drawerFinnhubTag" style="background:rgba(0, 208, 132, 0.15); color:var(--emerald-green-dark);">CONNECTED</span>
+              </div>
+              <span class="dni-desc" id="drawerFinnhubDesc">Live Streaming · Tap to refresh quotes</span>
+            </div>
+          </div>
+
+          <!-- Dark / Light Mode Toggle -->
+          <div class="drawer-nav-item clickable" id="btnDrawerThemeToggle" title="Toggle Light / Dark Mode">
+            <div class="dni-icon-box" style="background:rgba(245, 158, 11, 0.15); color:#f59e0b;" id="drawerThemeIconBox">🌓</div>
+            <div class="dni-text-stack">
+              <div class="dni-title-row">
+                <span class="dni-title">Theme Display</span>
+                <span class="dni-badge-pill" id="drawerThemeTag">Dark Mode</span>
+              </div>
+              <span class="dni-desc" id="drawerThemeDesc">Tap to switch to Light / Dark mode</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="drawer-divider"></div>
+
+        <!-- 2. Custom Portfolios Switcher -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <div class="drawer-section-label" style="margin-bottom:0;">Your Custom Portfolios</div>
+          <button class="drawer-mini-btn" id="btnDrawerNewPortShortcut">+ New</button>
+        </div>
+
+        <div class="portfolio-picker-list" id="portfolioPickerList">
+          <!-- Dynamically populated from state.portfolios -->
+        </div>
+
+        <button class="btn-primary-neon" id="btnCreateNewPortfolio" style="width:100%; margin-top:8px; font-size:12.5px; padding:10px;">
+          + Create Custom Portfolio
+        </button>
+
+        <div class="drawer-divider"></div>
+
+        <!-- 3. Account / User Profile -->
+        <div class="drawer-user-card" id="drawerUserCard">
+          <div class="dni-icon-box" style="background:var(--card-subtle); color:var(--text-dim); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">👤</div>
+          <div style="flex:1; min-width:0; overflow:hidden;">
+            <div style="font-size:10.5px; color:var(--text-dim);">Account Status</div>
+            <div style="font-size:12px; font-weight:800; color:var(--text-main); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" id="drawerUserEmail">Guest (Free Plan)</div>
+          </div>
+          <div class="drawer-auth-btns" id="drawerAuthActions">
+            <button class="drawer-mini-btn" id="btnDrawerSignIn">Sign In</button>
+            <button class="drawer-mini-btn drawer-mini-btn-primary" id="btnDrawerSignUp">Register</button>
+            <button class="drawer-mini-btn drawer-mini-btn-primary hidden" id="btnDrawerUserMenu">Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create Custom Portfolio Modal -->
+    <div class="dark-form-modal hidden" id="createPortfolioModal">
+      <div class="sheet-top">
+        <h3>Create New Portfolio</h3>
+        <button class="sheet-close-btn" id="btnCloseCreatePortfolio">&times;</button>
+      </div>
+      <form id="createPortfolioForm">
+        <div class="form-group">
+          <label for="newPortNameInput">Portfolio Name</label>
+          <input type="text" id="newPortNameInput" class="dark-input" placeholder="e.g. Dividend Kings, Tech Moonshots..." required maxlength="40" />
+        </div>
+        <div class="form-group">
+          <label for="newPortDescInput">Strategy / Notes (Optional)</label>
+          <input type="text" id="newPortDescInput" class="dark-input" placeholder="e.g. Long-term hold, blue chip dividend payers" maxlength="100" />
+        </div>
+        <button type="submit" class="btn-primary-neon" id="btnSubmitCreatePortfolio">Create & Open Portfolio</button>
+      </form>
+    </div>
+
+    <!-- Universal Stock Search Modal (28,000+ Assets, S&P 500, NYSE, NASDAQ, Global) -->
+    <div class="dark-bottom-sheet hidden" id="searchSheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-top">
+        <div>
+          <h3>Search Global Markets</h3>
+          <span style="font-size:12px; color:var(--text-dim);">28,000+ US & Global Stocks, All 503 S&P 500, NYSE & NASDAQ via Finnhub</span>
+        </div>
+        <button class="sheet-close-btn" id="btnCloseSearch">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="assetSearchInput" placeholder="Type ANY ticker or company (e.g. MMM, AAPL, JPM, NVDA, TSLA, Toyota)..." />
+      </div>
+
+      <div class="trending-pills-row" id="trendingPills">
+        <button class="trend-pill" data-sym="ASML">ASML</button>
+        <button class="trend-pill" data-sym="NVO">NVO (Novo)</button>
+        <button class="trend-pill" data-sym="BUD">BUD (Anheuser)</button>
+        <button class="trend-pill" data-sym="RACE">RACE (Ferrari)</button>
+        <button class="trend-pill" data-sym="TM">TM (Toyota)</button>
+        <button class="trend-pill" data-sym="SONY">SONY</button>
+        <button class="trend-pill" data-sym="NVDA">NVDA</button>
+        <button class="trend-pill" data-sym="AAPL">AAPL</button>
+        <button class="trend-pill" data-sym="PLTR">PLTR</button>
+        <button class="trend-pill" data-sym="MSFT">MSFT</button>
+        <button class="trend-pill" data-sym="TSLA">TSLA</button>
+        <button class="trend-pill" data-sym="MSTR">MSTR</button>
+        <button class="trend-pill" data-sym="SMCI">SMCI</button>
+        <button class="trend-pill" data-sym="SHOP">SHOP</button>
+        <button class="trend-pill" data-sym="SPOT">SPOT</button>
+        <button class="trend-pill" data-sym="GME">GME</button>
+        <button class="trend-pill" data-sym="COIN">COIN</button>
+        <button class="trend-pill" data-sym="JPM">JPM (Chase)</button>
+        <button class="trend-pill" data-sym="SPY">SPY (S&P 500)</button>
+        <button class="trend-pill" data-sym="BTC">BTC</button>
+      </div>
+
+      <div class="search-results-box" id="searchResultsBox"></div>
+    </div>
+
+    <!-- Pro Stock Detail Modal (Full-Featured Pro Charting Workstation) -->
+    <div class="pro-stock-modal hidden" id="assetModal">
+      <!-- Modal Top Navigation & Stock Header -->
+      <div class="sheet-top" style="margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div class="asset-coin-avatar" id="sheetAssetIcon" style="width:42px; height:42px; font-size:16px;"></div>
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <h3 id="sheetAssetName" style="font-size:20px; font-weight:800; letter-spacing:-0.2px;">Ethereum</h3>
+              <span class="stock-market-tag" id="sheetMarketTag" style="font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:12px; background:var(--card-subtle); color:var(--text-muted); border:1px solid var(--border-light);">EQUITY</span>
+            </div>
+            <span id="sheetAssetPair" style="font-size:12.5px; color:var(--text-dim); font-weight:600;">ETH / USD</span>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <button class="btn-sheet-alert" id="sheetAlertBtn" title="Set Price Alert" style="background:var(--card-subtle); border:1px solid var(--border-medium); border-radius:10px; padding:6px 11px; font-size:14px; cursor:pointer; color:var(--text-main); display:inline-flex; align-items:center; gap:5px; font-weight:700;">🔔 Alert</button>
+          <button class="star-watchlist-btn" id="sheetStarBtn" title="Toggle Watchlist" style="font-size:22px; cursor:pointer;">☆</button>
+          <button class="sheet-close-btn" id="btnCloseSheet" title="Close Modal">&times;</button>
+        </div>
+      </div>
+
+      <!-- Real-time Price, Gain, and Session Return Row -->
+      <div class="modal-price-hero-row" style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:14px;">
+        <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:34px; font-weight:800; color:var(--text-main); letter-spacing:-0.5px;" id="sheetAssetPrice">$0.00</span>
+          <span class="pct-badge-pill" id="sheetAssetDelta">▲ +0.00%</span>
+          <span class="freshness-badge-pill" id="sheetFreshnessBadge" style="font-size:11px; font-weight:700; padding:3px 8px; border-radius:6px; cursor:pointer;" title="Data freshness status. Tap to upgrade.">🕒 Delayed 15 min</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color:var(--text-dim);">
+          <span>Period Change:</span>
+          <strong id="sheetAssetGainDollar" style="color:var(--text-main); font-weight:800;">+$0.00</strong>
+        </div>
+      </div>
+
+      <!-- Modal Section Navigation Tabs -->
+      <div class="modal-nav-tabs-bar" id="modalNavTabs">
+        <button type="button" class="modal-nav-tab active" data-tab="chart">📈 Historical Chart & Indicators</button>
+        <button type="button" class="modal-nav-tab" data-tab="fundamentals">🏢 Company Info & Metrics</button>
+        <button type="button" class="modal-nav-tab" data-tab="ratios">🧮 Calculated Ratios (6)</button>
+        <button type="button" class="modal-nav-tab" data-tab="assessment">📋 Performance Assessment</button>
+        <button type="button" class="modal-nav-tab" data-tab="news">📰 Company News</button>
+      </div>
+
+      <!-- TAB 1: Historical Stock Price Visualizer & Technical Indicators -->
+      <div class="modal-tab-content" id="tabContentChart">
+        <!-- Top Controls Bar: 18 Chart Styles Dropdown + 1D, 5D, 1M, 6M, YTD, 1Y, 5Y, ALL Timeframes -->
+        <div class="modal-chart-controls-bar">
+          <!-- Chart Style Dropdown (All 18 Styles) -->
+          <div class="chart-style-dropdown-wrap" id="modalChartStyleDropdownWrap">
+            <button class="chart-style-trigger-btn" id="btnModalChartStyleTrigger" type="button" aria-haspopup="true" aria-expanded="false" title="Change Stock Chart Style">
+              <span class="cs-icon" id="csModalActiveIcon">📈</span>
+              <span class="cs-label" id="csModalActiveLabel">Line</span>
+              <svg class="cs-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+
+            <div class="chart-style-menu" id="modalChartStyleMenu" role="menu">
+              <div class="cs-menu-header">
+                <span class="cs-menu-title">Stock Chart Style</span>
+                <span class="cs-menu-badge">18 Types</span>
+              </div>
+
+              <div class="cs-menu-scrollable">
+                <!-- Group 1: Candlesticks & Bars -->
+                <div class="cs-group-label">CANDLES & BARS</div>
+                <button class="cs-menu-item" data-mstyle="candles" role="menuitem">
+                  <span class="cs-item-icon">🕯️</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Candles</span>
+                    <span class="cs-item-desc">Japanese OHLC candlesticks</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="bars" role="menuitem">
+                  <span class="cs-item-icon">📊</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Bars</span>
+                    <span class="cs-item-desc">Classic OHLC tick bars</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="hollow_candles" role="menuitem">
+                  <span class="cs-item-icon">🕯️</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Hollow Candles</span>
+                    <span class="cs-item-desc">TradingView hollow & solid bars</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="volume_candles" role="menuitem">
+                  <span class="cs-item-icon">📶</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Volume Candles</span>
+                    <span class="cs-item-desc">Volume-weighted body widths</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="hlc_bars" role="menuitem">
+                  <span class="cs-item-icon">📉</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">HLC Bars</span>
+                    <span class="cs-item-desc">High, Low, Close without open</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="heikin_ashi" role="menuitem">
+                  <span class="cs-item-icon">🎋</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Heikin Ashi</span>
+                    <span class="cs-item-desc">Smoothed trend action candles</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+
+                <!-- Group 2: Lines & Areas -->
+                <div class="cs-group-label">LINES & AREAS</div>
+                <button class="cs-menu-item active" data-mstyle="line" role="menuitem">
+                  <span class="cs-item-icon">📈</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Line</span>
+                    <span class="cs-item-desc">Smooth continuous curve</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="line_markers" role="menuitem">
+                  <span class="cs-item-icon">🔘</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Line with Markers</span>
+                    <span class="cs-item-desc">Line with coordinate dots</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="step_line" role="menuitem">
+                  <span class="cs-item-icon">🪜</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Step Line</span>
+                    <span class="cs-item-desc">Staircase step progression</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="area" role="menuitem">
+                  <span class="cs-item-icon">⛰️</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Area</span>
+                    <span class="cs-item-desc">Gradient under-curve fill</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="hlc_area" role="menuitem">
+                  <span class="cs-item-icon">⛅</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">HLC Area</span>
+                    <span class="cs-item-desc">High-Low volatility cloud</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="baseline" role="menuitem">
+                  <span class="cs-item-icon">🎯</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Baseline</span>
+                    <span class="cs-item-desc">Reference line with +/- zones</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="columns" role="menuitem">
+                  <span class="cs-item-icon">🏛️</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Columns</span>
+                    <span class="cs-item-desc">Vertical histogram columns</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="high_low" role="menuitem">
+                  <span class="cs-item-icon">↕️</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">High-Low</span>
+                    <span class="cs-item-desc">Floating range pillars</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+
+                <!-- Group 3: Trend & Price Action -->
+                <div class="cs-group-label">TREND & PRICE ACTION</div>
+                <button class="cs-menu-item" data-mstyle="renko" role="menuitem">
+                  <span class="cs-item-icon">🧱</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Renko</span>
+                    <span class="cs-item-desc">Fixed price-step bricks</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="line_break" role="menuitem">
+                  <span class="cs-item-icon">🔲</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Line Break</span>
+                    <span class="cs-item-desc">Three-line price break blocks</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="kagi" role="menuitem">
+                  <span class="cs-item-icon">⛩️</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Kagi</span>
+                    <span class="cs-item-desc">Yin/Yang trend inflection</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+                <button class="cs-menu-item" data-mstyle="point_and_figure" role="menuitem">
+                  <span class="cs-item-icon">❌</span>
+                  <div class="cs-item-info">
+                    <span class="cs-item-name">Point and Figure</span>
+                    <span class="cs-item-desc">Columns of X's and O's</span>
+                  </div>
+                  <span class="cs-check">✓</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeframe Selector Pills (1D, 5D, 1M, 6M, YTD, 1Y, 5Y, ALL) -->
+          <div class="timeframe-bar-pills modal-tf-bar" id="modalTimeframePills" role="tablist">
+            <button class="tf-pill-btn active" data-mtf="1D" role="tab" title="1 Day">1D</button>
+            <button class="tf-pill-btn" data-mtf="5D" role="tab" title="5 Days">5D</button>
+            <button class="tf-pill-btn" data-mtf="1M" role="tab" title="1 Month">1M</button>
+            <button class="tf-pill-btn" data-mtf="6M" role="tab" title="6 Months">6M</button>
+            <button class="tf-pill-btn" data-mtf="YTD" role="tab" title="Year to Date">YTD</button>
+            <button class="tf-pill-btn" data-mtf="1Y" role="tab" title="1 Year">1Y</button>
+            <button class="tf-pill-btn" data-mtf="5Y" role="tab" title="5 Years History">5Y</button>
+            <button class="tf-pill-btn" data-mtf="ALL" role="tab" title="All Time History">ALL</button>
+          </div>
+
+          <!-- Technical Indicators Bar (Full Institutional Indicators Unlocked) -->
+          <div class="modal-indicators-bar" id="modalIndicatorsBar" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:8px;">
+            <span style="font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; margin-right:4px;">Indicators:</span>
+            <button class="indicator-chip-btn" data-indicator="sma" title="Simple Moving Average (20)">SMA 20</button>
+            <button class="indicator-chip-btn" data-indicator="ema" title="Exponential Moving Average (50)">EMA 50</button>
+            <button class="indicator-chip-btn" data-indicator="rsi" title="Relative Strength Index (14)">RSI 14</button>
+            <button class="indicator-chip-btn" data-indicator="macd" title="MACD Oscillator (12, 26, 9)">MACD</button>
+            <button class="indicator-chip-btn" data-indicator="bollinger" title="Bollinger Bands (20, 2)">BOLL</button>
+            <button class="indicator-chip-btn" data-indicator="vwap" title="Volume-Weighted Average Price">VWAP</button>
+            <span id="indicatorCountBadge" style="font-size:11px; color:var(--emerald-green-dark); margin-left:auto; font-weight:600;">0 Active (Unlimited)</span>
+          </div>
+        </div>
+
+        <!-- Pro Interactive Canvas Stage (with Real Y-Axis, Baseline & Crosshairs) -->
+        <div class="modal-chart-stage-wrap" id="modalChartStage">
+          <!-- Left Y-Axis Price Labels -->
+          <div class="chart-y-axis-labels modal-y-labels" id="modalChartYLabels">
+            <span>--</span>
+            <span>--</span>
+            <span>--</span>
+            <span>--</span>
+          </div>
+
+          <div class="chart-canvas-wrap modal-canvas-wrap">
+            <canvas id="modalStockCanvas"></canvas>
+            <div class="chart-watermark-tag">
+              <svg width="14" height="14" viewBox="0 0 100 100" fill="currentColor"><path d="M50 10A40 40 0 1 0 90 50 40 40 0 0 0 50 10zm0 70A30 30 0 1 1 80 50 30 30 0 0 1 50 80z"/></svg>
+              <span id="modalWatermarkTicker">MARKET</span>
+            </div>
+            <!-- Tooltip -->
+            <div class="pro-chart-tooltip hidden" id="modalChartTooltip">$0.00</div>
+          </div>
+
+          <!-- Google Stock Bottom X-Axis Timeline Labels -->
+          <div class="chart-x-axis-labels modal-x-labels" id="modalChartXLabels">
+            <span>9:30 AM</span>
+            <span>11:00 AM</span>
+            <span>1:00 PM</span>
+            <span>2:30 PM</span>
+            <span>4:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Key Position & Technical Stats Grid -->
+        <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; margin-bottom:18px;">
+          <div class="stat-metric-card">
+            <span class="stat-metric-label">Holdings Value</span>
+            <strong class="stat-metric-value" id="sheetHoldingsVal">$0.00</strong>
+          </div>
+          <div class="stat-metric-card">
+            <span class="stat-metric-label">Shares Owned</span>
+            <strong class="stat-metric-value" id="sheetAmountVal">0 units</strong>
+          </div>
+          <div class="stat-metric-card">
+            <span class="stat-metric-label">Average Cost</span>
+            <strong class="stat-metric-value" id="sheetAvgCost">$0.00</strong>
+          </div>
+          <div class="stat-metric-card">
+            <span class="stat-metric-label">Profit / Loss</span>
+            <strong class="stat-metric-value text-neon-green" id="sheetProfitVal">+$0.00</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: Company Information & Selected Financial Metrics -->
+      <div class="modal-tab-content hidden" id="tabContentFundamentals">
+        <!-- Company Overview Card -->
+        <div class="company-profile-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <h4 id="fundCompanyName" style="margin:0; font-size:16px; font-weight:800; color:var(--text-main);">Company Overview</h4>
+              <span class="stock-market-tag" id="fundExchangeTag" style="font-size:10px; font-weight:700;">NASDAQ</span>
+            </div>
+            <div style="display:flex; gap:6px;">
+              <span class="ratio-category-tag" id="fundSectorTag">Technology</span>
+              <span class="ratio-status-badge" id="fundIndustryTag">Semiconductors</span>
+            </div>
+          </div>
+
+          <p class="company-desc-text" id="fundCompanyDesc">
+            Loading company profile narrative...
+          </p>
+
+          <div class="company-details-grid">
+            <div class="company-detail-item">
+              <span class="company-detail-label">Chief Executive Officer</span>
+              <span class="company-detail-val" id="fundCompanyCeo">--</span>
+            </div>
+            <div class="company-detail-item">
+              <span class="company-detail-label">Headquarters</span>
+              <span class="company-detail-val" id="fundCompanyHq">--</span>
+            </div>
+            <div class="company-detail-item">
+              <span class="company-detail-label">Full-Time Employees</span>
+              <span class="company-detail-val" id="fundCompanyEmployees">--</span>
+            </div>
+            <div class="company-detail-item">
+              <span class="company-detail-label">Founded</span>
+              <span class="company-detail-val" id="fundCompanyFounded">--</span>
+            </div>
+            <div class="company-detail-item">
+              <span class="company-detail-label">IPO Year</span>
+              <span class="company-detail-val" id="fundCompanyIpo">--</span>
+            </div>
+            <div class="company-detail-item">
+              <span class="company-detail-label">Official Website</span>
+              <span class="company-detail-val" id="fundCompanyWebsite"><a href="#" target="_blank" rel="noopener">--</a></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 52-Week Price Corridor Range Bar -->
+        <div class="range-bar-wrapper">
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:12px; font-weight:700;">
+            <span style="color:var(--text-dim);">52-Week Price Corridor Position</span>
+            <span style="color:var(--emerald-green-dark);" id="fund52wPositionText">Position: 85%</span>
+          </div>
+          <div class="range-bar-track">
+            <div class="range-bar-fill" id="fund52wFill" style="width: 85%;"></div>
+            <div class="range-bar-pin" id="fund52wPin" style="left: 85%;"></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:11.5px; font-weight:700; color:var(--text-main);">
+            <span id="fund52wLow">$0.00 (52W Low)</span>
+            <span id="fundCurrentPriceRef" style="color:var(--emerald-green-dark); font-weight:800;">$0.00 (Current)</span>
+            <span id="fund52wHigh">$0.00 (52W High)</span>
+          </div>
+        </div>
+
+        <!-- Selected Financial Metrics Grid -->
+        <div class="metrics-section-title">
+          <span>Selected Financial Metrics</span>
+          <span style="font-size:11px; font-weight:600; color:var(--text-dim);">Trailing 12-Month & Real-Time Fundamentals</span>
+        </div>
+        <div class="metrics-grid-container" id="fundMetricsGrid">
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Market Capitalization</span>
+            <span class="metric-stat-value" id="metricMarketCap">$0.00</span>
+            <span class="metric-stat-sub">Total equity valuation</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Enterprise Value</span>
+            <span class="metric-stat-value" id="metricEnterpriseVal">$0.00</span>
+            <span class="metric-stat-sub">Market cap + debt - cash</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Volume (Current / Avg)</span>
+            <span class="metric-stat-value" id="metricVolume">0.0M</span>
+            <span class="metric-stat-sub" id="metricAvgVolume">Avg: 0.0M shares</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Diluted EPS (TTM)</span>
+            <span class="metric-stat-value" id="metricEps">$0.00</span>
+            <span class="metric-stat-sub">Earnings per share</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Annual Revenue (TTM)</span>
+            <span class="metric-stat-value" id="metricRevenue">$0.00</span>
+            <span class="metric-stat-sub">Top-line gross sales</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Net Income (TTM)</span>
+            <span class="metric-stat-value text-neon-green" id="metricNetIncome">$0.00</span>
+            <span class="metric-stat-sub">Bottom-line GAAP profit</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Gross Margin</span>
+            <span class="metric-stat-value" id="metricGrossMargin">0.0%</span>
+            <span class="metric-stat-sub">Revenue minus COGS</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Net Profit Margin</span>
+            <span class="metric-stat-value" id="metricNetMargin">0.0%</span>
+            <span class="metric-stat-sub">Net profit / total revenue</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Beta (5Y Monthly)</span>
+            <span class="metric-stat-value" id="metricBeta">1.00</span>
+            <span class="metric-stat-sub">Volatility relative to market</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Dividend Yield</span>
+            <span class="metric-stat-value" id="metricDividendYield">0.00%</span>
+            <span class="metric-stat-sub">Annual dividend payout</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">Shares Outstanding</span>
+            <span class="metric-stat-value" id="metricShares">0.0B</span>
+            <span class="metric-stat-sub">Total common shares</span>
+          </div>
+          <div class="metric-stat-card">
+            <span class="metric-stat-label">50-Day Moving Average</span>
+            <span class="metric-stat-value" id="metricSma50">$0.00</span>
+            <span class="metric-stat-sub">Medium-term baseline</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: Calculated Financial Ratios & Performance Indicators -->
+      <div class="modal-tab-content hidden" id="tabContentRatios">
+        <div class="metrics-section-title">
+          <span>Calculated Financial Ratios & Performance Indicators</span>
+          <span style="font-size:11px; font-weight:600; color:var(--text-dim);">Explicit mathematical formulas with input substitutions</span>
+        </div>
+        <div class="ratios-grid-container" id="fundRatiosGrid">
+          <!-- Dynamically populated with calculated ratios -->
+        </div>
+      </div>
+
+      <!-- TAB 4: Brief, Data-Supported Performance Assessment -->
+      <div class="modal-tab-content hidden" id="tabContentAssessment">
+        <div class="assessment-card" id="fundAssessmentCard">
+          <div class="assessment-header-row">
+            <div>
+              <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--text-dim); margin-bottom:4px;">Executive Verdict</div>
+              <span class="verdict-pill-badge" id="assessVerdictBadge">🟢 OUTPERFORM / STRONG GROWTH</span>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--text-dim); margin-bottom:2px;">Performance Score</div>
+              <div class="score-badge-box">
+                <span class="score-badge-num" id="assessScoreNum">8.8</span>
+                <span class="score-badge-max">/ 10</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="assessment-summary-lead" id="assessSummaryText">
+            Loading data-supported performance assessment...
+          </div>
+
+          <div class="assessment-pillars-list">
+            <div class="assessment-pillar-box">
+              <div class="assessment-pillar-title">💎 Pillar 1: Valuation Multiples & Price Alignment</div>
+              <div class="assessment-pillar-desc" id="assessValuationText">--</div>
+            </div>
+            <div class="assessment-pillar-box">
+              <div class="assessment-pillar-title">📈 Pillar 2: Profitability, Capital Returns & Moat</div>
+              <div class="assessment-pillar-desc" id="assessProfitabilityText">--</div>
+            </div>
+            <div class="assessment-pillar-box">
+              <div class="assessment-pillar-title">⚡ Pillar 3: Technical Trend, Velocity & Momentum</div>
+              <div class="assessment-pillar-desc" id="assessMomentumText">--</div>
+            </div>
+          </div>
+
+          <div class="strengths-risks-split">
+            <div class="sr-card strengths">
+              <div class="sr-title" style="color:#00d084;"><span>✓</span> <span>Key Data Strengths</span></div>
+              <ul class="sr-list" id="assessStrengthsList">
+                <li>Loading strengths...</li>
+              </ul>
+            </div>
+            <div class="sr-card risks">
+              <div class="sr-title" style="color:#ef4444;"><span>⚠</span> <span>Key Risk Factors & Watch Items</span></div>
+              <ul class="sr-list" id="assessRisksList">
+                <li>Loading risks...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 5: Stock Related News Feed in Modal -->
+      <div class="modal-tab-content hidden" id="tabContentNews">
+        <div class="sheet-news-section" id="sheetNewsSection" style="margin-bottom:18px;">
+          <h4 style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">Recent Company News</h4>
+          <div class="sheet-news-list" id="sheetNewsList">
+            <!-- Dynamically populated company news -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Fast Action Trade Buttons -->
+      <div style="display:flex; gap:10px;">
+        <button class="btn-primary-neon" style="flex:1; background:#00d084;" id="btnBuyAsset">Buy Shares</button>
+        <button class="btn-primary-neon" style="flex:1; background:#1e293b;" id="btnSellAsset">Sell Shares</button>
+        <button class="btn-primary-neon" style="flex:1.4; background:#0f172a;" id="btnOpenSavePortfolio">💼 +Portfolio</button>
+      </div>
+    </div>
+
+    <!-- Supabase & Local Auth Modal -->
+    <div class="dark-form-modal hidden" id="authModal">
+      <div class="sheet-top">
+        <div>
+          <h3 id="authModalTitle" style="margin:0; font-size:17px; font-weight:800;">Sign In to Market Reader</h3>
+          <div id="authModalSubtitle" style="font-size:12px; color:var(--text-dim); margin-top:3px;">Access your custom portfolios and real-time watchlists.</div>
+        </div>
+        <button class="sheet-close-btn" id="btnCloseAuth">&times;</button>
+      </div>
+      <div class="chart-mode-segment" style="margin:14px 0 16px;">
+        <button type="button" class="cms-btn active" id="tabSignIn">Sign In</button>
+        <button type="button" class="cms-btn" id="tabSignUp">Create Account</button>
+      </div>
+      <form id="authForm" novalidate>
+        <div class="form-group hidden" id="authNameGroup">
+          <label for="authFullName">Your Name</label>
+          <input type="text" id="authFullName" class="dark-input" placeholder="e.g. Alex Morgan" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="authEmail">Email Address</label>
+          <input type="email" id="authEmail" class="dark-input" placeholder="you@domain.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="authPassword">Password</label>
+          <input type="password" id="authPassword" class="dark-input" placeholder="At least 6 characters" required minlength="6" autocomplete="current-password" />
+        </div>
+        <div class="auth-msg-box" id="authMsgBox" style="display:none; margin-bottom:12px; font-size:12px; padding:10px 12px; border-radius:10px; line-height:1.4;"></div>
+        <button type="submit" class="btn-primary-neon" id="btnAuthSubmit">Sign In</button>
+        <button type="button" class="btn-demo-auth" id="btnDemoAuth" style="margin-top:8px;">⚡ Instant Demo Account (1-Click)</button>
+        <div style="text-align:center; margin-top:14px; font-size:12px; color:var(--text-dim);">
+          <span id="authTogglePrompt">Don't have an account?</span>
+          <button type="button" id="btnToggleAuthMode" style="background:none; border:none; color:var(--emerald-green-dark); font-weight:700; cursor:pointer; font-family:inherit; padding:0 4px; text-decoration:underline;">Create one</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- User Account Sheet -->
+    <div class="dark-form-modal hidden" id="userMenuModal">
+      <div class="sheet-top">
+        <h3>Your Account</h3>
+        <button class="sheet-close-btn" id="btnCloseUserMenu">&times;</button>
+      </div>
+      <div style="background:var(--card-subtle); border:1px solid var(--border-light); border-radius:14px; padding:14px; margin-bottom:16px;">
+        <div style="font-size:11.5px; color:var(--text-dim); margin-bottom:3px;">Logged in as</div>
+        <div style="font-size:16px; font-weight:800; color:var(--text-main);" id="userMenuName">Alex Morgan</div>
+        <div style="font-size:12.5px; color:var(--text-muted); word-break:break-all; margin-top:1px;" id="userMenuEmail">user@example.com</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; padding-top:10px; border-top:1px solid var(--border-light);">
+          <span style="font-size:12px; color:var(--text-dim);">Membership Plan:</span>
+          <span class="pct-badge-pill" id="userMenuPlanBadge" style="background:rgba(0, 208, 132, 0.2); color:#00d084;">⚡ PRO TRADER</span>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="btn-primary-neon" style="text-align:center; text-decoration:none; background:rgba(0, 208, 132, 0.15); color:#00d084; border:1px solid rgba(0, 208, 132, 0.3); pointer-events:none;" id="btnMenuUpgrade">💎 Pro Trader Unlocked (All Features Active)</div>
+        <button class="btn-demo-auth" style="border-color:#ef4444; color:#ef4444;" id="btnSignOut">Sign Out</button>
+      </div>
+    </div>
+
+    <!-- Price Alerts Manager Modal -->
+    <div class="dark-form-modal hidden" id="alertsManagerModal" style="max-width:540px;">
+      <div class="sheet-top">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:22px;">🔔</span>
+          <h3 style="margin:0;">Price Alerts Manager</h3>
+        </div>
+        <button class="sheet-close-btn" id="btnCloseAlertsModal">&times;</button>
+      </div>
+      <div style="padding:14px 0 0 0;">
+        <!-- Quota summary bar -->
+        <div id="alertsQuotaBanner" style="display:flex; justify-content:space-between; align-items:center; background:var(--card-subtle); border:1px solid var(--border-medium); border-radius:10px; padding:10px 14px; margin-bottom:14px; font-size:13px;">
+          <div>
+            <strong>Active Alerts: </strong>
+            <span id="alertsQuotaText" style="font-weight:700;">0 Active (Unlimited)</span>
+            <span id="alertsPlanBadge" style="margin-left:6px; font-size:10px; font-weight:800; background:rgba(0, 208, 132, 0.15); color:var(--emerald-green-dark); padding:2px 6px; border-radius:6px;">PRO TRADER</span>
+          </div>
+          <button id="btnAlertsUpgrade" class="btn-primary-neon" style="display:none; padding:4px 10px; font-size:11px; text-decoration:none; background:#00d084;">Upgrade to Unlimited</button>
+        </div>
+
+        <!-- Add Alert Form -->
+        <form id="formCreateAlert" style="background:var(--card-subtle); border:1px solid var(--border-medium); border-radius:12px; padding:14px; margin-bottom:16px;">
+          <h4 style="margin:0 0 10px 0; font-size:14px; color:var(--text-main);">Create New Price Alert</h4>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+            <div>
+              <label style="font-size:11px; color:var(--text-dim); font-weight:700; display:block; margin-bottom:4px;">SYMBOL</label>
+              <input type="text" id="alertSymbolInput" placeholder="e.g. NVDA, AAPL" required style="width:100%; box-sizing:border-box; background:var(--bg-main); border:1px solid var(--border-medium); color:var(--text-main); padding:8px 10px; border-radius:8px; font-weight:700; text-transform:uppercase;">
+            </div>
+            <div>
+              <label style="font-size:11px; color:var(--text-dim); font-weight:700; display:block; margin-bottom:4px;">TARGET PRICE ($)</label>
+              <input type="number" id="alertTargetPriceInput" step="0.01" min="0.01" placeholder="0.00" required style="width:100%; box-sizing:border-box; background:var(--bg-main); border:1px solid var(--border-medium); color:var(--text-main); padding:8px 10px; border-radius:8px; font-weight:700;">
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+            <div>
+              <label style="font-size:11px; color:var(--text-dim); font-weight:700; display:block; margin-bottom:4px;">TRIGGER CONDITION</label>
+              <select id="alertConditionSelect" style="width:100%; box-sizing:border-box; background:var(--bg-main); border:1px solid var(--border-medium); color:var(--text-main); padding:8px 10px; border-radius:8px; font-size:12px; font-weight:600;">
+                <option value="above">Price Rises Above (≥)</option>
+                <option value="below">Price Drops Below (≤)</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:11px; color:var(--text-dim); font-weight:700; display:block; margin-bottom:4px;">DELIVERY CHANNEL</label>
+              <select id="alertChannelSelect" style="width:100%; box-sizing:border-box; background:var(--bg-main); border:1px solid var(--border-medium); color:var(--text-main); padding:8px 10px; border-radius:8px; font-size:12px; font-weight:600;">
+                <option value="push">In-App & Push (Free)</option>
+                <option value="email">Instant Email Alert (⚡ Pro)</option>
+                <option value="sms">SMS Text Alert (⚡ Pro)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" id="btnSubmitNewAlert" class="btn-primary-neon" style="width:100%; padding:9px; font-weight:800; border-radius:8px; background:#00d084;">
+            + Set Price Alert
+          </button>
+        </form>
+
+        <!-- Active Alerts List -->
+        <h4 style="margin:0 0 8px 0; font-size:13px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.5px;">Your Active Alerts</h4>
+        <div id="alertsListContainer" style="max-height:220px; overflow-y:auto; display:flex; flex-direction:column; gap:8px;">
+          <div style="text-align:center; padding:20px; color:var(--text-dim); font-size:13px;">No active alerts set yet.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pro Feature Gate & Plans Modal -->
+    <div class="dark-form-modal hidden" id="proGateModal" style="max-width:540px;">
+      <div class="sheet-top">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:20px;">💎</span>
+          <h3 id="proGateModalTitle" style="margin:0;">Unlock Pro Trader</h3>
+        </div>
+        <button class="sheet-close-btn" id="btnCloseProGate">&times;</button>
+      </div>
+
+      <div style="padding:10px 0;">
+        <!-- Billing Interval Switcher -->
+        <div class="billing-interval-selector">
+          <button type="button" class="billing-interval-btn active" id="btnProIntervalMonth">
+            <span>Monthly Billing</span>
+          </button>
+          <button type="button" class="billing-interval-btn" id="btnProIntervalYear">
+            <span>Annual Billing</span>
+            <span class="billing-save-tag">SAVE 20%</span>
+          </button>
+        </div>
+
+        <!-- Price Display Card -->
+        <div style="background:var(--emerald-light-bg); border:1px solid rgba(0, 208, 132, 0.35); border-radius:14px; padding:16px; margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
+            <div>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span class="plan-tag" style="position:static; font-size:10px;">POPULAR</span>
+                <strong style="font-size:16px; color:var(--text-main);">Pro Trader Pass</strong>
+              </div>
+              <div id="proGateBillingNote" style="font-size:11.5px; color:var(--text-dim); margin-top:4px;">
+                Includes 7-day free trial. Cancel anytime with zero fees.
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <div id="proGatePriceDisplay" style="font-size:22px; font-weight:800; color:var(--emerald-green-dark);">$20 <span style="font-size:13px; font-weight:500; color:var(--text-dim);">/ mo</span></div>
+              <div id="proGateAnnualSub" style="font-size:11px; color:var(--emerald-green-dark); display:none;">$192 billed yearly ($16/mo)</div>
+            </div>
+          </div>
+
+          <!-- Feature Matrix Snapshot -->
+          <table class="pro-tier-feature-matrix">
+            <thead>
+              <tr>
+                <th>Feature / Limit</th>
+                <th style="text-align:center;">Free Plan</th>
+                <th style="text-align:center;">Pro Trader</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Watchlist Symbols</td>
+                <td class="col-free">Max 15</td>
+                <td class="col-pro">Unlimited</td>
+              </tr>
+              <tr>
+                <td>Custom Portfolios</td>
+                <td class="col-free">1 Portfolio</td>
+                <td class="col-pro">Unlimited</td>
+              </tr>
+              <tr>
+                <td>Price Alert Triggers</td>
+                <td class="col-free">3 (Push only)</td>
+                <td class="col-pro">Unlimited (Push, Email, SMS)</td>
+              </tr>
+              <tr>
+                <td>Technical Indicators</td>
+                <td class="col-free">SMA, EMA, RSI (3 max)</td>
+                <td class="col-pro">Full Suite + MACD, BOLL, VWAP</td>
+              </tr>
+              <tr>
+                <td>Live Quotes Latency</td>
+                <td class="col-free">🕒 Delayed 15 min</td>
+                <td class="col-pro">⚡ Real-Time Finnhub</td>
+              </tr>
+              <tr>
+                <td>Chart Historical Data</td>
+                <td class="col-free">1 Year Max</td>
+                <td class="col-pro">5-Year & All-Time History</td>
+              </tr>
+              <tr>
+                <td>CSV / Excel Exports</td>
+                <td class="col-free">✕ Locked</td>
+                <td class="col-pro">✓ Instant Downloads</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" id="btnProGateStartTrial" class="btn-primary-neon" style="width:100%; padding:12px; font-weight:800; border-radius:10px; background:#00d084; color:#0c1015; font-size:14px; margin-bottom:8px; border:none; cursor:pointer;">
+            🚀 Start 7-Day Free Trial
+          </button>
+          <button type="button" id="btnProGateSubscribe" class="btn-primary-neon" style="width:100%; padding:10px; font-weight:700; border-radius:10px; background:transparent; border:1px solid rgba(0, 208, 132, 0.5); color:var(--emerald-green-dark); font-size:13px; cursor:pointer;">
+            Subscribe Now ($20/mo)
+          </button>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:0 4px;">
+          <a href="/pricing" style="font-size:12px; color:var(--emerald-green-dark); text-decoration:none; font-weight:600;">
+            Compare All 18 Features on Full Pricing Page →
+          </a>
+          <span style="font-size:11px; color:var(--text-dim);">🛡️ Powered by Stripe</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add / Save to Portfolio Modal -->
+    <div class="dark-form-modal hidden" id="portfolioAddModal">
+      <div class="sheet-top">
+        <h3 id="portfolioAddTitle">Add to Portfolio</h3>
+        <button class="sheet-close-btn" id="btnClosePortfolioAdd">&times;</button>
+      </div>
+      <form id="portfolioAddForm">
+        <div class="form-group">
+          <label for="portTargetSelect">Select Portfolio</label>
+          <select id="portTargetSelect" class="dark-input" style="cursor:pointer;">
+            <!-- Dynamically populated -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Stock / Asset</label>
+          <input type="text" id="portAssetSymbol" class="dark-input" readonly />
+        </div>
+        <div class="form-group">
+          <label for="portAssetShares">Number of Shares / Units</label>
+          <input type="number" step="any" id="portAssetShares" class="dark-input" placeholder="e.g. 10" required />
+        </div>
+        <div class="form-group">
+          <label for="portAssetPrice">Average Buy Price ($)</label>
+          <input type="number" step="any" id="portAssetPrice" class="dark-input" placeholder="e.g. 150.00" required />
+        </div>
+        <div style="background:var(--emerald-light-bg); border:1px solid rgba(0,208,132,0.3); border-radius:10px; padding:12px; margin-bottom:14px;">
+          <div style="font-size:11.5px; color:var(--text-dim);">Estimated Total Value:</div>
+          <div style="font-size:17px; font-weight:800; color:var(--emerald-green-dark);" id="portCalcValue">$0.00</div>
+        </div>
+        <button type="submit" class="btn-primary-neon" id="btnSubmitPortfolioItem">+ Add Stock to Portfolio</button>
+      </form>
+    </div>
+
+    <!-- Ask AI Financial Analyst Bottom Sheet Modal -->
+    <div class="dark-bottom-sheet hidden" id="aiAssistantModal">
+      <div class="sheet-handle"></div>
+      <div class="sheet-top">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="ai-avatar-badge">✨</div>
+          <div>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <h3 style="font-size:17px; font-weight:800; margin:0;">MarketReader AI</h3>
+              <span class="ai-live-tag">LIVE</span>
+            </div>
+            <span style="font-size:11.5px; color:var(--text-dim);">Financial analyst & portfolio strategist</span>
+          </div>
+        </div>
+        <button class="sheet-close-btn" id="btnCloseAiModal">&times;</button>
+      </div>
+
+      <!-- Quick AI Prompts Row -->
+      <div class="ai-quick-prompts-row" id="aiQuickPrompts">
+        <button class="ai-prompt-chip" data-prompt="Diagnose my portfolio risk and asset concentration">📊 Portfolio Diagnostics</button>
+        <button class="ai-prompt-chip" data-prompt="What are today's major market catalysts and Fed expectations?">🏛️ Market Catalysts</button>
+        <button class="ai-prompt-chip" data-prompt="Which stocks in my watchlist have the strongest upside momentum?">🚀 Top Watchlist Movers</button>
+        <button class="ai-prompt-chip" data-prompt="Explain current tech sector earnings and AI valuation trends">💡 Tech & AI Trends</button>
+      </div>
+
+      <!-- Chat Thread -->
+      <div class="ai-chat-thread" id="aiChatThread">
+        <div class="ai-msg-bubble assistant">
+          <div class="ai-msg-avatar">✨</div>
+          <div class="ai-msg-text">
+            Hello! I am your <strong>MarketReader AI Analyst</strong>. I can diagnose your portfolio holdings, analyze risk concentration, summarize live market catalysts, or give an outlook on any stock.<br/><br/>
+            How can I help optimize your investment strategy today?
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Chat Input Box -->
+      <form class="ai-input-form" id="aiInputForm">
+        <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Ask anything about your portfolio, stocks, or macro news..." autocomplete="off" required />
+        <button type="submit" class="ai-send-btn" id="btnSendAi" title="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Toast Notice -->
+    <div class="toast-notice" id="toastNotice">
+      <span id="toastIcon">⭐</span>
+      <span id="toastMsg">Stock added to your watchlist</span>
+    </div>
+
+    <!-- Floating QA Debug Tier Switcher (Autonomously verify Free vs Pro) -->
+    <div class="qa-debug-fab" id="qaDebugFab" title="QA Debug: Switch Active Tier">
+      <span style="font-size:13px;">🛠️</span>
+      <span style="font-size:11.5px; font-weight:700; color:#94a3b8;">Tier:</span>
+      <span class="qa-badge-tier qa-free" id="qaActiveTierBadge">FREE</span>
+    </div>
+    <div class="qa-panel-dropdown hidden" id="qaPanelDropdown">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <strong style="font-size:13px; color:#fff;">🛠️ QA Tier Simulator</strong>
+        <button id="btnCloseQaPanel" style="background:none; border:none; color:#888; font-size:18px; cursor:pointer; line-height:1;">&times;</button>
+      </div>
+      <div style="font-size:11.5px; color:#8b99a8; line-height:1.4;">
+        Instant 1-click tier switching to test limits, paywalls, indicators, alerts, and live quote feeds.
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <button type="button" class="btn-primary-neon" id="btnQaSetFree" style="padding:7px; font-size:12px; font-weight:700; background:#1e293b; color:#fff; border:1px solid #475569; border-radius:8px; cursor:pointer;">
+          Set FREE
+        </button>
+        <button type="button" class="btn-primary-neon" id="btnQaSetPro" style="padding:7px; font-size:12px; font-weight:700; background:#00d084; color:#0c1015; border:none; border-radius:8px; cursor:pointer;">
+          Set PRO ⚡
+        </button>
+      </div>
+      <div id="qaLimitsSummary" style="font-size:11px; color:#94a3b8; background:rgba(0,0,0,0.3); padding:8px 10px; border-radius:8px; line-height:1.5;">
+        Loading active tier limits...
+      </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="catalog_data.js?v=20261022h"></script>
+  <script src="entitlements.js?v=20261022h"></script>
+  <script src="app.js?v=20261022h"></script>
+</body>
+</html>
