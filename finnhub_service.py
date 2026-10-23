@@ -1918,6 +1918,16 @@ COMPANY_PROFILES_DATABASE = {
     }
 }
 
+# Dynamically load all 43+ rich company profiles from api_data.json
+API_DATA_PATH = os.path.join(BASE_DIR, "api_data.json")
+if os.path.exists(API_DATA_PATH):
+    try:
+        with open(API_DATA_PATH, "r", encoding="utf-8") as _f:
+            _d = json.load(_f)
+            COMPANY_PROFILES_DATABASE.update(_d.get("COMPANY_PROFILES_DATABASE", {}))
+    except Exception:
+        pass
+
 def get_company_analysis(symbol):
     """
     Retrieves comprehensive company information, latest stock price, financial metrics,
