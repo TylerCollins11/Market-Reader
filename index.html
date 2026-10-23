@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261022_fully_unlocked_v6" />
+  <link rel="stylesheet" href="styles.css?v=20261022_universal_unlocked_v7" />
 </head>
 <body>
   <!-- Desktop Web Application Shell -->
@@ -81,10 +81,11 @@
       </div>
 
       <!-- Universal Ticker & Market Search Bar -->
-      <form class="desktop-search-bar" id="marketSearchBarForm" onsubmit="return false;" title="Search any company using its ticker symbol (e.g. NVDA, AAPL, TSLA, MSFT)">
+      <form class="desktop-search-bar" id="marketSearchBarForm" onsubmit="return false;" title="Search any company using its ticker symbol or company name (e.g. NVDA, Apple, Tesla, SPY)">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="navbarTickerSearchInput" class="navbar-ticker-input" placeholder="Search company by ticker symbol (e.g. NVDA, AAPL, TSLA, PLTR)..." autocomplete="off" spellcheck="false" />
-        <button type="submit" id="btnNavbarSearchSubmit" class="btn-navbar-search">Analyze</button>
+        <input type="text" id="navbarTickerSearchInput" class="navbar-ticker-input" placeholder="Search by ticker or name (e.g. NVDA, Apple, TSLA, SPY)..." autocomplete="off" spellcheck="false" />
+        <button type="submit" id="btnNavbarSearchSubmit" class="btn-navbar-search" title="Analyze Stock">Analyze</button>
+        <div class="navbar-search-dropdown hidden" id="navbarSearchDropdown"></div>
       </form>
 
       <!-- Right Header Actions (Clean Desktop Navbar) -->
@@ -1529,8 +1530,8 @@
     </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="catalog_data.js?v=20261022_fully_unlocked_v6"></script>
-  <script src="entitlements.js?v=20261022_fully_unlocked_v6"></script>
-  <script src="app.js?v=20261022_fully_unlocked_v6"></script>
+  <script src="catalog_data.js?v=20261022_universal_unlocked_v7"></script>
+  <script src="entitlements.js?v=20261022_universal_unlocked_v7"></script>
+  <script src="app.js?v=20261022_universal_unlocked_v7"></script>
 </body>
 </html>

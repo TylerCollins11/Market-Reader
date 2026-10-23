@@ -2432,6 +2432,7 @@ function renderCatalogContainer() {
         : `${pctOfPort}%`;
       rightColHtml = `
         <div style="display:flex; align-items:center; justify-content:flex-end; gap:6px;">
+          <button class="dps-btn btn-row-analyze" title="Deep Financial Analysis">Analyze</button>
           <div class="asset-holdings-col">
             <span class="ah-total">${displayVal}</span>
             <span class="ah-units">${holdingsAmt}</span>
@@ -2444,6 +2445,7 @@ function renderCatalogContainer() {
     } else {
       rightColHtml = `
         <div style="display:flex; align-items:center; justify-content:flex-end; gap:6px;">
+          <button class="dps-btn btn-row-analyze" title="Deep Financial Analysis">Analyze</button>
           <button class="dps-btn btn-row-star" style="padding:4px 8px; font-size:14px;" title="Save to Watchlist">
             ${isStarred ? '★' : '☆'}
           </button>
@@ -2475,6 +2477,14 @@ function renderCatalogContainer() {
       </div>
       ${rightColHtml}
     `;
+
+    const analyzeBtn = card.querySelector('.btn-row-analyze');
+    if (analyzeBtn) {
+      analyzeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openAssetModal(asset);
+      });
+    }
 
     const starBtn = card.querySelector('.btn-row-star');
     if (starBtn) {
@@ -20566,6 +20576,7 @@ function renderPortfolioPickerList() {
     card.addEventListener('click', (e) => {
       if (e.target.closest('.btn-del-portfolio')) return;
       switchPortfolio(port.id);
+      closePortfolioMenu();
     });
 
     const delBtn = card.querySelector('.btn-del-portfolio');
@@ -20620,20 +20631,17 @@ function updateDrawerControlsUI() {
   const btnDrawerSignUp = document.getElementById('btnDrawerSignUp');
   const btnDrawerUserMenu = document.getElementById('btnDrawerUserMenu');
 
-  if (state.currentUser) {
-    if (userEmail) userEmail.textContent = state.currentUser.email || 'Active Member';
-    if (btnDrawerSignIn) btnDrawerSignIn.classList.add('hidden');
-    if (btnDrawerSignUp) btnDrawerSignUp.classList.add('hidden');
-    if (btnDrawerUserMenu) btnDrawerUserMenu.classList.remove('hidden');
-  } else {
-    if (userEmail) userEmail.textContent = 'Guest (Free Plan)';
-    if (btnDrawerSignIn) btnDrawerSignIn.classList.remove('hidden');
-    if (btnDrawerSignUp) btnDrawerSignUp.classList.remove('hidden');
-    if (btnDrawerUserMenu) btnDrawerUserMenu.classList.add('hidden');
-  }
+  if (userEmail) userEmail.textContent = 'Pro Trader (⚡ Unlocked)';
+  if (btnDrawerSignIn) btnDrawerSignIn.classList.add('hidden');
+  if (btnDrawerSignUp) btnDrawerSignUp.classList.add('hidden');
+  if (btnDrawerUserMenu) btnDrawerUserMenu.classList.remove('hidden');
 }
 
 function openPortfolioMenu() {
+  const modal = document.getElementById('portfolioMenuModal');
+  const overlay = document.getElementById('modalOverlay');
+  if (modal) modal.classList.remove('hidden');
+  if (overlay) overlay.classList.remove('hidden');
   try {
     updateDrawerControlsUI();
   } catch (e) {
@@ -20644,10 +20652,15 @@ function openPortfolioMenu() {
   } catch (e) {
     console.error('[Menu] renderPortfolioPickerList error:', e);
   }
+}
+
+function togglePortfolioMenu() {
   const modal = document.getElementById('portfolioMenuModal');
-  const overlay = document.getElementById('modalOverlay');
-  if (modal) modal.classList.remove('hidden');
-  if (overlay) overlay.classList.remove('hidden');
+  if (modal && !modal.classList.contains('hidden')) {
+    closePortfolioMenu();
+  } else {
+    openPortfolioMenu();
+  }
 }
 
 function closePortfolioMenu() {
@@ -22352,7 +22365,7 @@ function formatTimeAgo(timestamp) {
 
 async function openAssetModalBySymbol(symbol, preferredTab = null) {
   if (!symbol) return;
-  const sym = symbol.toUpperCase().trim();
+  let sym = symbol.toUpperCase().trim();
   if (preferredTab) state.activeModalTab = preferredTab;
 
   // 1. Look in active portfolio, catalog assets, static catalog, or builtin catalog
@@ -22361,6 +22374,20 @@ async function openAssetModalBySymbol(symbol, preferredTab = null) {
               state.catalogAssets.find(a => a.symbol.toUpperCase() === sym) ||
               catalogSource.find(a => a.symbol.toUpperCase() === sym) ||
               (typeof BUILTIN_CATALOG !== 'undefined' ? BUILTIN_CATALOG.find(a => a.symbol.toUpperCase() === sym) : null);
+
+  // If not found by ticker, search by company name or alias
+  if (!asset) {
+    const rawLower = symbol.toLowerCase().trim();
+    asset = catalogSource.find(a => a.name.toLowerCase() === rawLower) ||
+            catalogSource.find(a => a.name.toLowerCase().startsWith(rawLower)) ||
+            catalogSource.find(a => a.name.toLowerCase().includes(rawLower)) ||
+            state.assets.find(a => a.name && a.name.toLowerCase().includes(rawLower)) ||
+            (typeof BUILTIN_CATALOG !== 'undefined' ? BUILTIN_CATALOG.find(a => a.name && a.name.toLowerCase().includes(rawLower)) : null);
+    if (asset) {
+      sym = asset.symbol.toUpperCase();
+    }
+  }
+
   if (asset) {
     openAssetModal(asset);
     return;
@@ -22413,8 +22440,13 @@ async function openAssetModalBySymbol(symbol, preferredTab = null) {
     return;
   }
 
-  // Not a real stock - reject lookup cleanly
-  showToast(`Symbol "${sym}" is not a recognized publicly traded stock. Only verified securities are supported.`, '⚠️');
+  // 4. Open universal search modal with query pre-filled
+  openSearchModal();
+  const searchInp = document.getElementById('assetSearchInput');
+  if (searchInp) {
+    searchInp.value = symbol;
+    executeUniversalSearch(symbol);
+  }
 }
 
 async function openCompanyAnalysisBySymbol(symbol, preferredTab = 'chart') {
@@ -22677,14 +22709,13 @@ function bindEventHandlers() {
   }
 
   // Universal Navbar Ticker Search Bar & Modal Trigger
-  const oldSearchBar = document.getElementById('marketSearchBar');
-  if (oldSearchBar) oldSearchBar.addEventListener('click', openSearchModal);
-
   const navbarSearchForm = document.getElementById('marketSearchBarForm');
   const navbarSearchInput = document.getElementById('navbarTickerSearchInput');
   const navbarSearchBtn = document.getElementById('btnNavbarSearchSubmit');
+  const searchDropdown = document.getElementById('navbarSearchDropdown');
 
   const executeNavbarSearch = () => {
+    if (searchDropdown) searchDropdown.classList.add('hidden');
     const val = (navbarSearchInput ? navbarSearchInput.value : '').trim();
     if (!val) {
       openSearchModal();
@@ -22692,6 +22723,102 @@ function bindEventHandlers() {
     }
     openCompanyAnalysisBySymbol(val);
   };
+
+  function renderNavbarDropdown(queryText = '') {
+    if (!searchDropdown) return;
+    const q = (queryText || '').trim().toLowerCase();
+    const catalogSource = (typeof STATIC_CATALOG_DATA !== 'undefined' && Array.isArray(STATIC_CATALOG_DATA) && STATIC_CATALOG_DATA.length > 0)
+      ? STATIC_CATALOG_DATA
+      : BUILTIN_CATALOG;
+
+    let matches = [];
+    if (!q) {
+      const popular = ['NVDA', 'AAPL', 'TSLA', 'MSFT', 'AMZN', 'PLTR', 'SPY', 'BTC', 'ETH', 'BUD', 'RACE', 'NVO'];
+      matches = popular.map(sym => catalogSource.find(a => a.symbol.toUpperCase() === sym)).filter(Boolean);
+    } else {
+      matches = catalogSource.filter(a =>
+        a.symbol.toLowerCase() === q ||
+        a.symbol.toLowerCase().startsWith(q) ||
+        a.name.toLowerCase().startsWith(q) ||
+        a.name.toLowerCase().includes(q) ||
+        a.symbol.toLowerCase().includes(q)
+      ).slice(0, 8);
+    }
+
+    if (matches.length === 0) {
+      searchDropdown.innerHTML = `
+        <div style="padding:14px; text-align:center; color:var(--text-dim); font-size:12.5px;">
+          No direct match. Press <kbd style="background:var(--card-subtle); padding:2px 6px; border-radius:4px; border:1px solid var(--border-medium); font-weight:700;">Enter</kbd> or click <strong>Analyze</strong> to search 28,000+ global assets.
+        </div>
+      `;
+      searchDropdown.classList.remove('hidden');
+      return;
+    }
+
+    searchDropdown.innerHTML = `
+      <div class="nsd-header">
+        <span>${q ? 'Matching Securities' : '🔥 Popular Assets'}</span>
+        <span style="font-size:10px; opacity:0.8;">Click to Analyze</span>
+      </div>
+    ` + matches.map(m => {
+      const price = Number(m.price || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const chg = Number(m.change24h !== undefined ? m.change24h : (m.pct || 0));
+      const isPos = chg >= 0;
+      return `
+        <div class="nsd-item" data-sym="${m.symbol}">
+          <div class="nsd-left">
+            <div class="nsd-avatar" style="background:${m.iconBg || '#17202c'}; color:${m.iconColor || '#38bdf8'};">
+              ${m.iconChar || m.symbol[0]}
+            </div>
+            <div class="nsd-meta">
+              <div class="nsd-title-row">
+                <span class="nsd-sym">${m.symbol}</span>
+                <span class="nsd-name">${escapeHtml(m.name)}</span>
+              </div>
+              <div style="font-size:10.5px; color:var(--text-dim);">${m.exchange || 'Market'} · ${m.category || 'Equity'}</div>
+            </div>
+          </div>
+          <div class="nsd-right">
+            <div>
+              <div class="nsd-price">$${price}</div>
+              <div class="nsd-chg ${isPos ? 'text-neon-green' : 'text-red'}">${isPos ? '▲ +' : '▼ '}${Math.abs(chg)}%</div>
+            </div>
+            <button class="nsd-btn-analyze" type="button" title="Analyze ${m.symbol}">Analyze</button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    searchDropdown.querySelectorAll('.nsd-item').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const sym = el.dataset.sym;
+        if (navbarSearchInput) navbarSearchInput.value = sym;
+        searchDropdown.classList.add('hidden');
+        openCompanyAnalysisBySymbol(sym);
+      });
+    });
+
+    searchDropdown.classList.remove('hidden');
+  }
+
+  if (navbarSearchInput) {
+    navbarSearchInput.addEventListener('focus', () => {
+      renderNavbarDropdown(navbarSearchInput.value);
+    });
+    navbarSearchInput.addEventListener('input', (e) => {
+      renderNavbarDropdown(e.target.value);
+    });
+    navbarSearchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (searchDropdown) searchDropdown.classList.add('hidden');
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        executeNavbarSearch();
+      }
+    });
+  }
 
   if (navbarSearchForm) {
     navbarSearchForm.addEventListener('submit', (e) => {
@@ -22706,6 +22833,12 @@ function bindEventHandlers() {
       executeNavbarSearch();
     });
   }
+
+  document.addEventListener('click', (e) => {
+    if (searchDropdown && !e.target.closest('#marketSearchBarForm')) {
+      searchDropdown.classList.add('hidden');
+    }
+  });
 
   // Modal Section Tabs (Chart, Fundamentals, Ratios, Assessment, News)
   document.querySelectorAll('#modalNavTabs .modal-nav-tab').forEach(btn => {
@@ -22898,9 +23031,9 @@ function bindEventHandlers() {
 
   // Portfolio Drawer & Custom Portfolio Switcher
   const btnDrop = document.getElementById('btnPortfolioDropdown');
-  if (btnDrop) btnDrop.addEventListener('click', openPortfolioMenu);
+  if (btnDrop) btnDrop.addEventListener('click', togglePortfolioMenu);
   const btnHam = document.getElementById('btnHamburgerMenu');
-  if (btnHam) btnHam.addEventListener('click', (e) => { e.stopPropagation(); openPortfolioMenu(); });
+  if (btnHam) btnHam.addEventListener('click', (e) => { e.stopPropagation(); togglePortfolioMenu(); });
   const btnClosePort = document.getElementById('btnClosePortfolioMenu');
   if (btnClosePort) btnClosePort.addEventListener('click', closePortfolioMenu);
 
@@ -22915,10 +23048,9 @@ function bindEventHandlers() {
 
   const btnDrawerPlans = document.getElementById('btnDrawerPlans');
   if (btnDrawerPlans) {
-    btnDrawerPlans.addEventListener('click', (e) => {
-      e.preventDefault();
+    btnDrawerPlans.addEventListener('click', () => {
       closePortfolioMenu();
-      showToast('Pro Trader Active - All features are 100% unlocked!', '⚡');
+      window.location.href = '/pricing';
     });
   }
 

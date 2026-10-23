@@ -795,7 +795,17 @@ module.exports = async (req, res) => {
 
   // 14. /api/company-analysis
   if (pathname === 'company-analysis') {
-    const sym = (query.symbol || 'NVDA').toUpperCase().trim();
+    let sym = (query.symbol || 'NVDA').toUpperCase().trim();
+    const catalog = getCatalog();
+    if (!catalog.find(s => s.symbol.toUpperCase() === sym)) {
+      const qLower = (query.symbol || '').toLowerCase().trim();
+      const match = catalog.find(s => s.name.toLowerCase() === qLower) ||
+                    catalog.find(s => s.name.toLowerCase().startsWith(qLower)) ||
+                    catalog.find(s => s.name.toLowerCase().includes(qLower));
+      if (match) {
+        sym = match.symbol.toUpperCase();
+      }
+    }
     const quote = await fetchLiveQuoteOrFallback(sym);
     if (!quote || !quote.price) {
       return res.status(404).json({ error: `Symbol '${sym}' not found. Only verified, exchange-listed securities are supported.` });

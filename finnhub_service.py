@@ -2051,6 +2051,14 @@ def get_company_analysis(symbol):
     if not sym:
         sym = "NVDA"
 
+    if sym not in COMPANY_PROFILES_DATABASE and sym not in CATALOG_MAP:
+        raw_lower = (symbol or "").lower().strip()
+        for cat_k, cat_v in CATALOG_MAP.items():
+            c_name = cat_v.get("name", "").lower()
+            if raw_lower == c_name or raw_lower in c_name or c_name.startswith(raw_lower):
+                sym = cat_k
+                break
+
     # 1. Latest Stock Quote & Price Action
     quote = get_quote(sym)
     if not quote or quote.get("error"):
