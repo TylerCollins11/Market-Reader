@@ -3807,9 +3807,6 @@ async function loadCompanyAnalysis(symbol) {
   }
 
   // If neither returned authentic data, do not display fake data
-  const fundDesc = document.getElementById('fundCompanyDesc');
-  if (fundDesc) fundDesc.textContent = `Verified Financial Filings Unavailable: No authentic SEC filings found for '${sym}'. Market Reader only displays verified corporate data.`;
-  const ratiosGrid = document.getElementById('fundRatiosGrid');
   if (ratiosGrid) ratiosGrid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 28px; color: var(--text-dim); font-size: 13px;">No verified financial ratios available for ${sym}.</div>`;
   const assessText = document.getElementById('assessSummaryText');
   if (assessText) assessText.textContent = `Performance assessment is only generated for verified, publicly traded securities with GAAP financial filings.`;
