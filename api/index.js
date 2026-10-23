@@ -908,8 +908,8 @@ module.exports = async (req, res) => {
     } else if (eps > 0) {
       peVal = Number((currentPrice / eps).toFixed(2));
       peFormatted = `${peVal.toFixed(2)}x`;
-      peStatus = peVal > 35 ? "Growth Premium" : (peVal > 18 ? "Reasonable Multiple" : "Undervalued / Low Multiple");
-      peInterp = `Trading at ${peVal.toFixed(1)}x earnings vs S&P 500 historical median of ~25.0x.`;
+      peStatus = peVal > 500 ? "Hyper-Growth / Transition Multiple" : (peVal > 35 ? "Growth Premium" : (peVal > 18 ? "Reasonable Multiple" : "Undervalued / Low Multiple"));
+      peInterp = peVal > 500 ? `Trading at ${peVal.toFixed(1)}x trailing GAAP earnings ($${eps.toFixed(2)} EPS) reflecting early transition to profitability.` : `Trading at ${peVal.toFixed(1)}x earnings vs S&P 500 historical median of ~25.0x.`;
       peCalcSteps = `$${currentPrice.toFixed(2)} / $${eps.toFixed(2)} = ${peVal.toFixed(2)}x`;
     } else {
       peVal = null;

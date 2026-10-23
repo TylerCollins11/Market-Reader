@@ -2209,8 +2209,8 @@ def get_company_analysis(symbol):
     elif eps > 0:
         pe_val = round(current_price / eps, 2)
         pe_formatted = f"{pe_val:.2f}x"
-        pe_status = "Growth Premium" if pe_val > 35 else ("Reasonable Multiple" if pe_val > 18 else "Undervalued / Low Multiple")
-        pe_interp = f"Trading at {pe_val:.1f}x earnings vs S&P 500 historical median of ~25.0x."
+        pe_status = "Hyper-Growth / Transition Multiple" if pe_val > 500 else ("Growth Premium" if pe_val > 35 else ("Reasonable Multiple" if pe_val > 18 else "Undervalued / Low Multiple"))
+        pe_interp = f"Trading at {pe_val:.1f}x trailing GAAP earnings (${eps:.2f} EPS) reflecting early transition to profitability." if pe_val > 500 else f"Trading at {pe_val:.1f}x earnings vs S&P 500 historical median of ~25.0x."
         pe_calc_steps = f"${current_price:.2f} / ${eps:.2f} = {pe_val:.2f}x"
     else:
         pe_val = None
