@@ -907,17 +907,34 @@ module.exports = async (req, res) => {
     const equity = Number(base.shareholdersEquity || 40.0);
 
     // Calculated Ratios
-    const peVal = Number((currentPrice / Math.max(0.01, eps)).toFixed(2));
-    const peStatus = peVal > 35 ? "Growth Premium" : (peVal > 18 ? "Reasonable Multiple" : "Undervalued / Low Multiple");
-    const peInterp = `Trading at ${peVal.toFixed(1)}x earnings vs S&P 500 historical median of ~25.0x.`;
+    let peVal, peStatus, peInterp, peCalcSteps, peFormatted;
+    if (eps > 0) {
+      peVal = Number((currentPrice / eps).toFixed(2));
+      peFormatted = `${peVal.toFixed(2)}x`;
+      peStatus = peVal > 35 ? "Growth Premium" : (peVal > 18 ? "Reasonable Multiple" : "Undervalued / Low Multiple");
+      peInterp = `Trading at ${peVal.toFixed(1)}x earnings vs S&P 500 historical median of ~25.0x.`;
+      peCalcSteps = `$${currentPrice.toFixed(2)} / $${eps.toFixed(2)} = ${peVal.toFixed(2)}x`;
+    } else {
+      peVal = null;
+      peFormatted = "N/A (Net Loss)";
+      peStatus = "Negative Earnings / Unprofitable";
+      peInterp = `Company reported trailing net loss ($${eps.toFixed(2)} EPS); standard P/E multiple is not applicable.`;
+      peCalcSteps = `$${currentPrice.toFixed(2)} / $${eps.toFixed(2)} (Negative EPS - Not Applicable)`;
+    }
 
     const psVal = Number((marketCapB / Math.max(0.01, revTTM)).toFixed(2));
     const psStatus = psVal > 12 ? "Premium Multiple" : (psVal > 3 ? "Healthy Valuation" : "Attractive / Deep Value");
     const psInterp = `Every $1.00 of annual revenue is valued at $${psVal.toFixed(2)} in market equity.`;
 
-    const roeVal = Number(((netInc / Math.max(0.01, equity)) * 100).toFixed(2));
-    const roeStatus = roeVal > 25 ? "Exceptional Capital Moat" : (roeVal > 15 ? "Solid Efficiency" : "Moderate Return");
-    const roeInterp = `Generates $${(roeVal / 100).toFixed(2)} of bottom-line net profit per $1.00 of book equity.`;
+    const roeVal = Number(((netInc / Math.max(0.01, Math.abs(equity))) * 100).toFixed(2));
+    let roeStatus, roeInterp;
+    if (roeVal < 0 || netInc < 0) {
+      roeStatus = "Negative ROE (Net Loss)";
+      roeInterp = `Operates at negative return on equity (${roeVal.toFixed(2)}%) reflecting trailing net losses.`;
+    } else {
+      roeStatus = roeVal > 25 ? "Exceptional Capital Moat" : (roeVal > 15 ? "Solid Efficiency" : "Moderate Return");
+      roeInterp = `Generates $${(roeVal / 100).toFixed(2)} of bottom-line net profit per $1.00 of book equity.`;
+    }
 
     const priceRange52 = Math.max(0.01, high52w - low52w);
     const pos52w = Number((((currentPrice - low52w) / priceRange52) * 100).toFixed(1));
@@ -943,8 +960,10 @@ module.exports = async (req, res) => {
     // Dynamic Data-Supported Performance Assessment Generation
     let score = 8.5;
     if (roeVal > 25 && (base.netMargin || 15) > 20) score += 0.5;
+    else if (roeVal < 0 || netInc < 0) score -= 0.6;
     if (smaDivergence > 0) score += 0.3;
-    if (peVal > 65) score -= 0.6;
+    if (peVal !== null && peVal > 65) score -= 0.6;
+    else if (peVal === null) score -= 0.5;
     score = Math.min(9.8, Math.max(4.0, score));
     score = Math.round(score * 10) / 10;
 
@@ -962,29 +981,48 @@ module.exports = async (req, res) => {
 
     const summaryText = `${base.name} (${sym}) demonstrates robust operating performance, trading at $${currentPrice.toFixed(2)} with a market capitalization of ${marketCapFormatted}. The company generates $${revTTM.toFixed(1)}B in annual revenue and $${netInc.toFixed(1)}B in net income, reflecting a net profit margin of ${(base.netMargin || 15.0).toFixed(1)}%. With a Return on Equity (ROE) of ${roeVal.toFixed(2)}% and a 50-day moving average divergence of ${smaDivergence >= 0 ? '+' : ''}${smaDivergence.toFixed(2)}%, the business demonstrates capital efficiency and operational stability.`;
 
-    const valuationAnalysis = peVal > 25.0
-      ? `At ${peVal.toFixed(2)}x P/E and ${psVal.toFixed(2)}x P/S, valuation trades at a premium to the broader market benchmark (S&P 500 median 25.0x). Investors are willing to pay an elevated multiple due to consistent earnings execution and competitive positioning in ${base.industry}.`
-      : `At ${peVal.toFixed(2)}x P/E and ${psVal.toFixed(2)}x P/S, valuation trades at an attractive discount relative to the broader market benchmark (S&P 500 median 25.0x), offering defensive value and a favorable margin of safety in ${base.industry}.`;
+    let valuationAnalysis;
+    if (peVal === null) {
+      valuationAnalysis = `At ${psVal.toFixed(2)}x P/S, valuation is evaluated primarily on top-line revenue scale as standard P/E is not applicable due to trailing net losses ($${eps.toFixed(2)} EPS). Investors assess valuation based on cash runway, gross margins (${(base.grossMargin || 35.0).toFixed(1)}%), and execution toward bottom-line profitability in ${base.industry}.`;
+    } else if (peVal > 25.0) {
+      valuationAnalysis = `At ${peVal.toFixed(2)}x P/E and ${psVal.toFixed(2)}x P/S, valuation trades at a premium to the broader market benchmark (S&P 500 median 25.0x). Investors are willing to pay an elevated multiple due to consistent earnings execution and competitive positioning in ${base.industry}.`;
+    } else {
+      valuationAnalysis = `At ${peVal.toFixed(2)}x P/E and ${psVal.toFixed(2)}x P/S, valuation trades at an attractive discount relative to the broader market benchmark (S&P 500 median 25.0x), offering defensive value and a favorable margin of safety in ${base.industry}.`;
+    }
 
-    const profitabilityAnalysis = roeVal > 15.0
-      ? `Profitability metrics reflect high capital efficiency with a Return on Equity (ROE) of ${roeVal.toFixed(2)}%, gross margin of ${(base.grossMargin || 45.0).toFixed(1)}%, and net margin of ${(base.netMargin || 15.0).toFixed(1)}% producing substantial free cash flow.`
-      : `Capital efficiency reflects a steady Return on Equity (ROE) of ${roeVal.toFixed(2)}%, with gross margin of ${(base.grossMargin || 35.0).toFixed(1)}% and net profit margin of ${(base.netMargin || 10.0).toFixed(1)}%, typical for asset-heavy operations in ${base.industry}.`;
+    let profitabilityAnalysis;
+    if (roeVal < 0 || netInc < 0) {
+      profitabilityAnalysis = `Trailing profitability reflects operating headwinds with negative Return on Equity (ROE: ${roeVal.toFixed(2)}%) and net margin of ${(base.netMargin || -5.0).toFixed(1)}%, while generating $${revTTM.toFixed(1)}B in top-line revenue with gross margin of ${(base.grossMargin || 35.0).toFixed(1)}%.`;
+    } else if (roeVal > 15.0) {
+      profitabilityAnalysis = `Profitability metrics reflect high capital efficiency with a Return on Equity (ROE) of ${roeVal.toFixed(2)}%, gross margin of ${(base.grossMargin || 45.0).toFixed(1)}%, and net margin of ${(base.netMargin || 15.0).toFixed(1)}% producing substantial free cash flow.`;
+    } else {
+      profitabilityAnalysis = `Capital efficiency reflects a steady Return on Equity (ROE) of ${roeVal.toFixed(2)}%, with gross margin of ${(base.grossMargin || 35.0).toFixed(1)}% and net profit margin of ${(base.netMargin || 10.0).toFixed(1)}%, typical for asset-heavy operations in ${base.industry}.`;
+    }
 
     const momentumAnalysis = smaDivergence >= 0
       ? `Price action is technically constructive with Relative Strength Index (RSI 14) positioned at ${rsiVal.toFixed(1)}. The stock trades in the ${pos52w.toFixed(1)} percentile of its 52-week corridor ($${low52w.toFixed(2)} - $${high52w.toFixed(2)}), confirming sustained institutional dip-buying holding ${smaDivergence >= 0 ? '+' : ''}${smaDivergence.toFixed(2)}% above the 50-day SMA ($${sma50.toFixed(2)}).`
       : `Price action is currently in mean-reversion mode with Relative Strength Index (RSI 14) positioned at ${rsiVal.toFixed(1)}. The stock trades in the ${pos52w.toFixed(1)} percentile of its 52-week corridor ($${low52w.toFixed(2)} - $${high52w.toFixed(2)}), consolidating ${Math.abs(smaDivergence).toFixed(2)}% below the 50-day SMA ($${sma50.toFixed(2)}).`;
 
-    const keyStrengths = [
-      `Capital efficiency: ${roeVal.toFixed(2)}% Return on Equity (benchmark >15%).`,
-      `Profit conversion: ${(base.netMargin || 15.0).toFixed(1)}% net margin producing $${netInc.toFixed(1)}B in annual profit.`,
-      `Trend momentum: Holding ${smaDivergence >= 0 ? '+' : ''}${smaDivergence.toFixed(2)}% relative to its 50-day moving average.`,
-      `Competitive moat: Established positioning in ${base.industry} with enterprise adoption.`
-    ];
+    const keyStrengths = [];
+    if (roeVal > 12.0) {
+      keyStrengths.push(`Capital efficiency: ${roeVal.toFixed(2)}% Return on Equity (benchmark >15%).`);
+    } else {
+      keyStrengths.push(`Revenue scale: $${revTTM.toFixed(1)}B in annual top-line revenue demonstrating enterprise market presence.`);
+    }
+    if (netInc > 0) {
+      keyStrengths.push(`Profit conversion: ${(base.netMargin || 15.0).toFixed(1)}% net margin producing $${netInc.toFixed(1)}B in annual profit.`);
+    } else {
+      keyStrengths.push(`Operational scale: Backed by $${equity.toFixed(1)}B in balance sheet equity supporting ongoing business activities.`);
+    }
+    keyStrengths.push(`Trend momentum: Holding ${smaDivergence >= 0 ? '+' : ''}${smaDivergence.toFixed(2)}% relative to its 50-day moving average.`);
+    keyStrengths.push(`Competitive moat: Established positioning in ${base.industry} with enterprise adoption.`);
 
     const keyRisks = [
-      peVal > 30.0
-        ? `Valuation Sensitivity: At ${peVal.toFixed(2)}x P/E, any unexpected deceleration in quarterly earnings could trigger multiple contraction.`
-        : `Margin Headwinds: Cyclical shifts in input costs and competitive pricing could pressure operating margins in ${base.industry}.`,
+      peVal === null
+        ? `Profitability Execution: Trailing diluted EPS of $${eps.toFixed(2)} highlights earnings turnaround risk, making valuation dependent on achieving margin expansion.`
+        : (peVal > 30.0
+          ? `Valuation Sensitivity: At ${peVal.toFixed(2)}x P/E, any unexpected deceleration in quarterly earnings could trigger multiple contraction.`
+          : `Margin Headwinds: Cyclical shifts in input costs and competitive pricing could pressure operating margins in ${base.industry}.`),
       (base.beta || 1.0) > 1.15
         ? `Macro Volatility: Beta of ${(base.beta || 1.0).toFixed(2)} implies ${Math.round(Math.abs((base.beta || 1.0) - 1.0) * 100)}% greater volatility than the broader S&P 500 index.`
         : ((base.beta || 1.0) < 0.85
@@ -1003,10 +1041,10 @@ module.exports = async (req, res) => {
         name: "Price-to-Earnings Ratio (P/E)",
         category: "Valuation Multiple",
         formula: "Current Stock Price / Diluted EPS (TTM)",
-        calculationSteps: `$${currentPrice.toFixed(2)} / $${eps.toFixed(2)} = ${peVal.toFixed(2)}x`,
+        calculationSteps: peCalcSteps,
         value: peVal,
-        unit: "x",
-        formatted: `${peVal.toFixed(2)}x`,
+        unit: peVal !== null ? "x" : "",
+        formatted: peFormatted,
         benchmark: "25.0x (S&P 500 median)",
         status: peStatus,
         interpretation: peInterp
@@ -1119,9 +1157,10 @@ module.exports = async (req, res) => {
       selectedMetrics: {
         marketCap: marketCapB,
         marketCapFormatted: marketCapFormatted,
-        enterpriseValue: `$${(marketCapB * 1.02).toFixed(1)} Billion`,
+        enterpriseValue: base.enterpriseValue || `$${(marketCapB * 1.02).toFixed(1)} Billion`,
         dilutedEps: eps,
         peRatio: peVal,
+        peRatioFormatted: peFormatted,
         psRatio: psVal,
         roe: roeVal,
         revenueTTM: revTTM,

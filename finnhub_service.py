@@ -52,6 +52,18 @@ if os.path.exists(US_INDEX_FILE):
     except Exception as e:
         print(f"[FinnhubService] Warning loading US symbols file: {e}")
 
+# Static Catalog Data (523+ Assets)
+CATALOG_FILE = os.path.join(BASE_DIR, "static_catalog_data.json")
+CATALOG_MAP = {}
+if os.path.exists(CATALOG_FILE):
+    try:
+        with open(CATALOG_FILE, "r", encoding="utf-8") as f:
+            _catalog = json.load(f)
+            CATALOG_MAP = {x["symbol"].upper(): x for x in _catalog if "symbol" in x}
+    except Exception as e:
+        print(f"[FinnhubService] Warning loading catalog file: {e}")
+
+
 
 # Comprehensive Builtin Catalog of Popular Market Assets
 STOCK_DIRECTORY = [
@@ -600,7 +612,70 @@ def get_quote(symbol, fetch_live=True):
             CACHE[cache_key] = (result, now)
             return result
 
-    # Deterministic price for any of the 28,000+ indexed equities or global stocks
+    # Check verified 523+ catalog dataset
+    cat_item = CATALOG_MAP.get(sym)
+    if cat_item:
+        p = float(cat_item.get("price") or 100.0)
+        pct = float(cat_item.get("change24h") or 0.0)
+        chg = round(p * (pct / 100.0), 2)
+        prof = COMPANY_PROFILES_DATABASE.get(sym, {})
+        lo52 = float(prof.get("low52wRatio", 0.8) * p)
+        hi52 = float(prof.get("high52wRatio", 1.2) * p)
+        result = {
+            "symbol": sym,
+            "name": cat_item.get("name") or prof.get("name") or f"{sym} Corporation",
+            "price": p,
+            "change": chg,
+            "pct": pct,
+            "high": round(p * 1.015, 2),
+            "low": round(p * 0.985, 2),
+            "open": round(p * 0.995, 2),
+            "prev_close": round(p - chg, 2),
+            "fiftyTwoWeekLow": round(lo52, 2),
+            "fiftyTwoWeekHigh": round(hi52, 2),
+            "volume": 25000000,
+            "exchange": cat_item.get("exchange") or prof.get("exchange") or "NYSE",
+            "is_live": False,
+            "source": "Catalog Calibrated Feed",
+            "timestamp": int(now)
+        }
+        CACHE[cache_key] = (result, now)
+        return result
+
+    # Check rich COMPANY_PROFILES_DATABASE
+    prof = COMPANY_PROFILES_DATABASE.get(sym)
+    if prof and prof.get("marketCap") and prof.get("sharesOutstanding"):
+        try:
+            m = re.findall(r"[\d\.]+", str(prof["sharesOutstanding"]))
+            val = float(m[0]) if m else 1.0
+            sh_b = val / 1000.0 if "million" in str(prof["sharesOutstanding"]).lower() else val
+            p = round(float(prof["marketCap"]) / max(0.001, sh_b), 2)
+        except Exception:
+            p = 100.0
+        pct = 1.0
+        chg = round(p * 0.01, 2)
+        result = {
+            "symbol": sym,
+            "name": prof.get("name") or f"{sym} Corporation",
+            "price": p,
+            "change": chg,
+            "pct": pct,
+            "high": round(p * 1.015, 2),
+            "low": round(p * 0.985, 2),
+            "open": round(p * 0.995, 2),
+            "prev_close": round(p - chg, 2),
+            "fiftyTwoWeekLow": round(p * float(prof.get("low52wRatio", 0.8)), 2),
+            "fiftyTwoWeekHigh": round(p * float(prof.get("high52wRatio", 1.2)), 2),
+            "volume": 25000000,
+            "exchange": prof.get("exchange") or "NYSE",
+            "is_live": False,
+            "source": "Profile Calibrated Feed",
+            "timestamp": int(now)
+        }
+        CACHE[cache_key] = (result, now)
+        return result
+
+    # Deterministic price for any other equities
     h = int(hashlib.md5(sym.encode("utf-8")).hexdigest()[:8], 16)
     base_price = round(18.50 + ((h % 46150) / 100.0), 2)
     chg_pct = round(((h % 730) - 320) / 100.0, 2)
@@ -2045,9 +2120,18 @@ def get_company_analysis(symbol):
 
     # 4. Explicit Mathematical Calculation of Financial Ratios & Performance Indicators
     # Ratio 1: Price-to-Earnings Ratio (P/E)
-    pe_val = round(current_price / max(0.01, eps), 2)
-    pe_status = "Growth Premium" if pe_val > 35 else ("Reasonable Multiple" if pe_val > 18 else "Undervalued / Low Multiple")
-    pe_interp = f"Trading at {pe_val:.1f}x earnings vs S&P 500 historical median of ~25.0x."
+    if eps > 0:
+        pe_val = round(current_price / eps, 2)
+        pe_formatted = f"{pe_val:.2f}x"
+        pe_status = "Growth Premium" if pe_val > 35 else ("Reasonable Multiple" if pe_val > 18 else "Undervalued / Low Multiple")
+        pe_interp = f"Trading at {pe_val:.1f}x earnings vs S&P 500 historical median of ~25.0x."
+        pe_calc_steps = f"${current_price:.2f} / ${eps:.2f} = {pe_val:.2f}x"
+    else:
+        pe_val = None
+        pe_formatted = "N/A (Net Loss)"
+        pe_status = "Negative Earnings / Unprofitable"
+        pe_interp = f"Company reported trailing net loss (${eps:.2f} EPS); standard P/E multiple is not applicable."
+        pe_calc_steps = f"${current_price:.2f} / ${eps:.2f} (Negative EPS - Not Applicable)"
 
     # Ratio 2: Price-to-Sales Ratio (P/S)
     ps_val = round(market_cap_b / max(0.01, rev_ttm), 2)
@@ -2055,9 +2139,13 @@ def get_company_analysis(symbol):
     ps_interp = f"Every $1.00 of annual revenue is valued at ${ps_val:.2f} in market equity."
 
     # Ratio 3: Return on Equity (ROE)
-    roe_val = round((net_inc / max(0.01, equity)) * 100.0, 2)
-    roe_status = "Exceptional Capital Moat" if roe_val > 25 else ("Solid Efficiency" if roe_val > 15 else "Moderate Return")
-    roe_interp = f"Generates ${roe_val / 100.0:.2f} of bottom-line net profit per $1.00 of book equity."
+    roe_val = round((net_inc / max(0.01, abs(equity))) * 100.0, 2)
+    if roe_val < 0 or net_inc < 0:
+        roe_status = "Negative ROE (Net Loss)"
+        roe_interp = f"Operates at negative return on equity ({roe_val:.2f}%) reflecting trailing net losses."
+    else:
+        roe_status = "Exceptional Capital Moat" if roe_val > 25 else ("Solid Efficiency" if roe_val > 15 else "Moderate Return")
+        roe_interp = f"Generates ${roe_val / 100.0:.2f} of bottom-line net profit per $1.00 of book equity."
 
     # Performance Indicator 1: Relative Strength Index (RSI 14)
     if rsi_val >= 70:
@@ -2087,10 +2175,10 @@ def get_company_analysis(symbol):
             "name": "Price-to-Earnings Ratio (P/E)",
             "category": "Valuation Multiple",
             "formula": "Current Stock Price / Diluted EPS (TTM)",
-            "calculationSteps": f"${current_price:.2f} / ${eps:.2f} = {pe_val:.2f}x",
+            "calculationSteps": pe_calc_steps,
             "value": pe_val,
-            "unit": "x",
-            "formatted": f"{pe_val:.2f}x",
+            "unit": "x" if pe_val is not None else "",
+            "formatted": pe_formatted,
             "benchmark": "25.0x (S&P 500 median)",
             "status": pe_status,
             "interpretation": pe_interp,
@@ -2190,10 +2278,14 @@ def get_company_analysis(symbol):
     score = 8.5
     if roe_val > 25 and profile.get("netMargin", 15) > 20:
         score += 0.5
+    elif roe_val < 0 or net_inc < 0:
+        score -= 0.6
     if sma_divergence > 0:
         score += 0.3
-    if pe_val > 65:
+    if pe_val is not None and pe_val > 65:
         score -= 0.6
+    elif pe_val is None:
+        score -= 0.5
     score = round(min(9.8, max(4.0, score)), 1)
 
     if score >= 8.0:
@@ -2214,24 +2306,42 @@ def get_company_analysis(symbol):
         f"the business demonstrates capital efficiency and operational stability."
     )
 
-    valuation_analysis = (
-        f"At {pe_val:.2f}x P/E and {ps_val:.2f}x P/S, valuation trades at a {'premium' if pe_val > 25.0 else 'discount'} "
-        f"to the broader market benchmark (S&P 500 median 25.0x). Investors are willing to pay an elevated multiple "
-        f"due to consistent earnings execution and competitive positioning in {profile['industry']}."
-        if pe_val > 25.0 else
-        f"At {pe_val:.2f}x P/E and {ps_val:.2f}x P/S, valuation trades at an attractive discount relative to the broader "
-        f"market benchmark (S&P 500 median 25.0x), offering defensive value and a favorable margin of safety in {profile['industry']}."
-    )
+    if pe_val is None:
+        valuation_analysis = (
+            f"At {ps_val:.2f}x P/S, valuation is evaluated primarily on top-line revenue scale as standard P/E is not "
+            f"applicable due to trailing net losses (${eps:.2f} EPS). Investors assess valuation based on cash runway, "
+            f"gross margins ({profile.get('grossMargin', 35.0):.1f}%), and execution toward bottom-line profitability in {profile['industry']}."
+        )
+    elif pe_val > 25.0:
+        valuation_analysis = (
+            f"At {pe_val:.2f}x P/E and {ps_val:.2f}x P/S, valuation trades at a premium "
+            f"to the broader market benchmark (S&P 500 median 25.0x). Investors are willing to pay an elevated multiple "
+            f"due to consistent earnings execution and competitive positioning in {profile['industry']}."
+        )
+    else:
+        valuation_analysis = (
+            f"At {pe_val:.2f}x P/E and {ps_val:.2f}x P/S, valuation trades at an attractive discount relative to the broader "
+            f"market benchmark (S&P 500 median 25.0x), offering defensive value and a favorable margin of safety in {profile['industry']}."
+        )
 
-    profitability_analysis = (
-        f"Profitability metrics reflect high capital efficiency with a Return on Equity (ROE) of {roe_val:.2f}%, "
-        f"gross margin of {profile.get('grossMargin', 45.0):.1f}%, and net margin of {profile.get('netMargin', 15.0):.1f}% "
-        f"producing substantial free cash flow."
-        if roe_val > 15.0 else
-        f"Capital efficiency reflects a steady Return on Equity (ROE) of {roe_val:.2f}%, with gross margin of "
-        f"{profile.get('grossMargin', 35.0):.1f}% and net profit margin of {profile.get('netMargin', 10.0):.1f}%, "
-        f"typical for asset-heavy operations in {profile['industry']}."
-    )
+    if roe_val < 0 or net_inc < 0:
+        profitability_analysis = (
+            f"Trailing profitability reflects operating headwinds with negative Return on Equity (ROE: {roe_val:.2f}%) "
+            f"and net profit margin of {profile.get('netMargin', -5.0):.1f}%, while generating ${rev_ttm:.1f}B in top-line revenue "
+            f"with gross margin of {profile.get('grossMargin', 35.0):.1f}%."
+        )
+    elif roe_val > 15.0:
+        profitability_analysis = (
+            f"Profitability metrics reflect high capital efficiency with a Return on Equity (ROE) of {roe_val:.2f}%, "
+            f"gross margin of {profile.get('grossMargin', 45.0):.1f}%, and net margin of {profile.get('netMargin', 15.0):.1f}% "
+            f"producing substantial free cash flow."
+        )
+    else:
+        profitability_analysis = (
+            f"Capital efficiency reflects a steady Return on Equity (ROE) of {roe_val:.2f}%, with gross margin of "
+            f"{profile.get('grossMargin', 35.0):.1f}% and net profit margin of {profile.get('netMargin', 10.0):.1f}%, "
+            f"typical for asset-heavy operations in {profile['industry']}."
+        )
 
     momentum_analysis = (
         f"Price action is technically constructive with Relative Strength Index (RSI 14) positioned at {rsi_val:.1f}. "
@@ -2243,18 +2353,27 @@ def get_company_analysis(symbol):
         f"consolidating {abs(sma_divergence):.2f}% below the 50-day SMA (${sma_50:.2f})."
     )
 
-    key_strengths = [
-        f"Capital efficiency: {roe_val:.2f}% Return on Equity (benchmark >15%).",
-        f"Profit conversion: {profile.get('netMargin', 15.0):.1f}% net margin producing ${net_inc:.1f}B in annual profit.",
-        f"Trend momentum: Holding {sma_divergence:+.2f}% relative to its 50-day moving average.",
-        f"Competitive moat: Established positioning in {profile['industry']} with enterprise adoption."
-    ]
+    key_strengths = []
+    if roe_val > 12.0:
+        key_strengths.append(f"Capital efficiency: {roe_val:.2f}% Return on Equity (benchmark >15%).")
+    else:
+        key_strengths.append(f"Revenue scale: ${rev_ttm:.1f}B in annual top-line revenue demonstrating enterprise market presence.")
 
-    risk_1 = (
-        f"Valuation Sensitivity: At {pe_val:.2f}x P/E, any unexpected deceleration in quarterly earnings could trigger multiple contraction."
-        if pe_val > 30.0 else
-        f"Margin Headwinds: Cyclical shifts in input costs and competitive pricing could pressure operating margins in {profile['industry']}."
-    )
+    if net_inc > 0:
+        key_strengths.append(f"Profit conversion: {profile.get('netMargin', 15.0):.1f}% net margin producing ${net_inc:.1f}B in annual profit.")
+    else:
+        key_strengths.append(f"Operational scale: Backed by ${equity:.1f}B in balance sheet equity supporting ongoing business activities.")
+
+    key_strengths.append(f"Trend momentum: Holding {sma_divergence:+.2f}% relative to its 50-day moving average.")
+    key_strengths.append(f"Competitive moat: Established positioning in {profile['industry']} with enterprise adoption.")
+
+    if pe_val is None:
+        risk_1 = f"Profitability Execution: Trailing diluted EPS of ${eps:.2f} highlights earnings turnaround risk, making valuation dependent on achieving margin expansion."
+    elif pe_val > 30.0:
+        risk_1 = f"Valuation Sensitivity: At {pe_val:.2f}x P/E, any unexpected deceleration in quarterly earnings could trigger multiple contraction."
+    else:
+        risk_1 = f"Margin Headwinds: Cyclical shifts in input costs and competitive pricing could pressure operating margins in {profile['industry']}."
+
     risk_2 = (
         f"Macro Volatility: Beta of {profile.get('beta', 1.0):.2f} implies {int(abs(profile.get('beta', 1.0) - 1.0) * 100)}% greater volatility than the broader S&P 500 index."
         if profile.get('beta', 1.0) > 1.15 else
@@ -2312,6 +2431,7 @@ def get_company_analysis(symbol):
             "enterpriseValue": profile.get("enterpriseValue"),
             "dilutedEps": eps,
             "peRatio": pe_val,
+            "peRatioFormatted": pe_formatted,
             "psRatio": ps_val,
             "roe": roe_val,
             "revenueTTM": rev_ttm,

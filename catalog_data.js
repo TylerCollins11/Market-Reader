@@ -5,7 +5,7 @@ const STATIC_CATALOG_DATA = [
     "name": "Bitcoin USD",
     "pair": "BTC / USD",
     "category": "crypto",
-    "price": 81251.81,
+    "price": 81325.64,
     "change24h": -0.08,
     "iconBg": "#271b12",
     "iconColor": "#f7931a",
@@ -18,7 +18,7 @@ const STATIC_CATALOG_DATA = [
     "name": "Ethereum USD",
     "pair": "ETH / USD",
     "category": "crypto",
-    "price": 2388.67,
+    "price": 2392.53,
     "change24h": 0.1,
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
@@ -31,7 +31,7 @@ const STATIC_CATALOG_DATA = [
     "name": "Solana USD",
     "pair": "SOL / USD",
     "category": "crypto",
-    "price": 103.91,
+    "price": 104.02,
     "change24h": 0.36,
     "iconBg": "#231633",
     "iconColor": "#c084fc",
@@ -83,7 +83,7 @@ const STATIC_CATALOG_DATA = [
     "name": "BNB USD",
     "pair": "BNB / USD",
     "category": "crypto",
-    "price": 732.42,
+    "price": 734.27,
     "change24h": 0.27,
     "iconBg": "#2b2210",
     "iconColor": "#f59e0b",
@@ -96,7 +96,7 @@ const STATIC_CATALOG_DATA = [
     "name": "Avalanche USD",
     "pair": "AVAX / USD",
     "category": "crypto",
-    "price": 9.17,
+    "price": 9.18,
     "change24h": 0.55,
     "iconBg": "#2b1418",
     "iconColor": "#e84142",
@@ -109,7 +109,7 @@ const STATIC_CATALOG_DATA = [
     "name": "Chainlink USD",
     "pair": "LINK / USD",
     "category": "crypto",
-    "price": 12.01,
+    "price": 12.04,
     "change24h": 0.5,
     "iconBg": "#101e30",
     "iconColor": "#375bd2",
@@ -127,7 +127,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#76b900",
     "iconChar": "\ud83d\udc41",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -140,7 +140,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#18202c",
     "iconColor": "#e2e8f0",
     "iconChar": "\uf8ff",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -153,7 +153,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "\u229e",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -166,7 +166,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#4285f4",
     "iconChar": "G",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -179,7 +179,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271e12",
     "iconColor": "#ff9900",
     "iconChar": "a",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -192,7 +192,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#121d30",
     "iconColor": "#0668e1",
     "iconChar": "\u221e",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -205,7 +205,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#e82127",
     "iconChar": "\u26a1",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -218,7 +218,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#10b981",
     "iconChar": "\u26b2",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -231,7 +231,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#291518",
     "iconColor": "#ed1c24",
     "iconChar": "\u25ec",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -244,7 +244,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#261317",
     "iconColor": "#ef4444",
     "iconChar": "B",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -257,7 +257,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122232",
     "iconColor": "#38bdf8",
     "iconChar": "S",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -270,7 +270,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122030",
     "iconColor": "#0091bd",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": false
   },
   {
@@ -283,7 +283,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1216",
     "iconColor": "#e50914",
     "iconChar": "N",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -309,7 +309,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1315",
     "iconColor": "#ff0000",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -322,7 +322,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#121d30",
     "iconColor": "#0071c5",
     "iconChar": "i",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -335,7 +335,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#132030",
     "iconColor": "#3253dc",
     "iconChar": "Q",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -361,7 +361,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#121b30",
     "iconColor": "#0052ff",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -374,7 +374,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#14251d",
     "iconColor": "#10b981",
     "iconChar": "500",
-    "exchange": "NYSEArca",
+    "exchange": "NYSE Arca",
     "isSp500": false
   },
   {
@@ -387,7 +387,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "Q",
-    "exchange": "NasdaqGM",
+    "exchange": "NGM",
     "isSp500": false
   },
   {
@@ -400,7 +400,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#3b82f6",
     "iconChar": "D",
-    "exchange": "NYSEArca",
+    "exchange": "NYSE Arca",
     "isSp500": false
   },
   {
@@ -413,7 +413,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#261517",
     "iconColor": "#ef4444",
     "iconChar": "V",
-    "exchange": "NYSEArca",
+    "exchange": "NYSE Arca",
     "isSp500": false
   },
   {
@@ -426,7 +426,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142520",
     "iconColor": "#10b981",
     "iconChar": "V",
-    "exchange": "NYSEArca",
+    "exchange": "NYSE Arca",
     "isSp500": false
   },
   {
@@ -439,7 +439,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1b1928",
     "iconColor": "#a855f7",
     "iconChar": "R",
-    "exchange": "NYSEArca",
+    "exchange": "NYSE Arca",
     "isSp500": false
   },
   {
@@ -452,7 +452,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#12242b",
     "iconColor": "#06b6d4",
     "iconChar": "\uce69",
-    "exchange": "NasdaqGM",
+    "exchange": "NGM",
     "isSp500": false
   },
   {
@@ -465,7 +465,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b2512",
     "iconColor": "#eab308",
     "iconChar": "\ud83d\udfe1",
-    "exchange": "NYSEArca",
+    "exchange": "NYSE Arca",
     "isSp500": false
   },
   {
@@ -478,7 +478,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1c222c",
     "iconColor": "#94a3b8",
     "iconChar": "\u26aa",
-    "exchange": "NYSEArca",
+    "exchange": "NYSE Arca",
     "isSp500": false
   },
   {
@@ -491,7 +491,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122033",
     "iconColor": "#0ea5e9",
     "iconChar": "K",
-    "exchange": "Cboe US",
+    "exchange": "BTS",
     "isSp500": false
   },
   {
@@ -595,7 +595,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102033",
     "iconColor": "#0079c1",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -608,7 +608,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122133",
     "iconColor": "#38bdf8",
     "iconChar": "\u2733",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -621,7 +621,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#261318",
     "iconColor": "#f87171",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -673,7 +673,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#12261d",
     "iconColor": "#00704a",
     "iconChar": "\u2615",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -881,7 +881,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -894,7 +894,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -933,7 +933,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -959,7 +959,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "L",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -985,7 +985,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "G",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1037,7 +1037,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1128,7 +1128,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1154,7 +1154,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1180,7 +1180,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1206,7 +1206,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1219,7 +1219,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1245,7 +1245,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1349,7 +1349,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1362,7 +1362,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1401,7 +1401,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "A",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1414,7 +1414,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "B",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1479,7 +1479,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "T",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1492,7 +1492,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "B",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1570,7 +1570,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "B",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1627,7 +1627,7 @@ const STATIC_CATALOG_DATA = [
   },
   {
     "symbol": "BF.B",
-    "name": "Brown-Forman Corp-Class B",
+    "name": "Brown\u2013Forman",
     "pair": "BF.B / USD",
     "category": "sp500",
     "price": 259.2,
@@ -1674,7 +1674,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1687,7 +1687,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1778,7 +1778,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1791,7 +1791,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "C",
-    "exchange": "Cboe US",
+    "exchange": "BTS",
     "isSp500": true
   },
   {
@@ -1817,7 +1817,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1908,7 +1908,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -1999,7 +1999,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2012,7 +2012,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2025,7 +2025,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2077,7 +2077,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2103,7 +2103,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2142,7 +2142,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2207,7 +2207,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2220,7 +2220,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2233,7 +2233,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2285,7 +2285,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2311,7 +2311,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2337,7 +2337,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "C",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2402,7 +2402,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "D",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2493,7 +2493,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "D",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2506,7 +2506,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2545,7 +2545,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "D",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2571,7 +2571,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "D",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2584,7 +2584,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "D",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2688,7 +2688,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "E",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2701,7 +2701,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "E",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2844,7 +2844,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "E",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2857,7 +2857,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "E",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2909,7 +2909,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "E",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2948,7 +2948,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "E",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2961,7 +2961,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "E",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -2974,7 +2974,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "E",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3013,7 +3013,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3052,7 +3052,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3143,7 +3143,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3169,7 +3169,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3182,7 +3182,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3208,7 +3208,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3234,7 +3234,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3247,7 +3247,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "F",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3325,7 +3325,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "G",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3351,7 +3351,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "G",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3429,7 +3429,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "G",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3507,7 +3507,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "H",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3546,7 +3546,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "H",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3611,7 +3611,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "H",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3624,7 +3624,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "H",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3650,7 +3650,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "H",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3715,7 +3715,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "H",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3767,7 +3767,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "I",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3793,7 +3793,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "I",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3806,7 +3806,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "I",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3832,7 +3832,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3845,7 +3845,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "I",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3897,7 +3897,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "I",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3910,7 +3910,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "I",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -3975,7 +3975,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "J",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4001,7 +4001,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "J",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4066,7 +4066,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "K",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4105,7 +4105,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "K",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4157,7 +4157,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "K",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4222,7 +4222,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "L",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4287,7 +4287,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "L",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4352,7 +4352,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "L",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4365,7 +4365,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "L",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4417,7 +4417,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "M",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4456,7 +4456,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "M",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4573,7 +4573,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "M",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4586,7 +4586,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "M",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4612,7 +4612,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "M",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4625,7 +4625,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "M",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4638,7 +4638,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "M",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4651,7 +4651,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "M",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4716,7 +4716,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "N",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4729,7 +4729,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "N",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4755,7 +4755,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "N",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4768,7 +4768,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "N",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4807,7 +4807,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "N",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4833,7 +4833,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "N",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4911,7 +4911,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "N",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4924,7 +4924,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "O",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4950,7 +4950,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "O",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -4976,7 +4976,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "O",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5028,7 +5028,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5054,7 +5054,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5067,7 +5067,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5093,7 +5093,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5119,7 +5119,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5236,7 +5236,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5314,7 +5314,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "P",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5457,7 +5457,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "R",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5470,7 +5470,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "R",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5535,7 +5535,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "H",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5574,7 +5574,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "R",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5587,7 +5587,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#2b1418",
     "iconColor": "#ef4444",
     "iconChar": "R",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5626,7 +5626,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "S",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5639,7 +5639,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "S",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5665,7 +5665,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "S",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5730,7 +5730,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "S",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5847,7 +5847,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "S",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5899,7 +5899,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "S",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5925,7 +5925,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "T",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5938,7 +5938,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "T",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -5951,7 +5951,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#271b12",
     "iconColor": "#f59e0b",
     "iconChar": "T",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6016,7 +6016,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "T",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6029,7 +6029,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "T",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6107,7 +6107,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "T",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6159,7 +6159,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "T",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6237,7 +6237,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#182715",
     "iconColor": "#10b981",
     "iconChar": "U",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6263,7 +6263,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#231633",
     "iconColor": "#c084fc",
     "iconChar": "U",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6380,7 +6380,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "V",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6393,7 +6393,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "V",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6419,7 +6419,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1e2433",
     "iconColor": "#a3b8cc",
     "iconChar": "V",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6445,7 +6445,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "V",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6549,7 +6549,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "W",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6640,7 +6640,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "W",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6692,7 +6692,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#102330",
     "iconColor": "#00a4ef",
     "iconChar": "W",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6705,7 +6705,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#122520",
     "iconColor": "#34d399",
     "iconChar": "W",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6718,7 +6718,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "W",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6731,7 +6731,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#1d1930",
     "iconColor": "#8b5cf6",
     "iconChar": "X",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
@@ -6770,7 +6770,7 @@ const STATIC_CATALOG_DATA = [
     "iconBg": "#142033",
     "iconColor": "#38bdf8",
     "iconChar": "Z",
-    "exchange": "NasdaqGS",
+    "exchange": "NASDAQ",
     "isSp500": true
   },
   {
