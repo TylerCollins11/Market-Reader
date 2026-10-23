@@ -23,12 +23,16 @@ FILES_TO_DEPLOY = [
     "app.js",
     "catalog_data.js",
     "static_catalog_data.json",
+    "api_data.json",
     "entitlements.js",
     "entitlements.json",
     "pricing.html",
     "vercel.json",
     "api/index.js",
-    "api/[...path].js"
+    "api/[...path].js",
+    "api/api_data.json",
+    "api/static_catalog_data.json",
+    "api/entitlements.json"
 ]
 
 base_dir = os.path.dirname(os.path.abspath(__file__))

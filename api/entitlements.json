@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "description": "Market Reader single source of truth for subscription tiers, feature flags, and usage limits.",
+  "tiers": {
+    "free": {
+      "id": "free",
+      "name": "Free Tier",
+      "badge": "FREE",
+      "tagline": "Essential tools for personal market monitoring",
+      "pricing": {
+        "monthly": 0,
+        "annual": 0,
+        "currency": "USD"
+      },
+      "trial": {
+        "available": false,
+        "days": 0
+      },
+      "limits": {
+        "maxWatchlists": -1,
+        "maxWatchlistSymbols": -1,
+        "maxPriceAlerts": -1,
+        "maxIndicatorsPerChart": -1,
+        "maxCustomPortfolios": -1,
+        "quoteLatencyMinutes": 0,
+        "chartHistoryDays": -1,
+        "allowedTimeframes": ["1D", "5D", "1M", "6M", "YTD", "1Y", "5Y", "ALL"],
+        "allowedIndicatorTypes": ["*"],
+        "alertDeliveryChannels": ["push", "email", "sms"]
+      },
+      "features": {
+        "realtimeQuotes": true,
+        "extendedHours": true,
+        "fullIndicators": true,
+        "drawingTools": true,
+        "multiChartLayout": true,
+        "savedChartTemplates": true,
+        "companyFundamentals": true,
+        "earningsEstimates": true,
+        "insiderTrades": true,
+        "advancedScreener": true,
+        "multiConditionAlerts": true,
+        "economicCalendar": true,
+        "dividendCalendar": true,
+        "aiSummaries": true,
+        "csvExport": true,
+        "crossDeviceSync": true,
+        "adFree": true,
+        "widgets": true
+      }
+    },
+    "pro": {
+      "id": "pro",
+      "name": "Pro Trader",
+      "badge": "PRO",
+      "tagline": "Professional institutional depth, real-time speed, and unlimited capacity",
+      "pricing": {
+        "monthly": 20,
+        "annual": 192,
+        "annualMonthlyEquivalent": 16,
+        "currency": "USD",
+        "annualDiscountPct": 20
+      },
+      "trial": {
+        "available": true,
+        "days": 7
+      },
+      "limits": {
+        "maxWatchlists": -1,
+        "maxWatchlistSymbols": -1,
+        "maxPriceAlerts": -1,
+        "maxIndicatorsPerChart": -1,
+        "maxCustomPortfolios": -1,
+        "quoteLatencyMinutes": 0,
+        "chartHistoryDays": -1,
+        "allowedTimeframes": ["1D", "5D", "1M", "6M", "YTD", "1Y", "5Y", "ALL"],
+        "allowedIndicatorTypes": ["*"],
+        "alertDeliveryChannels": ["push", "email", "sms"]
+      },
+      "features": {
+        "realtimeQuotes": true,
+        "extendedHours": true,
+        "fullIndicators": true,
+        "drawingTools": true,
+        "multiChartLayout": true,
+        "savedChartTemplates": true,
+        "companyFundamentals": true,
+        "earningsEstimates": true,
+        "insiderTrades": true,
+        "advancedScreener": true,
+        "multiConditionAlerts": true,
+        "economicCalendar": true,
+        "dividendCalendar": true,
+        "aiSummaries": true,
+        "csvExport": true,
+        "crossDeviceSync": true,
+        "adFree": true,
+        "widgets": true
+      }
+    }
+  },
+  "featureDescriptions": {
+    "realtimeQuotes": {
+      "name": "Real-Time Market Quotes",
+      "description": "Zero-latency live prices direct from Finnhub & US exchanges without 15-minute delays."
+    },
+    "maxWatchlistSymbols": {
+      "name": "Watchlist Capacity",
+      "description": "Track unlimited stocks, ETFs, and crypto pairs simultaneously."
+    },
+    "maxPriceAlerts": {
+      "name": "Price Alert Triggers",
+      "description": "Set unlimited price alerts across stocks, ETFs, and cryptocurrencies."
+    },
+    "maxCustomPortfolios": {
+      "name": "Custom Portfolios",
+      "description": "Build, isolate, and track unlimited distinct investment portfolios."
+    },
+    "fullIndicators": {
+      "name": "Full Indicator Library",
+      "description": "Unlock complete technical indicator catalog: MACD, Bollinger Bands, Stochastic, VWAP, Ichimoku."
+    },
+    "maxIndicatorsPerChart": {
+      "name": "Indicators per Chart",
+      "description": "Overlay unlimited technical indicators concurrently."
+    },
+    "drawingTools": {
+      "name": "Pro Drawing Tools",
+      "description": "Trendlines, Fibonacci retracements, support/resistance channels, and annotations."
+    },
+    "companyFundamentals": {
+      "name": "Financials & Fundamentals",
+      "description": "Balance sheets, income statements, cash flow statements, P/E ratios, and institutional ownership."
+    },
+    "advancedScreener": {
+      "name": "Advanced Stock Screener",
+      "description": "Multi-metric screening with custom saved search presets."
+    },
+    "csvExport": {
+      "name": "CSV / Excel Export",
+      "description": "Download portfolio holdings, performance records, and transaction histories."
+    },
+    "aiSummaries": {
+      "name": "AI Market Analyst & News Sentiment",
+      "description": "Institutional earnings call summaries and algorithmic sentiment scoring."
+    },
+    "adFree": {
+      "name": "Ad-Free Platform Experience",
+      "description": "Completely clean, distraction-free trading workspace."
+    }
+  }
+}
