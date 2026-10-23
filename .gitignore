@@ -54,3 +54,4 @@ wheels/
 .idea/
 *.sublime-project
 *.sublime-workspace
+scratch/
