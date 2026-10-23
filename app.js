@@ -2570,38 +2570,15 @@ function renderSearchResults(results, query = '') {
   box.innerHTML = '';
 
   if (!results || results.length === 0) {
-    const customSym = (query || 'CUSTOM').toUpperCase().replace(/[^A-Z0-9.]/g, '');
     box.innerHTML = `
-      <div style="text-align:center; padding:28px 16px;">
-        <p style="color:var(--text-dim); font-size:13px; margin-bottom:12px;">
-          No standard listing found for "<strong>${escapeHtml(query)}</strong>".
+      <div style="text-align:center; padding:32px 16px;">
+        <div style="font-size:32px; margin-bottom:12px;">🔍</div>
+        <div style="font-weight:700; font-size:15px; margin-bottom:6px; color:var(--text-main);">No Verified Stock Found</div>
+        <p style="color:var(--text-dim); font-size:13px; max-width:340px; margin:0 auto; line-height:1.5;">
+          No authentic publicly traded security matches "<strong>${escapeHtml(query)}</strong>". Market Reader only displays verified, exchange-listed securities.
         </p>
-        <button class="btn-primary-neon btn-trade-custom-direct" style="padding:10px 20px; font-size:13px; margin:0 auto; display:inline-flex; align-items:center; gap:8px;">
-          <span>⚡</span>
-          <span>Trade "${customSym}" as Custom Stock</span>
-        </button>
       </div>
     `;
-
-    const customBtn = box.querySelector('.btn-trade-custom-direct');
-    if (customBtn) {
-      customBtn.addEventListener('click', () => {
-        closeSearchModal();
-        const customAsset = {
-          symbol: customSym,
-          name: `${customSym} Equity`,
-          pair: `${customSym} / USD`,
-          price: 100.00,
-          change24h: 1.5,
-          exchange: 'Global',
-          category: 'custom',
-          iconBg: '#1e2433',
-          iconColor: '#38bdf8',
-          iconChar: customSym[0] || '★'
-        };
-        openAssetModal(customAsset);
-      });
-    }
     return;
   }
 
@@ -3782,17 +3759,30 @@ async function loadCompanyAnalysis(symbol) {
     const res = await fetch(`/api/company-analysis?symbol=${encodeURIComponent(sym)}`);
     if (res.ok) {
       const data = await res.json();
-      populateCompanyAnalysisData(data);
-      return data;
+      if (data && !data.error && data.company) {
+        populateCompanyAnalysisData(data);
+        return data;
+      }
     }
   } catch (err) {
-    console.warn('[CompanyAnalysis] Backend API unavailable, utilizing client financial engine fallback:', err);
+    console.warn('[CompanyAnalysis] Backend API unavailable:', err);
   }
 
-  // Client-Side Deterministic Analysis Engine Fallback (guarantees 100% functionality on static CDN/Vercel)
+  // Client-Side Curated Analysis Fallback (549 authentic stocks)
   const clientData = generateClientCompanyAnalysis(sym);
-  populateCompanyAnalysisData(clientData);
-  return clientData;
+  if (clientData) {
+    populateCompanyAnalysisData(clientData);
+    return clientData;
+  }
+
+  // If neither returned authentic data, do not display fake data
+  const fundDesc = document.getElementById('fundCompanyDesc');
+  if (fundDesc) fundDesc.textContent = `Verified Financial Filings Unavailable: No authentic SEC filings found for '${sym}'. Market Reader only displays verified corporate data.`;
+  const ratiosGrid = document.getElementById('fundRatiosGrid');
+  if (ratiosGrid) ratiosGrid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 28px; color: var(--text-dim); font-size: 13px;">No verified financial ratios available for ${sym}.</div>`;
+  const assessText = document.getElementById('assessSummaryText');
+  if (assessText) assessText.textContent = `Performance assessment is only generated for verified, publicly traded securities with GAAP financial filings.`;
+  return null;
 }
 
 function populateCompanyAnalysisData(data) {
@@ -19888,41 +19878,7 @@ function generateClientCompanyAnalysis(symbol) {
   hash = Math.abs(hash);
 
   if (!profile) {
-    const catItem = typeof STATIC_CATALOG_DATA !== 'undefined' ? STATIC_CATALOG_DATA.find(s => s.symbol.toUpperCase() === sym) : null;
-    const companyName = known?.name || catItem?.name || `${sym} Corporation`;
-    const secName = catItem?.sector || "Technology";
-    const indName = catItem?.industry || "Software & Services";
-    const mcapB = Number((curPrice * 1.0).toFixed(1));
-
-    profile = {
-      name: companyName,
-      symbol: sym,
-      exchange: known?.exchange || catItem?.exchange || "NASDAQ",
-      sector: secName,
-      industry: indName,
-      description: `${companyName} is an enterprise listed on the exchange under ticker symbol ${sym}, operating within the ${secName} sector.`,
-      ceo: "Executive Board of Directors",
-      headquarters: "United States",
-      employees: "N/A",
-      founded: "1995",
-      ipoYear: "2010",
-      website: `https://www.${sym.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`,
-      marketCap: mcapB,
-      enterpriseValue: `$${+(mcapB * 1.05).toFixed(1)} Billion`,
-      dilutedEps: +(curPrice / 25.0).toFixed(2),
-      revenueTTM: +(mcapB * 0.35).toFixed(1),
-      netIncomeTTM: +(mcapB * 0.05).toFixed(2),
-      shareholdersEquity: +(mcapB * 0.40).toFixed(1),
-      grossMargin: 45.0,
-      netMargin: 12.0,
-      dividendYield: 0.0,
-      beta: 1.0,
-      sharesOutstanding: "1.00 Billion",
-      low52wRatio: 0.75,
-      high52wRatio: 1.15,
-      sma50Ratio: 0.96,
-      rsi: 52.0
-    };
+    return null;
   }
 
   // Parse shares to billions
@@ -22035,23 +21991,29 @@ async function openAssetModalBySymbol(symbol, preferredTab = null) {
     console.warn('[CompanyAnalysisBySymbol] Backend API unavailable:', e);
   }
 
-  // 3. Client Deterministic Financial Engine Fallback (guarantees instant modal load on CDN/offline)
+  // 3. Client Curated Financial Database Fallback (only for authentic stocks)
   const clientData = generateClientCompanyAnalysis(sym);
-  const cp = clientData.price || {};
-  const cc = clientData.company || {};
-  asset = {
-    symbol: sym,
-    name: cc.name || `${sym} Corporation`,
-    pair: `${sym} / USD`,
-    price: cp.current || 150.0,
-    change24h: cp.pct || 1.5,
-    changeDollar: cp.change || 2.25,
-    exchange: cc.exchange || 'NASDAQ',
-    category: cc.sector || 'Equities',
-    sparkPoints: (cp.pct || 0) >= 0 ? [0.35, 0.45, 0.5, 0.65, 0.75, 0.9] : [0.9, 0.75, 0.65, 0.5, 0.45, 0.35]
-  };
-  openAssetModal(asset);
-  populateCompanyAnalysisData(clientData);
+  if (clientData) {
+    const cp = clientData.price || {};
+    const cc = clientData.company || {};
+    asset = {
+      symbol: sym,
+      name: cc.name,
+      pair: `${sym} / USD`,
+      price: cp.current || 150.0,
+      change24h: cp.pct || 1.5,
+      changeDollar: cp.change || 2.25,
+      exchange: cc.exchange || 'NASDAQ',
+      category: cc.sector || 'Equities',
+      sparkPoints: (cp.pct || 0) >= 0 ? [0.35, 0.45, 0.5, 0.65, 0.75, 0.9] : [0.9, 0.75, 0.65, 0.5, 0.45, 0.35]
+    };
+    openAssetModal(asset);
+    populateCompanyAnalysisData(clientData);
+    return;
+  }
+
+  // Not a real stock - reject lookup cleanly
+  showToast(`Symbol "${sym}" is not a recognized publicly traded stock. Only verified securities are supported.`, '⚠️');
 }
 
 async function openCompanyAnalysisBySymbol(symbol, preferredTab = 'chart') {

@@ -242,6 +242,9 @@ class MarketReaderHandler(http.server.SimpleHTTPRequestHandler):
             is_rt = subscription_service.can_access(eff_tier, "realtimeQuotes")
             try:
                 quote_data = finnhub_service.get_quote(symbol)
+                if not quote_data or (isinstance(quote_data, dict) and quote_data.get("error")):
+                    self.send_json_response({"error": f"Symbol '{symbol}' not found. Only verified, exchange-listed securities are supported."}, status=404)
+                    return
                 if isinstance(quote_data, dict):
                     quote_data["isRealTime"] = is_rt
                     quote_data["latencyMinutes"] = latency
@@ -260,6 +263,9 @@ class MarketReaderHandler(http.server.SimpleHTTPRequestHandler):
             is_rt = subscription_service.can_access(eff_tier, "realtimeQuotes")
             try:
                 analysis_data = finnhub_service.get_company_analysis(symbol)
+                if not analysis_data or (isinstance(analysis_data, dict) and analysis_data.get("error")):
+                    self.send_json_response(analysis_data or {"error": f"Symbol '{symbol}' not found. Only verified, exchange-listed securities are supported."}, status=404)
+                    return
                 if isinstance(analysis_data, dict):
                     analysis_data["isRealTime"] = is_rt
                     analysis_data["latencyMinutes"] = latency

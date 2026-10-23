@@ -675,29 +675,7 @@ def get_quote(symbol, fetch_live=True):
         CACHE[cache_key] = (result, now)
         return result
 
-    # Deterministic price for any other equities
-    h = int(hashlib.md5(sym.encode("utf-8")).hexdigest()[:8], 16)
-    base_price = round(18.50 + ((h % 46150) / 100.0), 2)
-    chg_pct = round(((h % 730) - 320) / 100.0, 2)
-    if chg_pct == 0.0:
-        chg_pct = 1.15
-    chg_dollar = round(base_price * (chg_pct / 100.0), 2)
-
-    result = {
-        "symbol": sym,
-        "price": base_price,
-        "change": chg_dollar,
-        "pct": chg_pct,
-        "high": round(base_price * 1.018, 2),
-        "low": round(base_price * 0.982, 2),
-        "open": round(base_price * 0.994, 2),
-        "prev_close": round(base_price - chg_dollar, 2),
-        "is_live": False,
-        "source": "Market Global Feed",
-        "timestamp": int(now)
-    }
-    CACHE[cache_key] = (result, now)
-    return result
+    return None
 
 def get_batch_quotes(symbols):
     """Fetches quotes for a list of symbols efficiently."""
@@ -941,8 +919,9 @@ def search_symbols(query, limit=50):
     for idx, (score, item) in enumerate(matches[:limit]):
         s = item["s"]
         seen.add(s)
-        live_fetch = idx < 2 or s == qu or s in alias_syms
         q_data = get_quote(s, fetch_live=live_fetch)
+        if not q_data:
+            continue
         bg, color, char = get_symbol_icon_metadata(s, item.get("d", s), item.get("m", ""))
         results.append({
             "symbol": s,
@@ -951,8 +930,8 @@ def search_symbols(query, limit=50):
             "category": "sp500" if s in SP500_SET else item.get("t", "Common Stock"),
             "exchange": item.get("m", "US"),
             "isSp500": s in SP500_SET,
-            "price": q_data["price"],
-            "change": q_data["pct"],
+            "price": q_data.get("price", 0.0),
+            "change": q_data.get("pct", 0.0),
             "iconBg": bg,
             "iconColor": color,
             "iconChar": char
@@ -976,6 +955,8 @@ def search_symbols(query, limit=50):
                     if target_sym and target_sym not in seen:
                         seen.add(target_sym)
                         q_data = get_quote(target_sym)
+                        if not q_data:
+                            continue
                         bg, color, char = get_symbol_icon_metadata(target_sym, desc)
                         entry = {
                             "symbol": target_sym,
@@ -984,8 +965,8 @@ def search_symbols(query, limit=50):
                             "category": r.get("type", "Global Stock"),
                             "exchange": "Global",
                             "isSp500": target_sym in SP500_SET,
-                            "price": q_data["price"],
-                            "change": q_data["pct"],
+                            "price": q_data.get("price", 0.0),
+                            "change": q_data.get("pct", 0.0),
                             "iconBg": bg,
                             "iconColor": color,
                             "iconChar": char
@@ -2110,7 +2091,13 @@ def get_company_analysis(symbol):
 
     # 1. Latest Stock Quote & Price Action
     quote = get_quote(sym)
-    current_price = float(quote.get("price") or 100.0)
+    if not quote or quote.get("error"):
+        return {"error": f"Symbol '{sym}' not found. Only verified, publicly traded securities are supported."}
+
+    current_price = float(quote.get("price") or 0.0)
+    if current_price <= 0:
+        return {"error": f"Symbol '{sym}' not found. Only verified, publicly traded securities are supported."}
+
     change = float(quote.get("change") or 0.0)
     pct = float(quote.get("pct") or 0.0)
     high_session = float(quote.get("high") or current_price * 1.01)
@@ -2132,21 +2119,28 @@ def get_company_analysis(symbol):
         if not profile:
             # Check S&P 500 authoritative directory
             sp_meta = SP500_DIRECTORY.get(sym, {})
-            company_name = quote.get("name") or sp_meta.get("name") or f"{sym} Corporation"
-            exchange_name = quote.get("exchange") or "NYSE"
-            wiki_desc = fetch_wikipedia_company_description(sym, company_name) or f"{company_name} is a publicly traded corporation listed on the {exchange_name}."
+            cat_meta = CATALOG_MAP.get(sym, {})
+            if not sp_meta and not cat_meta and (not quote.get("name") or quote.get("name") == sym):
+                return {"error": f"Symbol '{sym}' not found. Only verified, publicly traded securities are supported."}
+
+            company_name = quote.get("name") or sp_meta.get("name") or cat_meta.get("name")
+            if not company_name:
+                return {"error": f"Symbol '{sym}' not found. Only verified, publicly traded securities are supported."}
+
+            exchange_name = quote.get("exchange") or cat_meta.get("exchange") or "NASDAQ"
+            wiki_desc = fetch_wikipedia_company_description(sym, company_name) or f"{company_name} is an enterprise listed on the {exchange_name} exchange under ticker symbol {sym}."
             profile = {
                 "name": company_name,
                 "symbol": sym,
                 "exchange": exchange_name,
-                "sector": sp_meta.get("sector") or "General Equities",
-                "industry": sp_meta.get("industry") or "Diversified Operations",
+                "sector": sp_meta.get("sector") or cat_meta.get("category") or "Equities",
+                "industry": sp_meta.get("industry") or "Commercial Operations",
                 "description": wiki_desc,
-                "ceo": sp_meta.get("ceo", "Executive Board of Directors"),
+                "ceo": sp_meta.get("ceo") or f"{company_name} Leadership",
                 "headquarters": sp_meta.get("headquarters") or "United States",
                 "employees": "N/A",
-                "founded": str(sp_meta.get("founded") or "1990"),
-                "ipoYear": "1995",
+                "founded": str(sp_meta.get("founded") or "2000"),
+                "ipoYear": "2010",
                 "website": f"https://www.{sym.lower().replace('.', '')}.com",
                 "marketCap": round(current_price * 1.0, 1),
                 "enterpriseValue": f"${round(current_price * 1.05, 1)} Billion",

@@ -256,36 +256,7 @@ function getCuratedQuote(symbol) {
     };
   }
 
-  let h = 0;
-  for (let i = 0; i < sym.length; i++) h = ((h << 5) - h) + sym.charCodeAt(i);
-  h = Math.abs(h);
-  const basePrice = Number((18.50 + ((h % 46150) / 100.0)).toFixed(2));
-  let chgPct = Number((((h % 730) - 320) / 100.0).toFixed(2));
-  if (chgPct === 0) chgPct = 1.15;
-  const chgDollar = Number((basePrice * (chgPct / 100.0)).toFixed(2));
-
-  return {
-    symbol: sym,
-    name: `${sym} Corporation`,
-    price: basePrice,
-    change: chgDollar,
-    pct: chgPct,
-    high: Number((basePrice * 1.018).toFixed(2)),
-    low: Number((basePrice * 0.982).toFixed(2)),
-    open: Number((basePrice * 0.994).toFixed(2)),
-    prev_close: Number((basePrice - chgDollar).toFixed(2)),
-    volume: 25000000,
-    fiftyTwoWeekHigh: Number((basePrice * 1.18).toFixed(2)),
-    fiftyTwoWeekLow: Number((basePrice * 0.72).toFixed(2)),
-    exchange: h % 2 === 0 ? 'NASDAQ' : 'NYSE',
-    is_live: true,
-    source: 'Market Real-Time Tape',
-    timestamp: Math.floor(Date.now() / 1000),
-    isRealTime: true,
-    latencyMinutes: 0,
-    freshnessLabel: 'Real-Time',
-    tier: 'pro'
-  };
+  return null;
 }
 
 module.exports = async (req, res) => {
@@ -646,8 +617,10 @@ module.exports = async (req, res) => {
 
   // 10. /api/quote
   if (pathname === 'quote') {
-    const symbol = (query.symbol || 'NVDA').toUpperCase().trim();
     const q = await fetchLiveQuoteOrFallback(symbol);
+    if (!q) {
+      return res.status(404).json({ error: `Symbol '${symbol}' not found. Only verified, exchange-listed securities are supported.` });
+    }
     return res.status(200).json(q);
   }
 
@@ -816,6 +789,10 @@ module.exports = async (req, res) => {
   if (pathname === 'company-analysis') {
     const sym = (query.symbol || 'NVDA').toUpperCase().trim();
     const quote = await fetchLiveQuoteOrFallback(sym);
+    if (!quote || !quote.price) {
+      return res.status(404).json({ error: `Symbol '${sym}' not found. Only verified, exchange-listed securities are supported.` });
+    }
+
     const apiData = getApiData();
     const currentPrice = quote.price;
     const low52w = quote.fiftyTwoWeekLow;
@@ -827,17 +804,23 @@ module.exports = async (req, res) => {
       const catalog = getCatalog();
       const catItem = catalog.find(s => s.symbol.toUpperCase() === sym);
       const spMeta = (apiData.SP500_DIRECTORY && apiData.SP500_DIRECTORY[sym]) || null;
-      const companyName = quote.name && quote.name !== sym ? quote.name : (catItem?.name || spMeta?.name || `${sym} Inc.`);
-      const exchangeName = quote.exchange || catItem?.exchange || 'NASDAQ';
+      if (!catItem && !spMeta && (!quote.name || quote.name === sym)) {
+        return res.status(404).json({ error: `Symbol '${sym}' not found. Only verified, exchange-listed securities are supported.` });
+      }
 
+      const companyName = quote.name && quote.name !== sym ? quote.name : (catItem?.name || spMeta?.name);
+      if (!companyName) {
+        return res.status(404).json({ error: `Symbol '${sym}' not found. Only verified, exchange-listed securities are supported.` });
+      }
+      const exchangeName = quote.exchange || catItem?.exchange || 'NASDAQ';
       let wikiDesc = await fetchWikipediaDescription(companyName, sym);
-      const secName = spMeta?.sector || catItem?.sector || "Technology";
-      const indName = spMeta?.industry || catItem?.industry || "Software & Services";
+      const secName = spMeta?.sector || catItem?.sector || "Equities";
+      const indName = spMeta?.industry || catItem?.industry || "Commercial Operations";
       const hqLoc = spMeta?.headquarters || "United States";
-      const foundedYear = spMeta?.founded || "1995";
+      const foundedYear = spMeta?.founded || "2000";
 
       if (!wikiDesc) {
-        wikiDesc = `${companyName} is a publicly traded corporation listed on the ${exchangeName} exchange under ticker symbol ${sym}, operating across the ${secName} sector.`;
+        wikiDesc = `${companyName} is an enterprise listed on the ${exchangeName} exchange under ticker symbol ${sym}.`;
       }
 
       const mcapB = Number((currentPrice * 1.0).toFixed(1));
@@ -848,7 +831,7 @@ module.exports = async (req, res) => {
         sector: secName,
         industry: indName,
         description: wikiDesc,
-        ceo: spMeta?.ceo || "Executive Board of Directors",
+        ceo: spMeta?.ceo || `${companyName} Leadership`,
         headquarters: hqLoc,
         employees: "N/A",
         founded: foundedYear,
