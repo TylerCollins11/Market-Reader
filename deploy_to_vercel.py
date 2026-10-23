@@ -27,13 +27,8 @@ FILES_TO_DEPLOY = [
     "entitlements.json",
     "pricing.html",
     "vercel.json",
-    "api/quote.js",
-    "api/news.js",
-    "api/chart.js",
-    "api/company-analysis.js",
-    "api/ticker-band.js",
-    "api/status.js",
-    "api/config.js"
+    "api/index.js",
+    "api/[...path].js"
 ]
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -83,13 +78,12 @@ try:
         print(f"Deployment ID: {deployment_id}")
         print(f"URL: https://{res_data.get('url')}")
         print(f"Ready State: {res_data.get('readyState')}")
-        if "alias" in res_data:
-            print(f"Aliases: {res_data.get('alias')}")
 
         if deployment_id:
             import time
             print(f"\nWaiting for deployment {deployment_id} to be READY...")
-            for attempt in range(15):
+            is_ready = False
+            for attempt in range(30):
                 status_req = urllib.request.Request(
                     f"https://api.vercel.com/v13/deployments/{deployment_id}?teamId={TEAM_ID}",
                     headers={"Authorization": f"Bearer {TOKEN}"}
@@ -97,28 +91,36 @@ try:
                 try:
                     with urllib.request.urlopen(status_req, context=context) as s_resp:
                         s_data = json.loads(s_resp.read().decode("utf-8"))
-                        if s_data.get("readyState") == "READY":
-                            print(f"Deployment is READY on attempt {attempt+1}")
+                        curr_state = s_data.get("readyState")
+                        print(f"Attempt {attempt+1}: {curr_state}")
+                        if curr_state == "READY":
+                            print(f"✅ Deployment is READY on attempt {attempt+1}")
+                            is_ready = True
+                            break
+                        if curr_state in ("ERROR", "CANCELED"):
+                            print(f"❌ Deployment failed with state: {curr_state}")
+                            print(f"Error: {s_data.get('errorMessage') or s_data.get('error')}")
                             break
                 except Exception as ex:
                     print(f"Check attempt {attempt+1}: {ex}")
-                time.sleep(2)
+                time.sleep(3)
 
-            print(f"\nAssigning alias 'market-reader-pro.vercel.app' to {deployment_id}...")
-            alias_url = f"https://api.vercel.com/v2/deployments/{deployment_id}/aliases?teamId={TEAM_ID}"
-            alias_payload = json.dumps({"alias": "market-reader-pro.vercel.app"}).encode("utf-8")
-            alias_req = urllib.request.Request(
-                alias_url,
-                data=alias_payload,
-                headers={
-                    "Authorization": f"Bearer {TOKEN}",
-                    "Content-Type": "application/json"
-                },
-                method="POST"
-            )
-            with urllib.request.urlopen(alias_req, context=context) as alias_resp:
-                alias_res = json.loads(alias_resp.read().decode("utf-8"))
-                print(f"✅ Alias successfully mapped: {alias_res.get('alias', 'market-reader-pro.vercel.app')}")
+            if is_ready:
+                print(f"\nAssigning alias 'market-reader-pro.vercel.app' to {deployment_id}...")
+                alias_url = f"https://api.vercel.com/v2/deployments/{deployment_id}/aliases?teamId={TEAM_ID}"
+                alias_payload = json.dumps({"alias": "market-reader-pro.vercel.app"}).encode("utf-8")
+                alias_req = urllib.request.Request(
+                    alias_url,
+                    data=alias_payload,
+                    headers={
+                        "Authorization": f"Bearer {TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    method="POST"
+                )
+                with urllib.request.urlopen(alias_req, context=context) as alias_resp:
+                    alias_res = json.loads(alias_resp.read().decode("utf-8"))
+                    print(f"✅ Production URL successfully mapped: https://market-reader-pro.vercel.app")
 
 except urllib.error.HTTPError as e:
     err_body = e.read().decode("utf-8")
