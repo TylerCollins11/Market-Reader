@@ -4091,29 +4091,29 @@ const CLIENT_COMPANY_PROFILES = {
     "symbol": "MMM",
     "exchange": "NYSE",
     "sector": "Industrials",
-    "industry": "Conglomerate & Industrial Materials",
-    "description": "3M Company is an American multinational conglomerate operating across industrial adhesives, safety products, filtration materials, commercial branding, and iconic consumer goods (Post-it, Scotch, Command). Founded in 1902 in Two Harbors, Minnesota, 3M holds thousands of active patents driving scalable manufacturing solutions worldwide.",
+    "industry": "Industrial Conglomerates & Materials",
+    "description": "3M Company is an American multinational conglomerate operating across industrial adhesives, advanced materials, commercial branding, personal safety equipment, and iconic consumer stationery (Post-it, Scotch, Command). Founded in 1902 in Two Harbors, Minnesota, 3M holds thousands of active patents driving scalable manufacturing solutions worldwide.",
     "ceo": "William M. Brown",
     "headquarters": "Saint Paul, Minnesota, USA",
-    "employees": "85,000",
+    "employees": "65,000",
     "founded": "1902",
     "ipoYear": "1946",
     "website": "https://www.3m.com",
-    "marketCap": 45.8,
-    "enterpriseValue": "$48.1 Billion",
-    "dilutedEps": 2.67,
-    "revenueTTM": 32.5,
-    "netIncomeTTM": 4.12,
-    "shareholdersEquity": 14.8,
-    "grossMargin": 44.5,
-    "netMargin": 12.7,
-    "dividendYield": 2.78,
-    "beta": 0.98,
+    "marketCap": 96.9,
+    "enterpriseValue": "$105.4 Billion",
+    "dilutedEps": 7.2,
+    "revenueTTM": 24.6,
+    "netIncomeTTM": 3.8,
+    "shareholdersEquity": 6.2,
+    "grossMargin": 44.2,
+    "netMargin": 15.4,
+    "dividendYield": 1.62,
+    "beta": 0.95,
     "sharesOutstanding": "552 Million",
-    "low52wRatio": 0.62,
-    "high52wRatio": 1.15,
-    "sma50Ratio": 0.965,
-    "rsi": 55.4
+    "low52wRatio": 0.79,
+    "high52wRatio": 1.05,
+    "sma50Ratio": 0.985,
+    "rsi": 54.2
   },
   "DIS": {
     "name": "The Walt Disney Company",
@@ -5042,6 +5042,789 @@ const CLIENT_COMPANY_PROFILES = {
     "high52wRatio": 1.05,
     "sma50Ratio": 0.965,
     "rsi": 61.4
+  },
+  "ADA": {
+    "name": "Cardano",
+    "symbol": "ADA",
+    "exchange": "CRYPTO",
+    "sector": "Decentralized Finance & Blockchain",
+    "industry": "Layer-1 Smart Contract Platform",
+    "description": "Cardano is a proof-of-stake blockchain platform built on peer-reviewed research and evidence-based development. Founded in 2015 by Ethereum co-founder Charles Hoskinson, Cardano utilizes the Ouroboros consensus protocol to provide robust security, sustainability, and scalability for decentralized applications and digital identity solutions.",
+    "ceo": "Charles Hoskinson (Founder)",
+    "headquarters": "Zug, Switzerland",
+    "employees": "800+ (IOHK & Emurgo)",
+    "founded": "2015",
+    "ipoYear": "2017",
+    "website": "https://cardano.org",
+    "marketCap": 13.5,
+    "enterpriseValue": "$13.5 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 0.05,
+    "netIncomeTTM": 0.02,
+    "shareholdersEquity": 13.5,
+    "grossMargin": 95.0,
+    "netMargin": 40.0,
+    "dividendYield": 3.12,
+    "beta": 1.85,
+    "sharesOutstanding": "35.7 Billion",
+    "low52wRatio": 0.65,
+    "high52wRatio": 1.45,
+    "sma50Ratio": 0.94,
+    "rsi": 48.5
+  },
+  "DOGE": {
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "exchange": "CRYPTO",
+    "sector": "Digital Currency",
+    "industry": "Peer-to-Peer Payment Network",
+    "description": "Dogecoin is an open-source peer-to-peer cryptocurrency created in 2013 by Billy Markus and Jackson Palmer as a lighthearted alternative to traditional cryptocurrencies. Featuring the Shiba Inu dog meme as its mascot, Dogecoin has evolved into a globally recognized medium of exchange with low transaction fees and an active community.",
+    "ceo": "Decentralized Foundation Core Team",
+    "headquarters": "Decentralized / Open Source",
+    "employees": "Open Source Contributors",
+    "founded": "2013",
+    "ipoYear": "2013",
+    "website": "https://dogecoin.com",
+    "marketCap": 20.8,
+    "enterpriseValue": "$20.8 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 0.01,
+    "netIncomeTTM": 0.0,
+    "shareholdersEquity": 20.8,
+    "grossMargin": 99.0,
+    "netMargin": 50.0,
+    "dividendYield": 0.0,
+    "beta": 2.15,
+    "sharesOutstanding": "146.5 Billion",
+    "low52wRatio": 0.58,
+    "high52wRatio": 1.62,
+    "sma50Ratio": 0.92,
+    "rsi": 52.0
+  },
+  "XRP": {
+    "name": "XRP",
+    "symbol": "XRP",
+    "exchange": "CRYPTO",
+    "sector": "Digital Currency & Payments",
+    "industry": "Enterprise Cross-Border Liquidity",
+    "description": "XRP is the native digital asset on the decentralized XRP Ledger, designed for rapid, low-cost cross-border payments and remittances. Developed to settle transactions in 3\u20135 seconds with minimal energy consumption, XRP is utilized by Ripple Labs and global financial institutions for on-demand liquidity.",
+    "ceo": "Brad Garlinghouse (Ripple CEO)",
+    "headquarters": "San Francisco, California, USA",
+    "employees": "900+ (Ripple Labs)",
+    "founded": "2012",
+    "ipoYear": "2012",
+    "website": "https://xrpl.org",
+    "marketCap": 33.2,
+    "enterpriseValue": "$33.2 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 0.15,
+    "netIncomeTTM": 0.05,
+    "shareholdersEquity": 33.2,
+    "grossMargin": 92.0,
+    "netMargin": 33.3,
+    "dividendYield": 0.0,
+    "beta": 1.65,
+    "sharesOutstanding": "56.7 Billion",
+    "low52wRatio": 0.72,
+    "high52wRatio": 1.35,
+    "sma50Ratio": 0.96,
+    "rsi": 51.5
+  },
+  "BNB": {
+    "name": "BNB",
+    "symbol": "BNB",
+    "exchange": "CRYPTO",
+    "sector": "Smart Contracts & Ecosystems",
+    "industry": "EVM Layer-1 / Centralized-Decentralized Exchange",
+    "description": "BNB is the native utility token powering the BNB Chain ecosystem, including BNB Smart Chain (BSC) and the Binance cryptocurrency exchange. Launched in 2017, BNB is used for discounted trading fees, transaction gas on the blockchain, and participation in ecosystem governance, supported by an automated quarterly burn mechanism.",
+    "ceo": "Richard Teng (Binance CEO)",
+    "headquarters": "Global Decentralized / Dubai, UAE",
+    "employees": "5,000+ (Binance Group)",
+    "founded": "2017",
+    "ipoYear": "2017",
+    "website": "https://bnbchain.org",
+    "marketCap": 87.5,
+    "enterpriseValue": "$87.5 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 2.1,
+    "netIncomeTTM": 1.25,
+    "shareholdersEquity": 87.5,
+    "grossMargin": 88.0,
+    "netMargin": 59.5,
+    "dividendYield": 0.0,
+    "beta": 1.45,
+    "sharesOutstanding": "145.8 Million",
+    "low52wRatio": 0.68,
+    "high52wRatio": 1.24,
+    "sma50Ratio": 0.97,
+    "rsi": 56.0
+  },
+  "AVAX": {
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "exchange": "CRYPTO",
+    "sector": "Decentralized Infrastructure",
+    "industry": "Multi-Subnet Smart Contract Platform",
+    "description": "Avalanche is a high-throughput, eco-friendly smart contracts platform launched in 2020 by Ava Labs. Its novel multi-engine consensus mechanism achieves near-instant transaction finality (under 1 second), while allowing developers to build custom application-specific blockchains known as Subnets.",
+    "ceo": "Emin G\u00fcn Sirer (Ava Labs Founder)",
+    "headquarters": "Brooklyn, New York, USA",
+    "employees": "300+ (Ava Labs)",
+    "founded": "2020",
+    "ipoYear": "2020",
+    "website": "https://avax.network",
+    "marketCap": 11.4,
+    "enterpriseValue": "$11.4 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 0.08,
+    "netIncomeTTM": 0.03,
+    "shareholdersEquity": 11.4,
+    "grossMargin": 90.0,
+    "netMargin": 37.5,
+    "dividendYield": 5.4,
+    "beta": 2.2,
+    "sharesOutstanding": "401.2 Million",
+    "low52wRatio": 0.6,
+    "high52wRatio": 1.55,
+    "sma50Ratio": 0.93,
+    "rsi": 49.0
+  },
+  "LINK": {
+    "name": "Chainlink",
+    "symbol": "LINK",
+    "exchange": "CRYPTO",
+    "sector": "Blockchain Middleware",
+    "industry": "Decentralized Oracle Networks & Cross-Chain (CCIP)",
+    "description": "Chainlink is the industry-standard Web3 services platform connecting blockchains to real-world data, off-chain computation, and legacy banking systems (via Cross-Chain Interoperability Protocol / CCIP). Co-founded by Sergey Nazarov, Chainlink secures tens of billions of dollars across top DeFi protocols and institutional finance.",
+    "ceo": "Sergey Nazarov (Co-Founder)",
+    "headquarters": "San Francisco, California, USA",
+    "employees": "500+ (Chainlink Labs)",
+    "founded": "2017",
+    "ipoYear": "2017",
+    "website": "https://chain.link",
+    "marketCap": 7.3,
+    "enterpriseValue": "$7.3 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 0.12,
+    "netIncomeTTM": 0.04,
+    "shareholdersEquity": 7.3,
+    "grossMargin": 85.0,
+    "netMargin": 33.3,
+    "dividendYield": 0.0,
+    "beta": 1.75,
+    "sharesOutstanding": "608.1 Million",
+    "low52wRatio": 0.62,
+    "high52wRatio": 1.48,
+    "sma50Ratio": 0.95,
+    "rsi": 53.0
+  },
+  "SMCI": {
+    "name": "Super Micro Computer, Inc.",
+    "symbol": "SMCI",
+    "exchange": "NASDAQ",
+    "sector": "Technology",
+    "industry": "AI Compute Infrastructure & Server Systems",
+    "description": "Super Micro Computer, Inc. is a global leader in high-performance server and storage solutions built on modular, energy-efficient architecture (Building Block Solutions). Supermicro partners closely with NVIDIA, AMD, and Intel to deliver rack-scale AI clusters, liquid cooling systems, and enterprise data center infrastructure.",
+    "ceo": "Charles Liang",
+    "headquarters": "San Jose, California, USA",
+    "employees": "5,300",
+    "founded": "1993",
+    "ipoYear": "2007",
+    "website": "https://www.supermicro.com",
+    "marketCap": 27.2,
+    "enterpriseValue": "$29.4 Billion",
+    "dilutedEps": 2.21,
+    "revenueTTM": 14.9,
+    "netIncomeTTM": 1.29,
+    "shareholdersEquity": 5.1,
+    "grossMargin": 14.2,
+    "netMargin": 8.6,
+    "dividendYield": 0.0,
+    "beta": 2.1,
+    "sharesOutstanding": "585.0 Million",
+    "low52wRatio": 0.35,
+    "high52wRatio": 1.85,
+    "sma50Ratio": 0.88,
+    "rsi": 44.0
+  },
+  "ARM": {
+    "name": "Arm Holdings plc",
+    "symbol": "ARM",
+    "exchange": "NASDAQ",
+    "sector": "Technology",
+    "industry": "Semiconductor Architecture & IP Licensing",
+    "description": "Arm Holdings plc designs the microarchitecture and instruction sets powering over 99% of the world's smartphones, modern edge devices, and increasingly hyperscale data center processors (e.g. AWS Graviton, Apple Silicon). Headquartered in Cambridge, UK, Arm licenses its intellectual property to hundreds of leading global technology companies.",
+    "ceo": "Rene Haas",
+    "headquarters": "Cambridge, United Kingdom",
+    "employees": "6,900",
+    "founded": "1990",
+    "ipoYear": "2023",
+    "website": "https://www.arm.com",
+    "marketCap": 147.8,
+    "enterpriseValue": "$146.2 Billion",
+    "dilutedEps": 0.78,
+    "revenueTTM": 3.23,
+    "netIncomeTTM": 0.76,
+    "shareholdersEquity": 5.6,
+    "grossMargin": 96.2,
+    "netMargin": 23.5,
+    "dividendYield": 0.0,
+    "beta": 1.95,
+    "sharesOutstanding": "1.04 Billion",
+    "low52wRatio": 0.52,
+    "high52wRatio": 1.28,
+    "sma50Ratio": 0.94,
+    "rsi": 58.0
+  },
+  "TGT": {
+    "name": "Target Corporation",
+    "symbol": "TGT",
+    "exchange": "NYSE",
+    "sector": "Consumer Defensive",
+    "industry": "Discount Stores & General Merchandise",
+    "description": "Target Corporation is an iconic American general merchandise retailer operating nearly 2,000 stores across all 50 U.S. states and a leading digital fulfillment network. Target offers curated assortments spanning apparel, home essentials, food and beverage, beauty, and exclusive private-label brands.",
+    "ceo": "Brian C. Cornell",
+    "headquarters": "Minneapolis, Minnesota, USA",
+    "employees": "415,000",
+    "founded": "1902",
+    "ipoYear": "1967",
+    "website": "https://www.target.com",
+    "marketCap": 71.4,
+    "enterpriseValue": "$86.5 Billion",
+    "dilutedEps": 9.15,
+    "revenueTTM": 106.8,
+    "netIncomeTTM": 4.25,
+    "shareholdersEquity": 13.9,
+    "grossMargin": 28.4,
+    "netMargin": 4.0,
+    "dividendYield": 2.88,
+    "beta": 1.05,
+    "sharesOutstanding": "462.0 Million",
+    "low52wRatio": 0.75,
+    "high52wRatio": 1.15,
+    "sma50Ratio": 0.98,
+    "rsi": 52.4
+  },
+  "DIA": {
+    "name": "SPDR Dow Jones Industrial Average ETF Trust",
+    "symbol": "DIA",
+    "exchange": "NYSE Arca",
+    "sector": "Exchange Traded Funds",
+    "industry": "Large-Cap Industrial & Value Equity ETF",
+    "description": "The SPDR Dow Jones Industrial Average ETF Trust seeks to track the price and yield performance of the Dow Jones Industrial Average (DJIA), representing 30 prominent American blue-chip companies across major economic sectors excluding transportation and utilities.",
+    "ceo": "State Street Global Advisors (Trustee)",
+    "headquarters": "Boston, Massachusetts, USA",
+    "employees": "N/A (Managed ETF)",
+    "founded": "1998",
+    "ipoYear": "1998",
+    "website": "https://www.ssga.com/spdrs",
+    "marketCap": 34.2,
+    "enterpriseValue": "$34.2 Billion",
+    "dilutedEps": 18.5,
+    "revenueTTM": 0.06,
+    "netIncomeTTM": 0.05,
+    "shareholdersEquity": 34.2,
+    "grossMargin": 99.0,
+    "netMargin": 83.3,
+    "dividendYield": 1.68,
+    "beta": 0.88,
+    "sharesOutstanding": "81.2 Million",
+    "low52wRatio": 0.82,
+    "high52wRatio": 1.05,
+    "sma50Ratio": 0.99,
+    "rsi": 57.0
+  },
+  "VOO": {
+    "name": "Vanguard S&P 500 ETF",
+    "symbol": "VOO",
+    "exchange": "NYSE Arca",
+    "sector": "Exchange Traded Funds",
+    "industry": "Large-Cap Blend Equity ETF",
+    "description": "The Vanguard S&P 500 ETF invests in stocks in the S&P 500 Index, representing 500 of the largest U.S. companies. Renowned for its industry-leading low expense ratio of 0.03%, VOO offers diversified exposure to premier American corporate market capitalization.",
+    "ceo": "Salim Ramji (Vanguard CEO)",
+    "headquarters": "Malvern, Pennsylvania, USA",
+    "employees": "20,000+ (The Vanguard Group)",
+    "founded": "2010",
+    "ipoYear": "2010",
+    "website": "https://investor.vanguard.com",
+    "marketCap": 520.0,
+    "enterpriseValue": "$520.0 Billion",
+    "dilutedEps": 22.8,
+    "revenueTTM": 0.15,
+    "netIncomeTTM": 0.14,
+    "shareholdersEquity": 520.0,
+    "grossMargin": 99.5,
+    "netMargin": 93.3,
+    "dividendYield": 1.28,
+    "beta": 1.0,
+    "sharesOutstanding": "991.0 Million",
+    "low52wRatio": 0.8,
+    "high52wRatio": 1.06,
+    "sma50Ratio": 0.99,
+    "rsi": 59.0
+  },
+  "VTI": {
+    "name": "Vanguard Total Stock Market ETF",
+    "symbol": "VTI",
+    "exchange": "NYSE Arca",
+    "sector": "Exchange Traded Funds",
+    "industry": "Total US Equity Market ETF",
+    "description": "The Vanguard Total Stock Market ETF seeks to track the performance of the CRSP US Total Market Index, representing approximately 100% of the investable U.S. equity market across large, mid, small, and micro-cap growth and value stocks with an ultra-low 0.03% expense ratio.",
+    "ceo": "Salim Ramji (Vanguard CEO)",
+    "headquarters": "Malvern, Pennsylvania, USA",
+    "employees": "20,000+ (The Vanguard Group)",
+    "founded": "2001",
+    "ipoYear": "2001",
+    "website": "https://investor.vanguard.com",
+    "marketCap": 410.0,
+    "enterpriseValue": "$410.0 Billion",
+    "dilutedEps": 12.4,
+    "revenueTTM": 0.12,
+    "netIncomeTTM": 0.11,
+    "shareholdersEquity": 410.0,
+    "grossMargin": 99.5,
+    "netMargin": 91.7,
+    "dividendYield": 1.34,
+    "beta": 1.02,
+    "sharesOutstanding": "1.46 Billion",
+    "low52wRatio": 0.79,
+    "high52wRatio": 1.06,
+    "sma50Ratio": 0.985,
+    "rsi": 58.5
+  },
+  "IWM": {
+    "name": "iShares Russell 2000 ETF",
+    "symbol": "IWM",
+    "exchange": "NYSE Arca",
+    "sector": "Exchange Traded Funds",
+    "industry": "Small-Cap Blend Equity ETF",
+    "description": "The iShares Russell 2000 ETF seeks to track the investment results of an index composed of small-capitalization U.S. equities (the Russell 2000 Index). IWM is the world's most actively traded benchmark proxy for domestic U.S. economic growth and small-cap innovation.",
+    "ceo": "Larry Fink (BlackRock Chairman & CEO)",
+    "headquarters": "New York, New York, USA",
+    "employees": "19,800 (BlackRock Inc)",
+    "founded": "2000",
+    "ipoYear": "2000",
+    "website": "https://www.ishares.com",
+    "marketCap": 68.5,
+    "enterpriseValue": "$68.5 Billion",
+    "dilutedEps": 6.8,
+    "revenueTTM": 0.14,
+    "netIncomeTTM": 0.12,
+    "shareholdersEquity": 68.5,
+    "grossMargin": 99.0,
+    "netMargin": 85.7,
+    "dividendYield": 1.2,
+    "beta": 1.18,
+    "sharesOutstanding": "309.4 Million",
+    "low52wRatio": 0.74,
+    "high52wRatio": 1.08,
+    "sma50Ratio": 0.98,
+    "rsi": 56.0
+  },
+  "SMH": {
+    "name": "VanEck Semiconductor ETF",
+    "symbol": "SMH",
+    "exchange": "NASDAQ",
+    "sector": "Exchange Traded Funds",
+    "industry": "Semiconductor Industry Thematic ETF",
+    "description": "The VanEck Semiconductor ETF seeks to replicate the price and yield performance of the MVIS US Listed Semiconductor 25 Index. SMH provides concentrated exposure to the 25 largest semiconductor manufacturing and equipment companies worldwide, led by NVIDIA, TSMC, Broadcom, and ASML.",
+    "ceo": "Jan van Eck (VanEck CEO)",
+    "headquarters": "New York, New York, USA",
+    "employees": "400+ (VanEck Associates)",
+    "founded": "2011",
+    "ipoYear": "2011",
+    "website": "https://www.vaneck.com",
+    "marketCap": 23.4,
+    "enterpriseValue": "$23.4 Billion",
+    "dilutedEps": 5.6,
+    "revenueTTM": 0.08,
+    "netIncomeTTM": 0.07,
+    "shareholdersEquity": 23.4,
+    "grossMargin": 99.0,
+    "netMargin": 87.5,
+    "dividendYield": 0.45,
+    "beta": 1.58,
+    "sharesOutstanding": "92.6 Million",
+    "low52wRatio": 0.62,
+    "high52wRatio": 1.18,
+    "sma50Ratio": 0.97,
+    "rsi": 60.5
+  },
+  "GLD": {
+    "name": "SPDR Gold Shares",
+    "symbol": "GLD",
+    "exchange": "NYSE Arca",
+    "sector": "Commodities & Precious Metals",
+    "industry": "Physical Gold Bullion Trust",
+    "description": "SPDR Gold Shares is the largest physically backed gold exchange-traded fund in the world. Launched in 2004 and sponsored by the World Gold Trust Services, each share of GLD represents fractional ownership of physical gold bullion stored in secure vaults in London.",
+    "ceo": "World Gold Trust Services LLC (Sponsor)",
+    "headquarters": "New York, New York, USA",
+    "employees": "N/A (Trust Custodied at HSBC Bank plc)",
+    "founded": "2004",
+    "ipoYear": "2004",
+    "website": "https://www.spdrgoldshares.com",
+    "marketCap": 73.1,
+    "enterpriseValue": "$73.1 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 0.28,
+    "netIncomeTTM": 0.24,
+    "shareholdersEquity": 73.1,
+    "grossMargin": 99.0,
+    "netMargin": 85.7,
+    "dividendYield": 0.0,
+    "beta": 0.12,
+    "sharesOutstanding": "298.2 Million",
+    "low52wRatio": 0.78,
+    "high52wRatio": 1.03,
+    "sma50Ratio": 0.99,
+    "rsi": 62.0
+  },
+  "SLV": {
+    "name": "iShares Silver Trust",
+    "symbol": "SLV",
+    "exchange": "NYSE Arca",
+    "sector": "Commodities & Precious Metals",
+    "industry": "Physical Silver Bullion Trust",
+    "description": "The iShares Silver Trust seeks to reflect generally the performance of the price of silver bullion. Sponsored by BlackRock Asset Management, SLV holds physical silver bars in vaults in London and New York, providing cost-effective exposure to silver without requiring physical storage.",
+    "ceo": "Larry Fink (BlackRock Chairman & CEO)",
+    "headquarters": "New York, New York, USA",
+    "employees": "N/A (Custodied at JPMorgan Chase)",
+    "founded": "2006",
+    "ipoYear": "2006",
+    "website": "https://www.ishares.com",
+    "marketCap": 14.8,
+    "enterpriseValue": "$14.8 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 0.07,
+    "netIncomeTTM": 0.06,
+    "shareholdersEquity": 14.8,
+    "grossMargin": 99.0,
+    "netMargin": 85.7,
+    "dividendYield": 0.0,
+    "beta": 0.65,
+    "sharesOutstanding": "506.8 Million",
+    "low52wRatio": 0.68,
+    "high52wRatio": 1.15,
+    "sma50Ratio": 0.97,
+    "rsi": 58.0
+  },
+  "ARKK": {
+    "name": "ARK Innovation ETF",
+    "symbol": "ARKK",
+    "exchange": "NYSE Arca",
+    "sector": "Exchange Traded Funds",
+    "industry": "Disruptive Innovation Actively Managed ETF",
+    "description": "The ARK Innovation ETF is an actively managed ETF that seeks long-term capital growth by investing in companies that rely on or benefit from the development of technologically enabled products or services (e.g. artificial intelligence, genomics, autonomous tech, and robotics).",
+    "ceo": "Cathie Wood (Founder, CIO & CEO)",
+    "headquarters": "St. Petersburg, Florida, USA",
+    "employees": "65+ (ARK Investment Management)",
+    "founded": "2014",
+    "ipoYear": "2014",
+    "website": "https://ark-funds.com",
+    "marketCap": 5.9,
+    "enterpriseValue": "$5.9 Billion",
+    "dilutedEps": 0.0,
+    "revenueTTM": 0.04,
+    "netIncomeTTM": 0.03,
+    "shareholdersEquity": 5.9,
+    "grossMargin": 99.0,
+    "netMargin": 75.0,
+    "dividendYield": 0.0,
+    "beta": 1.72,
+    "sharesOutstanding": "120.7 Million",
+    "low52wRatio": 0.7,
+    "high52wRatio": 1.25,
+    "sma50Ratio": 0.96,
+    "rsi": 51.0
+  },
+  "AOS": {
+    "name": "A. O. Smith Corporation",
+    "symbol": "AOS",
+    "exchange": "NYSE",
+    "sector": "Industrials",
+    "industry": "Building Products & Water Treatment",
+    "description": "A. O. Smith Corporation is an American manufacturer of residential and commercial water heaters, boilers, and water treatment products. Founded in 1874 in Milwaukee, Wisconsin, A. O. Smith is one of the world's leading providers of innovative, energy-efficient water heating and water filtration technologies.",
+    "ceo": "Kevin J. Wheeler",
+    "headquarters": "Milwaukee, Wisconsin, USA",
+    "employees": "12,000",
+    "founded": "1874",
+    "ipoYear": "1983",
+    "website": "https://www.aosmith.com",
+    "marketCap": 9.4,
+    "enterpriseValue": "$9.6 Billion",
+    "dilutedEps": 3.85,
+    "revenueTTM": 3.9,
+    "netIncomeTTM": 0.58,
+    "shareholdersEquity": 1.95,
+    "grossMargin": 38.5,
+    "netMargin": 14.8,
+    "dividendYield": 2.15,
+    "beta": 1.12,
+    "sharesOutstanding": "148.0 Million",
+    "low52wRatio": 0.82,
+    "high52wRatio": 1.12,
+    "sma50Ratio": 0.985,
+    "rsi": 53.0
+  },
+  "ABT": {
+    "name": "Abbott Laboratories",
+    "symbol": "ABT",
+    "exchange": "NYSE",
+    "sector": "Healthcare",
+    "industry": "Medical Devices & Diagnostics",
+    "description": "Abbott Laboratories is an American multinational medical devices and healthcare company founded in 1888. Abbott creates breakthrough technologies across diagnostic systems, cardiovascular devices, neuromodulation, diabetes care (FreeStyle Libre), and science-based nutritional products.",
+    "ceo": "Robert B. Ford",
+    "headquarters": "North Chicago, Illinois, USA",
+    "employees": "114,000",
+    "founded": "1888",
+    "ipoYear": "1929",
+    "website": "https://www.abbott.com",
+    "marketCap": 178.5,
+    "enterpriseValue": "$189.2 Billion",
+    "dilutedEps": 3.32,
+    "revenueTTM": 41.5,
+    "netIncomeTTM": 5.8,
+    "shareholdersEquity": 38.2,
+    "grossMargin": 55.4,
+    "netMargin": 14.0,
+    "dividendYield": 2.15,
+    "beta": 0.72,
+    "sharesOutstanding": "1.74 Billion",
+    "low52wRatio": 0.84,
+    "high52wRatio": 1.1,
+    "sma50Ratio": 0.99,
+    "rsi": 54.0
+  },
+  "ABBV": {
+    "name": "AbbVie Inc.",
+    "symbol": "ABBV",
+    "exchange": "NYSE",
+    "sector": "Healthcare",
+    "industry": "Biotechnology & Pharmaceuticals",
+    "description": "AbbVie Inc. is an American biopharmaceutical company founded in 2013 as a spin-off of Abbott Laboratories. AbbVie discovers, develops, and delivers advanced therapies across immunology (Skyrizi, Rinvoq, Humira), oncology (Imbruvica, Venclexta), neuroscience (Botox, Vraylar), and eye care.",
+    "ceo": "Robert A. Michael",
+    "headquarters": "North Chicago, Illinois, USA",
+    "employees": "50,000",
+    "founded": "2013",
+    "ipoYear": "2013",
+    "website": "https://www.abbvie.com",
+    "marketCap": 348.0,
+    "enterpriseValue": "$410.5 Billion",
+    "dilutedEps": 3.45,
+    "revenueTTM": 55.2,
+    "netIncomeTTM": 6.12,
+    "shareholdersEquity": 11.2,
+    "grossMargin": 69.8,
+    "netMargin": 11.1,
+    "dividendYield": 3.25,
+    "beta": 0.58,
+    "sharesOutstanding": "1.77 Billion",
+    "low52wRatio": 0.82,
+    "high52wRatio": 1.08,
+    "sma50Ratio": 0.995,
+    "rsi": 57.5
+  },
+  "ACN": {
+    "name": "Accenture plc",
+    "symbol": "ACN",
+    "exchange": "NYSE",
+    "sector": "Information Technology",
+    "industry": "IT Consulting & Professional Services",
+    "description": "Accenture plc is a leading global professional services company that helps organizations build digital cores, optimize operations, and accelerate revenue growth. Operating across 120+ countries, Accenture provides unmatched scale in cloud migration, cybersecurity, and enterprise AI transformation.",
+    "ceo": "Julie Sweet",
+    "headquarters": "Dublin, Ireland",
+    "employees": "733,000",
+    "founded": "1989",
+    "ipoYear": "2001",
+    "website": "https://www.accenture.com",
+    "marketCap": 218.0,
+    "enterpriseValue": "$216.5 Billion",
+    "dilutedEps": 11.45,
+    "revenueTTM": 64.9,
+    "netIncomeTTM": 7.35,
+    "shareholdersEquity": 27.5,
+    "grossMargin": 32.6,
+    "netMargin": 11.3,
+    "dividendYield": 1.48,
+    "beta": 1.22,
+    "sharesOutstanding": "628.0 Million",
+    "low52wRatio": 0.78,
+    "high52wRatio": 1.12,
+    "sma50Ratio": 0.985,
+    "rsi": 56.0
+  },
+  "ADSK": {
+    "name": "Autodesk, Inc.",
+    "symbol": "ADSK",
+    "exchange": "NASDAQ",
+    "sector": "Technology",
+    "industry": "Application Software & Computer-Aided Design (CAD)",
+    "description": "Autodesk, Inc. is an American multinational software corporation that makes 3D software products and services for the architecture, engineering, construction, manufacturing, media, and entertainment industries. Its flagship software includes AutoCAD, Revit, Inventor, Maya, and Fusion 360.",
+    "ceo": "Andrew Anagnost",
+    "headquarters": "San Francisco, California, USA",
+    "employees": "14,100",
+    "founded": "1982",
+    "ipoYear": "1985",
+    "website": "https://www.autodesk.com",
+    "marketCap": 58.4,
+    "enterpriseValue": "$60.2 Billion",
+    "dilutedEps": 4.65,
+    "revenueTTM": 5.85,
+    "netIncomeTTM": 1.02,
+    "shareholdersEquity": 2.45,
+    "grossMargin": 91.5,
+    "netMargin": 17.4,
+    "dividendYield": 0.0,
+    "beta": 1.42,
+    "sharesOutstanding": "214.0 Million",
+    "low52wRatio": 0.72,
+    "high52wRatio": 1.15,
+    "sma50Ratio": 0.98,
+    "rsi": 58.0
+  },
+  "AMAT": {
+    "name": "Applied Materials, Inc.",
+    "symbol": "AMAT",
+    "exchange": "NASDAQ",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "description": "Applied Materials, Inc. is the leader in materials engineering solutions used to produce virtually every new chip and advanced display in the world. Its expertise in atomic-scale modification of materials enables the semiconductor industry to continually push the physical boundaries of Moore's Law.",
+    "ceo": "Gary E. Dickerson",
+    "headquarters": "Santa Clara, California, USA",
+    "employees": "34,000",
+    "founded": "1967",
+    "ipoYear": "1972",
+    "website": "https://www.appliedmaterials.com",
+    "marketCap": 158.0,
+    "enterpriseValue": "$160.5 Billion",
+    "dilutedEps": 8.65,
+    "revenueTTM": 26.8,
+    "netIncomeTTM": 7.15,
+    "shareholdersEquity": 17.8,
+    "grossMargin": 47.4,
+    "netMargin": 26.7,
+    "dividendYield": 0.85,
+    "beta": 1.55,
+    "sharesOutstanding": "824.0 Million",
+    "low52wRatio": 0.68,
+    "high52wRatio": 1.18,
+    "sma50Ratio": 0.97,
+    "rsi": 57.0
+  },
+  "GE": {
+    "name": "GE Aerospace",
+    "symbol": "GE",
+    "exchange": "NYSE",
+    "sector": "Industrials",
+    "industry": "Aerospace & Commercial Jet Engines",
+    "description": "GE Aerospace is a world-leading provider of commercial and military jet engines, components, and integrated systems for aircraft. Following the successful spins of GE HealthCare and GE Vernova, GE Aerospace operates as a pure-play propulsion leader powering 3 out of every 4 commercial flights globally.",
+    "ceo": "H. Lawrence Culp Jr.",
+    "headquarters": "Evendale, Ohio, USA",
+    "employees": "52,000",
+    "founded": "1892",
+    "ipoYear": "1896",
+    "website": "https://www.geaerospace.com",
+    "marketCap": 204.0,
+    "enterpriseValue": "$212.0 Billion",
+    "dilutedEps": 5.4,
+    "revenueTTM": 36.5,
+    "netIncomeTTM": 5.85,
+    "shareholdersEquity": 28.5,
+    "grossMargin": 31.5,
+    "netMargin": 16.0,
+    "dividendYield": 0.58,
+    "beta": 1.25,
+    "sharesOutstanding": "1.08 Billion",
+    "low52wRatio": 0.65,
+    "high52wRatio": 1.15,
+    "sma50Ratio": 0.99,
+    "rsi": 62.0
+  },
+  "HD": {
+    "name": "The Home Depot, Inc.",
+    "symbol": "HD",
+    "exchange": "NYSE",
+    "sector": "Consumer Cyclical",
+    "industry": "Home Improvement Retail",
+    "description": "The Home Depot, Inc. is the world's largest home improvement specialty retailer, operating more than 2,300 retail stores across the United States, Canada, and Mexico. Home Depot caters to do-it-yourself (DIY) customers and professional contractors with comprehensive building materials and tool rental.",
+    "ceo": "Ted Decker",
+    "headquarters": "Atlanta, Georgia, USA",
+    "employees": "465,000",
+    "founded": "1978",
+    "ipoYear": "1981",
+    "website": "https://www.homedepot.com",
+    "marketCap": 405.0,
+    "enterpriseValue": "$452.0 Billion",
+    "dilutedEps": 15.2,
+    "revenueTTM": 152.7,
+    "netIncomeTTM": 15.1,
+    "shareholdersEquity": 1.4,
+    "grossMargin": 33.4,
+    "netMargin": 9.9,
+    "dividendYield": 2.22,
+    "beta": 0.98,
+    "sharesOutstanding": "993.0 Million",
+    "low52wRatio": 0.78,
+    "high52wRatio": 1.08,
+    "sma50Ratio": 0.985,
+    "rsi": 56.5
+  },
+  "ORCL": {
+    "name": "Oracle Corporation",
+    "symbol": "ORCL",
+    "exchange": "NYSE",
+    "sector": "Technology",
+    "industry": "Enterprise Software & Cloud Infrastructure (OCI)",
+    "description": "Oracle Corporation offers products and services that address enterprise information technology environments worldwide. Its Oracle Cloud Infrastructure (OCI) delivers high-performance compute and autonomous database capabilities that have made it a preferred cloud partner for AI model training and enterprise ERP.",
+    "ceo": "Safra Catz",
+    "headquarters": "Austin, Texas, USA",
+    "employees": "159,000",
+    "founded": "1977",
+    "ipoYear": "1986",
+    "website": "https://www.oracle.com",
+    "marketCap": 485.0,
+    "enterpriseValue": "$565.0 Billion",
+    "dilutedEps": 3.85,
+    "revenueTTM": 53.0,
+    "netIncomeTTM": 10.5,
+    "shareholdersEquity": 15.2,
+    "grossMargin": 71.4,
+    "netMargin": 19.8,
+    "dividendYield": 0.95,
+    "beta": 1.15,
+    "sharesOutstanding": "2.76 Billion",
+    "low52wRatio": 0.65,
+    "high52wRatio": 1.12,
+    "sma50Ratio": 0.99,
+    "rsi": 63.0
+  },
+  "UNH": {
+    "name": "UnitedHealth Group Incorporated",
+    "symbol": "UNH",
+    "exchange": "NYSE",
+    "sector": "Healthcare",
+    "industry": "Healthcare Plans & Optum Services",
+    "description": "UnitedHealth Group is the largest healthcare company in the world by market capitalization, offering healthcare benefits through UnitedHealthcare and health services, analytics, pharmacy care, and ambulatory surgery centers through Optum.",
+    "ceo": "Andrew Witty",
+    "headquarters": "Minnetonka, Minnesota, USA",
+    "employees": "440,000",
+    "founded": "1977",
+    "ipoYear": "1984",
+    "website": "https://www.unitedhealthgroup.com",
+    "marketCap": 525.0,
+    "enterpriseValue": "$585.0 Billion",
+    "dilutedEps": 16.5,
+    "revenueTTM": 372.0,
+    "netIncomeTTM": 15.4,
+    "shareholdersEquity": 93.0,
+    "grossMargin": 23.5,
+    "netMargin": 4.1,
+    "dividendYield": 1.45,
+    "beta": 0.62,
+    "sharesOutstanding": "921.0 Million",
+    "low52wRatio": 0.82,
+    "high52wRatio": 1.08,
+    "sma50Ratio": 0.985,
+    "rsi": 55.0
   }
 };
 
@@ -5050,7 +5833,7 @@ function generateClientCompanyAnalysis(symbol) {
   const known = state.knownQuotes[sym] || (state.selectedAssetForModal && state.selectedAssetForModal.symbol.toUpperCase() === sym ? state.selectedAssetForModal : null);
   
   let profile = CLIENT_COMPANY_PROFILES[sym];
-  let curPrice = known && Number(known.price) > 0 ? Number(known.price) : (profile ? profile.defaultPrice : 150.0);
+  let curPrice = known && Number(known.price) > 0 ? Number(known.price) : (profile && profile.marketCap ? 150.0 : 150.0);
   let change = known && known.changeDollar !== undefined ? Number(known.changeDollar) : (curPrice * 0.015);
   let pct = known ? (known.change24h !== undefined ? Number(known.change24h) : Number(known.pct || 1.5)) : 1.5;
 
@@ -5059,69 +5842,81 @@ function generateClientCompanyAnalysis(symbol) {
   hash = Math.abs(hash);
 
   if (!profile) {
-    const sectors = [
-      ["Technology", "Software Infrastructure", "Enterprise software solutions and digital platforms."],
-      ["Technology", "Semiconductors", "Designing high-performance specialized processing units and analog chips."],
-      ["Healthcare", "Biotechnology", "Developing transformative therapeutics and medical device technologies."],
-      ["Financial Services", "Capital Markets", "Financial advisory, liquidity provision, and asset management."],
-      ["Consumer Cyclical", "Specialty Retail", "Omnichannel retail and lifestyle consumer products distribution."],
-      ["Industrials", "Aerospace & Defense", "High-precision components, machinery, and defense systems."]
-    ];
-    const sec = sectors[hash % sectors.length];
-    const estCap = +(5.0 + (hash % 3500) / 10.0).toFixed(1);
-    const estRev = +(Math.max(1.0, estCap / (2.5 + (hash % 50) / 10.0))).toFixed(1);
-    const estNet = +(estRev * (0.12 + ((hash % 20) / 100.0))).toFixed(2);
-    const estEquity = +(estCap * 0.45).toFixed(1);
-    const estEps = +(Math.max(0.40, curPrice / (18.0 + (hash % 35)))).toFixed(2);
+    const secName = hash % 2 === 0 ? "Information Technology" : "Industrials";
+    const indName = hash % 2 === 0 ? "Software Infrastructure" : "Industrial Conglomerates";
+    const estCap = +(Math.max(2.0, curPrice * (0.15 + (hash % 500) / 100.0))).toFixed(1);
+    const estRev = +(Math.max(0.5, estCap / (1.5 + (hash % 40) / 10.0))).toFixed(1);
+    const estNet = +(estRev * (0.08 + (hash % 18) / 100.0)).toFixed(2);
+    const estEquity = +(estCap * 0.40).toFixed(1);
+    const estEps = +(Math.max(0.50, curPrice / (15.0 + (hash % 30)))).toFixed(2);
+    const sharesCnt = +(estCap / Math.max(1.0, curPrice)).toFixed(2);
+    const sharesFormatted = sharesCnt < 1.0 ? `${Math.round(sharesCnt * 1000)} Million` : `${sharesCnt.toFixed(2)} Billion`;
 
     profile = {
       name: `${sym} Corporation`,
       symbol: sym,
       exchange: hash % 2 === 0 ? "NASDAQ" : "NYSE",
-      sector: sec[0],
-      industry: sec[1],
-      description: `${sym} Corporation operates globally within the ${sec[0]} sector, specializing in ${sec[1].toLowerCase()}. ${sec[2]} The company focuses on scalable operating leverage, customer retention, and technological differentiation across its key market segments.`,
-      ceo: `Executive Leadership Team (${sym})`,
+      sector: secName,
+      industry: indName,
+      description: `${sym} Corporation is an established enterprise operating globally within the ${secName} sector, specializing in ${indName.toLowerCase()}. The company focuses on scalable operating leverage, customer retention, and technological differentiation across its key market segments.`,
+      ceo: `Executive Leadership (${sym})`,
       headquarters: "United States",
-      employees: `${(1200 + (hash % 48000)).toLocaleString()}`,
-      founded: `${1985 + (hash % 35)}`,
-      ipoYear: `${2000 + (hash % 22)}`,
-      website: `https://www.${sym.toLowerCase()}.com`,
+      employees: `${(2500 + (hash % 45000)).toLocaleString()}`,
+      founded: `${1980 + (hash % 40)}`,
+      ipoYear: `${1995 + (hash % 25)}`,
+      website: `https://www.${sym.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`,
       marketCap: estCap,
-      enterpriseValue: `$${(estCap * 1.05).toFixed(1)} Billion`,
+      enterpriseValue: `$${(estCap * 1.06).toFixed(1)} Billion`,
       dilutedEps: estEps,
       revenueTTM: estRev,
       netIncomeTTM: estNet,
       shareholdersEquity: estEquity,
-      grossMargin: +(38.0 + (hash % 45)).toFixed(1),
+      grossMargin: +(35.0 + (hash % 40)).toFixed(1),
       netMargin: +((estNet / estRev) * 100).toFixed(1),
-      dividendYield: hash % 3 === 0 ? +((hash % 32) / 10.0).toFixed(2) : 0.0,
-      beta: +(0.85 + (hash % 140) / 100.0).toFixed(2),
-      sharesOutstanding: `${(estCap / Math.max(1.0, curPrice)).toFixed(2)} Billion`,
-      low52wRatio: +(0.55 + ((hash % 20) / 100.0)).toFixed(2),
-      high52wRatio: +(1.02 + ((hash % 15) / 100.0)).toFixed(2),
-      sma50Ratio: +(0.94 + ((hash % 10) / 100.0)).toFixed(3),
-      rsi: +(45.0 + (hash % 28)).toFixed(1)
+      dividendYield: hash % 3 === 0 ? +((hash % 30) / 10.0).toFixed(2) : 0.0,
+      beta: +(0.80 + (hash % 100) / 100.0).toFixed(2),
+      sharesOutstanding: sharesFormatted,
+      low52wRatio: +(0.65 + ((hash % 20) / 100.0)).toFixed(2),
+      high52wRatio: +(1.05 + ((hash % 15) / 100.0)).toFixed(2),
+      sma50Ratio: +(0.95 + ((hash % 10) / 100.0)).toFixed(3),
+      rsi: +(48.0 + (hash % 24)).toFixed(1)
     };
   }
 
-  const low52 = +(curPrice * (profile.low52wRatio || 0.65)).toFixed(2);
+  // Parse shares to billions
+  let sharesNumB = 1.0;
+  try {
+    const sStr = String(profile.sharesOutstanding || '1.0 Billion').trim();
+    const numMatch = parseFloat(sStr.replace(/[^\d\.]/g, '')) || 1.0;
+    if (/million/i.test(sStr)) {
+      sharesNumB = numMatch / 1000.0;
+    } else if (/trillion/i.test(sStr)) {
+      sharesNumB = numMatch * 1000.0;
+    } else {
+      sharesNumB = numMatch;
+    }
+  } catch (e) {
+    sharesNumB = 1.0;
+  }
+
+  const marketCapB = +(curPrice * sharesNumB).toFixed(1);
+  const capFormatted = marketCapB >= 1000.0 ? `$${(marketCapB / 1000.0).toFixed(2)} Trillion` : `$${marketCapB.toFixed(1)} Billion`;
+
+  const low52 = +(curPrice * (profile.low52wRatio || 0.70)).toFixed(2);
   const high52 = +(curPrice * (profile.high52wRatio || 1.08)).toFixed(2);
   const sma50 = +(curPrice * (profile.sma50Ratio || 0.95)).toFixed(2);
-  const rsiVal = profile.rsi || 60.0;
+  const rsiVal = profile.rsi || 55.0;
   const eps = profile.dilutedEps || 2.50;
   const rev = profile.revenueTTM || 50.0;
   const net = profile.netIncomeTTM || 10.0;
   const eq = profile.shareholdersEquity || 40.0;
-  const cap = profile.marketCap || 100.0;
 
-  const capFormatted = cap >= 1000.0 ? `$${(cap / 1000.0).toFixed(2)} Trillion` : `$${cap.toFixed(1)} Billion`;
   const vol = 25000000 + Math.abs(Math.floor(curPrice * 12345)) % 65000000;
 
   // Ratios
   const pe = +(curPrice / Math.max(0.01, eps)).toFixed(2);
   const peStatus = pe > 35 ? "Growth Premium" : (pe > 18 ? "Reasonable Multiple" : "Undervalued / Low Multiple");
-  const ps = +(cap / Math.max(0.01, rev)).toFixed(2);
+  const ps = +(marketCapB / Math.max(0.01, rev)).toFixed(2);
   const psStatus = ps > 12 ? "Premium Multiple" : (ps > 3 ? "Healthy Valuation" : "Attractive / Deep Value");
   const roe = +((net / Math.max(0.01, eq)) * 100.0).toFixed(2);
   const roeStatus = roe > 25 ? "Exceptional Capital Moat" : (roe > 15 ? "Solid Efficiency" : "Moderate Return");
@@ -5150,7 +5945,7 @@ function generateClientCompanyAnalysis(symbol) {
       volume: vol, volumeFormatted: `${(vol / 1e6).toFixed(1)}M`, isLive: true, source: "Finnhub Live"
     },
     selectedMetrics: {
-      marketCap: cap, marketCapFormatted: capFormatted, enterpriseValue: profile.enterpriseValue,
+      marketCap: marketCapB, marketCapFormatted: capFormatted, enterpriseValue: profile.enterpriseValue,
       dilutedEps: eps, peRatio: pe, psRatio: ps, roe: roe, revenueTTM: rev,
       revenueFormatted: `$${rev.toFixed(1)} Billion`, netIncomeTTM: net, netIncomeFormatted: `$${net.toFixed(1)} Billion`,
       grossMargin: profile.grossMargin, netMargin: profile.netMargin, dividendYield: profile.dividendYield,
@@ -5159,7 +5954,7 @@ function generateClientCompanyAnalysis(symbol) {
     },
     calculatedRatios: [
       { id: "pe_ratio", name: "Price-to-Earnings Ratio (P/E)", category: "Valuation Multiple", formula: "Current Stock Price / Diluted EPS (TTM)", calculationSteps: `$${curPrice.toFixed(2)} / $${eps.toFixed(2)} = ${pe.toFixed(2)}x`, value: pe, formatted: `${pe.toFixed(2)}x`, benchmark: "25.0x (S&P 500 median)", status: peStatus, interpretation: `Trading at ${pe.toFixed(1)}x earnings vs S&P 500 historical median of ~25.0x.` },
-      { id: "ps_ratio", name: "Price-to-Sales Ratio (P/S)", category: "Top-Line Valuation", formula: "Market Capitalization / Total Annual Revenue (TTM)", calculationSteps: `$${cap.toFixed(1)}B / $${rev.toFixed(1)}B = ${ps.toFixed(2)}x`, value: ps, formatted: `${ps.toFixed(2)}x`, benchmark: "2.8x (Market Average)", status: psStatus, interpretation: `Every $1.00 of annual revenue is valued at $${ps.toFixed(2)} in market equity.` },
+      { id: "ps_ratio", name: "Price-to-Sales Ratio (P/S)", category: "Top-Line Valuation", formula: "Market Capitalization / Total Annual Revenue (TTM)", calculationSteps: `$${marketCapB.toFixed(1)}B / $${rev.toFixed(1)}B = ${ps.toFixed(2)}x`, value: ps, formatted: `${ps.toFixed(2)}x`, benchmark: "2.8x (Market Average)", status: psStatus, interpretation: `Every $1.00 of annual revenue is valued at $${ps.toFixed(2)} in market equity.` },
       { id: "roe", name: "Return on Equity (ROE)", category: "Capital Efficiency", formula: "(Net Income / Shareholders' Equity) * 100%", calculationSteps: `($${net.toFixed(1)}B / $${eq.toFixed(1)}B) * 100% = ${roe.toFixed(2)}%`, value: roe, formatted: `${roe.toFixed(2)}%`, benchmark: "> 15.0% (High Moat Standard)", status: roeStatus, interpretation: `Generates $${(roe / 100).toFixed(2)} of bottom-line net profit per $1.00 of book equity.` },
       { id: "rsi_14", name: "Relative Strength Index (RSI 14)", category: "Momentum Oscillator", formula: "100 - [100 / (1 + Avg Gain / Avg Loss)] (14 periods)", calculationSteps: `14-period smoothed momentum oscillator = ${rsiVal.toFixed(1)}`, value: rsiVal, formatted: `${rsiVal.toFixed(1)}`, benchmark: "30 (Oversold) - 70 (Overbought)", status: rsiStatus, interpretation: "Balanced price velocity confirming healthy upward accumulation." },
       { id: "pos_52w", name: "52-Week Range Position", category: "Cyclical Price Action", formula: "((Current Price - 52W Low) / (52W High - 52W Low)) * 100%", calculationSteps: `(($${curPrice.toFixed(2)} - $${low52.toFixed(2)}) / ($${high52.toFixed(2)} - $${low52.toFixed(2)})) * 100% = ${pos52.toFixed(1)}%`, value: pos52, formatted: `${pos52.toFixed(1)}%`, benchmark: "50.0% (Corridor Midpoint)", status: posStatus, interpretation: `Trading at ${pos52.toFixed(1)}% of its 1-year trading range ($${low52.toFixed(2)} - $${high52.toFixed(2)}).` },
@@ -5171,212 +5966,39 @@ function generateClientCompanyAnalysis(symbol) {
       overallScore: +score.toFixed(1),
       maxScore: 10.0,
       riskLevel: (profile.beta || 1.0) < 1.8 ? "Moderate" : "Elevated Beta",
-      summary: `${profile.name} (${sym}) demonstrates robust operating performance, trading at $${curPrice.toFixed(2)} with a market capitalization of ${capFormatted}. The company generates $${rev.toFixed(1)}B in annual revenue and $${net.toFixed(1)}B in net income, reflecting an impressive net profit margin of ${(profile.netMargin || 20).toFixed(1)}%. With a Return on Equity (ROE) of ${roe.toFixed(2)}% and a 50-day moving average divergence of ${smaDiv > 0 ? '+' : ''}${smaDiv.toFixed(2)}%, the underlying business demonstrates substantial capital efficiency and technical strength.`,
-      valuationAnalysis: `At ${pe.toFixed(2)}x P/E and ${ps.toFixed(2)}x P/S, valuation trades at a ${pe > 25 ? 'premium' : 'discount'} to the broader market benchmark (S&P 500 median 25.0x). Investors are willing to pay an elevated multiple due to consistent double-digit earnings growth and market dominance in ${profile.industry}.`,
-      profitabilityAnalysis: `Profitability metrics rank in the top quartile across global equities. A Return on Equity of ${roe.toFixed(2)}% and gross margins of ${(profile.grossMargin || 50).toFixed(1)}% highlight extraordinary pricing power and high operating leverage.`,
-      momentumAnalysis: `Price action is technically constructive with the Relative Strength Index (RSI 14) positioned at ${rsiVal.toFixed(1)}. The stock trades in the ${pos52.toFixed(1)} percentile of its 52-week corridor ($${low52.toFixed(2)} - $${high52.toFixed(2)}), confirming sustained institutional dip-buying above the 50-day SMA ($${sma50.toFixed(2)}).`,
+      summary: `${profile.name} (${sym}) demonstrates robust operating performance, trading at $${curPrice.toFixed(2)} with a market capitalization of ${capFormatted}. The company generates $${rev.toFixed(1)}B in annual revenue and $${net.toFixed(1)}B in net income, reflecting an impressive net profit margin of ${(profile.netMargin || 15).toFixed(1)}%. With a Return on Equity (ROE) of ${roe.toFixed(2)}% and a 50-day moving average divergence of ${smaDiv > 0 ? '+' : ''}${smaDiv.toFixed(2)}%, the underlying business demonstrates substantial capital efficiency and technical strength.`,
+      valuationAnalysis: pe > 25.0
+        ? `At ${pe.toFixed(2)}x P/E and ${ps.toFixed(2)}x P/S, valuation trades at a premium to the broader market benchmark (S&P 500 median 25.0x). Investors are willing to pay an elevated multiple due to consistent earnings execution and competitive positioning in ${profile.industry}.`
+        : `At ${pe.toFixed(2)}x P/E and ${ps.toFixed(2)}x P/S, valuation trades at an attractive discount relative to the broader market benchmark (S&P 500 median 25.0x), offering defensive value and a favorable margin of safety in ${profile.industry}.`,
+      profitabilityAnalysis: roe > 15.0
+        ? `Profitability metrics reflect high capital efficiency with a Return on Equity (ROE) of ${roe.toFixed(2)}%, gross margin of ${(profile.grossMargin || 45).toFixed(1)}%, and net margin of ${(profile.netMargin || 15).toFixed(1)}% producing substantial free cash flow.`
+        : `Capital efficiency reflects a steady Return on Equity (ROE) of ${roe.toFixed(2)}%, with gross margin of ${(profile.grossMargin || 35).toFixed(1)}% and net profit margin of ${(profile.netMargin || 10).toFixed(1)}%, typical for asset-heavy operations in ${profile.industry}.`,
+      momentumAnalysis: smaDiv >= 0
+        ? `Price action is technically constructive with Relative Strength Index (RSI 14) positioned at ${rsiVal.toFixed(1)}. The stock trades in the ${pos52.toFixed(1)} percentile of its 52-week corridor ($${low52.toFixed(2)} - $${high52.toFixed(2)}), confirming sustained institutional dip-buying holding ${smaDiv > 0 ? '+' : ''}${smaDiv.toFixed(2)}% above the 50-day SMA ($${sma50.toFixed(2)}).`
+        : `Price action is currently in mean-reversion mode with Relative Strength Index (RSI 14) positioned at ${rsiVal.toFixed(1)}. The stock trades in the ${pos52.toFixed(1)} percentile of its 52-week corridor ($${low52.toFixed(2)} - $${high52.toFixed(2)}), consolidating ${Math.abs(smaDiv).toFixed(2)}% below the 50-day SMA ($${sma50.toFixed(2)}).`,
       keyStrengths: [
-        `Exceptional capital efficiency with a ${roe.toFixed(2)}% Return on Equity (benchmark >15%).`,
-        `High profit conversion: ${(profile.netMargin || 20).toFixed(1)}% net margin producing $${net.toFixed(1)}B in annual profit.`,
-        `Constructive trend momentum holding ${smaDiv > 0 ? '+' : ''}${smaDiv.toFixed(2)}% relative to its 50-day moving average.`,
-        `Industry-leading moat in ${profile.industry} with global enterprise adoption.`
+        `Capital efficiency: ${roe.toFixed(2)}% Return on Equity (benchmark >15%).`,
+        `Profit conversion: ${(profile.netMargin || 15).toFixed(1)}% net margin producing $${net.toFixed(1)}B in annual profit.`,
+        `Trend momentum: Holding ${smaDiv >= 0 ? '+' : ''}${smaDiv.toFixed(2)}% relative to its 50-day moving average.`,
+        `Competitive moat: Established positioning in ${profile.industry} with enterprise adoption.`
       ],
       keyRisks: [
-        `Valuation sensitivity: At ${pe.toFixed(2)}x P/E, any unexpected deceleration in quarterly earnings could trigger multiple contraction.`,
-        `Macro exposure: Beta of ${(profile.beta || 1.0).toFixed(2)} implies greater volatility than the broader S&P 500 index.`,
-        `Corridor proximity: Trading at ${pos52.toFixed(1)}% of its 52-week range leaves limited immediate margin of safety against macro pullbacks.`
+        pe > 30.0
+          ? `Valuation Sensitivity: At ${pe.toFixed(2)}x P/E, any unexpected deceleration in quarterly earnings could trigger multiple contraction.`
+          : `Margin Headwinds: Cyclical shifts in input costs and competitive pricing could pressure operating margins in ${profile.industry}.`,
+        (profile.beta || 1.0) > 1.15
+          ? `Macro Volatility: Beta of ${(profile.beta || 1.0).toFixed(2)} implies ${Math.round(Math.abs((profile.beta || 1.0) - 1.0) * 100)}% greater volatility than the broader S&P 500 index.`
+          : ((profile.beta || 1.0) < 0.85
+            ? `Market Sensitivity: Beta of ${(profile.beta || 1.0).toFixed(2)} reflects lower volatility than the broader market, which may lag aggressive equity rallies.`
+            : `Market Alignment: Beta of ${(profile.beta || 1.0).toFixed(2)} closely tracks the broader market, maintaining direct sensitivity to macroeconomic sentiment.`),
+        pos52 >= 75.0
+          ? `Corridor Proximity: Trading at ${pos52.toFixed(1)}% of its 52-week range leaves limited immediate margin of safety against technical pullbacks.`
+          : (pos52 <= 25.0
+            ? `Technical Downside Pressure: Trading near the lower bounds of its 52-week range (${pos52.toFixed(1)}%) requires confirming consolidation support before upward continuation.`
+            : `Range Consolidation: Positioned mid-corridor at ${pos52.toFixed(1)}% of its 52-week trading range ($${low52.toFixed(2)} - $${high52.toFixed(2)}), awaiting directional catalyst.`)
       ]
     }
   };
-}
-
-function populateCompanyAnalysisData(data) {
-  if (!data) return;
-  const company = data.company || {};
-  const price = data.price || {};
-  const metrics = data.selectedMetrics || {};
-  const ratios = data.calculatedRatios || [];
-  const assess = data.performanceAssessment || {};
-
-  // 1. Header latest price & change update
-  if (price.current !== undefined) {
-    const priceEl = document.getElementById('sheetAssetPrice');
-    if (priceEl) priceEl.textContent = `$${Number(price.current).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-
-    const deltaEl = document.getElementById('sheetAssetDelta');
-    if (deltaEl && price.pct !== undefined) {
-      const isUp = Number(price.pct) >= 0;
-      deltaEl.textContent = `${isUp ? '▲ +' : '▼ '}${Math.abs(Number(price.pct))}%`;
-      deltaEl.className = `pct-badge-pill ${isUp ? '' : 'negative'}`;
-    }
-
-    const gainDollarEl = document.getElementById('sheetAssetGainDollar');
-    if (gainDollarEl && price.change !== undefined) {
-      const isUp = Number(price.change) >= 0;
-      gainDollarEl.textContent = `${isUp ? '+' : ''}$${Number(price.change).toFixed(2)}`;
-      gainDollarEl.style.color = isUp ? 'var(--text-neon-green, #00d084)' : 'var(--text-red, #ef4444)';
-    }
-  }
-
-  // 2. Company Information (Tab 2)
-  const nameEl = document.getElementById('fundCompanyName');
-  if (nameEl) nameEl.textContent = company.name || data.symbol;
-
-  const exchEl = document.getElementById('fundExchangeTag');
-  if (exchEl) exchEl.textContent = company.exchange || 'NASDAQ';
-
-  const secEl = document.getElementById('fundSectorTag');
-  if (secEl) secEl.textContent = company.sector || 'Equities';
-
-  const indEl = document.getElementById('fundIndustryTag');
-  if (indEl) indEl.textContent = company.industry || 'Market Capital';
-
-  const descEl = document.getElementById('fundCompanyDesc');
-  if (descEl) descEl.textContent = company.description || 'Global corporate profile and operations.';
-
-  const ceoEl = document.getElementById('fundCompanyCeo');
-  if (ceoEl) ceoEl.textContent = company.ceo || '--';
-
-  const hqEl = document.getElementById('fundCompanyHq');
-  if (hqEl) hqEl.textContent = company.headquarters || '--';
-
-  const empEl = document.getElementById('fundCompanyEmployees');
-  if (empEl) empEl.textContent = company.employees || '--';
-
-  const fndEl = document.getElementById('fundCompanyFounded');
-  if (fndEl) fndEl.textContent = company.founded || '--';
-
-  const ipoEl = document.getElementById('fundCompanyIpo');
-  if (ipoEl) ipoEl.textContent = company.ipoYear || '--';
-
-  const webEl = document.getElementById('fundCompanyWebsite');
-  if (webEl) {
-    if (company.website) {
-      webEl.innerHTML = `<a href="${company.website}" target="_blank" rel="noopener noreferrer" style="color:var(--emerald-green-dark); text-decoration:underline;">${company.website.replace(/^https?:\/\//, '')}</a>`;
-    } else {
-      webEl.textContent = '--';
-    }
-  }
-
-  // 3. 52-Week Price Corridor Position
-  const low52 = metrics.low52w || (price.current ? price.current * 0.7 : 0);
-  const high52 = metrics.high52w || (price.current ? price.current * 1.2 : 0);
-  const curPrice = price.current || (state.selectedAssetForModal ? state.selectedAssetForModal.price : 0);
-  const spread = Math.max(0.01, high52 - low52);
-  const posPct = Math.min(100, Math.max(0, ((curPrice - low52) / spread) * 100));
-
-  const lowEl = document.getElementById('fund52wLow');
-  if (lowEl) lowEl.textContent = `$${low52.toFixed(2)} (52W Low)`;
-
-  const curRefEl = document.getElementById('fundCurrentPriceRef');
-  if (curRefEl) curRefEl.textContent = `$${curPrice.toFixed(2)} (Current)`;
-
-  const highEl = document.getElementById('fund52wHigh');
-  if (highEl) highEl.textContent = `$${high52.toFixed(2)} (52W High)`;
-
-  const posTextEl = document.getElementById('fund52wPositionText');
-  if (posTextEl) posTextEl.textContent = `Position: ${posPct.toFixed(1)}% of 52W Range`;
-
-  const fillEl = document.getElementById('fund52wFill');
-  if (fillEl) fillEl.style.width = `${posPct.toFixed(1)}%`;
-
-  const pinEl = document.getElementById('fund52wPin');
-  if (pinEl) pinEl.style.left = `${posPct.toFixed(1)}%`;
-
-  // 4. Selected Financial Metrics (Tab 2)
-  const setMetric = (id, val) => {
-    const el = document.getElementById(id);
-    if (el && val !== undefined && val !== null) el.textContent = val;
-  };
-
-  setMetric('metricMarketCap', metrics.marketCapFormatted || (metrics.marketCap ? `$${metrics.marketCap}B` : '--'));
-  setMetric('metricEnterpriseVal', metrics.enterpriseValue || '--');
-  setMetric('metricVolume', price.volumeFormatted || (price.volume ? `${(price.volume / 1e6).toFixed(1)}M` : '--'));
-  setMetric('metricAvgVolume', `Avg: ${price.volumeFormatted || '35.0M'}`);
-  setMetric('metricEps', metrics.dilutedEps !== undefined ? `$${Number(metrics.dilutedEps).toFixed(2)}` : '--');
-  setMetric('metricRevenue', metrics.revenueFormatted || (metrics.revenueTTM ? `$${metrics.revenueTTM}B` : '--'));
-  setMetric('metricNetIncome', metrics.netIncomeFormatted || (metrics.netIncomeTTM ? `$${metrics.netIncomeTTM}B` : '--'));
-  setMetric('metricGrossMargin', metrics.grossMargin !== undefined ? `${Number(metrics.grossMargin).toFixed(1)}%` : '--');
-  setMetric('metricNetMargin', metrics.netMargin !== undefined ? `${Number(metrics.netMargin).toFixed(1)}%` : '--');
-  setMetric('metricBeta', metrics.beta !== undefined ? Number(metrics.beta).toFixed(2) : '--');
-  setMetric('metricDividendYield', metrics.dividendYield !== undefined ? `${Number(metrics.dividendYield).toFixed(2)}%` : '0.00%');
-  setMetric('metricShares', metrics.sharesOutstanding || '--');
-  setMetric('metricSma50', metrics.sma50 !== undefined ? `$${Number(metrics.sma50).toFixed(2)}` : '--');
-
-  // 5. Calculated Financial Ratios & Performance Indicators (Tab 3)
-  const ratiosGrid = document.getElementById('fundRatiosGrid');
-  if (ratiosGrid) {
-    if (!ratios || ratios.length === 0) {
-      ratiosGrid.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-dim);">No calculated ratios available.</div>`;
-    } else {
-      ratiosGrid.innerHTML = ratios.map(r => `
-        <div class="ratio-calc-card">
-          <div class="ratio-card-top">
-            <div>
-              <div class="ratio-card-title">${r.name}</div>
-              <span class="ratio-category-tag">${r.category}</span>
-            </div>
-            <span class="ratio-status-badge">${r.status}</span>
-          </div>
-          <div class="ratio-result-row">
-            <span class="ratio-result-num">${r.formatted}</span>
-            <span class="ratio-benchmark-tag">vs. ${r.benchmark}</span>
-          </div>
-          <div class="ratio-formula-strip">
-            <span style="color:#38bdf8; font-weight:700;">Formula:</span> ${r.formula}
-          </div>
-          <div class="ratio-calc-steps">
-            <span style="color:var(--text-muted); font-size:11px;">Arithmetic Step:</span>
-            <span style="font-family:ui-monospace, monospace; color:var(--emerald-green-dark);">${r.calculationSteps}</span>
-          </div>
-          <div class="ratio-interp-text">
-            ${r.interpretation}
-          </div>
-        </div>
-      `).join('');
-    }
-  }
-
-  // 6. Data-Supported Performance Assessment (Tab 4)
-  const verdictEl = document.getElementById('assessVerdictBadge');
-  if (verdictEl) {
-    verdictEl.textContent = `${assess.verdictBadge || '🟢 Outperform'} · ${assess.verdict || 'STRONG GROWTH'}`;
-  }
-
-  const scoreEl = document.getElementById('assessScoreNum');
-  if (scoreEl) {
-    scoreEl.textContent = assess.overallScore !== undefined ? Number(assess.overallScore).toFixed(1) : '8.5';
-  }
-
-  const summaryEl = document.getElementById('assessSummaryText');
-  if (summaryEl) {
-    summaryEl.textContent = assess.summary || 'Solid fundamental execution across all operating sectors.';
-  }
-
-  const valEl = document.getElementById('assessValuationText');
-  if (valEl) {
-    valEl.textContent = assess.valuationAnalysis || '--';
-  }
-
-  const profEl = document.getElementById('assessProfitabilityText');
-  if (profEl) {
-    profEl.textContent = assess.profitabilityAnalysis || '--';
-  }
-
-  const momEl = document.getElementById('assessMomentumText');
-  if (momEl) {
-    momEl.textContent = assess.momentumAnalysis || '--';
-  }
-
-  const strList = document.getElementById('assessStrengthsList');
-  if (strList && assess.keyStrengths) {
-    strList.innerHTML = assess.keyStrengths.map(s => `<li>${s}</li>`).join('');
-  }
-
-  const riskList = document.getElementById('assessRisksList');
-  if (riskList && assess.keyRisks) {
-    riskList.innerHTML = assess.keyRisks.map(r => `<li>${r}</li>`).join('');
-  }
 }
 
 function drawSparkline(canvasId, points, isUp) {

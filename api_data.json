@@ -1726,29 +1726,29 @@
       "symbol": "MMM",
       "exchange": "NYSE",
       "sector": "Industrials",
-      "industry": "Conglomerate & Industrial Materials",
-      "description": "3M Company is an American multinational conglomerate operating across industrial adhesives, safety products, filtration materials, commercial branding, and iconic consumer goods (Post-it, Scotch, Command). Founded in 1902 in Two Harbors, Minnesota, 3M holds thousands of active patents driving scalable manufacturing solutions worldwide.",
+      "industry": "Industrial Conglomerates & Materials",
+      "description": "3M Company is an American multinational conglomerate operating across industrial adhesives, advanced materials, commercial branding, personal safety equipment, and iconic consumer stationery (Post-it, Scotch, Command). Founded in 1902 in Two Harbors, Minnesota, 3M holds thousands of active patents driving scalable manufacturing solutions worldwide.",
       "ceo": "William M. Brown",
       "headquarters": "Saint Paul, Minnesota, USA",
-      "employees": "85,000",
+      "employees": "65,000",
       "founded": "1902",
       "ipoYear": "1946",
       "website": "https://www.3m.com",
-      "marketCap": 45.8,
-      "enterpriseValue": "$48.1 Billion",
-      "dilutedEps": 2.67,
-      "revenueTTM": 32.5,
-      "netIncomeTTM": 4.12,
-      "shareholdersEquity": 14.8,
-      "grossMargin": 44.5,
-      "netMargin": 12.7,
-      "dividendYield": 2.78,
-      "beta": 0.98,
+      "marketCap": 96.9,
+      "enterpriseValue": "$105.4 Billion",
+      "dilutedEps": 7.2,
+      "revenueTTM": 24.6,
+      "netIncomeTTM": 3.8,
+      "shareholdersEquity": 6.2,
+      "grossMargin": 44.2,
+      "netMargin": 15.4,
+      "dividendYield": 1.62,
+      "beta": 0.95,
       "sharesOutstanding": "552 Million",
-      "low52wRatio": 0.62,
-      "high52wRatio": 1.15,
-      "sma50Ratio": 0.965,
-      "rsi": 55.4
+      "low52wRatio": 0.79,
+      "high52wRatio": 1.05,
+      "sma50Ratio": 0.985,
+      "rsi": 54.2
     },
     "DIS": {
       "name": "The Walt Disney Company",
@@ -2677,6 +2677,4815 @@
       "high52wRatio": 1.05,
       "sma50Ratio": 0.965,
       "rsi": 61.4
+    },
+    "ADA": {
+      "name": "Cardano",
+      "symbol": "ADA",
+      "exchange": "CRYPTO",
+      "sector": "Decentralized Finance & Blockchain",
+      "industry": "Layer-1 Smart Contract Platform",
+      "description": "Cardano is a proof-of-stake blockchain platform built on peer-reviewed research and evidence-based development. Founded in 2015 by Ethereum co-founder Charles Hoskinson, Cardano utilizes the Ouroboros consensus protocol to provide robust security, sustainability, and scalability for decentralized applications and digital identity solutions.",
+      "ceo": "Charles Hoskinson (Founder)",
+      "headquarters": "Zug, Switzerland",
+      "employees": "800+ (IOHK & Emurgo)",
+      "founded": "2015",
+      "ipoYear": "2017",
+      "website": "https://cardano.org",
+      "marketCap": 13.5,
+      "enterpriseValue": "$13.5 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 0.05,
+      "netIncomeTTM": 0.02,
+      "shareholdersEquity": 13.5,
+      "grossMargin": 95.0,
+      "netMargin": 40.0,
+      "dividendYield": 3.12,
+      "beta": 1.85,
+      "sharesOutstanding": "35.7 Billion",
+      "low52wRatio": 0.65,
+      "high52wRatio": 1.45,
+      "sma50Ratio": 0.94,
+      "rsi": 48.5
+    },
+    "DOGE": {
+      "name": "Dogecoin",
+      "symbol": "DOGE",
+      "exchange": "CRYPTO",
+      "sector": "Digital Currency",
+      "industry": "Peer-to-Peer Payment Network",
+      "description": "Dogecoin is an open-source peer-to-peer cryptocurrency created in 2013 by Billy Markus and Jackson Palmer as a lighthearted alternative to traditional cryptocurrencies. Featuring the Shiba Inu dog meme as its mascot, Dogecoin has evolved into a globally recognized medium of exchange with low transaction fees and an active community.",
+      "ceo": "Decentralized Foundation Core Team",
+      "headquarters": "Decentralized / Open Source",
+      "employees": "Open Source Contributors",
+      "founded": "2013",
+      "ipoYear": "2013",
+      "website": "https://dogecoin.com",
+      "marketCap": 20.8,
+      "enterpriseValue": "$20.8 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 0.01,
+      "netIncomeTTM": 0.0,
+      "shareholdersEquity": 20.8,
+      "grossMargin": 99.0,
+      "netMargin": 50.0,
+      "dividendYield": 0.0,
+      "beta": 2.15,
+      "sharesOutstanding": "146.5 Billion",
+      "low52wRatio": 0.58,
+      "high52wRatio": 1.62,
+      "sma50Ratio": 0.92,
+      "rsi": 52.0
+    },
+    "XRP": {
+      "name": "XRP",
+      "symbol": "XRP",
+      "exchange": "CRYPTO",
+      "sector": "Digital Currency & Payments",
+      "industry": "Enterprise Cross-Border Liquidity",
+      "description": "XRP is the native digital asset on the decentralized XRP Ledger, designed for rapid, low-cost cross-border payments and remittances. Developed to settle transactions in 3\u20135 seconds with minimal energy consumption, XRP is utilized by Ripple Labs and global financial institutions for on-demand liquidity.",
+      "ceo": "Brad Garlinghouse (Ripple CEO)",
+      "headquarters": "San Francisco, California, USA",
+      "employees": "900+ (Ripple Labs)",
+      "founded": "2012",
+      "ipoYear": "2012",
+      "website": "https://xrpl.org",
+      "marketCap": 33.2,
+      "enterpriseValue": "$33.2 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 0.15,
+      "netIncomeTTM": 0.05,
+      "shareholdersEquity": 33.2,
+      "grossMargin": 92.0,
+      "netMargin": 33.3,
+      "dividendYield": 0.0,
+      "beta": 1.65,
+      "sharesOutstanding": "56.7 Billion",
+      "low52wRatio": 0.72,
+      "high52wRatio": 1.35,
+      "sma50Ratio": 0.96,
+      "rsi": 51.5
+    },
+    "BNB": {
+      "name": "BNB",
+      "symbol": "BNB",
+      "exchange": "CRYPTO",
+      "sector": "Smart Contracts & Ecosystems",
+      "industry": "EVM Layer-1 / Centralized-Decentralized Exchange",
+      "description": "BNB is the native utility token powering the BNB Chain ecosystem, including BNB Smart Chain (BSC) and the Binance cryptocurrency exchange. Launched in 2017, BNB is used for discounted trading fees, transaction gas on the blockchain, and participation in ecosystem governance, supported by an automated quarterly burn mechanism.",
+      "ceo": "Richard Teng (Binance CEO)",
+      "headquarters": "Global Decentralized / Dubai, UAE",
+      "employees": "5,000+ (Binance Group)",
+      "founded": "2017",
+      "ipoYear": "2017",
+      "website": "https://bnbchain.org",
+      "marketCap": 87.5,
+      "enterpriseValue": "$87.5 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 2.1,
+      "netIncomeTTM": 1.25,
+      "shareholdersEquity": 87.5,
+      "grossMargin": 88.0,
+      "netMargin": 59.5,
+      "dividendYield": 0.0,
+      "beta": 1.45,
+      "sharesOutstanding": "145.8 Million",
+      "low52wRatio": 0.68,
+      "high52wRatio": 1.24,
+      "sma50Ratio": 0.97,
+      "rsi": 56.0
+    },
+    "AVAX": {
+      "name": "Avalanche",
+      "symbol": "AVAX",
+      "exchange": "CRYPTO",
+      "sector": "Decentralized Infrastructure",
+      "industry": "Multi-Subnet Smart Contract Platform",
+      "description": "Avalanche is a high-throughput, eco-friendly smart contracts platform launched in 2020 by Ava Labs. Its novel multi-engine consensus mechanism achieves near-instant transaction finality (under 1 second), while allowing developers to build custom application-specific blockchains known as Subnets.",
+      "ceo": "Emin G\u00fcn Sirer (Ava Labs Founder)",
+      "headquarters": "Brooklyn, New York, USA",
+      "employees": "300+ (Ava Labs)",
+      "founded": "2020",
+      "ipoYear": "2020",
+      "website": "https://avax.network",
+      "marketCap": 11.4,
+      "enterpriseValue": "$11.4 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 0.08,
+      "netIncomeTTM": 0.03,
+      "shareholdersEquity": 11.4,
+      "grossMargin": 90.0,
+      "netMargin": 37.5,
+      "dividendYield": 5.4,
+      "beta": 2.2,
+      "sharesOutstanding": "401.2 Million",
+      "low52wRatio": 0.6,
+      "high52wRatio": 1.55,
+      "sma50Ratio": 0.93,
+      "rsi": 49.0
+    },
+    "LINK": {
+      "name": "Chainlink",
+      "symbol": "LINK",
+      "exchange": "CRYPTO",
+      "sector": "Blockchain Middleware",
+      "industry": "Decentralized Oracle Networks & Cross-Chain (CCIP)",
+      "description": "Chainlink is the industry-standard Web3 services platform connecting blockchains to real-world data, off-chain computation, and legacy banking systems (via Cross-Chain Interoperability Protocol / CCIP). Co-founded by Sergey Nazarov, Chainlink secures tens of billions of dollars across top DeFi protocols and institutional finance.",
+      "ceo": "Sergey Nazarov (Co-Founder)",
+      "headquarters": "San Francisco, California, USA",
+      "employees": "500+ (Chainlink Labs)",
+      "founded": "2017",
+      "ipoYear": "2017",
+      "website": "https://chain.link",
+      "marketCap": 7.3,
+      "enterpriseValue": "$7.3 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 0.12,
+      "netIncomeTTM": 0.04,
+      "shareholdersEquity": 7.3,
+      "grossMargin": 85.0,
+      "netMargin": 33.3,
+      "dividendYield": 0.0,
+      "beta": 1.75,
+      "sharesOutstanding": "608.1 Million",
+      "low52wRatio": 0.62,
+      "high52wRatio": 1.48,
+      "sma50Ratio": 0.95,
+      "rsi": 53.0
+    },
+    "SMCI": {
+      "name": "Super Micro Computer, Inc.",
+      "symbol": "SMCI",
+      "exchange": "NASDAQ",
+      "sector": "Technology",
+      "industry": "AI Compute Infrastructure & Server Systems",
+      "description": "Super Micro Computer, Inc. is a global leader in high-performance server and storage solutions built on modular, energy-efficient architecture (Building Block Solutions). Supermicro partners closely with NVIDIA, AMD, and Intel to deliver rack-scale AI clusters, liquid cooling systems, and enterprise data center infrastructure.",
+      "ceo": "Charles Liang",
+      "headquarters": "San Jose, California, USA",
+      "employees": "5,300",
+      "founded": "1993",
+      "ipoYear": "2007",
+      "website": "https://www.supermicro.com",
+      "marketCap": 27.2,
+      "enterpriseValue": "$29.4 Billion",
+      "dilutedEps": 2.21,
+      "revenueTTM": 14.9,
+      "netIncomeTTM": 1.29,
+      "shareholdersEquity": 5.1,
+      "grossMargin": 14.2,
+      "netMargin": 8.6,
+      "dividendYield": 0.0,
+      "beta": 2.1,
+      "sharesOutstanding": "585.0 Million",
+      "low52wRatio": 0.35,
+      "high52wRatio": 1.85,
+      "sma50Ratio": 0.88,
+      "rsi": 44.0
+    },
+    "ARM": {
+      "name": "Arm Holdings plc",
+      "symbol": "ARM",
+      "exchange": "NASDAQ",
+      "sector": "Technology",
+      "industry": "Semiconductor Architecture & IP Licensing",
+      "description": "Arm Holdings plc designs the microarchitecture and instruction sets powering over 99% of the world's smartphones, modern edge devices, and increasingly hyperscale data center processors (e.g. AWS Graviton, Apple Silicon). Headquartered in Cambridge, UK, Arm licenses its intellectual property to hundreds of leading global technology companies.",
+      "ceo": "Rene Haas",
+      "headquarters": "Cambridge, United Kingdom",
+      "employees": "6,900",
+      "founded": "1990",
+      "ipoYear": "2023",
+      "website": "https://www.arm.com",
+      "marketCap": 147.8,
+      "enterpriseValue": "$146.2 Billion",
+      "dilutedEps": 0.78,
+      "revenueTTM": 3.23,
+      "netIncomeTTM": 0.76,
+      "shareholdersEquity": 5.6,
+      "grossMargin": 96.2,
+      "netMargin": 23.5,
+      "dividendYield": 0.0,
+      "beta": 1.95,
+      "sharesOutstanding": "1.04 Billion",
+      "low52wRatio": 0.52,
+      "high52wRatio": 1.28,
+      "sma50Ratio": 0.94,
+      "rsi": 58.0
+    },
+    "TGT": {
+      "name": "Target Corporation",
+      "symbol": "TGT",
+      "exchange": "NYSE",
+      "sector": "Consumer Defensive",
+      "industry": "Discount Stores & General Merchandise",
+      "description": "Target Corporation is an iconic American general merchandise retailer operating nearly 2,000 stores across all 50 U.S. states and a leading digital fulfillment network. Target offers curated assortments spanning apparel, home essentials, food and beverage, beauty, and exclusive private-label brands.",
+      "ceo": "Brian C. Cornell",
+      "headquarters": "Minneapolis, Minnesota, USA",
+      "employees": "415,000",
+      "founded": "1902",
+      "ipoYear": "1967",
+      "website": "https://www.target.com",
+      "marketCap": 71.4,
+      "enterpriseValue": "$86.5 Billion",
+      "dilutedEps": 9.15,
+      "revenueTTM": 106.8,
+      "netIncomeTTM": 4.25,
+      "shareholdersEquity": 13.9,
+      "grossMargin": 28.4,
+      "netMargin": 4.0,
+      "dividendYield": 2.88,
+      "beta": 1.05,
+      "sharesOutstanding": "462.0 Million",
+      "low52wRatio": 0.75,
+      "high52wRatio": 1.15,
+      "sma50Ratio": 0.98,
+      "rsi": 52.4
+    },
+    "DIA": {
+      "name": "SPDR Dow Jones Industrial Average ETF Trust",
+      "symbol": "DIA",
+      "exchange": "NYSE Arca",
+      "sector": "Exchange Traded Funds",
+      "industry": "Large-Cap Industrial & Value Equity ETF",
+      "description": "The SPDR Dow Jones Industrial Average ETF Trust seeks to track the price and yield performance of the Dow Jones Industrial Average (DJIA), representing 30 prominent American blue-chip companies across major economic sectors excluding transportation and utilities.",
+      "ceo": "State Street Global Advisors (Trustee)",
+      "headquarters": "Boston, Massachusetts, USA",
+      "employees": "N/A (Managed ETF)",
+      "founded": "1998",
+      "ipoYear": "1998",
+      "website": "https://www.ssga.com/spdrs",
+      "marketCap": 34.2,
+      "enterpriseValue": "$34.2 Billion",
+      "dilutedEps": 18.5,
+      "revenueTTM": 0.06,
+      "netIncomeTTM": 0.05,
+      "shareholdersEquity": 34.2,
+      "grossMargin": 99.0,
+      "netMargin": 83.3,
+      "dividendYield": 1.68,
+      "beta": 0.88,
+      "sharesOutstanding": "81.2 Million",
+      "low52wRatio": 0.82,
+      "high52wRatio": 1.05,
+      "sma50Ratio": 0.99,
+      "rsi": 57.0
+    },
+    "VOO": {
+      "name": "Vanguard S&P 500 ETF",
+      "symbol": "VOO",
+      "exchange": "NYSE Arca",
+      "sector": "Exchange Traded Funds",
+      "industry": "Large-Cap Blend Equity ETF",
+      "description": "The Vanguard S&P 500 ETF invests in stocks in the S&P 500 Index, representing 500 of the largest U.S. companies. Renowned for its industry-leading low expense ratio of 0.03%, VOO offers diversified exposure to premier American corporate market capitalization.",
+      "ceo": "Salim Ramji (Vanguard CEO)",
+      "headquarters": "Malvern, Pennsylvania, USA",
+      "employees": "20,000+ (The Vanguard Group)",
+      "founded": "2010",
+      "ipoYear": "2010",
+      "website": "https://investor.vanguard.com",
+      "marketCap": 520.0,
+      "enterpriseValue": "$520.0 Billion",
+      "dilutedEps": 22.8,
+      "revenueTTM": 0.15,
+      "netIncomeTTM": 0.14,
+      "shareholdersEquity": 520.0,
+      "grossMargin": 99.5,
+      "netMargin": 93.3,
+      "dividendYield": 1.28,
+      "beta": 1.0,
+      "sharesOutstanding": "991.0 Million",
+      "low52wRatio": 0.8,
+      "high52wRatio": 1.06,
+      "sma50Ratio": 0.99,
+      "rsi": 59.0
+    },
+    "VTI": {
+      "name": "Vanguard Total Stock Market ETF",
+      "symbol": "VTI",
+      "exchange": "NYSE Arca",
+      "sector": "Exchange Traded Funds",
+      "industry": "Total US Equity Market ETF",
+      "description": "The Vanguard Total Stock Market ETF seeks to track the performance of the CRSP US Total Market Index, representing approximately 100% of the investable U.S. equity market across large, mid, small, and micro-cap growth and value stocks with an ultra-low 0.03% expense ratio.",
+      "ceo": "Salim Ramji (Vanguard CEO)",
+      "headquarters": "Malvern, Pennsylvania, USA",
+      "employees": "20,000+ (The Vanguard Group)",
+      "founded": "2001",
+      "ipoYear": "2001",
+      "website": "https://investor.vanguard.com",
+      "marketCap": 410.0,
+      "enterpriseValue": "$410.0 Billion",
+      "dilutedEps": 12.4,
+      "revenueTTM": 0.12,
+      "netIncomeTTM": 0.11,
+      "shareholdersEquity": 410.0,
+      "grossMargin": 99.5,
+      "netMargin": 91.7,
+      "dividendYield": 1.34,
+      "beta": 1.02,
+      "sharesOutstanding": "1.46 Billion",
+      "low52wRatio": 0.79,
+      "high52wRatio": 1.06,
+      "sma50Ratio": 0.985,
+      "rsi": 58.5
+    },
+    "IWM": {
+      "name": "iShares Russell 2000 ETF",
+      "symbol": "IWM",
+      "exchange": "NYSE Arca",
+      "sector": "Exchange Traded Funds",
+      "industry": "Small-Cap Blend Equity ETF",
+      "description": "The iShares Russell 2000 ETF seeks to track the investment results of an index composed of small-capitalization U.S. equities (the Russell 2000 Index). IWM is the world's most actively traded benchmark proxy for domestic U.S. economic growth and small-cap innovation.",
+      "ceo": "Larry Fink (BlackRock Chairman & CEO)",
+      "headquarters": "New York, New York, USA",
+      "employees": "19,800 (BlackRock Inc)",
+      "founded": "2000",
+      "ipoYear": "2000",
+      "website": "https://www.ishares.com",
+      "marketCap": 68.5,
+      "enterpriseValue": "$68.5 Billion",
+      "dilutedEps": 6.8,
+      "revenueTTM": 0.14,
+      "netIncomeTTM": 0.12,
+      "shareholdersEquity": 68.5,
+      "grossMargin": 99.0,
+      "netMargin": 85.7,
+      "dividendYield": 1.2,
+      "beta": 1.18,
+      "sharesOutstanding": "309.4 Million",
+      "low52wRatio": 0.74,
+      "high52wRatio": 1.08,
+      "sma50Ratio": 0.98,
+      "rsi": 56.0
+    },
+    "SMH": {
+      "name": "VanEck Semiconductor ETF",
+      "symbol": "SMH",
+      "exchange": "NASDAQ",
+      "sector": "Exchange Traded Funds",
+      "industry": "Semiconductor Industry Thematic ETF",
+      "description": "The VanEck Semiconductor ETF seeks to replicate the price and yield performance of the MVIS US Listed Semiconductor 25 Index. SMH provides concentrated exposure to the 25 largest semiconductor manufacturing and equipment companies worldwide, led by NVIDIA, TSMC, Broadcom, and ASML.",
+      "ceo": "Jan van Eck (VanEck CEO)",
+      "headquarters": "New York, New York, USA",
+      "employees": "400+ (VanEck Associates)",
+      "founded": "2011",
+      "ipoYear": "2011",
+      "website": "https://www.vaneck.com",
+      "marketCap": 23.4,
+      "enterpriseValue": "$23.4 Billion",
+      "dilutedEps": 5.6,
+      "revenueTTM": 0.08,
+      "netIncomeTTM": 0.07,
+      "shareholdersEquity": 23.4,
+      "grossMargin": 99.0,
+      "netMargin": 87.5,
+      "dividendYield": 0.45,
+      "beta": 1.58,
+      "sharesOutstanding": "92.6 Million",
+      "low52wRatio": 0.62,
+      "high52wRatio": 1.18,
+      "sma50Ratio": 0.97,
+      "rsi": 60.5
+    },
+    "GLD": {
+      "name": "SPDR Gold Shares",
+      "symbol": "GLD",
+      "exchange": "NYSE Arca",
+      "sector": "Commodities & Precious Metals",
+      "industry": "Physical Gold Bullion Trust",
+      "description": "SPDR Gold Shares is the largest physically backed gold exchange-traded fund in the world. Launched in 2004 and sponsored by the World Gold Trust Services, each share of GLD represents fractional ownership of physical gold bullion stored in secure vaults in London.",
+      "ceo": "World Gold Trust Services LLC (Sponsor)",
+      "headquarters": "New York, New York, USA",
+      "employees": "N/A (Trust Custodied at HSBC Bank plc)",
+      "founded": "2004",
+      "ipoYear": "2004",
+      "website": "https://www.spdrgoldshares.com",
+      "marketCap": 73.1,
+      "enterpriseValue": "$73.1 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 0.28,
+      "netIncomeTTM": 0.24,
+      "shareholdersEquity": 73.1,
+      "grossMargin": 99.0,
+      "netMargin": 85.7,
+      "dividendYield": 0.0,
+      "beta": 0.12,
+      "sharesOutstanding": "298.2 Million",
+      "low52wRatio": 0.78,
+      "high52wRatio": 1.03,
+      "sma50Ratio": 0.99,
+      "rsi": 62.0
+    },
+    "SLV": {
+      "name": "iShares Silver Trust",
+      "symbol": "SLV",
+      "exchange": "NYSE Arca",
+      "sector": "Commodities & Precious Metals",
+      "industry": "Physical Silver Bullion Trust",
+      "description": "The iShares Silver Trust seeks to reflect generally the performance of the price of silver bullion. Sponsored by BlackRock Asset Management, SLV holds physical silver bars in vaults in London and New York, providing cost-effective exposure to silver without requiring physical storage.",
+      "ceo": "Larry Fink (BlackRock Chairman & CEO)",
+      "headquarters": "New York, New York, USA",
+      "employees": "N/A (Custodied at JPMorgan Chase)",
+      "founded": "2006",
+      "ipoYear": "2006",
+      "website": "https://www.ishares.com",
+      "marketCap": 14.8,
+      "enterpriseValue": "$14.8 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 0.07,
+      "netIncomeTTM": 0.06,
+      "shareholdersEquity": 14.8,
+      "grossMargin": 99.0,
+      "netMargin": 85.7,
+      "dividendYield": 0.0,
+      "beta": 0.65,
+      "sharesOutstanding": "506.8 Million",
+      "low52wRatio": 0.68,
+      "high52wRatio": 1.15,
+      "sma50Ratio": 0.97,
+      "rsi": 58.0
+    },
+    "ARKK": {
+      "name": "ARK Innovation ETF",
+      "symbol": "ARKK",
+      "exchange": "NYSE Arca",
+      "sector": "Exchange Traded Funds",
+      "industry": "Disruptive Innovation Actively Managed ETF",
+      "description": "The ARK Innovation ETF is an actively managed ETF that seeks long-term capital growth by investing in companies that rely on or benefit from the development of technologically enabled products or services (e.g. artificial intelligence, genomics, autonomous tech, and robotics).",
+      "ceo": "Cathie Wood (Founder, CIO & CEO)",
+      "headquarters": "St. Petersburg, Florida, USA",
+      "employees": "65+ (ARK Investment Management)",
+      "founded": "2014",
+      "ipoYear": "2014",
+      "website": "https://ark-funds.com",
+      "marketCap": 5.9,
+      "enterpriseValue": "$5.9 Billion",
+      "dilutedEps": 0.0,
+      "revenueTTM": 0.04,
+      "netIncomeTTM": 0.03,
+      "shareholdersEquity": 5.9,
+      "grossMargin": 99.0,
+      "netMargin": 75.0,
+      "dividendYield": 0.0,
+      "beta": 1.72,
+      "sharesOutstanding": "120.7 Million",
+      "low52wRatio": 0.7,
+      "high52wRatio": 1.25,
+      "sma50Ratio": 0.96,
+      "rsi": 51.0
+    },
+    "AOS": {
+      "name": "A. O. Smith Corporation",
+      "symbol": "AOS",
+      "exchange": "NYSE",
+      "sector": "Industrials",
+      "industry": "Building Products & Water Treatment",
+      "description": "A. O. Smith Corporation is an American manufacturer of residential and commercial water heaters, boilers, and water treatment products. Founded in 1874 in Milwaukee, Wisconsin, A. O. Smith is one of the world's leading providers of innovative, energy-efficient water heating and water filtration technologies.",
+      "ceo": "Kevin J. Wheeler",
+      "headquarters": "Milwaukee, Wisconsin, USA",
+      "employees": "12,000",
+      "founded": "1874",
+      "ipoYear": "1983",
+      "website": "https://www.aosmith.com",
+      "marketCap": 9.4,
+      "enterpriseValue": "$9.6 Billion",
+      "dilutedEps": 3.85,
+      "revenueTTM": 3.9,
+      "netIncomeTTM": 0.58,
+      "shareholdersEquity": 1.95,
+      "grossMargin": 38.5,
+      "netMargin": 14.8,
+      "dividendYield": 2.15,
+      "beta": 1.12,
+      "sharesOutstanding": "148.0 Million",
+      "low52wRatio": 0.82,
+      "high52wRatio": 1.12,
+      "sma50Ratio": 0.985,
+      "rsi": 53.0
+    },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "symbol": "ABT",
+      "exchange": "NYSE",
+      "sector": "Healthcare",
+      "industry": "Medical Devices & Diagnostics",
+      "description": "Abbott Laboratories is an American multinational medical devices and healthcare company founded in 1888. Abbott creates breakthrough technologies across diagnostic systems, cardiovascular devices, neuromodulation, diabetes care (FreeStyle Libre), and science-based nutritional products.",
+      "ceo": "Robert B. Ford",
+      "headquarters": "North Chicago, Illinois, USA",
+      "employees": "114,000",
+      "founded": "1888",
+      "ipoYear": "1929",
+      "website": "https://www.abbott.com",
+      "marketCap": 178.5,
+      "enterpriseValue": "$189.2 Billion",
+      "dilutedEps": 3.32,
+      "revenueTTM": 41.5,
+      "netIncomeTTM": 5.8,
+      "shareholdersEquity": 38.2,
+      "grossMargin": 55.4,
+      "netMargin": 14.0,
+      "dividendYield": 2.15,
+      "beta": 0.72,
+      "sharesOutstanding": "1.74 Billion",
+      "low52wRatio": 0.84,
+      "high52wRatio": 1.1,
+      "sma50Ratio": 0.99,
+      "rsi": 54.0
+    },
+    "ABBV": {
+      "name": "AbbVie Inc.",
+      "symbol": "ABBV",
+      "exchange": "NYSE",
+      "sector": "Healthcare",
+      "industry": "Biotechnology & Pharmaceuticals",
+      "description": "AbbVie Inc. is an American biopharmaceutical company founded in 2013 as a spin-off of Abbott Laboratories. AbbVie discovers, develops, and delivers advanced therapies across immunology (Skyrizi, Rinvoq, Humira), oncology (Imbruvica, Venclexta), neuroscience (Botox, Vraylar), and eye care.",
+      "ceo": "Robert A. Michael",
+      "headquarters": "North Chicago, Illinois, USA",
+      "employees": "50,000",
+      "founded": "2013",
+      "ipoYear": "2013",
+      "website": "https://www.abbvie.com",
+      "marketCap": 348.0,
+      "enterpriseValue": "$410.5 Billion",
+      "dilutedEps": 3.45,
+      "revenueTTM": 55.2,
+      "netIncomeTTM": 6.12,
+      "shareholdersEquity": 11.2,
+      "grossMargin": 69.8,
+      "netMargin": 11.1,
+      "dividendYield": 3.25,
+      "beta": 0.58,
+      "sharesOutstanding": "1.77 Billion",
+      "low52wRatio": 0.82,
+      "high52wRatio": 1.08,
+      "sma50Ratio": 0.995,
+      "rsi": 57.5
+    },
+    "ACN": {
+      "name": "Accenture plc",
+      "symbol": "ACN",
+      "exchange": "NYSE",
+      "sector": "Information Technology",
+      "industry": "IT Consulting & Professional Services",
+      "description": "Accenture plc is a leading global professional services company that helps organizations build digital cores, optimize operations, and accelerate revenue growth. Operating across 120+ countries, Accenture provides unmatched scale in cloud migration, cybersecurity, and enterprise AI transformation.",
+      "ceo": "Julie Sweet",
+      "headquarters": "Dublin, Ireland",
+      "employees": "733,000",
+      "founded": "1989",
+      "ipoYear": "2001",
+      "website": "https://www.accenture.com",
+      "marketCap": 218.0,
+      "enterpriseValue": "$216.5 Billion",
+      "dilutedEps": 11.45,
+      "revenueTTM": 64.9,
+      "netIncomeTTM": 7.35,
+      "shareholdersEquity": 27.5,
+      "grossMargin": 32.6,
+      "netMargin": 11.3,
+      "dividendYield": 1.48,
+      "beta": 1.22,
+      "sharesOutstanding": "628.0 Million",
+      "low52wRatio": 0.78,
+      "high52wRatio": 1.12,
+      "sma50Ratio": 0.985,
+      "rsi": 56.0
+    },
+    "ADSK": {
+      "name": "Autodesk, Inc.",
+      "symbol": "ADSK",
+      "exchange": "NASDAQ",
+      "sector": "Technology",
+      "industry": "Application Software & Computer-Aided Design (CAD)",
+      "description": "Autodesk, Inc. is an American multinational software corporation that makes 3D software products and services for the architecture, engineering, construction, manufacturing, media, and entertainment industries. Its flagship software includes AutoCAD, Revit, Inventor, Maya, and Fusion 360.",
+      "ceo": "Andrew Anagnost",
+      "headquarters": "San Francisco, California, USA",
+      "employees": "14,100",
+      "founded": "1982",
+      "ipoYear": "1985",
+      "website": "https://www.autodesk.com",
+      "marketCap": 58.4,
+      "enterpriseValue": "$60.2 Billion",
+      "dilutedEps": 4.65,
+      "revenueTTM": 5.85,
+      "netIncomeTTM": 1.02,
+      "shareholdersEquity": 2.45,
+      "grossMargin": 91.5,
+      "netMargin": 17.4,
+      "dividendYield": 0.0,
+      "beta": 1.42,
+      "sharesOutstanding": "214.0 Million",
+      "low52wRatio": 0.72,
+      "high52wRatio": 1.15,
+      "sma50Ratio": 0.98,
+      "rsi": 58.0
+    },
+    "AMAT": {
+      "name": "Applied Materials, Inc.",
+      "symbol": "AMAT",
+      "exchange": "NASDAQ",
+      "sector": "Technology",
+      "industry": "Semiconductor Equipment & Materials",
+      "description": "Applied Materials, Inc. is the leader in materials engineering solutions used to produce virtually every new chip and advanced display in the world. Its expertise in atomic-scale modification of materials enables the semiconductor industry to continually push the physical boundaries of Moore's Law.",
+      "ceo": "Gary E. Dickerson",
+      "headquarters": "Santa Clara, California, USA",
+      "employees": "34,000",
+      "founded": "1967",
+      "ipoYear": "1972",
+      "website": "https://www.appliedmaterials.com",
+      "marketCap": 158.0,
+      "enterpriseValue": "$160.5 Billion",
+      "dilutedEps": 8.65,
+      "revenueTTM": 26.8,
+      "netIncomeTTM": 7.15,
+      "shareholdersEquity": 17.8,
+      "grossMargin": 47.4,
+      "netMargin": 26.7,
+      "dividendYield": 0.85,
+      "beta": 1.55,
+      "sharesOutstanding": "824.0 Million",
+      "low52wRatio": 0.68,
+      "high52wRatio": 1.18,
+      "sma50Ratio": 0.97,
+      "rsi": 57.0
+    },
+    "GE": {
+      "name": "GE Aerospace",
+      "symbol": "GE",
+      "exchange": "NYSE",
+      "sector": "Industrials",
+      "industry": "Aerospace & Commercial Jet Engines",
+      "description": "GE Aerospace is a world-leading provider of commercial and military jet engines, components, and integrated systems for aircraft. Following the successful spins of GE HealthCare and GE Vernova, GE Aerospace operates as a pure-play propulsion leader powering 3 out of every 4 commercial flights globally.",
+      "ceo": "H. Lawrence Culp Jr.",
+      "headquarters": "Evendale, Ohio, USA",
+      "employees": "52,000",
+      "founded": "1892",
+      "ipoYear": "1896",
+      "website": "https://www.geaerospace.com",
+      "marketCap": 204.0,
+      "enterpriseValue": "$212.0 Billion",
+      "dilutedEps": 5.4,
+      "revenueTTM": 36.5,
+      "netIncomeTTM": 5.85,
+      "shareholdersEquity": 28.5,
+      "grossMargin": 31.5,
+      "netMargin": 16.0,
+      "dividendYield": 0.58,
+      "beta": 1.25,
+      "sharesOutstanding": "1.08 Billion",
+      "low52wRatio": 0.65,
+      "high52wRatio": 1.15,
+      "sma50Ratio": 0.99,
+      "rsi": 62.0
+    },
+    "HD": {
+      "name": "The Home Depot, Inc.",
+      "symbol": "HD",
+      "exchange": "NYSE",
+      "sector": "Consumer Cyclical",
+      "industry": "Home Improvement Retail",
+      "description": "The Home Depot, Inc. is the world's largest home improvement specialty retailer, operating more than 2,300 retail stores across the United States, Canada, and Mexico. Home Depot caters to do-it-yourself (DIY) customers and professional contractors with comprehensive building materials and tool rental.",
+      "ceo": "Ted Decker",
+      "headquarters": "Atlanta, Georgia, USA",
+      "employees": "465,000",
+      "founded": "1978",
+      "ipoYear": "1981",
+      "website": "https://www.homedepot.com",
+      "marketCap": 405.0,
+      "enterpriseValue": "$452.0 Billion",
+      "dilutedEps": 15.2,
+      "revenueTTM": 152.7,
+      "netIncomeTTM": 15.1,
+      "shareholdersEquity": 1.4,
+      "grossMargin": 33.4,
+      "netMargin": 9.9,
+      "dividendYield": 2.22,
+      "beta": 0.98,
+      "sharesOutstanding": "993.0 Million",
+      "low52wRatio": 0.78,
+      "high52wRatio": 1.08,
+      "sma50Ratio": 0.985,
+      "rsi": 56.5
+    },
+    "ORCL": {
+      "name": "Oracle Corporation",
+      "symbol": "ORCL",
+      "exchange": "NYSE",
+      "sector": "Technology",
+      "industry": "Enterprise Software & Cloud Infrastructure (OCI)",
+      "description": "Oracle Corporation offers products and services that address enterprise information technology environments worldwide. Its Oracle Cloud Infrastructure (OCI) delivers high-performance compute and autonomous database capabilities that have made it a preferred cloud partner for AI model training and enterprise ERP.",
+      "ceo": "Safra Catz",
+      "headquarters": "Austin, Texas, USA",
+      "employees": "159,000",
+      "founded": "1977",
+      "ipoYear": "1986",
+      "website": "https://www.oracle.com",
+      "marketCap": 485.0,
+      "enterpriseValue": "$565.0 Billion",
+      "dilutedEps": 3.85,
+      "revenueTTM": 53.0,
+      "netIncomeTTM": 10.5,
+      "shareholdersEquity": 15.2,
+      "grossMargin": 71.4,
+      "netMargin": 19.8,
+      "dividendYield": 0.95,
+      "beta": 1.15,
+      "sharesOutstanding": "2.76 Billion",
+      "low52wRatio": 0.65,
+      "high52wRatio": 1.12,
+      "sma50Ratio": 0.99,
+      "rsi": 63.0
+    },
+    "UNH": {
+      "name": "UnitedHealth Group Incorporated",
+      "symbol": "UNH",
+      "exchange": "NYSE",
+      "sector": "Healthcare",
+      "industry": "Healthcare Plans & Optum Services",
+      "description": "UnitedHealth Group is the largest healthcare company in the world by market capitalization, offering healthcare benefits through UnitedHealthcare and health services, analytics, pharmacy care, and ambulatory surgery centers through Optum.",
+      "ceo": "Andrew Witty",
+      "headquarters": "Minnetonka, Minnesota, USA",
+      "employees": "440,000",
+      "founded": "1977",
+      "ipoYear": "1984",
+      "website": "https://www.unitedhealthgroup.com",
+      "marketCap": 525.0,
+      "enterpriseValue": "$585.0 Billion",
+      "dilutedEps": 16.5,
+      "revenueTTM": 372.0,
+      "netIncomeTTM": 15.4,
+      "shareholdersEquity": 93.0,
+      "grossMargin": 23.5,
+      "netMargin": 4.1,
+      "dividendYield": 1.45,
+      "beta": 0.62,
+      "sharesOutstanding": "921.0 Million",
+      "low52wRatio": 0.82,
+      "high52wRatio": 1.08,
+      "sma50Ratio": 0.985,
+      "rsi": 55.0
+    }
+  },
+  "SP500_DIRECTORY": {
+    "MMM": {
+      "symbol": "MMM",
+      "name": "3M",
+      "sector": "Industrials",
+      "industry": "Industrial Conglomerates",
+      "headquarters": "Saint Paul, Minnesota",
+      "founded": "1902"
+    },
+    "AOS": {
+      "symbol": "AOS",
+      "name": "A. O. Smith",
+      "sector": "Industrials",
+      "industry": "Building Products",
+      "headquarters": "Milwaukee, Wisconsin",
+      "founded": "1916"
+    },
+    "ABT": {
+      "symbol": "ABT",
+      "name": "Abbott Laboratories",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "North Chicago, Illinois",
+      "founded": "1888"
+    },
+    "ABBV": {
+      "symbol": "ABBV",
+      "name": "AbbVie",
+      "sector": "Health Care",
+      "industry": "Biotechnology",
+      "headquarters": "North Chicago, Illinois",
+      "founded": "2013"
+    },
+    "ACN": {
+      "symbol": "ACN",
+      "name": "Accenture",
+      "sector": "Information Technology",
+      "industry": "IT Consulting &amp; Other Services",
+      "headquarters": "Dublin, Ireland",
+      "founded": "1989"
+    },
+    "ADBE": {
+      "symbol": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "San Jose, California",
+      "founded": "1982"
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "name": "Advanced Micro Devices",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Santa Clara, California",
+      "founded": "1969"
+    },
+    "AES": {
+      "symbol": "AES",
+      "name": "AES Corporation",
+      "sector": "Utilities",
+      "industry": "Independent Power Producers &amp; Energy Traders",
+      "headquarters": "Arlington, Virginia",
+      "founded": "1981"
+    },
+    "AFL": {
+      "symbol": "AFL",
+      "name": "Aflac",
+      "sector": "Financials",
+      "industry": "Life &amp; Health Insurance",
+      "headquarters": "Columbus, Georgia",
+      "founded": "1955"
+    },
+    "A": {
+      "symbol": "A",
+      "name": "Agilent Technologies",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "Santa Clara, California",
+      "founded": "1999"
+    },
+    "APD": {
+      "symbol": "APD",
+      "name": "Air Products",
+      "sector": "Materials",
+      "industry": "Industrial Gases",
+      "headquarters": "Upper Macungie Township, Pennsylvania",
+      "founded": "1940"
+    },
+    "ABNB": {
+      "symbol": "ABNB",
+      "name": "Airbnb",
+      "sector": "Consumer Discretionary",
+      "industry": "Hotels, Resorts &amp; Cruise Lines",
+      "headquarters": "San Francisco, California",
+      "founded": "2008"
+    },
+    "AKAM": {
+      "symbol": "AKAM",
+      "name": "Akamai Technologies",
+      "sector": "Information Technology",
+      "industry": "Internet Services &amp; Infrastructure",
+      "headquarters": "Cambridge, Massachusetts",
+      "founded": "1998"
+    },
+    "ALB": {
+      "symbol": "ALB",
+      "name": "Albemarle Corporation",
+      "sector": "Materials",
+      "industry": "Specialty Chemicals",
+      "headquarters": "Charlotte, North Carolina",
+      "founded": "1994"
+    },
+    "ARE": {
+      "symbol": "ARE",
+      "name": "Alexandria Real Estate Equities",
+      "sector": "Real Estate",
+      "industry": "Office REITs",
+      "headquarters": "Pasadena, California",
+      "founded": "1994"
+    },
+    "ALGN": {
+      "symbol": "ALGN",
+      "name": "Align Technology",
+      "sector": "Health Care",
+      "industry": "Health Care Supplies",
+      "headquarters": "Tempe, Arizona",
+      "founded": "1997"
+    },
+    "ALLE": {
+      "symbol": "ALLE",
+      "name": "Allegion",
+      "sector": "Industrials",
+      "industry": "Building Products",
+      "headquarters": "Dublin, Ireland",
+      "founded": "1908"
+    },
+    "LNT": {
+      "symbol": "LNT",
+      "name": "Alliant Energy",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Madison, Wisconsin",
+      "founded": "1917"
+    },
+    "ALL": {
+      "symbol": "ALL",
+      "name": "Allstate",
+      "sector": "Financials",
+      "industry": "Property &amp; Casualty Insurance",
+      "headquarters": "Northbrook, Illinois",
+      "founded": "1931"
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc. (Class A)",
+      "sector": "Communication Services",
+      "industry": "Interactive Media &amp; Services",
+      "headquarters": "Mountain View, California",
+      "founded": "1998"
+    },
+    "GOOG": {
+      "symbol": "GOOG",
+      "name": "Alphabet Inc. (Class C)",
+      "sector": "Communication Services",
+      "industry": "Interactive Media &amp; Services",
+      "headquarters": "Mountain View, California",
+      "founded": "1998"
+    },
+    "MO": {
+      "symbol": "MO",
+      "name": "Altria",
+      "sector": "Consumer Staples",
+      "industry": "Tobacco",
+      "headquarters": "Richmond, Virginia",
+      "founded": "1985"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "industry": "Broadline Retail",
+      "headquarters": "Seattle, Washington",
+      "founded": "1994"
+    },
+    "AMCR": {
+      "symbol": "AMCR",
+      "name": "Amcor",
+      "sector": "Materials",
+      "industry": "Paper &amp; Plastic Packaging Products &amp; Materials",
+      "headquarters": "Warmley, Bristol, United Kingdom",
+      "founded": "2019"
+    },
+    "AEE": {
+      "symbol": "AEE",
+      "name": "Ameren",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "St. Louis, Missouri",
+      "founded": "1902"
+    },
+    "AEP": {
+      "symbol": "AEP",
+      "name": "American Electric Power",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Columbus, Ohio",
+      "founded": "1906"
+    },
+    "AXP": {
+      "symbol": "AXP",
+      "name": "American Express",
+      "sector": "Financials",
+      "industry": "Consumer Finance",
+      "headquarters": "New York City, New York",
+      "founded": "1850"
+    },
+    "AIG": {
+      "symbol": "AIG",
+      "name": "American International Group",
+      "sector": "Financials",
+      "industry": "Multi-line Insurance",
+      "headquarters": "New York City, New York",
+      "founded": "1919"
+    },
+    "AMT": {
+      "symbol": "AMT",
+      "name": "American Tower",
+      "sector": "Real Estate",
+      "industry": "Telecom Tower REITs",
+      "headquarters": "Boston, Massachusetts",
+      "founded": "1995"
+    },
+    "AWK": {
+      "symbol": "AWK",
+      "name": "American Water Works",
+      "sector": "Utilities",
+      "industry": "Water Utilities",
+      "headquarters": "Camden, New Jersey",
+      "founded": "1886"
+    },
+    "AMP": {
+      "symbol": "AMP",
+      "name": "Ameriprise Financial",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "Minneapolis, Minnesota",
+      "founded": "1894"
+    },
+    "AME": {
+      "symbol": "AME",
+      "name": "Ametek",
+      "sector": "Industrials",
+      "industry": "Electrical Components &amp; Equipment",
+      "headquarters": "Berwyn, Pennsylvania",
+      "founded": "1930"
+    },
+    "AMGN": {
+      "symbol": "AMGN",
+      "name": "Amgen",
+      "sector": "Health Care",
+      "industry": "Biotechnology",
+      "headquarters": "Thousand Oaks, California",
+      "founded": "1980"
+    },
+    "APH": {
+      "symbol": "APH",
+      "name": "Amphenol",
+      "sector": "Information Technology",
+      "industry": "Electronic Components",
+      "headquarters": "Wallingford, Connecticut",
+      "founded": "1932"
+    },
+    "ADI": {
+      "symbol": "ADI",
+      "name": "Analog Devices",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Wilmington, Massachusetts",
+      "founded": "1965"
+    },
+    "AON": {
+      "symbol": "AON",
+      "name": "Aon plc",
+      "sector": "Financials",
+      "industry": "Insurance Brokers",
+      "headquarters": "London, United Kingdom",
+      "founded": "1982"
+    },
+    "APA": {
+      "symbol": "APA",
+      "name": "APA Corporation",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Houston, Texas",
+      "founded": "1954"
+    },
+    "APO": {
+      "symbol": "APO",
+      "name": "Apollo Global Management",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "New York City, New York",
+      "founded": "1990"
+    },
+    "AAPL": {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "Cupertino, California",
+      "founded": "1977"
+    },
+    "AMAT": {
+      "symbol": "AMAT",
+      "name": "Applied Materials",
+      "sector": "Information Technology",
+      "industry": "Semiconductor Materials &amp; Equipment",
+      "headquarters": "Santa Clara, California",
+      "founded": "1967"
+    },
+    "APP": {
+      "symbol": "APP",
+      "name": "AppLovin",
+      "sector": "Communication Services",
+      "industry": "Advertising",
+      "headquarters": "Palo Alto, California",
+      "founded": "2012"
+    },
+    "APTV": {
+      "symbol": "APTV",
+      "name": "Aptiv",
+      "sector": "Consumer Discretionary",
+      "industry": "Automotive Parts &amp; Equipment",
+      "headquarters": "Schaffhausen, Switzerland",
+      "founded": "1994"
+    },
+    "ACGL": {
+      "symbol": "ACGL",
+      "name": "Arch Capital Group",
+      "sector": "Financials",
+      "industry": "Property &amp; Casualty Insurance",
+      "headquarters": "Hamilton, Bermuda",
+      "founded": "1995"
+    },
+    "ADM": {
+      "symbol": "ADM",
+      "name": "Archer Daniels Midland",
+      "sector": "Consumer Staples",
+      "industry": "Agricultural Products &amp; Services",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1902"
+    },
+    "ARES": {
+      "symbol": "ARES",
+      "name": "Ares Management",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "Los Angeles, California",
+      "founded": "1977"
+    },
+    "ANET": {
+      "symbol": "ANET",
+      "name": "Arista Networks",
+      "sector": "Information Technology",
+      "industry": "Communications Equipment",
+      "headquarters": "Santa Clara, California",
+      "founded": "2004"
+    },
+    "AJG": {
+      "symbol": "AJG",
+      "name": "Arthur J. Gallagher &amp; Co.",
+      "sector": "Financials",
+      "industry": "Insurance Brokers",
+      "headquarters": "Rolling Meadows, Illinois",
+      "founded": "1927"
+    },
+    "AIZ": {
+      "symbol": "AIZ",
+      "name": "Assurant",
+      "sector": "Financials",
+      "industry": "Multi-line Insurance",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1892"
+    },
+    "T": {
+      "symbol": "T",
+      "name": "AT&amp;T",
+      "sector": "Communication Services",
+      "industry": "Integrated Telecommunication Services",
+      "headquarters": "Dallas, Texas",
+      "founded": "1983"
+    },
+    "ATO": {
+      "symbol": "ATO",
+      "name": "Atmos Energy",
+      "sector": "Utilities",
+      "industry": "Gas Utilities",
+      "headquarters": "Dallas, Texas",
+      "founded": "1906"
+    },
+    "ADSK": {
+      "symbol": "ADSK",
+      "name": "Autodesk",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "San Francisco, California",
+      "founded": "1982"
+    },
+    "ADP": {
+      "symbol": "ADP",
+      "name": "Automatic Data Processing",
+      "sector": "Industrials",
+      "industry": "Human Resource &amp; Employment Services",
+      "headquarters": "Roseland, New Jersey",
+      "founded": "1949"
+    },
+    "AZO": {
+      "symbol": "AZO",
+      "name": "AutoZone",
+      "sector": "Consumer Discretionary",
+      "industry": "Automotive Retail",
+      "headquarters": "Memphis, Tennessee",
+      "founded": "1979"
+    },
+    "AVY": {
+      "symbol": "AVY",
+      "name": "Avery Dennison",
+      "sector": "Materials",
+      "industry": "Paper &amp; Plastic Packaging Products &amp; Materials",
+      "headquarters": "Mentor, Ohio",
+      "founded": "1935"
+    },
+    "AXON": {
+      "symbol": "AXON",
+      "name": "Axon Enterprise",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Scottsdale, Arizona",
+      "founded": "1993"
+    },
+    "BKR": {
+      "symbol": "BKR",
+      "name": "Baker Hughes",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Equipment &amp; Services",
+      "headquarters": "Houston, Texas",
+      "founded": "2017"
+    },
+    "BALL": {
+      "symbol": "BALL",
+      "name": "Ball Corporation",
+      "sector": "Materials",
+      "industry": "Metal, Glass &amp; Plastic Containers",
+      "headquarters": "Broomfield, Colorado",
+      "founded": "1880"
+    },
+    "BAC": {
+      "symbol": "BAC",
+      "name": "Bank of America",
+      "sector": "Financials",
+      "industry": "Diversified Banks",
+      "headquarters": "Charlotte, North Carolina",
+      "founded": "1998"
+    },
+    "BAX": {
+      "symbol": "BAX",
+      "name": "Baxter International",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Deerfield, Illinois",
+      "founded": "1931"
+    },
+    "BDX": {
+      "symbol": "BDX",
+      "name": "Becton Dickinson",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Franklin Lakes, New Jersey",
+      "founded": "1897"
+    },
+    "BRK.B": {
+      "symbol": "BRK.B",
+      "name": "Berkshire Hathaway",
+      "sector": "Financials",
+      "industry": "Multi-Sector Holdings",
+      "headquarters": "Omaha, Nebraska",
+      "founded": "1839"
+    },
+    "BBY": {
+      "symbol": "BBY",
+      "name": "Best Buy",
+      "sector": "Consumer Discretionary",
+      "industry": "Computer &amp; Electronics Retail",
+      "headquarters": "Richfield, Minnesota",
+      "founded": "1966"
+    },
+    "TECH": {
+      "symbol": "TECH",
+      "name": "Bio-Techne",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "Minneapolis, Minnesota",
+      "founded": "1976"
+    },
+    "BIIB": {
+      "symbol": "BIIB",
+      "name": "Biogen",
+      "sector": "Health Care",
+      "industry": "Biotechnology",
+      "headquarters": "Cambridge, Massachusetts",
+      "founded": "1978"
+    },
+    "BLK": {
+      "symbol": "BLK",
+      "name": "BlackRock",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "New York City, New York",
+      "founded": "1988"
+    },
+    "BX": {
+      "symbol": "BX",
+      "name": "Blackstone Inc.",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "New York City, New York",
+      "founded": "1985"
+    },
+    "XYZ": {
+      "symbol": "XYZ",
+      "name": "Block, Inc.",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "none",
+      "founded": "2009"
+    },
+    "BE": {
+      "symbol": "BE",
+      "name": "Bloom Energy",
+      "sector": "Industrials",
+      "industry": "Electrical Components &amp; Equipment",
+      "headquarters": "San Jose, California",
+      "founded": "2001"
+    },
+    "BNY": {
+      "symbol": "BNY",
+      "name": "BNY Mellon",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "New York City, New York",
+      "founded": "2007"
+    },
+    "BA": {
+      "symbol": "BA",
+      "name": "Boeing",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Arlington, Virginia",
+      "founded": "1916"
+    },
+    "BKNG": {
+      "symbol": "BKNG",
+      "name": "Booking Holdings",
+      "sector": "Consumer Discretionary",
+      "industry": "Hotels, Resorts &amp; Cruise Lines",
+      "headquarters": "Norwalk, Connecticut",
+      "founded": "1996"
+    },
+    "BSX": {
+      "symbol": "BSX",
+      "name": "Boston Scientific",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Marlborough, Massachusetts",
+      "founded": "1979"
+    },
+    "BMY": {
+      "symbol": "BMY",
+      "name": "Bristol Myers Squibb",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals",
+      "headquarters": "New York City, New York",
+      "founded": "1989"
+    },
+    "AVGO": {
+      "symbol": "AVGO",
+      "name": "Broadcom",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Palo Alto, California",
+      "founded": "1961"
+    },
+    "BR": {
+      "symbol": "BR",
+      "name": "Broadridge Financial Solutions",
+      "sector": "Industrials",
+      "industry": "Data Processing &amp; Outsourced Services",
+      "headquarters": "Lake Success, New York",
+      "founded": "1962"
+    },
+    "BRO": {
+      "symbol": "BRO",
+      "name": "Brown &amp; Brown",
+      "sector": "Financials",
+      "industry": "Insurance Brokers",
+      "headquarters": "Daytona Beach, Florida",
+      "founded": "1939"
+    },
+    "BF.B": {
+      "symbol": "BF.B",
+      "name": "Brown\u2013Forman",
+      "sector": "Consumer Staples",
+      "industry": "Distillers &amp; Vintners",
+      "headquarters": "Louisville, Kentucky",
+      "founded": "1870"
+    },
+    "BG": {
+      "symbol": "BG",
+      "name": "Bunge Global",
+      "sector": "Consumer Staples",
+      "industry": "Agricultural Products &amp; Services",
+      "headquarters": "Chesterfield, Missouri",
+      "founded": "1818"
+    },
+    "BXP": {
+      "symbol": "BXP",
+      "name": "BXP, Inc.",
+      "sector": "Real Estate",
+      "industry": "Office REITs",
+      "headquarters": "Boston, Massachusetts",
+      "founded": "1970"
+    },
+    "CHRW": {
+      "symbol": "CHRW",
+      "name": "C.H. Robinson",
+      "sector": "Industrials",
+      "industry": "Air Freight &amp; Logistics",
+      "headquarters": "Eden Prairie, Minnesota",
+      "founded": "1905"
+    },
+    "CDNS": {
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "San Jose, California",
+      "founded": "1988"
+    },
+    "CPT": {
+      "symbol": "CPT",
+      "name": "Camden Property Trust",
+      "sector": "Real Estate",
+      "industry": "Multi-Family Residential REITs",
+      "headquarters": "Houston, Texas",
+      "founded": "1981"
+    },
+    "COF": {
+      "symbol": "COF",
+      "name": "Capital One",
+      "sector": "Financials",
+      "industry": "Consumer Finance",
+      "headquarters": "Tysons Corner, Virginia",
+      "founded": "1994"
+    },
+    "CAH": {
+      "symbol": "CAH",
+      "name": "Cardinal Health",
+      "sector": "Health Care",
+      "industry": "Health Care Distributors",
+      "headquarters": "Dublin, Ohio",
+      "founded": "1971"
+    },
+    "CCL": {
+      "symbol": "CCL",
+      "name": "Carnival Corporation",
+      "sector": "Consumer Discretionary",
+      "industry": "Hotels, Resorts &amp; Cruise Lines",
+      "headquarters": "Miami, Florida",
+      "founded": "1972"
+    },
+    "CARR": {
+      "symbol": "CARR",
+      "name": "Carrier Global",
+      "sector": "Industrials",
+      "industry": "Building Products",
+      "headquarters": "Palm Beach Gardens, Florida",
+      "founded": "2020"
+    },
+    "CVNA": {
+      "symbol": "CVNA",
+      "name": "Carvana",
+      "sector": "Consumer Discretionary",
+      "industry": "Automotive Retail",
+      "headquarters": "Tempe, Arizona",
+      "founded": "2012"
+    },
+    "CASY": {
+      "symbol": "CASY",
+      "name": "Casey's",
+      "sector": "Consumer Staples",
+      "industry": "Food Retail",
+      "headquarters": "Ankeny, Iowa",
+      "founded": "1967"
+    },
+    "CAT": {
+      "symbol": "CAT",
+      "name": "Caterpillar Inc.",
+      "sector": "Industrials",
+      "industry": "Construction Machinery &amp; Heavy Transportation Equipment",
+      "headquarters": "Irving, Texas",
+      "founded": "1925"
+    },
+    "CBOE": {
+      "symbol": "CBOE",
+      "name": "Cboe Global Markets",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1973"
+    },
+    "CBRE": {
+      "symbol": "CBRE",
+      "name": "CBRE Group",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "headquarters": "Dallas, Texas",
+      "founded": "1906"
+    },
+    "CDW": {
+      "symbol": "CDW",
+      "name": "CDW Corporation",
+      "sector": "Information Technology",
+      "industry": "Technology Distributors",
+      "headquarters": "Vernon Hills, Illinois",
+      "founded": "1984"
+    },
+    "COR": {
+      "symbol": "COR",
+      "name": "Cencora",
+      "sector": "Health Care",
+      "industry": "Health Care Distributors",
+      "headquarters": "Conshohocken, Pennsylvania",
+      "founded": "1985"
+    },
+    "CNC": {
+      "symbol": "CNC",
+      "name": "Centene Corporation",
+      "sector": "Health Care",
+      "industry": "Managed Health Care",
+      "headquarters": "St. Louis, Missouri",
+      "founded": "1984"
+    },
+    "CNP": {
+      "symbol": "CNP",
+      "name": "CenterPoint Energy",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Houston, Texas",
+      "founded": "1882"
+    },
+    "CF": {
+      "symbol": "CF",
+      "name": "CF Industries",
+      "sector": "Materials",
+      "industry": "Fertilizers &amp; Agricultural Chemicals",
+      "headquarters": "Deerfield, Illinois",
+      "founded": "1946"
+    },
+    "CRL": {
+      "symbol": "CRL",
+      "name": "Charles River Laboratories",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "Wilmington, Massachusetts",
+      "founded": "1947"
+    },
+    "SCHW": {
+      "symbol": "SCHW",
+      "name": "Charles Schwab Corporation",
+      "sector": "Financials",
+      "industry": "Investment Banking &amp; Brokerage",
+      "headquarters": "Westlake, Texas",
+      "founded": "1971"
+    },
+    "CHTR": {
+      "symbol": "CHTR",
+      "name": "Charter Communications",
+      "sector": "Communication Services",
+      "industry": "Cable &amp; Satellite",
+      "headquarters": "Stamford, Connecticut",
+      "founded": "1993"
+    },
+    "CVX": {
+      "symbol": "CVX",
+      "name": "Chevron Corporation",
+      "sector": "Energy",
+      "industry": "Integrated Oil &amp; Gas",
+      "headquarters": "Houston, Texas",
+      "founded": "1879"
+    },
+    "CMG": {
+      "symbol": "CMG",
+      "name": "Chipotle Mexican Grill",
+      "sector": "Consumer Discretionary",
+      "industry": "Restaurants",
+      "headquarters": "Newport Beach, California",
+      "founded": "1993"
+    },
+    "CB": {
+      "symbol": "CB",
+      "name": "Chubb Limited",
+      "sector": "Financials",
+      "industry": "Property &amp; Casualty Insurance",
+      "headquarters": "Zurich, Switzerland",
+      "founded": "1985"
+    },
+    "CHD": {
+      "symbol": "CHD",
+      "name": "Church &amp; Dwight",
+      "sector": "Consumer Staples",
+      "industry": "Household Products",
+      "headquarters": "Ewing, New Jersey",
+      "founded": "1847"
+    },
+    "CIEN": {
+      "symbol": "CIEN",
+      "name": "Ciena",
+      "sector": "Information Technology",
+      "industry": "Communications Equipment",
+      "headquarters": "Hanover, Maryland",
+      "founded": "1992"
+    },
+    "CI": {
+      "symbol": "CI",
+      "name": "Cigna",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "headquarters": "Bloomfield, Connecticut",
+      "founded": "1982"
+    },
+    "CINF": {
+      "symbol": "CINF",
+      "name": "Cincinnati Financial",
+      "sector": "Financials",
+      "industry": "Property &amp; Casualty Insurance",
+      "headquarters": "Fairfield, Ohio",
+      "founded": "1950"
+    },
+    "CTAS": {
+      "symbol": "CTAS",
+      "name": "Cintas",
+      "sector": "Industrials",
+      "industry": "Diversified Support Services",
+      "headquarters": "Mason, Ohio",
+      "founded": "1929"
+    },
+    "CSCO": {
+      "symbol": "CSCO",
+      "name": "Cisco",
+      "sector": "Information Technology",
+      "industry": "Communications Equipment",
+      "headquarters": "San Jose, California",
+      "founded": "1984"
+    },
+    "C": {
+      "symbol": "C",
+      "name": "Citigroup",
+      "sector": "Financials",
+      "industry": "Diversified Banks",
+      "headquarters": "New York City, New York",
+      "founded": "1998"
+    },
+    "CFG": {
+      "symbol": "CFG",
+      "name": "Citizens Financial Group",
+      "sector": "Financials",
+      "industry": "Regional Banks",
+      "headquarters": "Providence, Rhode Island",
+      "founded": "1828"
+    },
+    "CLX": {
+      "symbol": "CLX",
+      "name": "Clorox",
+      "sector": "Consumer Staples",
+      "industry": "Household Products",
+      "headquarters": "Oakland, California",
+      "founded": "1913"
+    },
+    "CME": {
+      "symbol": "CME",
+      "name": "CME Group",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1848"
+    },
+    "CMS": {
+      "symbol": "CMS",
+      "name": "CMS Energy",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Jackson, Michigan",
+      "founded": "1886"
+    },
+    "KO": {
+      "symbol": "KO",
+      "name": "Coca-Cola Company (The)",
+      "sector": "Consumer Staples",
+      "industry": "Soft Drinks &amp; Non-alcoholic Beverages",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1886"
+    },
+    "CTSH": {
+      "symbol": "CTSH",
+      "name": "Cognizant",
+      "sector": "Information Technology",
+      "industry": "IT Consulting &amp; Other Services",
+      "headquarters": "Teaneck, New Jersey",
+      "founded": "1994"
+    },
+    "COHR": {
+      "symbol": "COHR",
+      "name": "Coherent Corp.",
+      "sector": "Information Technology",
+      "industry": "Electronic Components",
+      "headquarters": "Saxonburg, Pennsylvania",
+      "founded": "1971"
+    },
+    "COIN": {
+      "symbol": "COIN",
+      "name": "Coinbase",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "New York City, New York",
+      "founded": "2012"
+    },
+    "CL": {
+      "symbol": "CL",
+      "name": "Colgate-Palmolive",
+      "sector": "Consumer Staples",
+      "industry": "Household Products",
+      "headquarters": "New York City, New York",
+      "founded": "1806"
+    },
+    "CMCSA": {
+      "symbol": "CMCSA",
+      "name": "Comcast",
+      "sector": "Communication Services",
+      "industry": "Cable &amp; Satellite",
+      "headquarters": "Philadelphia, Pennsylvania",
+      "founded": "1963"
+    },
+    "FIX": {
+      "symbol": "FIX",
+      "name": "Comfort Systems USA",
+      "sector": "Industrials",
+      "industry": "Construction &amp; Engineering",
+      "headquarters": "Houston, Texas",
+      "founded": "1997"
+    },
+    "COP": {
+      "symbol": "COP",
+      "name": "ConocoPhillips",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Houston, Texas",
+      "founded": "2002"
+    },
+    "ED": {
+      "symbol": "ED",
+      "name": "Consolidated Edison",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "New York City, New York",
+      "founded": "1823"
+    },
+    "STZ": {
+      "symbol": "STZ",
+      "name": "Constellation Brands",
+      "sector": "Consumer Staples",
+      "industry": "Distillers &amp; Vintners",
+      "headquarters": "Rochester, New York",
+      "founded": "1945"
+    },
+    "CEG": {
+      "symbol": "CEG",
+      "name": "Constellation Energy",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Baltimore, Maryland",
+      "founded": "1999"
+    },
+    "COO": {
+      "symbol": "COO",
+      "name": "Cooper Companies (The)",
+      "sector": "Health Care",
+      "industry": "Health Care Supplies",
+      "headquarters": "San Ramon, California",
+      "founded": "1958"
+    },
+    "CPRT": {
+      "symbol": "CPRT",
+      "name": "Copart",
+      "sector": "Industrials",
+      "industry": "Diversified Support Services",
+      "headquarters": "Dallas, Texas",
+      "founded": "1982"
+    },
+    "GLW": {
+      "symbol": "GLW",
+      "name": "Corning Inc.",
+      "sector": "Information Technology",
+      "industry": "Electronic Components",
+      "headquarters": "Corning, New York",
+      "founded": "1851"
+    },
+    "CPAY": {
+      "symbol": "CPAY",
+      "name": "Corpay",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "2000"
+    },
+    "CSGP": {
+      "symbol": "CSGP",
+      "name": "CoStar Group",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "headquarters": "Washington, D.C.",
+      "founded": "1987"
+    },
+    "COST": {
+      "symbol": "COST",
+      "name": "Costco",
+      "sector": "Consumer Staples",
+      "industry": "Consumer Staples Merchandise Retail",
+      "headquarters": "Issaquah, Washington",
+      "founded": "1976"
+    },
+    "CRH": {
+      "symbol": "CRH",
+      "name": "CRH plc",
+      "sector": "Materials",
+      "industry": "Construction Materials",
+      "headquarters": "Dublin, Ireland",
+      "founded": "1970"
+    },
+    "CRWD": {
+      "symbol": "CRWD",
+      "name": "CrowdStrike",
+      "sector": "Information Technology",
+      "industry": "Systems Software",
+      "headquarters": "Austin, Texas",
+      "founded": "2011"
+    },
+    "CCI": {
+      "symbol": "CCI",
+      "name": "Crown Castle",
+      "sector": "Real Estate",
+      "industry": "Telecom Tower REITs",
+      "headquarters": "Houston, Texas",
+      "founded": "1994"
+    },
+    "CSX": {
+      "symbol": "CSX",
+      "name": "CSX Corporation",
+      "sector": "Industrials",
+      "industry": "Rail Transportation",
+      "headquarters": "Jacksonville, Florida",
+      "founded": "1980"
+    },
+    "CMI": {
+      "symbol": "CMI",
+      "name": "Cummins",
+      "sector": "Industrials",
+      "industry": "Construction Machinery &amp; Heavy Transportation Equipment",
+      "headquarters": "Columbus, Indiana",
+      "founded": "1919"
+    },
+    "CVS": {
+      "symbol": "CVS",
+      "name": "CVS Health",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "headquarters": "Woonsocket, Rhode Island",
+      "founded": "1996"
+    },
+    "DHR": {
+      "symbol": "DHR",
+      "name": "Danaher Corporation",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "Washington, D.C.",
+      "founded": "1969"
+    },
+    "DRI": {
+      "symbol": "DRI",
+      "name": "Darden Restaurants",
+      "sector": "Consumer Discretionary",
+      "industry": "Restaurants",
+      "headquarters": "Orlando, Florida",
+      "founded": "1938"
+    },
+    "DDOG": {
+      "symbol": "DDOG",
+      "name": "Datadog",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "New York City, New York",
+      "founded": "2010"
+    },
+    "DVA": {
+      "symbol": "DVA",
+      "name": "DaVita",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "headquarters": "Denver, Colorado",
+      "founded": "1979"
+    },
+    "DECK": {
+      "symbol": "DECK",
+      "name": "Deckers Brands",
+      "sector": "Consumer Discretionary",
+      "industry": "Footwear",
+      "headquarters": "Goleta, California",
+      "founded": "1973"
+    },
+    "DE": {
+      "symbol": "DE",
+      "name": "Deere &amp; Company",
+      "sector": "Industrials",
+      "industry": "Agricultural &amp; Farm Machinery",
+      "headquarters": "Moline, Illinois",
+      "founded": "1837"
+    },
+    "DELL": {
+      "symbol": "DELL",
+      "name": "Dell Technologies",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "Round Rock, Texas",
+      "founded": "2016"
+    },
+    "DAL": {
+      "symbol": "DAL",
+      "name": "Delta Air Lines",
+      "sector": "Industrials",
+      "industry": "Passenger Airlines",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1929"
+    },
+    "DVN": {
+      "symbol": "DVN",
+      "name": "Devon Energy",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Oklahoma City, Oklahoma",
+      "founded": "1971"
+    },
+    "DXCM": {
+      "symbol": "DXCM",
+      "name": "Dexcom",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "San Diego, California",
+      "founded": "1999"
+    },
+    "FANG": {
+      "symbol": "FANG",
+      "name": "Diamondback Energy",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Midland, Texas",
+      "founded": "2007"
+    },
+    "DLR": {
+      "symbol": "DLR",
+      "name": "Digital Realty",
+      "sector": "Real Estate",
+      "industry": "Data Center REITs",
+      "headquarters": "Austin, Texas",
+      "founded": "2004"
+    },
+    "DG": {
+      "symbol": "DG",
+      "name": "Dollar General",
+      "sector": "Consumer Staples",
+      "industry": "Consumer Staples Merchandise Retail",
+      "headquarters": "Goodlettsville, Tennessee",
+      "founded": "1939"
+    },
+    "DLTR": {
+      "symbol": "DLTR",
+      "name": "Dollar Tree",
+      "sector": "Consumer Staples",
+      "industry": "Consumer Staples Merchandise Retail",
+      "headquarters": "Chesapeake, Virginia",
+      "founded": "1986"
+    },
+    "D": {
+      "symbol": "D",
+      "name": "Dominion Energy",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Richmond, Virginia",
+      "founded": "1983"
+    },
+    "DPZ": {
+      "symbol": "DPZ",
+      "name": "Domino's",
+      "sector": "Consumer Discretionary",
+      "industry": "Restaurants",
+      "headquarters": "Ann Arbor, Michigan",
+      "founded": "1960"
+    },
+    "DASH": {
+      "symbol": "DASH",
+      "name": "DoorDash",
+      "sector": "Consumer Discretionary",
+      "industry": "Specialized Consumer Services",
+      "headquarters": "San Francisco, California",
+      "founded": "2012"
+    },
+    "DOV": {
+      "symbol": "DOV",
+      "name": "Dover Corporation",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Downers Grove, Illinois",
+      "founded": "1955"
+    },
+    "DOW": {
+      "symbol": "DOW",
+      "name": "Dow Inc.",
+      "sector": "Materials",
+      "industry": "Commodity Chemicals",
+      "headquarters": "Midland, Michigan",
+      "founded": "2019"
+    },
+    "DHI": {
+      "symbol": "DHI",
+      "name": "D. R. Horton",
+      "sector": "Consumer Discretionary",
+      "industry": "Homebuilding",
+      "headquarters": "Arlington, Texas",
+      "founded": "1978"
+    },
+    "DTE": {
+      "symbol": "DTE",
+      "name": "DTE Energy",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Detroit, Michigan",
+      "founded": "1995"
+    },
+    "DUK": {
+      "symbol": "DUK",
+      "name": "Duke Energy",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Charlotte, North Carolina",
+      "founded": "1904"
+    },
+    "DD": {
+      "symbol": "DD",
+      "name": "DuPont",
+      "sector": "Industrials",
+      "industry": "Industrial Conglomerates",
+      "headquarters": "Wilmington, Delaware",
+      "founded": "2017"
+    },
+    "ETN": {
+      "symbol": "ETN",
+      "name": "Eaton Corporation",
+      "sector": "Industrials",
+      "industry": "Electrical Components &amp; Equipment",
+      "headquarters": "Dublin, Ireland",
+      "founded": "1911"
+    },
+    "EBAY": {
+      "symbol": "EBAY",
+      "name": "eBay Inc.",
+      "sector": "Consumer Discretionary",
+      "industry": "Broadline Retail",
+      "headquarters": "San Jose, California",
+      "founded": "1995"
+    },
+    "ECHO": {
+      "symbol": "ECHO",
+      "name": "EchoStar",
+      "sector": "Communication Services",
+      "industry": "Wireless Telecommunication Services",
+      "headquarters": "Englewood, Colorado",
+      "founded": "2008"
+    },
+    "ECL": {
+      "symbol": "ECL",
+      "name": "Ecolab",
+      "sector": "Materials",
+      "industry": "Specialty Chemicals",
+      "headquarters": "Saint Paul, Minnesota",
+      "founded": "1923"
+    },
+    "EIX": {
+      "symbol": "EIX",
+      "name": "Edison International",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Rosemead, California",
+      "founded": "1886"
+    },
+    "EW": {
+      "symbol": "EW",
+      "name": "Edwards Lifesciences",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Irvine, California",
+      "founded": "1958"
+    },
+    "ELV": {
+      "symbol": "ELV",
+      "name": "Elevance Health",
+      "sector": "Health Care",
+      "industry": "Managed Health Care",
+      "headquarters": "Indianapolis, Indiana",
+      "founded": "2014"
+    },
+    "EME": {
+      "symbol": "EME",
+      "name": "Emcor",
+      "sector": "Industrials",
+      "industry": "Construction &amp; Engineering",
+      "headquarters": "Norwalk, Connecticut",
+      "founded": "1994"
+    },
+    "EMR": {
+      "symbol": "EMR",
+      "name": "Emerson Electric",
+      "sector": "Industrials",
+      "industry": "Electrical Components &amp; Equipment",
+      "headquarters": "Ferguson, Missouri",
+      "founded": "1890"
+    },
+    "ETR": {
+      "symbol": "ETR",
+      "name": "Entergy",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "New Orleans, Louisiana",
+      "founded": "1913"
+    },
+    "EOG": {
+      "symbol": "EOG",
+      "name": "EOG Resources",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Houston, Texas",
+      "founded": "1999"
+    },
+    "EQT": {
+      "symbol": "EQT",
+      "name": "EQT Corporation",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Pittsburgh, Pennsylvania",
+      "founded": "1888"
+    },
+    "EFX": {
+      "symbol": "EFX",
+      "name": "Equifax",
+      "sector": "Industrials",
+      "industry": "Research &amp; Consulting Services",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1899"
+    },
+    "EQIX": {
+      "symbol": "EQIX",
+      "name": "Equinix",
+      "sector": "Real Estate",
+      "industry": "Data Center REITs",
+      "headquarters": "Redwood City, California",
+      "founded": "1998"
+    },
+    "ERIE": {
+      "symbol": "ERIE",
+      "name": "Erie Indemnity",
+      "sector": "Financials",
+      "industry": "Insurance Brokers",
+      "headquarters": "Erie, Pennsylvania",
+      "founded": "1925"
+    },
+    "ESS": {
+      "symbol": "ESS",
+      "name": "Essex Property Trust",
+      "sector": "Real Estate",
+      "industry": "Multi-Family Residential REITs",
+      "headquarters": "San Mateo, California",
+      "founded": "1971"
+    },
+    "EL": {
+      "symbol": "EL",
+      "name": "Est\u00e9e Lauder Companies (The)",
+      "sector": "Consumer Staples",
+      "industry": "Personal Care Products",
+      "headquarters": "New York City, New York",
+      "founded": "1946"
+    },
+    "EG": {
+      "symbol": "EG",
+      "name": "Everest Group",
+      "sector": "Financials",
+      "industry": "Reinsurance",
+      "headquarters": "Hamilton, Bermuda",
+      "founded": "1973"
+    },
+    "EVRG": {
+      "symbol": "EVRG",
+      "name": "Evergy",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Kansas City, Missouri",
+      "founded": "1909"
+    },
+    "P": {
+      "symbol": "P",
+      "name": "Everpure",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "Santa Clara, California",
+      "founded": "2009"
+    },
+    "ES": {
+      "symbol": "ES",
+      "name": "Eversource Energy",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Hartford, Connecticut",
+      "founded": "1966"
+    },
+    "EXC": {
+      "symbol": "EXC",
+      "name": "Exelon",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Chicago, Illinois",
+      "founded": "2000"
+    },
+    "EXE": {
+      "symbol": "EXE",
+      "name": "Expand Energy",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Oklahoma City, Oklahoma",
+      "founded": "1989"
+    },
+    "EXPE": {
+      "symbol": "EXPE",
+      "name": "Expedia Group",
+      "sector": "Consumer Discretionary",
+      "industry": "Hotels, Resorts &amp; Cruise Lines",
+      "headquarters": "Seattle, Washington",
+      "founded": "1996"
+    },
+    "EXPD": {
+      "symbol": "EXPD",
+      "name": "Expeditors International",
+      "sector": "Industrials",
+      "industry": "Air Freight &amp; Logistics",
+      "headquarters": "Seattle, Washington",
+      "founded": "1979"
+    },
+    "EXR": {
+      "symbol": "EXR",
+      "name": "Extra Space Storage",
+      "sector": "Real Estate",
+      "industry": "Self-Storage REITs",
+      "headquarters": "Salt Lake City, Utah",
+      "founded": "1977"
+    },
+    "XOM": {
+      "symbol": "XOM",
+      "name": "ExxonMobil",
+      "sector": "Energy",
+      "industry": "Integrated Oil &amp; Gas",
+      "headquarters": "Irving, Texas",
+      "founded": "1999"
+    },
+    "FFIV": {
+      "symbol": "FFIV",
+      "name": "F5, Inc.",
+      "sector": "Information Technology",
+      "industry": "Communications Equipment",
+      "headquarters": "Seattle, Washington",
+      "founded": "1996"
+    },
+    "FDS": {
+      "symbol": "FDS",
+      "name": "FactSet",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "Norwalk, Connecticut",
+      "founded": "1978"
+    },
+    "FICO": {
+      "symbol": "FICO",
+      "name": "Fair Isaac",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Bozeman, Montana",
+      "founded": "1956"
+    },
+    "FAST": {
+      "symbol": "FAST",
+      "name": "Fastenal",
+      "sector": "Industrials",
+      "industry": "Trading Companies &amp; Distributors",
+      "headquarters": "Winona, Minnesota",
+      "founded": "1967"
+    },
+    "FRT": {
+      "symbol": "FRT",
+      "name": "Federal Realty Investment Trust",
+      "sector": "Real Estate",
+      "industry": "Retail REITs",
+      "headquarters": "Rockville, Maryland",
+      "founded": "1962"
+    },
+    "FDX": {
+      "symbol": "FDX",
+      "name": "FedEx",
+      "sector": "Industrials",
+      "industry": "Air Freight &amp; Logistics",
+      "headquarters": "Memphis, Tennessee",
+      "founded": "1971"
+    },
+    "FDXF": {
+      "symbol": "FDXF",
+      "name": "FedEx Freight",
+      "sector": "Industrials",
+      "industry": "Cargo Ground Transportation",
+      "headquarters": "Memphis, Tennessee",
+      "founded": "1982"
+    },
+    "FERG": {
+      "symbol": "FERG",
+      "name": "Ferguson Enterprises",
+      "sector": "Industrials",
+      "industry": "Trading Companies &amp; Distributors",
+      "headquarters": "Newport News, Virginia",
+      "founded": "1953"
+    },
+    "FIS": {
+      "symbol": "FIS",
+      "name": "Fidelity National Information Services",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "Jacksonville, Florida",
+      "founded": "1968"
+    },
+    "FITB": {
+      "symbol": "FITB",
+      "name": "Fifth Third Bancorp",
+      "sector": "Financials",
+      "industry": "Regional Banks",
+      "headquarters": "Cincinnati, Ohio",
+      "founded": "1858"
+    },
+    "FSLR": {
+      "symbol": "FSLR",
+      "name": "First Solar",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Tempe, Arizona",
+      "founded": "1999"
+    },
+    "FE": {
+      "symbol": "FE",
+      "name": "FirstEnergy",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Akron, Ohio",
+      "founded": "1997"
+    },
+    "FISV": {
+      "symbol": "FISV",
+      "name": "Fiserv",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "Brookfield, Wisconsin",
+      "founded": "1984"
+    },
+    "FLEX": {
+      "symbol": "FLEX",
+      "name": "Flex Ltd.",
+      "sector": "Information Technology",
+      "industry": "Electronic Manufacturing Services",
+      "headquarters": "Austin, Texas",
+      "founded": "1969"
+    },
+    "F": {
+      "symbol": "F",
+      "name": "Ford Motor Company",
+      "sector": "Consumer Discretionary",
+      "industry": "Automobile Manufacturers",
+      "headquarters": "Dearborn, Michigan",
+      "founded": "1903"
+    },
+    "FTNT": {
+      "symbol": "FTNT",
+      "name": "Fortinet",
+      "sector": "Information Technology",
+      "industry": "Systems Software",
+      "headquarters": "Sunnyvale, California",
+      "founded": "2000"
+    },
+    "FTV": {
+      "symbol": "FTV",
+      "name": "Fortive",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Everett, Washington",
+      "founded": "2016"
+    },
+    "FOXA": {
+      "symbol": "FOXA",
+      "name": "Fox Corporation (Class A)",
+      "sector": "Communication Services",
+      "industry": "Broadcasting",
+      "headquarters": "New York City, New York",
+      "founded": "2019"
+    },
+    "FOX": {
+      "symbol": "FOX",
+      "name": "Fox Corporation (Class B)",
+      "sector": "Communication Services",
+      "industry": "Broadcasting",
+      "headquarters": "New York City, New York",
+      "founded": "2019"
+    },
+    "BEN": {
+      "symbol": "BEN",
+      "name": "Franklin Resources",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "San Mateo, California",
+      "founded": "1947"
+    },
+    "FCX": {
+      "symbol": "FCX",
+      "name": "Freeport-McMoRan",
+      "sector": "Materials",
+      "industry": "Copper",
+      "headquarters": "Phoenix, Arizona",
+      "founded": "1912"
+    },
+    "GRMN": {
+      "symbol": "GRMN",
+      "name": "Garmin",
+      "sector": "Consumer Discretionary",
+      "industry": "Consumer Electronics",
+      "headquarters": "Schaffhausen, Switzerland",
+      "founded": "1989"
+    },
+    "IT": {
+      "symbol": "IT",
+      "name": "Gartner",
+      "sector": "Information Technology",
+      "industry": "IT Consulting &amp; Other Services",
+      "headquarters": "Stamford, Connecticut",
+      "founded": "1979"
+    },
+    "GE": {
+      "symbol": "GE",
+      "name": "GE Aerospace",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Evendale, Ohio",
+      "founded": "1892"
+    },
+    "GEHC": {
+      "symbol": "GEHC",
+      "name": "GE HealthCare",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1994"
+    },
+    "GEV": {
+      "symbol": "GEV",
+      "name": "GE Vernova",
+      "sector": "Industrials",
+      "industry": "Heavy Electrical Equipment",
+      "headquarters": "Cambridge, Massachusetts",
+      "founded": "2024"
+    },
+    "GEN": {
+      "symbol": "GEN",
+      "name": "Gen Digital",
+      "sector": "Information Technology",
+      "industry": "Systems Software",
+      "headquarters": "Tempe, Arizona",
+      "founded": "1982"
+    },
+    "GNRC": {
+      "symbol": "GNRC",
+      "name": "Generac",
+      "sector": "Industrials",
+      "industry": "Heavy Electrical Equipment",
+      "headquarters": "Waukesha, Wisconsin",
+      "founded": "1959"
+    },
+    "GD": {
+      "symbol": "GD",
+      "name": "General Dynamics",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Reston, Virginia",
+      "founded": "1899"
+    },
+    "GIS": {
+      "symbol": "GIS",
+      "name": "General Mills",
+      "sector": "Consumer Staples",
+      "industry": "Packaged Foods &amp; Meats",
+      "headquarters": "Golden Valley, Minnesota",
+      "founded": "1856"
+    },
+    "GM": {
+      "symbol": "GM",
+      "name": "General Motors",
+      "sector": "Consumer Discretionary",
+      "industry": "Automobile Manufacturers",
+      "headquarters": "Detroit, Michigan",
+      "founded": "1908"
+    },
+    "GPC": {
+      "symbol": "GPC",
+      "name": "Genuine Parts Company",
+      "sector": "Consumer Discretionary",
+      "industry": "Distributors",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1925"
+    },
+    "GILD": {
+      "symbol": "GILD",
+      "name": "Gilead Sciences",
+      "sector": "Health Care",
+      "industry": "Biotechnology",
+      "headquarters": "Foster City, California",
+      "founded": "1987"
+    },
+    "GPN": {
+      "symbol": "GPN",
+      "name": "Global Payments",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "2000"
+    },
+    "GL": {
+      "symbol": "GL",
+      "name": "Globe Life",
+      "sector": "Financials",
+      "industry": "Life &amp; Health Insurance",
+      "headquarters": "McKinney, Texas",
+      "founded": "1900"
+    },
+    "GDDY": {
+      "symbol": "GDDY",
+      "name": "GoDaddy",
+      "sector": "Information Technology",
+      "industry": "Internet Services &amp; Infrastructure",
+      "headquarters": "Tempe, Arizona",
+      "founded": "1997"
+    },
+    "GS": {
+      "symbol": "GS",
+      "name": "Goldman Sachs",
+      "sector": "Financials",
+      "industry": "Investment Banking &amp; Brokerage",
+      "headquarters": "New York City, New York",
+      "founded": "1869"
+    },
+    "HAL": {
+      "symbol": "HAL",
+      "name": "Halliburton",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Equipment &amp; Services",
+      "headquarters": "Houston, Texas",
+      "founded": "1919"
+    },
+    "HIG": {
+      "symbol": "HIG",
+      "name": "Hartford (The)",
+      "sector": "Financials",
+      "industry": "Property &amp; Casualty Insurance",
+      "headquarters": "Hartford, Connecticut",
+      "founded": "1810"
+    },
+    "HAS": {
+      "symbol": "HAS",
+      "name": "Hasbro",
+      "sector": "Consumer Discretionary",
+      "industry": "Leisure Products",
+      "headquarters": "Pawtucket, Rhode Island",
+      "founded": "1923"
+    },
+    "HCA": {
+      "symbol": "HCA",
+      "name": "HCA Healthcare",
+      "sector": "Health Care",
+      "industry": "Health Care Facilities",
+      "headquarters": "Nashville, Tennessee",
+      "founded": "1968"
+    },
+    "DOC": {
+      "symbol": "DOC",
+      "name": "Healthpeak Properties",
+      "sector": "Real Estate",
+      "industry": "Health Care REITs",
+      "headquarters": "Denver, Colorado",
+      "founded": "1985"
+    },
+    "HSIC": {
+      "symbol": "HSIC",
+      "name": "Henry Schein",
+      "sector": "Health Care",
+      "industry": "Health Care Distributors",
+      "headquarters": "Melville, New York",
+      "founded": "1932"
+    },
+    "HSY": {
+      "symbol": "HSY",
+      "name": "Hershey Company (The)",
+      "sector": "Consumer Staples",
+      "industry": "Packaged Foods &amp; Meats",
+      "headquarters": "Hershey, Pennsylvania",
+      "founded": "1894"
+    },
+    "HPE": {
+      "symbol": "HPE",
+      "name": "Hewlett Packard Enterprise",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "Houston, Texas",
+      "founded": "2015"
+    },
+    "HLT": {
+      "symbol": "HLT",
+      "name": "Hilton Worldwide",
+      "sector": "Consumer Discretionary",
+      "industry": "Hotels, Resorts &amp; Cruise Lines",
+      "headquarters": "Tysons Corner, Virginia",
+      "founded": "1919"
+    },
+    "HD": {
+      "symbol": "HD",
+      "name": "Home Depot (The)",
+      "sector": "Consumer Discretionary",
+      "industry": "Home Improvement Retail",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1978"
+    },
+    "HONA": {
+      "symbol": "HONA",
+      "name": "Honeywell Aerospace",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Phoenix, Arizona",
+      "founded": "1914"
+    },
+    "HON": {
+      "symbol": "HON",
+      "name": "Honeywell Technologies",
+      "sector": "Industrials",
+      "industry": "Industrial Conglomerates",
+      "headquarters": "Charlotte, North Carolina",
+      "founded": "1906"
+    },
+    "HRL": {
+      "symbol": "HRL",
+      "name": "Hormel Foods",
+      "sector": "Consumer Staples",
+      "industry": "Packaged Foods &amp; Meats",
+      "headquarters": "Austin, Minnesota",
+      "founded": "1891"
+    },
+    "HST": {
+      "symbol": "HST",
+      "name": "Host Hotels &amp; Resorts",
+      "sector": "Real Estate",
+      "industry": "Hotel &amp; Resort REITs",
+      "headquarters": "Bethesda, Maryland",
+      "founded": "1993"
+    },
+    "HWM": {
+      "symbol": "HWM",
+      "name": "Howmet Aerospace",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Pittsburgh, Pennsylvania",
+      "founded": "1888"
+    },
+    "HPQ": {
+      "symbol": "HPQ",
+      "name": "HP Inc.",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "Palo Alto, California",
+      "founded": "1939"
+    },
+    "HUBB": {
+      "symbol": "HUBB",
+      "name": "Hubbell Incorporated",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Shelton, Connecticut",
+      "founded": "1888"
+    },
+    "HUM": {
+      "symbol": "HUM",
+      "name": "Humana",
+      "sector": "Health Care",
+      "industry": "Managed Health Care",
+      "headquarters": "Louisville, Kentucky",
+      "founded": "1961"
+    },
+    "HBAN": {
+      "symbol": "HBAN",
+      "name": "Huntington Bancshares",
+      "sector": "Financials",
+      "industry": "Regional Banks",
+      "headquarters": "Columbus, Ohio; Detroit, Michigan",
+      "founded": "1866"
+    },
+    "HII": {
+      "symbol": "HII",
+      "name": "Huntington Ingalls Industries",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Newport News, Virginia",
+      "founded": "2011"
+    },
+    "IBM": {
+      "symbol": "IBM",
+      "name": "IBM",
+      "sector": "Information Technology",
+      "industry": "IT Consulting &amp; Other Services",
+      "headquarters": "Armonk, New York",
+      "founded": "1911"
+    },
+    "IEX": {
+      "symbol": "IEX",
+      "name": "IDEX Corporation",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Northbrook, Illinois",
+      "founded": "1988"
+    },
+    "IDXX": {
+      "symbol": "IDXX",
+      "name": "Idexx Laboratories",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Westbrook, Maine",
+      "founded": "1983"
+    },
+    "ITW": {
+      "symbol": "ITW",
+      "name": "Illinois Tool Works",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Glenview, Illinois",
+      "founded": "1912"
+    },
+    "ILMN": {
+      "symbol": "ILMN",
+      "name": "Illumina, Inc.",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "San Diego, California",
+      "founded": "1998"
+    },
+    "INCY": {
+      "symbol": "INCY",
+      "name": "Incyte",
+      "sector": "Health Care",
+      "industry": "Biotechnology",
+      "headquarters": "Wilmington, Delaware",
+      "founded": "1991"
+    },
+    "IR": {
+      "symbol": "IR",
+      "name": "Ingersoll Rand",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Davidson, North Carolina",
+      "founded": "1859"
+    },
+    "PODD": {
+      "symbol": "PODD",
+      "name": "Insulet Corporation",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Acton, Massachusetts",
+      "founded": "2000"
+    },
+    "INTC": {
+      "symbol": "INTC",
+      "name": "Intel",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Santa Clara, California",
+      "founded": "1968"
+    },
+    "IBKR": {
+      "symbol": "IBKR",
+      "name": "Interactive Brokers",
+      "sector": "Financials",
+      "industry": "Investment Banking &amp; Brokerage",
+      "headquarters": "Greenwich, Connecticut",
+      "founded": "1977"
+    },
+    "ICE": {
+      "symbol": "ICE",
+      "name": "Intercontinental Exchange",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "2000"
+    },
+    "IFF": {
+      "symbol": "IFF",
+      "name": "International Flavors &amp; Fragrances",
+      "sector": "Materials",
+      "industry": "Specialty Chemicals",
+      "headquarters": "New York City, New York",
+      "founded": "1958"
+    },
+    "IP": {
+      "symbol": "IP",
+      "name": "International Paper",
+      "sector": "Materials",
+      "industry": "Paper &amp; Plastic Packaging Products &amp; Materials",
+      "headquarters": "Memphis, Tennessee",
+      "founded": "1898"
+    },
+    "INTU": {
+      "symbol": "INTU",
+      "name": "Intuit",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Mountain View, California",
+      "founded": "1983"
+    },
+    "ISRG": {
+      "symbol": "ISRG",
+      "name": "Intuitive Surgical",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Sunnyvale, California",
+      "founded": "1995"
+    },
+    "IVZ": {
+      "symbol": "IVZ",
+      "name": "Invesco",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1935"
+    },
+    "INVH": {
+      "symbol": "INVH",
+      "name": "Invitation Homes",
+      "sector": "Real Estate",
+      "industry": "Single-Family Residential REITs",
+      "headquarters": "Dallas, Texas",
+      "founded": "2012"
+    },
+    "IQV": {
+      "symbol": "IQV",
+      "name": "IQVIA",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "Durham, North Carolina",
+      "founded": "1982"
+    },
+    "IRM": {
+      "symbol": "IRM",
+      "name": "Iron Mountain",
+      "sector": "Real Estate",
+      "industry": "Other Specialized REITs",
+      "headquarters": "Portsmouth, New Hampshire",
+      "founded": "1951"
+    },
+    "JBHT": {
+      "symbol": "JBHT",
+      "name": "J.B. Hunt",
+      "sector": "Industrials",
+      "industry": "Cargo Ground Transportation",
+      "headquarters": "Lowell, Arkansas",
+      "founded": "1961"
+    },
+    "JBL": {
+      "symbol": "JBL",
+      "name": "Jabil",
+      "sector": "Information Technology",
+      "industry": "Electronic Manufacturing Services",
+      "headquarters": "St. Petersburg, Florida",
+      "founded": "1966"
+    },
+    "JKHY": {
+      "symbol": "JKHY",
+      "name": "Jack Henry &amp; Associates",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "Monett, Missouri",
+      "founded": "1976"
+    },
+    "J": {
+      "symbol": "J",
+      "name": "Jacobs Solutions",
+      "sector": "Industrials",
+      "industry": "Construction &amp; Engineering",
+      "headquarters": "Dallas, Texas",
+      "founded": "1947"
+    },
+    "JNJ": {
+      "symbol": "JNJ",
+      "name": "Johnson &amp; Johnson",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals",
+      "headquarters": "New Brunswick, New Jersey",
+      "founded": "1886"
+    },
+    "JCI": {
+      "symbol": "JCI",
+      "name": "Johnson Controls",
+      "sector": "Industrials",
+      "industry": "Building Products",
+      "headquarters": "Cork, Ireland",
+      "founded": "1885"
+    },
+    "JPM": {
+      "symbol": "JPM",
+      "name": "JPMorgan Chase",
+      "sector": "Financials",
+      "industry": "Diversified Banks",
+      "headquarters": "New York City, New York",
+      "founded": "2000"
+    },
+    "KVUE": {
+      "symbol": "KVUE",
+      "name": "Kenvue",
+      "sector": "Consumer Staples",
+      "industry": "Personal Care Products",
+      "headquarters": "Skillman, New Jersey",
+      "founded": "2022"
+    },
+    "KDP": {
+      "symbol": "KDP",
+      "name": "Keurig Dr Pepper",
+      "sector": "Consumer Staples",
+      "industry": "Soft Drinks &amp; Non-alcoholic Beverages",
+      "headquarters": "Burlington, Massachusetts",
+      "founded": "1981"
+    },
+    "KEY": {
+      "symbol": "KEY",
+      "name": "KeyCorp",
+      "sector": "Financials",
+      "industry": "Regional Banks",
+      "headquarters": "Cleveland, Ohio",
+      "founded": "1825"
+    },
+    "KEYS": {
+      "symbol": "KEYS",
+      "name": "Keysight Technologies",
+      "sector": "Information Technology",
+      "industry": "Electronic Equipment &amp; Instruments",
+      "headquarters": "Santa Rosa, California",
+      "founded": "2014"
+    },
+    "KMB": {
+      "symbol": "KMB",
+      "name": "Kimberly-Clark",
+      "sector": "Consumer Staples",
+      "industry": "Household Products",
+      "headquarters": "Irving, Texas",
+      "founded": "1872"
+    },
+    "KIM": {
+      "symbol": "KIM",
+      "name": "Kimco Realty",
+      "sector": "Real Estate",
+      "industry": "Retail REITs",
+      "headquarters": "Jericho, New York",
+      "founded": "1958"
+    },
+    "KMI": {
+      "symbol": "KMI",
+      "name": "Kinder Morgan",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Storage &amp; Transportation",
+      "headquarters": "Houston, Texas",
+      "founded": "1997"
+    },
+    "KKR": {
+      "symbol": "KKR",
+      "name": "KKR &amp; Co.",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "New York City, New York",
+      "founded": "1976"
+    },
+    "KLAC": {
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
+      "sector": "Information Technology",
+      "industry": "Semiconductor Materials &amp; Equipment",
+      "headquarters": "Milpitas, California",
+      "founded": "1975"
+    },
+    "KHC": {
+      "symbol": "KHC",
+      "name": "Kraft Heinz",
+      "sector": "Consumer Staples",
+      "industry": "Packaged Foods &amp; Meats",
+      "headquarters": "Chicago, Illinois; Pittsburgh, Pennsylvania",
+      "founded": "2015"
+    },
+    "KR": {
+      "symbol": "KR",
+      "name": "Kroger",
+      "sector": "Consumer Staples",
+      "industry": "Food Retail",
+      "headquarters": "Cincinnati, Ohio",
+      "founded": "1883"
+    },
+    "LHX": {
+      "symbol": "LHX",
+      "name": "L3Harris",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Melbourne, Florida",
+      "founded": "2019"
+    },
+    "LH": {
+      "symbol": "LH",
+      "name": "Labcorp",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "headquarters": "Burlington, North Carolina",
+      "founded": "1978"
+    },
+    "LRCX": {
+      "symbol": "LRCX",
+      "name": "Lam Research",
+      "sector": "Information Technology",
+      "industry": "Semiconductor Materials &amp; Equipment",
+      "headquarters": "Fremont, California",
+      "founded": "1980"
+    },
+    "LVS": {
+      "symbol": "LVS",
+      "name": "Las Vegas Sands",
+      "sector": "Consumer Discretionary",
+      "industry": "Casinos &amp; Gaming",
+      "headquarters": "Las Vegas, Nevada",
+      "founded": "1988"
+    },
+    "LDOS": {
+      "symbol": "LDOS",
+      "name": "Leidos",
+      "sector": "Industrials",
+      "industry": "Diversified Support Services",
+      "headquarters": "Reston, Virginia",
+      "founded": "1969"
+    },
+    "LEN": {
+      "symbol": "LEN",
+      "name": "Lennar",
+      "sector": "Consumer Discretionary",
+      "industry": "Homebuilding",
+      "headquarters": "Miami, Florida",
+      "founded": "1954"
+    },
+    "LII": {
+      "symbol": "LII",
+      "name": "Lennox International",
+      "sector": "Industrials",
+      "industry": "Building Products",
+      "headquarters": "Richardson, Texas",
+      "founded": "1895"
+    },
+    "LLY": {
+      "symbol": "LLY",
+      "name": "Lilly (Eli)",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals",
+      "headquarters": "Indianapolis, Indiana",
+      "founded": "1876"
+    },
+    "LIN": {
+      "symbol": "LIN",
+      "name": "Linde plc",
+      "sector": "Materials",
+      "industry": "Industrial Gases",
+      "headquarters": "Guildford, United Kingdom",
+      "founded": "1879"
+    },
+    "LYV": {
+      "symbol": "LYV",
+      "name": "Live Nation Entertainment",
+      "sector": "Communication Services",
+      "industry": "Movies &amp; Entertainment",
+      "headquarters": "Beverly Hills, California",
+      "founded": "2010"
+    },
+    "LMT": {
+      "symbol": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Bethesda, Maryland",
+      "founded": "1995"
+    },
+    "L": {
+      "symbol": "L",
+      "name": "Loews Corporation",
+      "sector": "Financials",
+      "industry": "Multi-line Insurance",
+      "headquarters": "New York City, New York",
+      "founded": "1959"
+    },
+    "LOW": {
+      "symbol": "LOW",
+      "name": "Lowe's",
+      "sector": "Consumer Discretionary",
+      "industry": "Home Improvement Retail",
+      "headquarters": "Mooresville, North Carolina",
+      "founded": "1904"
+    },
+    "LULU": {
+      "symbol": "LULU",
+      "name": "Lululemon Athletica",
+      "sector": "Consumer Discretionary",
+      "industry": "Apparel, Accessories &amp; Luxury Goods",
+      "headquarters": "Vancouver, Canada",
+      "founded": "1998"
+    },
+    "LITE": {
+      "symbol": "LITE",
+      "name": "Lumentum",
+      "sector": "Information Technology",
+      "industry": "Communications Equipment",
+      "headquarters": "San Jose, California",
+      "founded": "2015"
+    },
+    "LYB": {
+      "symbol": "LYB",
+      "name": "LyondellBasell",
+      "sector": "Materials",
+      "industry": "Specialty Chemicals",
+      "headquarters": "Rotterdam, Netherlands",
+      "founded": "2007"
+    },
+    "MTB": {
+      "symbol": "MTB",
+      "name": "M&amp;T Bank",
+      "sector": "Financials",
+      "industry": "Regional Banks",
+      "headquarters": "Buffalo, New York",
+      "founded": "1856"
+    },
+    "MPC": {
+      "symbol": "MPC",
+      "name": "Marathon Petroleum",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Refining &amp; Marketing",
+      "headquarters": "Findlay, Ohio",
+      "founded": "2009"
+    },
+    "MAR": {
+      "symbol": "MAR",
+      "name": "Marriott International",
+      "sector": "Consumer Discretionary",
+      "industry": "Hotels, Resorts &amp; Cruise Lines",
+      "headquarters": "Bethesda, Maryland",
+      "founded": "1927"
+    },
+    "MRSH": {
+      "symbol": "MRSH",
+      "name": "Marsh McLennan",
+      "sector": "Financials",
+      "industry": "Insurance Brokers",
+      "headquarters": "New York City, New York",
+      "founded": "1905"
+    },
+    "MLM": {
+      "symbol": "MLM",
+      "name": "Martin Marietta Materials",
+      "sector": "Materials",
+      "industry": "Construction Materials",
+      "headquarters": "Raleigh, North Carolina",
+      "founded": "1993"
+    },
+    "MRVL": {
+      "symbol": "MRVL",
+      "name": "Marvell Technology",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Santa Clara, California",
+      "founded": "1995"
+    },
+    "MAS": {
+      "symbol": "MAS",
+      "name": "Masco",
+      "sector": "Industrials",
+      "industry": "Building Products",
+      "headquarters": "Livonia, Michigan",
+      "founded": "1929"
+    },
+    "MA": {
+      "symbol": "MA",
+      "name": "Mastercard",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "Harrison, New York",
+      "founded": "1966"
+    },
+    "MKC": {
+      "symbol": "MKC",
+      "name": "McCormick &amp; Company",
+      "sector": "Consumer Staples",
+      "industry": "Packaged Foods &amp; Meats",
+      "headquarters": "Hunt Valley, Maryland",
+      "founded": "1889"
+    },
+    "MCD": {
+      "symbol": "MCD",
+      "name": "McDonald's",
+      "sector": "Consumer Discretionary",
+      "industry": "Restaurants",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1940"
+    },
+    "MCK": {
+      "symbol": "MCK",
+      "name": "McKesson",
+      "sector": "Health Care",
+      "industry": "Health Care Distributors",
+      "headquarters": "Irving, Texas",
+      "founded": "1833"
+    },
+    "MDT": {
+      "symbol": "MDT",
+      "name": "Medtronic",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Galway, Ireland",
+      "founded": "1949"
+    },
+    "MRK": {
+      "symbol": "MRK",
+      "name": "Merck &amp; Co.",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals",
+      "headquarters": "Kenilworth, New Jersey",
+      "founded": "1891"
+    },
+    "META": {
+      "symbol": "META",
+      "name": "Meta Platforms",
+      "sector": "Communication Services",
+      "industry": "Interactive Media &amp; Services",
+      "headquarters": "Menlo Park, California",
+      "founded": "2004"
+    },
+    "MET": {
+      "symbol": "MET",
+      "name": "MetLife",
+      "sector": "Financials",
+      "industry": "Life &amp; Health Insurance",
+      "headquarters": "New York City, New York",
+      "founded": "1868"
+    },
+    "MTD": {
+      "symbol": "MTD",
+      "name": "Mettler Toledo",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "Columbus, Ohio",
+      "founded": "1945"
+    },
+    "MGM": {
+      "symbol": "MGM",
+      "name": "MGM Resorts",
+      "sector": "Consumer Discretionary",
+      "industry": "Casinos &amp; Gaming",
+      "headquarters": "Paradise, Nevada",
+      "founded": "1986"
+    },
+    "MCHP": {
+      "symbol": "MCHP",
+      "name": "Microchip Technology",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Chandler, Arizona",
+      "founded": "1989"
+    },
+    "MU": {
+      "symbol": "MU",
+      "name": "Micron Technology",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Boise, Idaho",
+      "founded": "1978"
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "sector": "Information Technology",
+      "industry": "Systems Software",
+      "headquarters": "Redmond, Washington",
+      "founded": "1975"
+    },
+    "MAA": {
+      "symbol": "MAA",
+      "name": "Mid-America Apartment Communities",
+      "sector": "Real Estate",
+      "industry": "Multi-Family Residential REITs",
+      "headquarters": "Memphis, Tennessee",
+      "founded": "1977"
+    },
+    "MRNA": {
+      "symbol": "MRNA",
+      "name": "Moderna",
+      "sector": "Health Care",
+      "industry": "Biotechnology",
+      "headquarters": "Cambridge, Massachusetts",
+      "founded": "2010"
+    },
+    "MDLZ": {
+      "symbol": "MDLZ",
+      "name": "Mondelez International",
+      "sector": "Consumer Staples",
+      "industry": "Packaged Foods &amp; Meats",
+      "headquarters": "Chicago, Illinois",
+      "founded": "2012"
+    },
+    "MPWR": {
+      "symbol": "MPWR",
+      "name": "Monolithic Power Systems",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Kirkland, Washington",
+      "founded": "1997"
+    },
+    "MNST": {
+      "symbol": "MNST",
+      "name": "Monster Beverage",
+      "sector": "Consumer Staples",
+      "industry": "Soft Drinks &amp; Non-alcoholic Beverages",
+      "headquarters": "Corona, California",
+      "founded": "2012"
+    },
+    "MCO": {
+      "symbol": "MCO",
+      "name": "Moody's Corporation",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "New York City, New York",
+      "founded": "1909"
+    },
+    "MS": {
+      "symbol": "MS",
+      "name": "Morgan Stanley",
+      "sector": "Financials",
+      "industry": "Investment Banking &amp; Brokerage",
+      "headquarters": "New York City, New York",
+      "founded": "1935"
+    },
+    "MOS": {
+      "symbol": "MOS",
+      "name": "Mosaic Company (The)",
+      "sector": "Materials",
+      "industry": "Fertilizers &amp; Agricultural Chemicals",
+      "headquarters": "Tampa, Florida",
+      "founded": "2004"
+    },
+    "MSI": {
+      "symbol": "MSI",
+      "name": "Motorola Solutions",
+      "sector": "Information Technology",
+      "industry": "Communications Equipment",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1928"
+    },
+    "MSCI": {
+      "symbol": "MSCI",
+      "name": "MSCI",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "New York City, New York",
+      "founded": "1969"
+    },
+    "NDAQ": {
+      "symbol": "NDAQ",
+      "name": "Nasdaq, Inc.",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "New York City, New York",
+      "founded": "1971"
+    },
+    "NTAP": {
+      "symbol": "NTAP",
+      "name": "NetApp",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "San Jose, California",
+      "founded": "1992"
+    },
+    "NFLX": {
+      "symbol": "NFLX",
+      "name": "Netflix",
+      "sector": "Communication Services",
+      "industry": "Movies &amp; Entertainment",
+      "headquarters": "Los Gatos, California",
+      "founded": "1997"
+    },
+    "NEM": {
+      "symbol": "NEM",
+      "name": "Newmont",
+      "sector": "Materials",
+      "industry": "Gold",
+      "headquarters": "Denver, Colorado",
+      "founded": "1921"
+    },
+    "NWSA": {
+      "symbol": "NWSA",
+      "name": "News Corp (Class A)",
+      "sector": "Communication Services",
+      "industry": "Publishing",
+      "headquarters": "New York City, New York",
+      "founded": "2013"
+    },
+    "NWS": {
+      "symbol": "NWS",
+      "name": "News Corp (Class B)",
+      "sector": "Communication Services",
+      "industry": "Publishing",
+      "headquarters": "New York City, New York",
+      "founded": "2013"
+    },
+    "NEE": {
+      "symbol": "NEE",
+      "name": "NextEra Energy",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Juno Beach, Florida",
+      "founded": "1984"
+    },
+    "NKE": {
+      "symbol": "NKE",
+      "name": "Nike, Inc.",
+      "sector": "Consumer Discretionary",
+      "industry": "Apparel, Accessories &amp; Luxury Goods",
+      "headquarters": "Washington County, Oregon",
+      "founded": "1964"
+    },
+    "NI": {
+      "symbol": "NI",
+      "name": "NiSource",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Merrillville, Indiana",
+      "founded": "1912"
+    },
+    "NDSN": {
+      "symbol": "NDSN",
+      "name": "Nordson Corporation",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Westlake, Ohio",
+      "founded": "1935"
+    },
+    "NSC": {
+      "symbol": "NSC",
+      "name": "Norfolk Southern",
+      "sector": "Industrials",
+      "industry": "Rail Transportation",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1881"
+    },
+    "NTRS": {
+      "symbol": "NTRS",
+      "name": "Northern Trust",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1889"
+    },
+    "NOC": {
+      "symbol": "NOC",
+      "name": "Northrop Grumman",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "West Falls Church, Virginia[2]",
+      "founded": "1994"
+    },
+    "NCLH": {
+      "symbol": "NCLH",
+      "name": "Norwegian Cruise Line Holdings",
+      "sector": "Consumer Discretionary",
+      "industry": "Hotels, Resorts &amp; Cruise Lines",
+      "headquarters": "Miami-Dade County, Florida[3]",
+      "founded": "2011"
+    },
+    "NRG": {
+      "symbol": "NRG",
+      "name": "NRG Energy",
+      "sector": "Utilities",
+      "industry": "Independent Power Producers &amp; Energy Traders",
+      "headquarters": "Houston, Texas",
+      "founded": "1992"
+    },
+    "NUE": {
+      "symbol": "NUE",
+      "name": "Nucor",
+      "sector": "Materials",
+      "industry": "Steel",
+      "headquarters": "Charlotte, North Carolina",
+      "founded": "1940"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "name": "Nvidia",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Santa Clara, California",
+      "founded": "1993"
+    },
+    "NVR": {
+      "symbol": "NVR",
+      "name": "NVR, Inc.",
+      "sector": "Consumer Discretionary",
+      "industry": "Homebuilding",
+      "headquarters": "Reston, Virginia",
+      "founded": "1980"
+    },
+    "NXPI": {
+      "symbol": "NXPI",
+      "name": "NXP Semiconductors",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Eindhoven, Netherlands",
+      "founded": "1953"
+    },
+    "ORLY": {
+      "symbol": "ORLY",
+      "name": "O'Reilly Automotive",
+      "sector": "Consumer Discretionary",
+      "industry": "Automotive Retail",
+      "headquarters": "Springfield, Missouri",
+      "founded": "1957"
+    },
+    "OXY": {
+      "symbol": "OXY",
+      "name": "Occidental Petroleum",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Houston, Texas",
+      "founded": "1920"
+    },
+    "ODFL": {
+      "symbol": "ODFL",
+      "name": "Old Dominion",
+      "sector": "Industrials",
+      "industry": "Cargo Ground Transportation",
+      "headquarters": "Thomasville, North Carolina",
+      "founded": "1934"
+    },
+    "OMC": {
+      "symbol": "OMC",
+      "name": "Omnicom Group",
+      "sector": "Communication Services",
+      "industry": "Advertising",
+      "headquarters": "New York City, New York",
+      "founded": "1986"
+    },
+    "ON": {
+      "symbol": "ON",
+      "name": "ON Semiconductor",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Phoenix, Arizona",
+      "founded": "1999"
+    },
+    "OKE": {
+      "symbol": "OKE",
+      "name": "Oneok",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Storage &amp; Transportation",
+      "headquarters": "Tulsa, Oklahoma",
+      "founded": "1906"
+    },
+    "ORCL": {
+      "symbol": "ORCL",
+      "name": "Oracle Corporation",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Austin, Texas",
+      "founded": "1977"
+    },
+    "OTIS": {
+      "symbol": "OTIS",
+      "name": "Otis Worldwide",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Farmington, Connecticut",
+      "founded": "2020"
+    },
+    "PCAR": {
+      "symbol": "PCAR",
+      "name": "Paccar",
+      "sector": "Industrials",
+      "industry": "Construction Machinery &amp; Heavy Transportation Equipment",
+      "headquarters": "Bellevue, Washington",
+      "founded": "1905"
+    },
+    "PKG": {
+      "symbol": "PKG",
+      "name": "Packaging Corporation of America",
+      "sector": "Materials",
+      "industry": "Paper &amp; Plastic Packaging Products &amp; Materials",
+      "headquarters": "Lake Forest, Illinois",
+      "founded": "1959"
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "name": "Palantir Technologies",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Aventura, Florida",
+      "founded": "2003"
+    },
+    "PANW": {
+      "symbol": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Information Technology",
+      "industry": "Systems Software",
+      "headquarters": "Santa Clara, California",
+      "founded": "2005"
+    },
+    "PH": {
+      "symbol": "PH",
+      "name": "Parker Hannifin",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Cleveland, Ohio",
+      "founded": "1917"
+    },
+    "PAYX": {
+      "symbol": "PAYX",
+      "name": "Paychex",
+      "sector": "Industrials",
+      "industry": "Human Resource &amp; Employment Services",
+      "headquarters": "Penfield, New York",
+      "founded": "1971"
+    },
+    "PYPL": {
+      "symbol": "PYPL",
+      "name": "PayPal",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "San Jose, California",
+      "founded": "1998"
+    },
+    "PNR": {
+      "symbol": "PNR",
+      "name": "Pentair",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Worsley, United Kingdom",
+      "founded": "1966"
+    },
+    "PEP": {
+      "symbol": "PEP",
+      "name": "PepsiCo",
+      "sector": "Consumer Staples",
+      "industry": "Soft Drinks &amp; Non-alcoholic Beverages",
+      "headquarters": "Purchase, New York",
+      "founded": "1898"
+    },
+    "PFE": {
+      "symbol": "PFE",
+      "name": "Pfizer",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals",
+      "headquarters": "New York City, New York",
+      "founded": "1849"
+    },
+    "PCG": {
+      "symbol": "PCG",
+      "name": "PG&amp;E Corporation",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Oakland, California",
+      "founded": "1905"
+    },
+    "PM": {
+      "symbol": "PM",
+      "name": "Philip Morris International",
+      "sector": "Consumer Staples",
+      "industry": "Tobacco",
+      "headquarters": "New York City, New York",
+      "founded": "2008"
+    },
+    "PSX": {
+      "symbol": "PSX",
+      "name": "Phillips 66",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Refining &amp; Marketing",
+      "headquarters": "Houston, Texas",
+      "founded": "2012"
+    },
+    "PNW": {
+      "symbol": "PNW",
+      "name": "Pinnacle West Capital",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Phoenix, Arizona",
+      "founded": "1985"
+    },
+    "PNC": {
+      "symbol": "PNC",
+      "name": "PNC Financial Services",
+      "sector": "Financials",
+      "industry": "Diversified Banks",
+      "headquarters": "Pittsburgh, Pennsylvania",
+      "founded": "1845"
+    },
+    "PPG": {
+      "symbol": "PPG",
+      "name": "PPG Industries",
+      "sector": "Materials",
+      "industry": "Specialty Chemicals",
+      "headquarters": "Pittsburgh, Pennsylvania",
+      "founded": "1883"
+    },
+    "PPL": {
+      "symbol": "PPL",
+      "name": "PPL Corporation",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Allentown, Pennsylvania",
+      "founded": "1920"
+    },
+    "PFG": {
+      "symbol": "PFG",
+      "name": "Principal Financial Group",
+      "sector": "Financials",
+      "industry": "Life &amp; Health Insurance",
+      "headquarters": "Des Moines, Iowa",
+      "founded": "1879"
+    },
+    "PG": {
+      "symbol": "PG",
+      "name": "Procter &amp; Gamble",
+      "sector": "Consumer Staples",
+      "industry": "Personal Care Products",
+      "headquarters": "Cincinnati, Ohio",
+      "founded": "1837"
+    },
+    "PGR": {
+      "symbol": "PGR",
+      "name": "Progressive Corporation",
+      "sector": "Financials",
+      "industry": "Property &amp; Casualty Insurance",
+      "headquarters": "Mayfield Village, Ohio",
+      "founded": "1937"
+    },
+    "PLD": {
+      "symbol": "PLD",
+      "name": "Prologis",
+      "sector": "Real Estate",
+      "industry": "Industrial REITs",
+      "headquarters": "San Francisco, California",
+      "founded": "1983"
+    },
+    "PRU": {
+      "symbol": "PRU",
+      "name": "Prudential Financial",
+      "sector": "Financials",
+      "industry": "Life &amp; Health Insurance",
+      "headquarters": "Newark, New Jersey",
+      "founded": "1875"
+    },
+    "PEG": {
+      "symbol": "PEG",
+      "name": "Public Service Enterprise Group",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Newark, New Jersey",
+      "founded": "1903"
+    },
+    "PTC": {
+      "symbol": "PTC",
+      "name": "PTC Inc.",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Boston, Massachusetts",
+      "founded": "1985"
+    },
+    "PSA": {
+      "symbol": "PSA",
+      "name": "Public Storage",
+      "sector": "Real Estate",
+      "industry": "Self-Storage REITs",
+      "headquarters": "Glendale, California",
+      "founded": "1972"
+    },
+    "PHM": {
+      "symbol": "PHM",
+      "name": "PulteGroup",
+      "sector": "Consumer Discretionary",
+      "industry": "Homebuilding",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1956"
+    },
+    "PWR": {
+      "symbol": "PWR",
+      "name": "Quanta Services",
+      "sector": "Industrials",
+      "industry": "Construction &amp; Engineering",
+      "headquarters": "Houston, Texas",
+      "founded": "1997"
+    },
+    "QCOM": {
+      "symbol": "QCOM",
+      "name": "Qualcomm",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "San Diego, California",
+      "founded": "1985"
+    },
+    "DGX": {
+      "symbol": "DGX",
+      "name": "Quest Diagnostics",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "headquarters": "Secaucus, New Jersey",
+      "founded": "1967"
+    },
+    "Q": {
+      "symbol": "Q",
+      "name": "Qnity Electronics",
+      "sector": "Information Technology",
+      "industry": "Semiconductor Materials &amp; Equipment",
+      "headquarters": "Wilmington, Delaware",
+      "founded": "2025"
+    },
+    "RL": {
+      "symbol": "RL",
+      "name": "Ralph Lauren Corporation",
+      "sector": "Consumer Discretionary",
+      "industry": "Apparel, Accessories &amp; Luxury Goods",
+      "headquarters": "New York City, New York",
+      "founded": "1967"
+    },
+    "RJF": {
+      "symbol": "RJF",
+      "name": "Raymond James Financial",
+      "sector": "Financials",
+      "industry": "Investment Banking &amp; Brokerage",
+      "headquarters": "St. Petersburg, Florida",
+      "founded": "1962"
+    },
+    "RDDT": {
+      "symbol": "RDDT",
+      "name": "Reddit",
+      "sector": "Communication Services",
+      "industry": "Interactive Media &amp; Services",
+      "headquarters": "San Francisco, California",
+      "founded": "2005"
+    },
+    "RTX": {
+      "symbol": "RTX",
+      "name": "RTX Corporation",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Waltham, Massachusetts",
+      "founded": "1922"
+    },
+    "O": {
+      "symbol": "O",
+      "name": "Realty Income",
+      "sector": "Real Estate",
+      "industry": "Retail REITs",
+      "headquarters": "San Diego, California",
+      "founded": "1969"
+    },
+    "REG": {
+      "symbol": "REG",
+      "name": "Regency Centers",
+      "sector": "Real Estate",
+      "industry": "Retail REITs",
+      "headquarters": "Jacksonville, Florida",
+      "founded": "1963"
+    },
+    "REGN": {
+      "symbol": "REGN",
+      "name": "Regeneron Pharmaceuticals",
+      "sector": "Health Care",
+      "industry": "Biotechnology",
+      "headquarters": "Tarrytown, New York",
+      "founded": "1988"
+    },
+    "RF": {
+      "symbol": "RF",
+      "name": "Regions Financial Corporation",
+      "sector": "Financials",
+      "industry": "Regional Banks",
+      "headquarters": "Birmingham, Alabama",
+      "founded": "1971"
+    },
+    "RSG": {
+      "symbol": "RSG",
+      "name": "Republic Services",
+      "sector": "Industrials",
+      "industry": "Environmental &amp; Facilities Services",
+      "headquarters": "Phoenix, Arizona",
+      "founded": "1998"
+    },
+    "RMD": {
+      "symbol": "RMD",
+      "name": "ResMed",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "San Diego, California",
+      "founded": "1989"
+    },
+    "RVTY": {
+      "symbol": "RVTY",
+      "name": "Revvity",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Waltham, Massachusetts",
+      "founded": "1937"
+    },
+    "HOOD": {
+      "symbol": "HOOD",
+      "name": "Robinhood Markets",
+      "sector": "Financials",
+      "industry": "Investment Banking &amp; Brokerage",
+      "headquarters": "Menlo Park, California",
+      "founded": "2013"
+    },
+    "ROK": {
+      "symbol": "ROK",
+      "name": "Rockwell Automation",
+      "sector": "Industrials",
+      "industry": "Electrical Components &amp; Equipment",
+      "headquarters": "Milwaukee, Wisconsin",
+      "founded": "1903"
+    },
+    "ROL": {
+      "symbol": "ROL",
+      "name": "Rollins, Inc.",
+      "sector": "Industrials",
+      "industry": "Environmental &amp; Facilities Services",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1948"
+    },
+    "ROP": {
+      "symbol": "ROP",
+      "name": "Roper Technologies",
+      "sector": "Information Technology",
+      "industry": "Electronic Equipment &amp; Instruments",
+      "headquarters": "Sarasota, Florida",
+      "founded": "1981"
+    },
+    "ROST": {
+      "symbol": "ROST",
+      "name": "Ross Stores",
+      "sector": "Consumer Discretionary",
+      "industry": "Apparel Retail",
+      "headquarters": "Dublin, California",
+      "founded": "1982"
+    },
+    "RCL": {
+      "symbol": "RCL",
+      "name": "Royal Caribbean Group",
+      "sector": "Consumer Discretionary",
+      "industry": "Hotels, Resorts &amp; Cruise Lines",
+      "headquarters": "Miami, Florida",
+      "founded": "1997"
+    },
+    "SPGI": {
+      "symbol": "SPGI",
+      "name": "S&amp;P Global",
+      "sector": "Financials",
+      "industry": "Financial Exchanges &amp; Data",
+      "headquarters": "New York City, New York",
+      "founded": "1917"
+    },
+    "CRM": {
+      "symbol": "CRM",
+      "name": "Salesforce",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "San Francisco, California",
+      "founded": "1999"
+    },
+    "SNDK": {
+      "symbol": "SNDK",
+      "name": "Sandisk",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "Milpitas, California",
+      "founded": "1988"
+    },
+    "SBAC": {
+      "symbol": "SBAC",
+      "name": "SBA Communications",
+      "sector": "Real Estate",
+      "industry": "Telecom Tower REITs",
+      "headquarters": "Boca Raton, Florida",
+      "founded": "1989"
+    },
+    "SLB": {
+      "symbol": "SLB",
+      "name": "Schlumberger",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Equipment &amp; Services",
+      "headquarters": "Houston, Texas",
+      "founded": "1926"
+    },
+    "STX": {
+      "symbol": "STX",
+      "name": "Seagate Technology",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "Dublin, Ireland",
+      "founded": "1979"
+    },
+    "SRE": {
+      "symbol": "SRE",
+      "name": "Sempra",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "San Diego, California",
+      "founded": "1998"
+    },
+    "NOW": {
+      "symbol": "NOW",
+      "name": "ServiceNow",
+      "sector": "Information Technology",
+      "industry": "Systems Software",
+      "headquarters": "Santa Clara, California",
+      "founded": "2003"
+    },
+    "SHW": {
+      "symbol": "SHW",
+      "name": "Sherwin-Williams",
+      "sector": "Materials",
+      "industry": "Specialty Chemicals",
+      "headquarters": "Cleveland, Ohio",
+      "founded": "1866"
+    },
+    "SPG": {
+      "symbol": "SPG",
+      "name": "Simon Property Group",
+      "sector": "Real Estate",
+      "industry": "Retail REITs",
+      "headquarters": "Indianapolis, Indiana",
+      "founded": "2003"
+    },
+    "SKYD": {
+      "symbol": "SKYD",
+      "name": "Skydance Corporation",
+      "sector": "Communication Services",
+      "industry": "Movies &amp; Entertainment",
+      "headquarters": "New York City, New York",
+      "founded": "2025"
+    },
+    "SWKS": {
+      "symbol": "SWKS",
+      "name": "Skyworks Solutions",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Irvine, California",
+      "founded": "2002"
+    },
+    "SJM": {
+      "symbol": "SJM",
+      "name": "J.M. Smucker Company (The)",
+      "sector": "Consumer Staples",
+      "industry": "Packaged Foods &amp; Meats",
+      "headquarters": "Orrville, Ohio",
+      "founded": "1897"
+    },
+    "SW": {
+      "symbol": "SW",
+      "name": "Smurfit Westrock",
+      "sector": "Materials",
+      "industry": "Paper &amp; Plastic Packaging Products &amp; Materials",
+      "headquarters": "Dublin, Ireland",
+      "founded": "1934"
+    },
+    "SNA": {
+      "symbol": "SNA",
+      "name": "Snap-on",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Kenosha, Wisconsin",
+      "founded": "1920"
+    },
+    "SOLV": {
+      "symbol": "SOLV",
+      "name": "Solventum",
+      "sector": "Health Care",
+      "industry": "Health Care Technology",
+      "headquarters": "Saint Paul, Minnesota",
+      "founded": "2023"
+    },
+    "SO": {
+      "symbol": "SO",
+      "name": "Southern Company",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Atlanta, Georgia",
+      "founded": "1945"
+    },
+    "LUV": {
+      "symbol": "LUV",
+      "name": "Southwest Airlines",
+      "sector": "Industrials",
+      "industry": "Passenger Airlines",
+      "headquarters": "Dallas, Texas",
+      "founded": "1967"
+    },
+    "SWK": {
+      "symbol": "SWK",
+      "name": "Stanley Black &amp; Decker",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "New Britain, Connecticut",
+      "founded": "1843"
+    },
+    "SBUX": {
+      "symbol": "SBUX",
+      "name": "Starbucks",
+      "sector": "Consumer Discretionary",
+      "industry": "Restaurants",
+      "headquarters": "Seattle, Washington",
+      "founded": "1971"
+    },
+    "STT": {
+      "symbol": "STT",
+      "name": "State Street Corporation",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "Boston, Massachusetts",
+      "founded": "1792"
+    },
+    "STLD": {
+      "symbol": "STLD",
+      "name": "Steel Dynamics",
+      "sector": "Materials",
+      "industry": "Steel",
+      "headquarters": "Fort Wayne, Indiana",
+      "founded": "1993"
+    },
+    "STE": {
+      "symbol": "STE",
+      "name": "Steris",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Dublin, Ireland",
+      "founded": "1985"
+    },
+    "SYK": {
+      "symbol": "SYK",
+      "name": "Stryker Corporation",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Kalamazoo, Michigan",
+      "founded": "1941"
+    },
+    "SMCI": {
+      "symbol": "SMCI",
+      "name": "Supermicro",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "San Jose, California",
+      "founded": "1993"
+    },
+    "SYF": {
+      "symbol": "SYF",
+      "name": "Synchrony Financial",
+      "sector": "Financials",
+      "industry": "Consumer Finance",
+      "headquarters": "Stamford, Connecticut",
+      "founded": "2003"
+    },
+    "SNPS": {
+      "symbol": "SNPS",
+      "name": "Synopsys",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Sunnyvale, California",
+      "founded": "1986"
+    },
+    "SYY": {
+      "symbol": "SYY",
+      "name": "Sysco",
+      "sector": "Consumer Staples",
+      "industry": "Food Distributors",
+      "headquarters": "Houston, Texas",
+      "founded": "1969"
+    },
+    "TMUS": {
+      "symbol": "TMUS",
+      "name": "T-Mobile US",
+      "sector": "Communication Services",
+      "industry": "Wireless Telecommunication Services",
+      "headquarters": "Bellevue, Washington",
+      "founded": "1994"
+    },
+    "TROW": {
+      "symbol": "TROW",
+      "name": "T. Rowe Price",
+      "sector": "Financials",
+      "industry": "Asset Management &amp; Custody Banks",
+      "headquarters": "Baltimore, Maryland",
+      "founded": "1937"
+    },
+    "TTWO": {
+      "symbol": "TTWO",
+      "name": "Take-Two Interactive",
+      "sector": "Communication Services",
+      "industry": "Interactive Home Entertainment",
+      "headquarters": "New York City, New York",
+      "founded": "1993"
+    },
+    "TPR": {
+      "symbol": "TPR",
+      "name": "Tapestry, Inc.",
+      "sector": "Consumer Discretionary",
+      "industry": "Apparel, Accessories &amp; Luxury Goods",
+      "headquarters": "New York City, New York",
+      "founded": "2017"
+    },
+    "TRGP": {
+      "symbol": "TRGP",
+      "name": "Targa Resources",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Storage &amp; Transportation",
+      "headquarters": "Houston, Texas",
+      "founded": "2005"
+    },
+    "TGT": {
+      "symbol": "TGT",
+      "name": "Target Corporation",
+      "sector": "Consumer Staples",
+      "industry": "Consumer Staples Merchandise Retail",
+      "headquarters": "Minneapolis, Minnesota",
+      "founded": "1902"
+    },
+    "TEL": {
+      "symbol": "TEL",
+      "name": "TE Connectivity",
+      "sector": "Information Technology",
+      "industry": "Electronic Manufacturing Services",
+      "headquarters": "Galway, Ireland",
+      "founded": "2007"
+    },
+    "TDY": {
+      "symbol": "TDY",
+      "name": "Teledyne Technologies",
+      "sector": "Information Technology",
+      "industry": "Electronic Equipment &amp; Instruments",
+      "headquarters": "Thousand Oaks, California",
+      "founded": "1960"
+    },
+    "TER": {
+      "symbol": "TER",
+      "name": "Teradyne",
+      "sector": "Information Technology",
+      "industry": "Semiconductor Materials &amp; Equipment",
+      "headquarters": "North Reading, Massachusetts",
+      "founded": "1960"
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "name": "Tesla, Inc.",
+      "sector": "Consumer Discretionary",
+      "industry": "Automobile Manufacturers",
+      "headquarters": "Austin, Texas",
+      "founded": "2003"
+    },
+    "TXN": {
+      "symbol": "TXN",
+      "name": "Texas Instruments",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "headquarters": "Dallas, Texas",
+      "founded": "1930"
+    },
+    "TPL": {
+      "symbol": "TPL",
+      "name": "Texas Pacific Land Corporation",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Exploration &amp; Production",
+      "headquarters": "Dallas, Texas",
+      "founded": "1888"
+    },
+    "TXT": {
+      "symbol": "TXT",
+      "name": "Textron",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Providence, Rhode Island",
+      "founded": "1923"
+    },
+    "TMO": {
+      "symbol": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "Waltham, Massachusetts",
+      "founded": "2006"
+    },
+    "TJX": {
+      "symbol": "TJX",
+      "name": "TJX Companies",
+      "sector": "Consumer Discretionary",
+      "industry": "Apparel Retail",
+      "headquarters": "Framingham, Massachusetts",
+      "founded": "1987"
+    },
+    "TKO": {
+      "symbol": "TKO",
+      "name": "TKO Group Holdings",
+      "sector": "Communication Services",
+      "industry": "Movies &amp; Entertainment",
+      "headquarters": "New York City, New York",
+      "founded": "2023"
+    },
+    "TSCO": {
+      "symbol": "TSCO",
+      "name": "Tractor Supply",
+      "sector": "Consumer Discretionary",
+      "industry": "Other Specialty Retail",
+      "headquarters": "Brentwood, Tennessee",
+      "founded": "1938"
+    },
+    "TT": {
+      "symbol": "TT",
+      "name": "Trane Technologies",
+      "sector": "Industrials",
+      "industry": "Building Products",
+      "headquarters": "Dublin, Ireland",
+      "founded": "1871"
+    },
+    "TDG": {
+      "symbol": "TDG",
+      "name": "TransDigm Group",
+      "sector": "Industrials",
+      "industry": "Aerospace &amp; Defense",
+      "headquarters": "Cleveland, Ohio",
+      "founded": "1993"
+    },
+    "TRV": {
+      "symbol": "TRV",
+      "name": "Travelers Companies (The)",
+      "sector": "Financials",
+      "industry": "Property &amp; Casualty Insurance",
+      "headquarters": "New York City, New York",
+      "founded": "1853"
+    },
+    "TRMB": {
+      "symbol": "TRMB",
+      "name": "Trimble Inc.",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Westminster, Colorado",
+      "founded": "1978"
+    },
+    "TFC": {
+      "symbol": "TFC",
+      "name": "Truist Financial",
+      "sector": "Financials",
+      "industry": "Diversified Banks",
+      "headquarters": "Charlotte, North Carolina",
+      "founded": "1872"
+    },
+    "TWLO": {
+      "symbol": "TWLO",
+      "name": "Twilio",
+      "sector": "Information Technology",
+      "industry": "Systems Software",
+      "headquarters": "San Francisco, California",
+      "founded": "2008"
+    },
+    "TYL": {
+      "symbol": "TYL",
+      "name": "Tyler Technologies",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Plano, Texas",
+      "founded": "1966"
+    },
+    "TSN": {
+      "symbol": "TSN",
+      "name": "Tyson Foods",
+      "sector": "Consumer Staples",
+      "industry": "Packaged Foods &amp; Meats",
+      "headquarters": "Springdale, Arkansas",
+      "founded": "1935"
+    },
+    "USB": {
+      "symbol": "USB",
+      "name": "U.S. Bancorp",
+      "sector": "Financials",
+      "industry": "Diversified Banks",
+      "headquarters": "Minneapolis, Minnesota",
+      "founded": "1968"
+    },
+    "UBER": {
+      "symbol": "UBER",
+      "name": "Uber",
+      "sector": "Industrials",
+      "industry": "Passenger Ground Transportation",
+      "headquarters": "San Francisco, California",
+      "founded": "2009"
+    },
+    "UDR": {
+      "symbol": "UDR",
+      "name": "UDR, Inc.",
+      "sector": "Real Estate",
+      "industry": "Multi-Family Residential REITs",
+      "headquarters": "Highlands Ranch, Colorado",
+      "founded": "1972"
+    },
+    "ULTA": {
+      "symbol": "ULTA",
+      "name": "Ulta Beauty",
+      "sector": "Consumer Discretionary",
+      "industry": "Other Specialty Retail",
+      "headquarters": "Bolingbrook, Illinois",
+      "founded": "1990"
+    },
+    "UNP": {
+      "symbol": "UNP",
+      "name": "Union Pacific Corporation",
+      "sector": "Industrials",
+      "industry": "Rail Transportation",
+      "headquarters": "Omaha, Nebraska",
+      "founded": "1862"
+    },
+    "UAL": {
+      "symbol": "UAL",
+      "name": "United Airlines Holdings",
+      "sector": "Industrials",
+      "industry": "Passenger Airlines",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1967"
+    },
+    "UPS": {
+      "symbol": "UPS",
+      "name": "United Parcel Service",
+      "sector": "Industrials",
+      "industry": "Air Freight &amp; Logistics",
+      "headquarters": "Sandy Springs, Georgia",
+      "founded": "1907"
+    },
+    "URI": {
+      "symbol": "URI",
+      "name": "United Rentals",
+      "sector": "Industrials",
+      "industry": "Trading Companies &amp; Distributors",
+      "headquarters": "Stamford, Connecticut",
+      "founded": "1997"
+    },
+    "UNH": {
+      "symbol": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Health Care",
+      "industry": "Managed Health Care",
+      "headquarters": "Eden Prairie, Minnesota",
+      "founded": "1977"
+    },
+    "UHS": {
+      "symbol": "UHS",
+      "name": "Universal Health Services",
+      "sector": "Health Care",
+      "industry": "Health Care Facilities",
+      "headquarters": "King of Prussia, Pennsylvania",
+      "founded": "1979"
+    },
+    "VLO": {
+      "symbol": "VLO",
+      "name": "Valero Energy",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Refining &amp; Marketing",
+      "headquarters": "San Antonio, Texas",
+      "founded": "1980"
+    },
+    "VEEV": {
+      "symbol": "VEEV",
+      "name": "Veeva Systems",
+      "sector": "Health Care",
+      "industry": "Health Care Technology",
+      "headquarters": "Pleasanton, California",
+      "founded": "2007"
+    },
+    "VTR": {
+      "symbol": "VTR",
+      "name": "Ventas",
+      "sector": "Real Estate",
+      "industry": "Health Care REITs",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1998"
+    },
+    "VLTO": {
+      "symbol": "VLTO",
+      "name": "Veralto",
+      "sector": "Industrials",
+      "industry": "Environmental &amp; Facilities Services",
+      "headquarters": "Waltham, Massachusetts",
+      "founded": "2023"
+    },
+    "VRSN": {
+      "symbol": "VRSN",
+      "name": "Verisign",
+      "sector": "Information Technology",
+      "industry": "Internet Services &amp; Infrastructure",
+      "headquarters": "Reston, Virginia",
+      "founded": "1995"
+    },
+    "VRSK": {
+      "symbol": "VRSK",
+      "name": "Verisk Analytics",
+      "sector": "Industrials",
+      "industry": "Research &amp; Consulting Services",
+      "headquarters": "Jersey City, New Jersey",
+      "founded": "1971"
+    },
+    "VZ": {
+      "symbol": "VZ",
+      "name": "Verizon",
+      "sector": "Communication Services",
+      "industry": "Integrated Telecommunication Services",
+      "headquarters": "New York City, New York",
+      "founded": "1983"
+    },
+    "VRTX": {
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals",
+      "sector": "Health Care",
+      "industry": "Biotechnology",
+      "headquarters": "Boston, Massachusetts",
+      "founded": "1989"
+    },
+    "VRT": {
+      "symbol": "VRT",
+      "name": "Vertiv",
+      "sector": "Industrials",
+      "industry": "Electrical Components &amp; Equipment",
+      "headquarters": "Westerville, Ohio",
+      "founded": "2016"
+    },
+    "VTRS": {
+      "symbol": "VTRS",
+      "name": "Viatris",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals",
+      "headquarters": "Pittsburgh, Pennsylvania",
+      "founded": "1961"
+    },
+    "VICI": {
+      "symbol": "VICI",
+      "name": "Vici Properties",
+      "sector": "Real Estate",
+      "industry": "Hotel &amp; Resort REITs",
+      "headquarters": "New York City, New York",
+      "founded": "2017"
+    },
+    "V": {
+      "symbol": "V",
+      "name": "Visa Inc.",
+      "sector": "Financials",
+      "industry": "Transaction &amp; Payment Processing Services",
+      "headquarters": "San Francisco, California",
+      "founded": "1958"
+    },
+    "VST": {
+      "symbol": "VST",
+      "name": "Vistra Corp.",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Irving, Texas",
+      "founded": "2016"
+    },
+    "VMRK": {
+      "symbol": "VMRK",
+      "name": "Vivmark Residential",
+      "sector": "Real Estate",
+      "industry": "Multi-Family Residential REITs",
+      "headquarters": "Chicago, Illinois",
+      "founded": "1969"
+    },
+    "VMC": {
+      "symbol": "VMC",
+      "name": "Vulcan Materials Company",
+      "sector": "Materials",
+      "industry": "Construction Materials",
+      "headquarters": "Birmingham, Alabama",
+      "founded": "1909"
+    },
+    "VYLR": {
+      "symbol": "VYLR",
+      "name": "Vylor",
+      "sector": "Consumer Staples",
+      "industry": "Agricultural Products &amp; Services",
+      "headquarters": "Johnston, Iowa",
+      "founded": "2026"
+    },
+    "WRB": {
+      "symbol": "WRB",
+      "name": "W. R. Berkley Corporation",
+      "sector": "Financials",
+      "industry": "Property &amp; Casualty Insurance",
+      "headquarters": "Greenwich, Connecticut",
+      "founded": "1967"
+    },
+    "GWW": {
+      "symbol": "GWW",
+      "name": "W. W. Grainger",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "Lake Forest, Illinois",
+      "founded": "1927"
+    },
+    "WAB": {
+      "symbol": "WAB",
+      "name": "Wabtec",
+      "sector": "Industrials",
+      "industry": "Construction Machinery &amp; Heavy Transportation Equipment",
+      "headquarters": "Pittsburgh, Pennsylvania",
+      "founded": "1999"
+    },
+    "WMT": {
+      "symbol": "WMT",
+      "name": "Walmart",
+      "sector": "Consumer Staples",
+      "industry": "Consumer Staples Merchandise Retail",
+      "headquarters": "Bentonville, Arkansas",
+      "founded": "1962"
+    },
+    "DIS": {
+      "symbol": "DIS",
+      "name": "Walt Disney Company (The)",
+      "sector": "Communication Services",
+      "industry": "Movies &amp; Entertainment",
+      "headquarters": "Burbank, California",
+      "founded": "1923"
+    },
+    "WM": {
+      "symbol": "WM",
+      "name": "Waste Management",
+      "sector": "Industrials",
+      "industry": "Environmental &amp; Facilities Services",
+      "headquarters": "Houston, Texas",
+      "founded": "1968"
+    },
+    "WAT": {
+      "symbol": "WAT",
+      "name": "Waters Corporation",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools &amp; Services",
+      "headquarters": "Milford, Massachusetts",
+      "founded": "1958"
+    },
+    "WEC": {
+      "symbol": "WEC",
+      "name": "WEC Energy Group",
+      "sector": "Utilities",
+      "industry": "Electric Utilities",
+      "headquarters": "Milwaukee, Wisconsin",
+      "founded": "1896"
+    },
+    "WFC": {
+      "symbol": "WFC",
+      "name": "Wells Fargo",
+      "sector": "Financials",
+      "industry": "Diversified Banks",
+      "headquarters": "San Francisco, California",
+      "founded": "1852"
+    },
+    "WELL": {
+      "symbol": "WELL",
+      "name": "Welltower",
+      "sector": "Real Estate",
+      "industry": "Health Care REITs",
+      "headquarters": "Toledo, Ohio",
+      "founded": "1970"
+    },
+    "WST": {
+      "symbol": "WST",
+      "name": "West Pharmaceutical Services",
+      "sector": "Health Care",
+      "industry": "Health Care Supplies",
+      "headquarters": "Exton, Pennsylvania",
+      "founded": "1923"
+    },
+    "WDC": {
+      "symbol": "WDC",
+      "name": "Western Digital",
+      "sector": "Information Technology",
+      "industry": "Technology Hardware, Storage &amp; Peripherals",
+      "headquarters": "San Jose, California",
+      "founded": "1970"
+    },
+    "WY": {
+      "symbol": "WY",
+      "name": "Weyerhaeuser",
+      "sector": "Real Estate",
+      "industry": "Timber REITs",
+      "headquarters": "Seattle, Washington",
+      "founded": "1900"
+    },
+    "WSM": {
+      "symbol": "WSM",
+      "name": "Williams-Sonoma, Inc.",
+      "sector": "Consumer Discretionary",
+      "industry": "Homefurnishing Retail",
+      "headquarters": "San Francisco, California",
+      "founded": "1956"
+    },
+    "WMB": {
+      "symbol": "WMB",
+      "name": "Williams Companies",
+      "sector": "Energy",
+      "industry": "Oil &amp; Gas Storage &amp; Transportation",
+      "headquarters": "Tulsa, Oklahoma",
+      "founded": "1908"
+    },
+    "WTW": {
+      "symbol": "WTW",
+      "name": "Willis Towers Watson",
+      "sector": "Financials",
+      "industry": "Insurance Brokers",
+      "headquarters": "London, United Kingdom",
+      "founded": "2016"
+    },
+    "WDAY": {
+      "symbol": "WDAY",
+      "name": "Workday, Inc.",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "headquarters": "Pleasanton, California",
+      "founded": "2005"
+    },
+    "WYNN": {
+      "symbol": "WYNN",
+      "name": "Wynn Resorts",
+      "sector": "Consumer Discretionary",
+      "industry": "Casinos &amp; Gaming",
+      "headquarters": "Paradise, Nevada",
+      "founded": "2002"
+    },
+    "XEL": {
+      "symbol": "XEL",
+      "name": "Xcel Energy",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities",
+      "headquarters": "Minneapolis, Minnesota",
+      "founded": "1909"
+    },
+    "XYL": {
+      "symbol": "XYL",
+      "name": "Xylem Inc.",
+      "sector": "Industrials",
+      "industry": "Industrial Machinery &amp; Supplies &amp; Components",
+      "headquarters": "White Plains, New York",
+      "founded": "2011"
+    },
+    "YUM": {
+      "symbol": "YUM",
+      "name": "Yum! Brands",
+      "sector": "Consumer Discretionary",
+      "industry": "Restaurants",
+      "headquarters": "Louisville, Kentucky",
+      "founded": "1997"
+    },
+    "ZBRA": {
+      "symbol": "ZBRA",
+      "name": "Zebra Technologies",
+      "sector": "Information Technology",
+      "industry": "Electronic Equipment &amp; Instruments",
+      "headquarters": "Lincolnshire, Illinois",
+      "founded": "1969"
+    },
+    "ZBH": {
+      "symbol": "ZBH",
+      "name": "Zimmer Biomet",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "headquarters": "Warsaw, Indiana",
+      "founded": "1927"
+    },
+    "ZTS": {
+      "symbol": "ZTS",
+      "name": "Zoetis",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals",
+      "headquarters": "Parsippany, New Jersey",
+      "founded": "1952"
     }
   }
 }
