@@ -20731,17 +20731,16 @@ async function setTierForTesting(newTier) {
 function updateQaDebugUI() {
   const badge = document.getElementById('qaActiveTierBadge');
   const summary = document.getElementById('qaLimitsSummary');
-  const isPro = (state.userPlan === 'pro');
+  state.userPlan = 'pro';
+  const isPro = true;
 
   if (badge) {
-    badge.textContent = isPro ? 'PRO ⚡' : 'FREE';
-    badge.className = `qa-badge-tier ${isPro ? 'qa-pro' : 'qa-free'}`;
+    badge.textContent = 'PRO ⚡';
+    badge.className = 'qa-badge-tier qa-pro';
   }
 
   if (summary) {
-    summary.innerHTML = isPro
-      ? '<strong style="color:#00d084;">⚡ Pro Trader Active:</strong><br>• Unlimited watchlists & symbols<br>• Unlimited custom portfolios<br>• Unlimited price alerts<br>• Full indicator suite (MACD, BOLL, VWAP)<br>• 0-delay live quotes'
-      : '<strong style="color:#f59e0b;">🔒 Free Explorer Active:</strong><br>• Max 15 watchlist symbols<br>• 1 custom portfolio<br>• 3 price alerts (Push)<br>• 3 basic indicators (SMA, EMA, RSI)<br>• 15-minute delayed quotes';
+    summary.innerHTML = '<strong style="color:#00d084;">⚡ Pro Institutional All-Access Active:</strong><br>• Unlimited watchlists & symbols (549 stocks)<br>• Unlimited custom portfolios<br>• Unlimited price alerts<br>• Full technical indicator suite<br>• 0-delay real-time institutional feed<br>• Full financial statements & ratios';
   }
 }
 

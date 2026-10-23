@@ -52,14 +52,15 @@ if os.path.exists(US_INDEX_FILE):
     except Exception as e:
         print(f"[FinnhubService] Warning loading US symbols file: {e}")
 
-# Static Catalog Data (523+ Assets)
+# Static Catalog Data (549 Assets)
 CATALOG_FILE = os.path.join(BASE_DIR, "static_catalog_data.json")
+CATALOG_ITEMS = []
 CATALOG_MAP = {}
 if os.path.exists(CATALOG_FILE):
     try:
         with open(CATALOG_FILE, "r", encoding="utf-8") as f:
-            _catalog = json.load(f)
-            CATALOG_MAP = {x["symbol"].upper(): x for x in _catalog if "symbol" in x}
+            CATALOG_ITEMS = json.load(f)
+            CATALOG_MAP = {x["symbol"].upper(): x for x in CATALOG_ITEMS if "symbol" in x}
     except Exception as e:
         print(f"[FinnhubService] Warning loading catalog file: {e}")
 
@@ -1046,105 +1047,55 @@ def get_catalog(category="sp500", search="", page=1, limit=50, symbols=None):
     page = max(1, int(page))
     limit = max(1, min(100, int(limit)))
 
-    # Select base dataset
+    # Select base dataset from authentic catalog
+    catalog = list(CATALOG_ITEMS)
     if c == "watchlist" or symbols:
-        sym_list = [s.strip().upper() for s in (symbols or []) if s and s.strip()]
-        raw_items = []
-        for s in sym_list:
-            if s in SYMBOL_MAP:
-                raw_items.append(SYMBOL_MAP[s])
-            else:
-                found = next((x for x in STOCK_DIRECTORY if x["symbol"] == s), None)
-                if found:
-                    raw_items.append({"s": found["symbol"], "d": found["name"], "t": found.get("category", "Stock"), "m": "US"})
-                else:
-                    raw_items.append({"s": s, "d": s, "t": "Stock", "m": "US"})
+        sym_set = set(s.strip().upper() for s in (symbols or []) if s and s.strip())
+        filtered = [item for item in catalog if item.get("symbol", "").upper() in sym_set]
     elif c == "sp500":
-        raw_items = [SYMBOL_MAP[s] for s in SP500_LIST if s in SYMBOL_MAP]
-    elif c == "nyse":
-        raw_items = [x for x in US_SYMBOLS if x.get("m") in ("XNYS", "ARCX", "XASE") and x.get("t") in ("Common Stock", "ADR", "REIT")]
-    elif c == "nasdaq":
-        raw_items = [x for x in US_SYMBOLS if x.get("m") == "XNAS" and x.get("t") in ("Common Stock", "ADR", "REIT")]
-    elif c == "etf":
-        raw_items = [x for x in US_SYMBOLS if x.get("t") == "ETF"]
+        filtered = [item for item in catalog if item.get("symbol", "").upper() in SP500_SET or item.get("isSp500")]
     elif c == "crypto":
-        crypto_syms = ["BTC", "ETH", "SOL", "ADA", "DOGE", "XRP", "BNB", "AVAX", "LINK", "SUI", "DOT", "NEAR", "SHIB", "PEPE", "UNI", "LTC"]
-        raw_items = []
-        for cs in crypto_syms:
-            item = next((x for x in STOCK_DIRECTORY if x["symbol"] == cs), None)
-            if item:
-                raw_items.append({"s": item["symbol"], "d": item["name"], "t": "Crypto", "m": "CRYPTO"})
-            else:
-                raw_items.append({"s": cs, "d": f"{cs} Token", "t": "Crypto", "m": "CRYPTO"})
+        filtered = [item for item in catalog if item.get("category") == "crypto"]
+    elif c == "etf":
+        filtered = [item for item in catalog if item.get("category") == "etf"]
+    elif c == "nyse":
+        filtered = [item for item in catalog if item.get("exchange") == "NYSE"]
+    elif c == "nasdaq":
+        filtered = [item for item in catalog if item.get("exchange") == "NASDAQ"]
     elif c == "global":
-        top_global_syms = [
-            "ASML", "TSM", "NVO", "BUD", "SONY", "TM", "RACE", "LVMUY", "MC.PA",
-            "SAP", "BABA", "TCEHY", "AZN", "SHEL", "BP", "TTE", "SNY", "HMC",
-            "NESN.SW", "AIR.PA", "BMW.DE", "MBG.DE", "005930.KS", "0700.HK",
-            "9988.HK", "HESAY", "POAHY", "NTDOY", "BYDDY", "SHOP", "SPOT",
-            "SE", "MELI", "PDD", "BIDU"
-        ]
-        top_items = [SYMBOL_MAP[s] for s in top_global_syms if s in SYMBOL_MAP and "s" in SYMBOL_MAP[s]]
-        seen_top = {x["s"] for x in top_items}
-        other_global = [
-            x for x in US_SYMBOLS
-            if (x.get("t") == "ADR" or "." in x.get("s", "") or x.get("m") not in ("XNYS", "XNAS", "ARCX", "XASE", "BATS", "CRYPTO"))
-            and x.get("s") not in seen_top
-        ]
-        raw_items = top_items + other_global
+        filtered = [item for item in catalog if item.get("category") == "global" or item.get("exchange") == "Global"]
     else:  # "all"
-        raw_items = US_SYMBOLS
+        filtered = catalog
 
     # Filter by search string if specified
     if search:
         sq = search.upper().strip()
         sql = search.lower().strip()
-        raw_items = [x for x in raw_items if sq in x.get("s", "") or sql in x.get("d", "").lower()]
+        filtered = [item for item in filtered if sq in item.get("symbol", "").upper() or sql in item.get("name", "").lower()]
 
-    total = len(raw_items)
+    total = len(filtered)
     start = (page - 1) * limit
     end = start + limit
-    sliced = raw_items[start:end]
-
-    ex_map = {"XNYS": "NYSE", "ARCX": "NYSE Arca", "XASE": "NYSE American", "XNAS": "NASDAQ", "BATS": "Cboe", "OOTC": "OTC", "CRYPTO": "Crypto"}
+    sliced = filtered[start:end]
 
     assets = []
     for item in sliced:
-        sym = item.get("s", "").upper()
-        desc = item.get("d", sym)
-        stype = item.get("t", "Common Stock")
-        mic = item.get("m", "")
-        live_fetch = len(assets) < 3
-        q = get_quote(sym, fetch_live=live_fetch)
-        bg, color, char = get_symbol_icon_metadata(sym, desc, mic)
-        friendly_ex = ex_map.get(mic, mic or "US")
-
-        is_up = q["pct"] >= 0
+        sym = item.get("symbol", "").upper()
+        q = get_quote(sym, fetch_live=(len(assets) < 3))
+        price = q["price"] if (q and isinstance(q, dict) and "price" in q) else item.get("price", 100.0)
+        pct = q["pct"] if (q and isinstance(q, dict) and "pct" in q) else item.get("change24h", 0.0)
+        chg = q["change"] if (q and isinstance(q, dict) and "change" in q) else round(price * (pct / 100.0), 2)
+        
+        is_up = pct >= 0
         spark = [0.35, 0.42, 0.40, 0.55, 0.50, 0.65, 0.62, 0.78, 0.85] if is_up else [0.85, 0.78, 0.70, 0.62, 0.65, 0.48, 0.50, 0.35, 0.28]
 
-        assets.append({
-            "id": sym.lower(),
-            "symbol": sym,
-            "name": desc,
-            "pair": f"{sym} / USD",
-            "category": c,
-            "type": stype,
-            "exchange": friendly_ex,
-            "isSp500": sym in SP500_SET,
-            "price": q["price"],
-            "change24h": q["pct"],
-            "changeDollar": q["change"],
-            "holdingsAmount": "0",
-            "holdingsValue": 0,
-            "avgBuyPrice": q["price"],
-            "unrealizedProfit": 0,
-            "unrealizedProfitPct": 0,
-            "iconBg": bg,
-            "iconColor": color,
-            "iconChar": char,
-            "sparkPoints": spark,
-            "isLive": q.get("is_live", False)
-        })
+        asset_entry = dict(item)
+        asset_entry["price"] = price
+        asset_entry["change24h"] = pct
+        asset_entry["changeDollar"] = chg
+        asset_entry["sparkPoints"] = spark
+        asset_entry["isLive"] = bool(q and q.get("is_live"))
+        assets.append(asset_entry)
 
     return {
         "category": c,
