@@ -1,4 +1,3 @@
-// Market Reader Static Builtin Catalog Data (523+ Assets: S&P 500, Tech, Crypto, ETFs, Financials, Consumer)
 const STATIC_CATALOG_DATA = [
   {
     "symbol": "BTC",
@@ -6541,7 +6540,7 @@ const STATIC_CATALOG_DATA = [
   },
   {
     "symbol": "WBD",
-    "name": "Warner Bros. Discovery, Inc. - ",
+    "name": "Warner Bros. Discovery, Inc.",
     "pair": "WBD / USD",
     "category": "sp500",
     "price": 30.95,
@@ -6798,5 +6797,291 @@ const STATIC_CATALOG_DATA = [
     "iconChar": "Z",
     "exchange": "NYSE",
     "isSp500": true
+  },
+  {
+    "symbol": "MSTR",
+    "name": "MicroStrategy Incorporated",
+    "price": 152.8,
+    "change24h": -2.44,
+    "exchange": "NMS",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "marketCap": 61.7
+  },
+  {
+    "symbol": "RIVN",
+    "name": "Rivian Automotive, Inc.",
+    "price": 12.15,
+    "change24h": 0.7,
+    "exchange": "NMS",
+    "category": "consumer",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 17.5
+  },
+  {
+    "symbol": "SOFI",
+    "name": "SoFi Technologies, Inc.",
+    "price": 14.81,
+    "change24h": 0.8,
+    "exchange": "NMS",
+    "category": "finance",
+    "sector": "Financial Services",
+    "industry": "Credit Services",
+    "marketCap": 19.1
+  },
+  {
+    "symbol": "DKNG",
+    "name": "DraftKings Inc.",
+    "price": 20.95,
+    "change24h": -2.19,
+    "exchange": "NMS",
+    "category": "consumer",
+    "sector": "Consumer Cyclical",
+    "industry": "Gambling",
+    "marketCap": 10.4
+  },
+  {
+    "symbol": "NIO",
+    "name": "NIO Inc.",
+    "price": 3.52,
+    "change24h": 0.4,
+    "exchange": "NYQ",
+    "category": "consumer",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 8.3
+  },
+  {
+    "symbol": "BABA",
+    "name": "Alibaba Group Holding Limited",
+    "price": 101.73,
+    "change24h": -1.08,
+    "exchange": "NYQ",
+    "category": "consumer",
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail",
+    "marketCap": 253.3
+  },
+  {
+    "symbol": "TSM",
+    "name": "Taiwan Semiconductor Manufacturing Company Limited",
+    "price": 412.06,
+    "change24h": -1.12,
+    "exchange": "NYQ",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "marketCap": 2138.6
+  },
+  {
+    "symbol": "ASML",
+    "name": "ASML Holding N.V.",
+    "price": 1560.72,
+    "change24h": 1.14,
+    "exchange": "NMS",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "marketCap": 601.5
+  },
+  {
+    "symbol": "SPOT",
+    "name": "Spotify Technology S.A.",
+    "price": 583.66,
+    "change24h": -1.44,
+    "exchange": "NYQ",
+    "category": "equities",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "marketCap": 120.0
+  },
+  {
+    "symbol": "SNAP",
+    "name": "Snap Inc.",
+    "price": 7.43,
+    "change24h": -0.52,
+    "exchange": "NYQ",
+    "category": "equities",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "marketCap": 10.7
+  },
+  {
+    "symbol": "PINS",
+    "name": "Pinterest, Inc.",
+    "price": 26.41,
+    "change24h": -0.18,
+    "exchange": "NYQ",
+    "category": "equities",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "marketCap": 13.0
+  },
+  {
+    "symbol": "NET",
+    "name": "Cloudflare, Inc.",
+    "price": 335.09,
+    "change24h": 1.76,
+    "exchange": "NYQ",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "marketCap": 108.1
+  },
+  {
+    "symbol": "SNOW",
+    "name": "Snowflake Inc.",
+    "price": 314.06,
+    "change24h": -0.67,
+    "exchange": "NYQ",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "marketCap": 110.8
+  },
+  {
+    "symbol": "ZS",
+    "name": "Zscaler, Inc.",
+    "price": 237.89,
+    "change24h": 1.47,
+    "exchange": "NMS",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "marketCap": 38.8
+  },
+  {
+    "symbol": "GME",
+    "name": "GameStop Corp.",
+    "price": 25.37,
+    "change24h": -1.06,
+    "exchange": "NYQ",
+    "category": "consumer",
+    "sector": "Consumer Cyclical",
+    "industry": "Specialty Retail",
+    "marketCap": 12.8
+  },
+  {
+    "symbol": "AMC",
+    "name": "AMC Entertainment Holdings, Inc.",
+    "price": 2.91,
+    "change24h": -1.03,
+    "exchange": "NYQ",
+    "category": "equities",
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "marketCap": 2.6
+  },
+  {
+    "symbol": "CAVA",
+    "name": "CAVA Group, Inc.",
+    "price": 54.79,
+    "change24h": -0.08,
+    "exchange": "NYQ",
+    "category": "consumer",
+    "sector": "Consumer Cyclical",
+    "industry": "Restaurants",
+    "marketCap": 6.4
+  },
+  {
+    "symbol": "CELH",
+    "name": "Celsius Holdings, Inc.",
+    "price": 28.46,
+    "change24h": 1.11,
+    "exchange": "NCM",
+    "category": "consumer",
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Non-Alcoholic",
+    "marketCap": 7.2
+  },
+  {
+    "symbol": "HIMS",
+    "name": "Hims & Hers Health, Inc.",
+    "price": 30.24,
+    "change24h": -1.27,
+    "exchange": "NYQ",
+    "category": "healthcare",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - Specialty & Generic",
+    "marketCap": 6.8
+  },
+  {
+    "symbol": "TOST",
+    "name": "Toast, Inc.",
+    "price": 37.55,
+    "change24h": 0.4,
+    "exchange": "NYQ",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "marketCap": 19.3
+  },
+  {
+    "symbol": "ASTS",
+    "name": "AST SpaceMobile, Inc.",
+    "price": 50.37,
+    "change24h": -1.98,
+    "exchange": "NMS",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "marketCap": 15.1
+  },
+  {
+    "symbol": "RKLB",
+    "name": "Rocket Lab Corporation",
+    "price": 54.8,
+    "change24h": -1.38,
+    "exchange": "NMS",
+    "category": "industrials",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "marketCap": 32.8
+  },
+  {
+    "symbol": "IONQ",
+    "name": "IonQ, Inc.",
+    "price": 31.1,
+    "change24h": 1.83,
+    "exchange": "NYQ",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "marketCap": 12.6
+  },
+  {
+    "symbol": "AFRM",
+    "name": "Affirm Holdings, Inc.",
+    "price": 82.18,
+    "change24h": 1.99,
+    "exchange": "NMS",
+    "category": "finance",
+    "sector": "Financial Services",
+    "industry": "Credit Services",
+    "marketCap": 24.4
+  },
+  {
+    "symbol": "CART",
+    "name": "Maplebear Inc.",
+    "price": 51.83,
+    "change24h": -1.88,
+    "exchange": "NMS",
+    "category": "consumer",
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail",
+    "marketCap": 12.3
+  },
+  {
+    "symbol": "DUOL",
+    "name": "Duolingo, Inc.",
+    "price": 164.18,
+    "change24h": 0.48,
+    "exchange": "NMS",
+    "category": "tech",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "marketCap": 6.6
   }
 ];

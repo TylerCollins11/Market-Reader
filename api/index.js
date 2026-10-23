@@ -827,32 +827,20 @@ module.exports = async (req, res) => {
       const catalog = getCatalog();
       const catItem = catalog.find(s => s.symbol.toUpperCase() === sym);
       const spMeta = (apiData.SP500_DIRECTORY && apiData.SP500_DIRECTORY[sym]) || null;
-      const companyName = catItem?.name || spMeta?.name || quote.name || `${sym} Corporation`;
-      const exchangeName = catItem?.exchange || quote.exchange || 'NYSE';
+      const companyName = quote.name && quote.name !== sym ? quote.name : (catItem?.name || spMeta?.name || `${sym} Inc.`);
+      const exchangeName = quote.exchange || catItem?.exchange || 'NASDAQ';
 
       let wikiDesc = await fetchWikipediaDescription(companyName, sym);
-
-      let h = 0;
-      for (let i = 0; i < sym.length; i++) h = ((h << 5) - h) + sym.charCodeAt(i);
-      h = Math.abs(h);
-
-      const secName = spMeta?.sector || (h % 2 === 0 ? "Information Technology" : "Industrials");
-      const indName = spMeta?.industry || (h % 2 === 0 ? "Software Infrastructure" : "Industrial Conglomerates");
+      const secName = spMeta?.sector || catItem?.sector || "Technology";
+      const indName = spMeta?.industry || catItem?.industry || "Software & Services";
       const hqLoc = spMeta?.headquarters || "United States";
-      const foundedYear = spMeta?.founded || `${1980 + (h % 40)}`;
+      const foundedYear = spMeta?.founded || "1995";
 
       if (!wikiDesc) {
-        wikiDesc = `${companyName} is an established corporation operating within the ${secName} sector, specializing in ${indName.toLowerCase()}. Headquartered in ${hqLoc}, the company delivers critical products, operational scale, and competitive positioning across its markets.`;
+        wikiDesc = `${companyName} is a publicly traded corporation listed on the ${exchangeName} exchange under ticker symbol ${sym}, operating across the ${secName} sector.`;
       }
 
-      const estCap = Number((Math.max(2.0, currentPrice * (0.15 + (h % 500) / 100.0))).toFixed(1));
-      const estRev = Number((Math.max(0.5, estCap / (1.5 + (h % 40) / 10.0))).toFixed(1));
-      const estNet = Number((estRev * (0.08 + (h % 18) / 100.0)).toFixed(2));
-      const estEquity = Number((estCap * 0.40).toFixed(1));
-      const estEps = Number((Math.max(0.50, currentPrice / (15.0 + (h % 30)))).toFixed(2));
-      const sharesCnt = Number((estCap / Math.max(1.0, currentPrice)).toFixed(2));
-      const sharesFormatted = sharesCnt < 1.0 ? `${Math.round(sharesCnt * 1000)} Million` : `${sharesCnt.toFixed(2)} Billion`;
-
+      const mcapB = Number((currentPrice * 1.0).toFixed(1));
       base = {
         name: companyName,
         symbol: sym,
@@ -860,27 +848,27 @@ module.exports = async (req, res) => {
         sector: secName,
         industry: indName,
         description: wikiDesc,
-        ceo: `Executive Leadership (${companyName})`,
+        ceo: spMeta?.ceo || "Executive Board of Directors",
         headquarters: hqLoc,
-        employees: `${(2500 + (h % 45000)).toLocaleString()}`,
+        employees: "N/A",
         founded: foundedYear,
-        ipoYear: `${Math.max(1970, parseInt(foundedYear) || 1990)}`,
+        ipoYear: "2010",
         website: `https://www.${sym.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`,
-        marketCap: estCap,
-        enterpriseValue: `$${(estCap * 1.06).toFixed(1)} Billion`,
-        dilutedEps: estEps,
-        revenueTTM: estRev,
-        netIncomeTTM: estNet,
-        shareholdersEquity: estEquity,
-        grossMargin: Number((35.0 + (h % 40)).toFixed(1)),
-        netMargin: Number(((estNet / estRev) * 100).toFixed(1)),
-        dividendYield: h % 3 === 0 ? Number(((h % 30) / 10.0).toFixed(2)) : 0.0,
-        beta: Number((0.80 + (h % 100) / 100.0).toFixed(2)),
-        sharesOutstanding: sharesFormatted,
-        low52wRatio: Number((0.65 + ((h % 20) / 100.0)).toFixed(2)),
-        high52wRatio: Number((1.05 + ((h % 15) / 100.0)).toFixed(2)),
-        sma50Ratio: Number((0.95 + ((h % 10) / 100.0)).toFixed(3)),
-        rsi: Number((48.0 + (h % 24)).toFixed(1))
+        marketCap: mcapB,
+        enterpriseValue: `$${Number((mcapB * 1.05).toFixed(1))} Billion`,
+        dilutedEps: Number((currentPrice / 25.0).toFixed(2)),
+        revenueTTM: Number((mcapB * 0.35).toFixed(1)),
+        netIncomeTTM: Number((mcapB * 0.05).toFixed(2)),
+        shareholdersEquity: Number((mcapB * 0.40).toFixed(1)),
+        grossMargin: 45.0,
+        netMargin: 12.0,
+        dividendYield: 0.0,
+        beta: 1.0,
+        sharesOutstanding: "1.00 Billion",
+        low52wRatio: 0.75,
+        high52wRatio: 1.15,
+        sma50Ratio: 0.96,
+        rsi: 52.0
       };
     }
 
@@ -906,9 +894,18 @@ module.exports = async (req, res) => {
     const netInc = Number(base.netIncomeTTM || 10.0);
     const equity = Number(base.shareholdersEquity || 40.0);
 
+    const isCrypto = base.sector === 'Decentralized Finance' || ['BTC', 'ETH', 'SOL', 'ADA', 'DOGE', 'XRP', 'BNB', 'AVAX', 'LINK'].includes(sym);
+    const isEtf = base.sector === 'Exchange Traded Fund' || ['SPY', 'QQQ', 'DIA', 'VOO', 'VTI', 'IWM', 'SMH', 'GLD', 'SLV', 'ARKK'].includes(sym);
+
     // Calculated Ratios
     let peVal, peStatus, peInterp, peCalcSteps, peFormatted;
-    if (eps > 0) {
+    if (isCrypto || isEtf) {
+      peVal = null;
+      peFormatted = isCrypto ? "N/A (Crypto Protocol)" : "N/A (Index ETF Trust)";
+      peStatus = isCrypto ? "Decentralized Asset" : "Benchmark Index Basket";
+      peInterp = isCrypto ? "Cryptocurrency protocol without equity EPS multiple." : "Index ETF holding diversified underlying equity/commodity basket.";
+      peCalcSteps = "Asset / Protocol Structure - P/E Not Applicable";
+    } else if (eps > 0) {
       peVal = Number((currentPrice / eps).toFixed(2));
       peFormatted = `${peVal.toFixed(2)}x`;
       peStatus = peVal > 35 ? "Growth Premium" : (peVal > 18 ? "Reasonable Multiple" : "Undervalued / Low Multiple");
@@ -923,12 +920,15 @@ module.exports = async (req, res) => {
     }
 
     const psVal = Number((marketCapB / Math.max(0.01, revTTM)).toFixed(2));
-    const psStatus = psVal > 12 ? "Premium Multiple" : (psVal > 3 ? "Healthy Valuation" : "Attractive / Deep Value");
+    const psStatus = isCrypto ? "Protocol Utility" : (isEtf ? "ETF Asset Scale" : (psVal > 12 ? "Premium Multiple" : (psVal > 3 ? "Healthy Valuation" : "Attractive / Deep Value")));
     const psInterp = `Every $1.00 of annual revenue is valued at $${psVal.toFixed(2)} in market equity.`;
 
     const roeVal = Number(((netInc / Math.max(0.01, Math.abs(equity))) * 100).toFixed(2));
     let roeStatus, roeInterp;
-    if (roeVal < 0 || netInc < 0) {
+    if (isCrypto || isEtf) {
+      roeStatus = isCrypto ? "Staking / Protocol Yield" : "Index Fund Yield";
+      roeInterp = isCrypto ? "Protocol distribution and staking yield." : "Aggregated underlying equity dividends.";
+    } else if (roeVal < 0 || netInc < 0) {
       roeStatus = "Negative ROE (Net Loss)";
       roeInterp = `Operates at negative return on equity (${roeVal.toFixed(2)}%) reflecting trailing net losses.`;
     } else {
