@@ -21463,12 +21463,11 @@ async function handleAuthSubmit(e) {
 async function initAuth() {
   const activeSession = getActiveSession();
   if (activeSession) {
-    const subTier = activeSession.tier || activeSession.plan || 'free';
-    activeSession.tier = subTier;
-    activeSession.plan = subTier;
-    activeSession.subscription_status = activeSession.subscription_status || 'active';
+    activeSession.tier = 'pro';
+    activeSession.plan = 'pro';
+    activeSession.subscription_status = 'active';
     state.currentUser = activeSession;
-    state.userPlan = subTier;
+    state.userPlan = 'pro';
     syncUserSubscription();
   }
 
@@ -21481,7 +21480,8 @@ async function initAuth() {
             email: session.user.email.toLowerCase(),
             fullName: session.user.user_metadata?.full_name || session.user.email.split('@')[0],
             createdAt: session.user.created_at,
-            plan: state.userPlan || 'free'
+            plan: 'pro',
+            tier: 'pro'
           };
           state.currentUser = user;
           saveActiveSession(user);
@@ -21499,7 +21499,8 @@ async function initAuth() {
           email: user.email.toLowerCase(),
           fullName: user.user_metadata?.full_name || user.email.split('@')[0],
           createdAt: user.created_at,
-          plan: 'free'
+          plan: 'pro',
+          tier: 'pro'
         };
         saveActiveSession(state.currentUser);
         await syncUserProfile(user);
@@ -21518,10 +21519,12 @@ async function syncUserProfile(user) {
   if (!sbClient || !user) return;
   try {
     const { data: profile } = await sbClient.from('profiles').select('*').eq('id', user.id).single();
+    state.userPlan = 'pro';
+    localStorage.setItem('market_reader_plan', 'pro');
     if (profile) {
+      profile.plan = 'pro';
+      profile.tier = 'pro';
       state.currentProfile = profile;
-      state.userPlan = profile.plan || 'free';
-      localStorage.setItem('market_reader_plan', state.userPlan);
     }
   } catch (err) {
     console.error('Profile sync error:', err);
@@ -21723,15 +21726,15 @@ async function handleSignOut() {
       await sbClient.auth.signOut();
     } catch (e) {}
   }
-  saveActiveSession(null);
-  state.currentUser = null;
+  state.currentUser = DEFAULT_PRO_USER;
   state.currentProfile = null;
-  state.userPlan = 'free';
-  localStorage.setItem('market_reader_plan', 'free');
+  state.userPlan = 'pro';
+  saveActiveSession(DEFAULT_PRO_USER);
+  localStorage.setItem('market_reader_plan', 'pro');
 
   closeUserMenu();
   refreshUserDataAndViews();
-  showToast('Signed out of Market Reader', '👋');
+  showToast('Reset to default Pro Trader account', '⚡');
 }
 
 // Toast

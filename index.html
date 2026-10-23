@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261022_fundamentals_precision" />
+  <link rel="stylesheet" href="styles.css?v=20261022_fully_unlocked_v6" />
 </head>
 <body>
   <!-- Desktop Web Application Shell -->
@@ -531,16 +531,16 @@
           </button>
 
           <!-- Plans / Pricing -->
-          <a href="/pricing" class="drawer-nav-item" id="btnDrawerPlans" title="View Membership Plans">
+          <div class="drawer-nav-item" id="btnDrawerPlans" title="Pro Trader Plan Active" style="cursor:pointer;">
             <div class="dni-icon-box" style="background:rgba(0, 208, 132, 0.15); color:var(--emerald-green-dark);">💎</div>
             <div class="dni-text-stack">
               <div class="dni-title-row">
-                <span class="dni-title">Membership Plans</span>
-                <span class="dni-badge-pill" style="background:rgba(0, 208, 132, 0.2); color:var(--emerald-green-dark);">PRO UNLOCKED</span>
+                <span class="dni-title">Pro Trader Pass</span>
+                <span class="dni-badge-pill" style="background:rgba(0, 208, 132, 0.2); color:var(--emerald-green-dark);">100% UNLOCKED</span>
               </div>
-              <span class="dni-desc">Pro Trader plan & custom portfolios</span>
+              <span class="dni-desc">Unlimited portfolios, real-time quotes & tools</span>
             </div>
-          </a>
+          </div>
 
           <!-- Price Alerts Manager -->
           <button class="drawer-nav-item" id="btnDrawerAlerts" title="Manage Price Alerts">
@@ -613,15 +613,13 @@
 
         <!-- 3. Account / User Profile -->
         <div class="drawer-user-card" id="drawerUserCard">
-          <div class="dni-icon-box" style="background:var(--card-subtle); color:var(--text-dim); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">👤</div>
+          <div class="dni-icon-box" style="background:rgba(0, 208, 132, 0.15); color:var(--emerald-green-dark); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">⚡</div>
           <div style="flex:1; min-width:0; overflow:hidden;">
             <div style="font-size:10.5px; color:var(--text-dim);">Account Status</div>
-            <div style="font-size:12px; font-weight:800; color:var(--text-main); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" id="drawerUserEmail">Guest (Free Plan)</div>
+            <div style="font-size:12px; font-weight:800; color:var(--text-main); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" id="drawerUserEmail">Pro Trader (⚡ Unlocked)</div>
           </div>
           <div class="drawer-auth-btns" id="drawerAuthActions">
-            <button class="drawer-mini-btn" id="btnDrawerSignIn">Sign In</button>
-            <button class="drawer-mini-btn drawer-mini-btn-primary" id="btnDrawerSignUp">Register</button>
-            <button class="drawer-mini-btn drawer-mini-btn-primary hidden" id="btnDrawerUserMenu">Account</button>
+            <button class="drawer-mini-btn drawer-mini-btn-primary" id="btnDrawerUserMenu">Account (Pro)</button>
           </div>
         </div>
       </div>
@@ -1321,7 +1319,7 @@
       <div class="sheet-top">
         <div style="display:flex; align-items:center; gap:8px;">
           <span style="font-size:20px;">💎</span>
-          <h3 id="proGateModalTitle" style="margin:0;">Unlock Pro Trader</h3>
+          <h3 id="proGateModalTitle" style="margin:0;">Pro Trader Unlocked</h3>
         </div>
         <button class="sheet-close-btn" id="btnCloseProGate">&times;</button>
       </div>
@@ -1404,12 +1402,10 @@
             </tbody>
           </table>
 
-          <button type="button" id="btnProGateStartTrial" class="btn-primary-neon" style="width:100%; padding:12px; font-weight:800; border-radius:10px; background:#00d084; color:#0c1015; font-size:14px; margin-bottom:8px; border:none; cursor:pointer;">
-            🚀 Start 7-Day Free Trial
+          <button type="button" id="btnProGateStartTrial" class="btn-primary-neon" style="width:100%; padding:12px; font-weight:800; border-radius:10px; background:#00d084; color:#0c1015; font-size:14px; margin-bottom:8px; border:none; cursor:default;" disabled>
+            ✓ Pro Trader Plan Active (100% Unlocked)
           </button>
-          <button type="button" id="btnProGateSubscribe" class="btn-primary-neon" style="width:100%; padding:10px; font-weight:700; border-radius:10px; background:transparent; border:1px solid rgba(0, 208, 132, 0.5); color:var(--emerald-green-dark); font-size:13px; cursor:pointer;">
-            Subscribe Now ($20/mo)
-          </button>
+          <button type="button" id="btnProGateSubscribe" style="display:none;"></button>
         </div>
 
         <div style="display:flex; justify-content:space-between; align-items:center; padding:0 4px;">
@@ -1533,8 +1529,8 @@
     </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="catalog_data.js?v=20261022_authentic_precision_v2"></script>
-  <script src="entitlements.js?v=20261022_authentic_precision_v2"></script>
-  <script src="app.js?v=20261022_authentic_precision_v2"></script>
+  <script src="catalog_data.js?v=20261022_fully_unlocked_v6"></script>
+  <script src="entitlements.js?v=20261022_fully_unlocked_v6"></script>
+  <script src="app.js?v=20261022_fully_unlocked_v6"></script>
 </body>
 </html>

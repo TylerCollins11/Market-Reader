@@ -371,15 +371,16 @@
 </head>
 <body class="dark-app">
   <div class="pricing-page-container">
+    <a href="/" style="align-self:flex-start; display:inline-flex; align-items:center; gap:8px; color:#00e699; text-decoration:none; font-weight:700; font-size:14px; margin-bottom:20px;">← Return to Trading Dashboard</a>
     <div class="pricing-header">
       <div class="pricing-badge">
-        <span>⚡ Market Reader Memberships</span>
+        <span>💎 PRO TRADER ACCESS ACTIVE · 100% UNLOCKED</span>
       </div>
-      <h1 class="pricing-title">Simple, Transparent Pricing</h1>
+      <h1 class="pricing-title">Market Reader Pro is 100% Unlocked</h1>
       <p class="pricing-subtitle">
-        Track your favorite equities and cryptocurrencies, or upgrade to Pro to unlock persistent portfolio tracking and paper order execution.
+        Your account has full institutional depth: 562 verified securities, real-time live streaming quotes, unlimited custom portfolios, drawing tools, and advanced financial metrics.
       </p>
-      <div id="pricingUserEmail" style="display:none; font-size:13px; color:#00e699; margin-top:12px; font-weight:700; background:rgba(0,230,153,0.1); padding:6px 14px; border-radius:999px; border:1px solid rgba(0,230,153,0.25);"></div>
+      <div id="pricingUserEmail" style="display:inline-block; font-size:13px; color:#00e699; margin-top:12px; font-weight:700; background:rgba(0,230,153,0.1); padding:6px 14px; border-radius:999px; border:1px solid rgba(0,230,153,0.25);">⚡ Status: Pro Trader Active (Unlimited)</div>
     </div>
 
     <!-- Billing Frequency Switcher -->
@@ -447,7 +448,7 @@
             <span>CSV Portfolio & Trade exports</span>
           </li>
         </ul>
-        <button class="plan-btn plan-btn-outline" id="btnSelectFree">Current Plan</button>
+        <button class="plan-btn plan-btn-outline" id="btnSelectFree" style="opacity:0.6; cursor:default;" disabled>Included Baseline (Free Tier)</button>
       </div>
 
       <!-- Plan 2: Paid Pro Plan ($20/month or $192/year) -->
@@ -501,8 +502,8 @@
           </li>
         </ul>
         <div style="display:flex; flex-direction:column; gap:8px;">
-          <button class="plan-btn plan-btn-neon" id="btnPageStartTrial">🚀 Start 7-Day Free Trial</button>
-          <button class="plan-btn plan-btn-outline" id="btnUpgradePro">Subscribe Directly</button>
+          <button class="plan-btn plan-btn-neon" id="btnPageStartTrial" style="background:#00e699; color:#0b0f14; font-weight:800; cursor:default; border:none;">✓ Pro Plan Active & 100% Unlocked</button>
+          <button class="plan-btn plan-btn-outline" id="btnUpgradePro" style="display:none;">Subscribe Directly</button>
         </div>
       </div>
     </div>
@@ -620,24 +621,23 @@
       const proBtn = document.getElementById('btnUpgradePro');
       const trialBtn = document.getElementById('btnPageStartTrial');
 
-      if (currentPlan === 'pro') {
-        if (freeBtn) freeBtn.textContent = 'Switch to Free Explorer';
-        if (proBtn) {
-          proBtn.textContent = '✓ Active Pro Member';
-          proBtn.style.background = '#17202c';
-          proBtn.style.color = '#00e699';
-          proBtn.style.border = '1px solid #00e699';
-        }
-        if (trialBtn) trialBtn.style.display = 'none';
-      } else {
-        if (freeBtn) freeBtn.textContent = '✓ Current Plan';
-        if (proBtn) {
-          proBtn.textContent = 'Subscribe to Pro';
-          proBtn.style.background = 'transparent';
-          proBtn.style.color = '#fff';
-          proBtn.style.border = '1px solid rgba(255, 255, 255, 0.2)';
-        }
-        if (trialBtn) trialBtn.style.display = 'block';
+      if (freeBtn) {
+        freeBtn.textContent = 'Included Baseline (Free Tier)';
+        freeBtn.disabled = true;
+        freeBtn.style.opacity = '0.6';
+        freeBtn.style.cursor = 'default';
+      }
+      if (trialBtn) {
+        trialBtn.textContent = '✓ Pro Plan Active & 100% Unlocked';
+        trialBtn.style.background = '#00e699';
+        trialBtn.style.color = '#0b0f14';
+        trialBtn.style.fontWeight = '800';
+        trialBtn.style.border = 'none';
+        trialBtn.style.cursor = 'default';
+        trialBtn.style.display = 'block';
+      }
+      if (proBtn) {
+        proBtn.style.display = 'none';
       }
     }
     updatePlanUI();
@@ -649,26 +649,24 @@
         const u = JSON.parse(rawUser);
         if (u && (u.email || u.id)) {
           currentUserEmail = u.email || u.id;
-          if (u.tier) currentPlan = u.tier;
-          updatePlanUI();
         }
       }
     } catch(e) {}
+    currentPlan = 'pro';
+    localStorage.setItem('market_reader_plan', 'pro');
+    updatePlanUI();
 
     // Check Supabase
     if (supabase) {
       supabase.auth.getUser().then(async ({ data: { user } }) => {
         if (user) {
           currentUserEmail = user.email || currentUserEmail;
-          const { data: profile } = await supabase.from('profiles').select('plan').eq('id', user.id).single();
-          if (profile && profile.plan) {
-            currentPlan = profile.plan;
-            localStorage.setItem('market_reader_plan', currentPlan);
-            updatePlanUI();
-          }
+          currentPlan = 'pro';
+          localStorage.setItem('market_reader_plan', 'pro');
+          updatePlanUI();
           const emailDisplay = document.getElementById('pricingUserEmail');
           if (emailDisplay) {
-            emailDisplay.textContent = `Signed in as: ${user.email} (${currentPlan === 'pro' ? '⚡ Pro Member' : 'Free Member'})`;
+            emailDisplay.textContent = `Signed in as: ${user.email} (⚡ Pro Member · 100% Unlocked)`;
             emailDisplay.style.display = 'inline-block';
           }
         }
@@ -701,24 +699,12 @@
 
     if (btnOpen) btnOpen.addEventListener('click', () => openCheckoutModal(false));
     if (btnUpgrade) btnUpgrade.addEventListener('click', () => openCheckoutModal(false));
-    if (btnTrial) btnTrial.addEventListener('click', () => openCheckoutModal(true));
     if (btnClose) btnClose.addEventListener('click', closeModal);
 
     // Free plan selection
-    document.getElementById('btnSelectFree').addEventListener('click', async () => {
-      localStorage.setItem('market_reader_plan', 'free');
-      currentPlan = 'free';
-      updatePlanUI();
-
-      try {
-        await fetch('/api/subscription/cancel', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ userId: currentUserEmail, immediate: true })
-        });
-      } catch(e) {}
-
-      alert('Switched to Free Plan. Limits applied: 15 watchlist symbols, 1 portfolio, 3 alerts. Existing assets remain safely preserved.');
+    document.getElementById('btnSelectFree').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Your account is permanently unlocked as Pro Trader with access to all 562 securities and tools.');
     });
 
     // Handle Sandbox Stripe Payment
