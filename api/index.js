@@ -386,7 +386,14 @@ module.exports = async (req, res) => {
     const now = Math.floor(Date.now() / 1000);
     const instruments = apiData.TICKER_BAND_INSTRUMENTS || [];
     const items = instruments.map((inst, idx) => {
-      const q = getCuratedQuote(inst.symbol);
+      let q = getCuratedQuote(inst.symbol);
+      if (!q) {
+        const catalog = getCatalog();
+        const catIt = catalog.find(s => s.symbol.toUpperCase() === inst.symbol.toUpperCase()) || {};
+        const p = Number(catIt.price) || 100.0;
+        const pct = Number(catIt.change24h) || 0.5;
+        q = { price: p, pct: pct, change: Number((p * (pct / 100)).toFixed(2)) };
+      }
       return {
         symbol: inst.symbol,
         display: inst.display,
@@ -503,7 +510,8 @@ module.exports = async (req, res) => {
     } else if (category === 'nasdaq') {
       filtered = catalog.filter(item => item.exchange === 'NASDAQ');
     } else if (category === 'global') {
-      filtered = catalog.filter(item => item.category === 'global' || item.exchange === 'Global');
+      const globalSet = new Set(['TSM', 'ASML', 'NVO', 'BABA', 'TM', 'SONY', 'BUD', 'RACE', 'SAP', 'NVS', 'AZN', 'SHEL', 'BTI', 'UL']);
+      filtered = catalog.filter(item => globalSet.has(item.symbol.toUpperCase()) || item.category === 'global' || item.isGlobal || item.exchange === 'Global');
     }
 
     if (search) {

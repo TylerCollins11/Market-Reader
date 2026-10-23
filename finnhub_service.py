@@ -1049,6 +1049,7 @@ def get_catalog(category="sp500", search="", page=1, limit=50, symbols=None):
 
     # Select base dataset from authentic catalog
     catalog = list(CATALOG_ITEMS)
+    GLOBAL_SET = {"TSM", "ASML", "NVO", "BABA", "TM", "SONY", "BUD", "RACE", "SAP", "NVS", "AZN", "SHEL", "BTI", "UL"}
     if c == "watchlist" or symbols:
         sym_set = set(s.strip().upper() for s in (symbols or []) if s and s.strip())
         filtered = [item for item in catalog if item.get("symbol", "").upper() in sym_set]
@@ -1063,7 +1064,7 @@ def get_catalog(category="sp500", search="", page=1, limit=50, symbols=None):
     elif c == "nasdaq":
         filtered = [item for item in catalog if item.get("exchange") == "NASDAQ"]
     elif c == "global":
-        filtered = [item for item in catalog if item.get("category") == "global" or item.get("exchange") == "Global"]
+        filtered = [item for item in catalog if item.get("symbol", "").upper() in GLOBAL_SET or item.get("category") == "global" or item.get("isGlobal")]
     else:  # "all"
         filtered = catalog
 
@@ -1244,10 +1245,20 @@ def get_ticker_band_data():
         for inst in TICKER_BAND_INSTRUMENTS:
             sym = inst["symbol"]
             q = get_quote(sym)
+            if not q or not isinstance(q, dict) or "price" not in q:
+                cat_it = CATALOG_MAP.get(sym, {})
+                base_p = float(cat_it.get("price", 100.0))
+                base_pct = float(cat_it.get("change24h", 0.5))
+                q = {
+                    "price": base_p,
+                    "pct": base_pct,
+                    "change": round(base_p * (base_pct / 100.0), 2),
+                    "is_live": False
+                }
             new_cache[sym] = {
                 "base_price": float(q["price"]),
                 "base_pct": float(q["pct"]),
-                "base_change": float(q["change"]),
+                "base_change": float(q.get("change", 0.0)),
                 "is_live": bool(q.get("is_live", False))
             }
         TICKER_CACHE = new_cache
